@@ -121,30 +121,31 @@ Progress so far:
 | FE7J C files compiled with agbcc (`-ffunction-sections`) | 84/84 |
 | C functions located in the EU ROM (order-preserving chain per source file) | **885** |
 | merged symbol map (`config/eu-symbols-all.txt`) | 5,724 symbols |
-| candidates linkable without unresolved references | 342 |
-| **functions integrated into the matching build** | **257** ✅ |
-| C bytes replacing assembly in the ROM | 12,948 |
+| **functions integrated into the matching build** | **853 / 885 (96.4%)** ✅ |
+| C bytes replacing assembly in the ROM | 84,652 (70 source files) |
 
 The integration runs as a differential build loop (`just integrate-all`,
-`scripts/integrate_all.py`): every linkable candidate is placed at its EU
-address, the ROM is rebuilt, and any candidate whose bytes differ is dropped
-(together with candidates that referenced it) until the rebuild matches the
-baserom sha1 exactly. The final ROM is byte-identical to the original dump.
+`scripts/integrate_all.py`): every located candidate is placed at its EU
+address, **every relocation is patched from the baserom bytes at the same
+offset** (`scripts/patch_relocs_from_rom.py` — branch targets, literal-pool
+entries, string and RAM pointers are all correct by construction, no symbol
+resolution needed), the relocation sections are deactivated so `ld` only
+places sections, and the ROM is rebuilt. Any candidate whose remaining bytes
+differ is dropped and the loop repeats until the rebuild matches the baserom
+sha1 exactly. The final ROM is byte-identical to the original dump.
+
+The 32 candidates that did not survive the loop compile to bytes that genuinely
+differ from the EU ROM (EU-specific code changes relative to JP) — they stay
+assembly and are the first targets for the permuter in Phase 4.
 
 Two toolchain pitfalls the pipeline works around (binutils 15.3):
 
 - `ld` appends interworking stubs to any section whose `bl` targets a
-  linker-script symbol, shifting the fixed `AT()` layout — so external
-  references are resolved at *assembly* time instead: `gen_symbol_defs.py`
-  emits `.set name, address` definitions (with the Thumb bit) into each C
-  object, and gas resolves the calls itself.
+  linker-script symbol, shifting the fixed `AT()` layout — avoided by never
+  letting C relocations reach `ld` at all (patched from ROM, then deactivated).
 - `gas` pads section ends to 4 bytes with Thumb NOPs (`0x46C0`) where the ROM
   uses zeros — `filter_c_sections.py` appends an explicit `.align 2, 0` to
   every kept function block.
-
-Not yet integratable: 71 located functions reference discarded `.rodata`
-(string literals / jump tables — needs rodata placement first) and 472 more
-reference symbols absent from the map.
 
 Tools added in this phase:
 
@@ -159,6 +160,11 @@ Tools added in this phase:
   integrated functions (holes).
 - `scripts/gen_eu_build.py --integrated` — place every C `.text.<func>` section at its ROM
   address in the linker script.
+- `scripts/integrate_all.py` — the differential integration loop (`just integrate-all`).
+- `scripts/filter_c_sections.py` — keep only integrated function blocks in the agbcc
+  assembly, with ROM-convention zero padding.
+- `scripts/patch_relocs_from_rom.py` — resolve C relocations from the baserom bytes at
+  the same offset, then deactivate the relocation sections.
 
 The Makefile now compiles the integrated C files with the agbcc pipeline
 (`cpp | iconv | agbcc -ffunction-sections | as | strip`) and links them into
@@ -171,10 +177,9 @@ just integrate-all     # candidates -> differential build loop -> manifest
 make -j && sha1sum -c fe7eu.sha1
 ```
 
-Next steps: unlock the remaining located candidates — place `.rodata` so the 71
-string/jump-table users can link, and extend the symbol map for the 472 with
-unknown references — then decompile the ~81% of functions that FE7J never
-converted to C with Ghidra + m2c + permuter.
+Next steps (Phase 4): decompile the remaining ~81% of functions that FE7J
+never converted to C — Ghidra + m2c + permuter against the EU asm — starting
+with the 32 EU-divergent candidates the loop rejected.
 
 ## Tools in the shell
 

@@ -39,7 +39,7 @@ $(BUILD)/asm/eu/%.o: asm/eu/%.s
 $(BUILD)/gen/%.o: $(BUILD)/gen/%.s
 	$(AS) -mcpu=arm7tdmi -I . $< -o $@
 
-$(BUILD)/c/%.o: refs/fe7j/src/%.c config/c-integrated.json scripts/filter_c_sections.py
+$(BUILD)/c/%.o: refs/fe7j/src/%.c config/c-integrated.json scripts/filter_c_sections.py scripts/patch_relocs_from_rom.py
 	@mkdir -p $(@D)
 	$(CPP) -Irefs/fe7j/tools/agbcc/include -iquote refs/fe7j/include \
 		-iquote refs/fe7j -nostdinc -undef $< | \
@@ -49,13 +49,10 @@ $(BUILD)/c/%.o: refs/fe7j/src/%.c config/c-integrated.json scripts/filter_c_sect
 	python3 scripts/filter_c_sections.py --manifest config/c-integrated.json \
 		--file $* < $(BUILD)/c/$*.s > $(BUILD)/c/$*.keep.s
 	printf '.text\n\t.align\t2, 0\n' >> $(BUILD)/c/$*.keep.s
-	$(AS) -mcpu=arm7tdmi -I refs/fe7j/include $(BUILD)/c/$*.keep.s -o $(BUILD)/c/$*.tmp.o
-	arm-none-eabi-nm -u $(BUILD)/c/$*.tmp.o | \
-		python3 scripts/gen_symbol_defs.py > $(BUILD)/c/$*.defs.s
-	cat $(BUILD)/c/$*.defs.s $(BUILD)/c/$*.keep.s > $(BUILD)/c/$*.final.s
-	$(AS) -mcpu=arm7tdmi -I refs/fe7j/include $(BUILD)/c/$*.final.s -o $@
+	$(AS) -mcpu=arm7tdmi -I refs/fe7j/include $(BUILD)/c/$*.keep.s -o $@
+	python3 scripts/patch_relocs_from_rom.py --manifest config/c-integrated.json \
+		--rom rom/fe7eu.gba $@
 	$(STRIP) -N .gcc2_compiled. $@
-	@rm -f $(BUILD)/c/$*.tmp.o
 
 fe7eu.elf: $(OBJS) fe7eu.lds
 	$(LD) -T fe7eu.lds -o $@ $(OBJS)

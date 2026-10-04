@@ -5878,6 +5878,14 @@ SECTIONS
     .DummyIrqRoutine : AT(0xBBC) { build/c/irq.o(.text.DummyIrqRoutine) }
     . = 0x08000000 + 0xBC8;
     .fill_0002 : AT(0xBC8) { build/gen/fill_0002.o(.text) }
+    . = 0x08000000 + 0xBEC;
+    .NextRN : AT(0xBEC) { build/c/random.o(.text.NextRN) }
+    . = 0x08000000 + 0xCB4;
+    .RandInit : AT(0xCB4) { build/c/random.o(.text.RandInit) }
+    . = 0x08000000 + 0xD80;
+    .RandSetSt : AT(0xD80) { build/c/random.o(.text.RandSetSt) }
+    . = 0x08000000 + 0xDDC;
+    .RandGetSt : AT(0xDDC) { build/c/random.o(.text.RandGetSt) }
     . = 0x08000000 + 0xE10;
     .RandNext_100 : AT(0xE10) { build/c/random.o(.text.RandNext_100) }
     . = 0x08000000 + 0xE3C;
@@ -5888,26 +5896,78 @@ SECTIONS
     .RandRoll2Rn : AT(0xE90) { build/c/random.o(.text.RandRoll2Rn) }
     . = 0x08000000 + 0xECC;
     .fill_0003 : AT(0xECC) { build/gen/fill_0003.o(.text) }
+    . = 0x08000000 + 0xEE8;
+    .RandNextB : AT(0xEE8) { build/c/random.o(.text.RandNextB) }
+    . = 0x08000000 + 0xF20;
+    .fill_0004 : AT(0xF20) { build/gen/fill_0004.o(.text) }
+    . = 0x08000000 + 0xF54;
+    .IncGameTime : AT(0xF54) { build/c/hardware.o(.text.IncGameTime) }
+    . = 0x08000000 + 0xF8C;
+    .FormatTime : AT(0xF8C) { build/c/hardware.o(.text.FormatTime) }
+    . = 0x08000000 + 0x1008;
+    .fill_0005 : AT(0x1008) { build/gen/fill_0005.o(.text) }
+    . = 0x08000000 + 0x1090;
+    .ApplyPaletteExt : AT(0x1090) { build/c/hardware.o(.text.ApplyPaletteExt) }
+    . = 0x08000000 + 0x1100;
+    .sub_80010CC : AT(0x1100) { build/c/hardware.o(.text.sub_80010CC) }
+    . = 0x08000000 + 0x11BC;
+    .SyncDispIo : AT(0x11BC) { build/c/hardware.o(.text.SyncDispIo) }
+    . = 0x08000000 + 0x1354;
+    .fill_0006 : AT(0x1354) { build/gen/fill_0006.o(.text) }
+    . = 0x08000000 + 0x13A4;
+    .GetBgChrOffset : AT(0x13A4) { build/c/hardware.o(.text.GetBgChrOffset) }
     . = 0x08000000 + 0x13D8;
     .GetBgChrId : AT(0x13D8) { build/c/hardware.o(.text.GetBgChrId) }
     . = 0x08000000 + 0x140C;
-    .fill_0004 : AT(0x140C) { build/gen/fill_0004.o(.text) }
+    .GetBgTilemapOffset : AT(0x140C) { build/c/hardware.o(.text.GetBgTilemapOffset) }
+    . = 0x08000000 + 0x1440;
+    .SetBgChrOffset : AT(0x1440) { build/c/hardware.o(.text.SetBgChrOffset) }
+    . = 0x08000000 + 0x1484;
+    .SetBgTilemapOffset : AT(0x1484) { build/c/hardware.o(.text.SetBgTilemapOffset) }
+    . = 0x08000000 + 0x14E8;
+    .SetBgScreenSize : AT(0x14E8) { build/c/hardware.o(.text.SetBgScreenSize) }
+    . = 0x08000000 + 0x1524;
+    .SetBgBpp : AT(0x1524) { build/c/hardware.o(.text.SetBgBpp) }
+    . = 0x08000000 + 0x1568;
+    .ApplyColorAddition_ClampMax : AT(0x1568) { build/c/hardware.o(.text.ApplyColorAddition_ClampMax) }
+    . = 0x08000000 + 0x1630;
+    .ApplyColorAddition_ClampMin : AT(0x1630) { build/c/hardware.o(.text.ApplyColorAddition_ClampMin) }
+    . = 0x08000000 + 0x16F8;
+    .SyncBgsAndPal : AT(0x16F8) { build/c/hardware.o(.text.SyncBgsAndPal) }
+    . = 0x08000000 + 0x181C;
+    .TmFill : AT(0x181C) { build/c/hardware.o(.text.TmFill) }
     . = 0x08000000 + 0x184C;
     .SetBlankChr : AT(0x184C) { build/c/hardware.o(.text.SetBlankChr) }
     . = 0x08000000 + 0x1870;
-    .fill_0005 : AT(0x1870) { build/gen/fill_0005.o(.text) }
+    .SetOnVBlank : AT(0x1870) { build/c/hardware.o(.text.SetOnVBlank) }
+    . = 0x08000000 + 0x18DC;
+    .SetOnVMatch : AT(0x18DC) { build/c/hardware.o(.text.SetOnVMatch) }
     . = 0x08000000 + 0x1954;
     .SetNextVCount : AT(0x1954) { build/c/hardware.o(.text.SetNextVCount) }
     . = 0x08000000 + 0x199C;
-    .fill_0006 : AT(0x199C) { build/gen/fill_0006.o(.text) }
+    .SetVCount : AT(0x199C) { build/c/hardware.o(.text.SetVCount) }
+    . = 0x08000000 + 0x19C4;
+    .SetMainFunc : AT(0x19C4) { build/c/hardware.o(.text.SetMainFunc) }
+    . = 0x08000000 + 0x19E0;
+    .RunMainFunc : AT(0x19E0) { build/c/hardware.o(.text.RunMainFunc) }
     . = 0x08000000 + 0x1A00;
     .RefreshKeyStFromKeys : AT(0x1A00) { build/c/hardware.o(.text.RefreshKeyStFromKeys) }
     . = 0x08000000 + 0x1BD4;
-    .fill_0007 : AT(0x1BD4) { build/gen/fill_0007.o(.text) }
+    .RefreshKeySt : AT(0x1BD4) { build/c/hardware.o(.text.RefreshKeySt) }
     . = 0x08000000 + 0x1C28;
     .ClearKeySt : AT(0x1C28) { build/c/hardware.o(.text.ClearKeySt) }
     . = 0x08000000 + 0x1C5C;
-    .fill_0008 : AT(0x1C5C) { build/gen/fill_0008.o(.text) }
+    .InitKeySt : AT(0x1C5C) { build/c/hardware.o(.text.InitKeySt) }
+    . = 0x08000000 + 0x1CDC;
+    .fill_0007 : AT(0x1CDC) { build/gen/fill_0007.o(.text) }
+    . = 0x08000000 + 0x1CF8;
+    .KeyProcMain : AT(0x1CF8) { build/c/hardware.o(.text.KeyProcMain) }
+    . = 0x08000000 + 0x1D60;
+    .NewKeyStSetter : AT(0x1D60) { build/c/hardware.o(.text.NewKeyStSetter) }
+    . = 0x08000000 + 0x1D98;
+    .SetBgOffset : AT(0x1D98) { build/c/hardware.o(.text.SetBgOffset) }
+    . = 0x08000000 + 0x1EA0;
+    .fill_0008 : AT(0x1EA0) { build/gen/fill_0008.o(.text) }
     . = 0x08000000 + 0x1F08;
     .sub_8001ED4 : AT(0x1F08) { build/c/hardware.o(.text.sub_8001ED4) }
     . = 0x08000000 + 0x1F48;
@@ -5915,35 +5975,85 @@ SECTIONS
     . = 0x08000000 + 0x2024;
     .sub_8001FF0 : AT(0x2024) { build/c/hardware.o(.text.sub_8001FF0) }
     . = 0x08000000 + 0x20C8;
-    .fill_0009 : AT(0x20C8) { build/gen/fill_0009.o(.text) }
+    .ColorFadeInit : AT(0x20C8) { build/c/hardware.o(.text.ColorFadeInit) }
+    . = 0x08000000 + 0x2100;
+    .sub_80020CC : AT(0x2100) { build/c/hardware.o(.text.sub_80020CC) }
+    . = 0x08000000 + 0x2224;
+    .sub_80021F0 : AT(0x2224) { build/c/hardware.o(.text.sub_80021F0) }
+    . = 0x08000000 + 0x2344;
+    .sub_8002310 : AT(0x2344) { build/c/hardware.o(.text.sub_8002310) }
+    . = 0x08000000 + 0x2390;
+    .ColorFadeSetupFromColorToBlack : AT(0x2390) { build/c/hardware.o(.text.ColorFadeSetupFromColorToBlack) }
+    . = 0x08000000 + 0x24C8;
+    .ColorFadeSetupFromBlack : AT(0x24C8) { build/c/hardware.o(.text.ColorFadeSetupFromBlack) }
+    . = 0x08000000 + 0x25F0;
+    .ColorFadeSetupFromColorToWhite : AT(0x25F0) { build/c/hardware.o(.text.ColorFadeSetupFromColorToWhite) }
+    . = 0x08000000 + 0x2728;
+    .ColorFadeSetupFromWhite : AT(0x2728) { build/c/hardware.o(.text.ColorFadeSetupFromWhite) }
+    . = 0x08000000 + 0x2860;
+    .ColorFadeTick2 : AT(0x2860) { build/c/hardware.o(.text.ColorFadeTick2) }
+    . = 0x08000000 + 0x2A78;
+    .InitBgs : AT(0x2A78) { build/c/hardware.o(.text.InitBgs) }
+    . = 0x08000000 + 0x2BF4;
+    .GetBgTilemap : AT(0x2BF4) { build/c/hardware.o(.text.GetBgTilemap) }
+    . = 0x08000000 + 0x2C18;
+    .fill_0009 : AT(0x2C18) { build/gen/fill_0009.o(.text) }
     . = 0x08000000 + 0x2D54;
     .sub_8002C24 : AT(0x2D54) { build/c/hardware.o(.text.sub_8002C24) }
     . = 0x08000000 + 0x2DD4;
     .fill_0010 : AT(0x2DD4) { build/gen/fill_0010.o(.text) }
+    . = 0x08000000 + 0x2FE8;
+    .ClearMoveList : AT(0x2FE8) { build/c/move-data.o(.text.ClearMoveList) }
+    . = 0x08000000 + 0x3084;
+    .RegisterDataMove : AT(0x3084) { build/c/move-data.o(.text.RegisterDataMove) }
+    . = 0x08000000 + 0x3108;
+    .RegisterDataFill : AT(0x3108) { build/c/move-data.o(.text.RegisterDataFill) }
+    . = 0x08000000 + 0x3184;
+    .fill_0011 : AT(0x3184) { build/gen/fill_0011.o(.text) }
+    . = 0x08000000 + 0x3238;
+    .InitOam : AT(0x3238) { build/c/oam.o(.text.InitOam) }
+    . = 0x08000000 + 0x32D4;
+    .fill_0012 : AT(0x32D4) { build/gen/fill_0012.o(.text) }
+    . = 0x08000000 + 0x32EC;
+    .SyncHiOam : AT(0x32EC) { build/c/oam.o(.text.SyncHiOam) }
+    . = 0x08000000 + 0x3344;
+    .fill_0013 : AT(0x3344) { build/gen/fill_0013.o(.text) }
+    . = 0x08000000 + 0x3394;
+    .SetObjAffine : AT(0x3394) { build/c/oam.o(.text.SetObjAffine) }
+    . = 0x08000000 + 0x345C;
+    .fill_0014 : AT(0x345C) { build/gen/fill_0014.o(.text) }
     . = 0x08000000 + 0x34E8;
     .sound : AT(0x34E8) { build/asm/eu/sound.o(.text) }
     . = 0x08000000 + 0x4288;
     .ram_funcs : AT(0x4288) { build/asm/eu/ram-funcs.o(.text) }
     . = 0x08000000 + 0x442C;
-    .fill_0011 : AT(0x442C) { build/gen/fill_0011.o(.text) }
+    .Proc_Init : AT(0x442C) { build/c/proc.o(.text.Proc_Init) }
+    . = 0x08000000 + 0x44A0;
+    .Proc_Start : AT(0x44A0) { build/c/proc.o(.text.Proc_Start) }
     . = 0x08000000 + 0x4504;
     .Proc_StartBlocking : AT(0x4504) { build/c/proc.o(.text.Proc_StartBlocking) }
     . = 0x08000000 + 0x4534;
-    .fill_0012 : AT(0x4534) { build/gen/fill_0012.o(.text) }
+    .DeleteProcessRecursive : AT(0x4534) { build/c/proc.o(.text.DeleteProcessRecursive) }
     . = 0x08000000 + 0x4590;
     .Proc_End : AT(0x4590) { build/c/proc.o(.text.Proc_End) }
     . = 0x08000000 + 0x45A8;
-    .fill_0013 : AT(0x45A8) { build/gen/fill_0013.o(.text) }
+    .fill_0015 : AT(0x45A8) { build/gen/fill_0015.o(.text) }
     . = 0x08000000 + 0x45EC;
     .InsertChildProcess : AT(0x45EC) { build/c/proc.o(.text.InsertChildProcess) }
     . = 0x08000000 + 0x4604;
-    .fill_0014 : AT(0x4604) { build/gen/fill_0014.o(.text) }
+    .UnlinkProcess : AT(0x4604) { build/c/proc.o(.text.UnlinkProcess) }
+    . = 0x08000000 + 0x464C;
+    .RunProcessRecursive : AT(0x464C) { build/c/proc.o(.text.RunProcessRecursive) }
     . = 0x08000000 + 0x46A8;
     .Proc_Run : AT(0x46A8) { build/c/proc.o(.text.Proc_Run) }
     . = 0x08000000 + 0x46B8;
     .Proc_Break : AT(0x46B8) { build/c/proc.o(.text.Proc_Break) }
     . = 0x08000000 + 0x46C0;
-    .fill_0015 : AT(0x46C0) { build/gen/fill_0015.o(.text) }
+    .fill_0016 : AT(0x46C0) { build/gen/fill_0016.o(.text) }
+    . = 0x08000000 + 0x46E8;
+    .Proc_FindNonBlocked : AT(0x46E8) { build/c/proc.o(.text.Proc_FindNonBlocked) }
+    . = 0x08000000 + 0x4718;
+    .sub_80045D0 : AT(0x4718) { build/c/proc.o(.text.sub_80045D0) }
     . = 0x08000000 + 0x4748;
     .Proc_Goto : AT(0x4748) { build/c/proc.o(.text.Proc_Goto) }
     . = 0x08000000 + 0x4780;
@@ -5951,21 +6061,43 @@ SECTIONS
     . = 0x08000000 + 0x4788;
     .sub_800463C : AT(0x4788) { build/c/proc.o(.text.sub_800463C) }
     . = 0x08000000 + 0x4790;
-    .fill_0016 : AT(0x4790) { build/gen/fill_0016.o(.text) }
+    .fill_0017 : AT(0x4790) { build/gen/fill_0017.o(.text) }
+    . = 0x08000000 + 0x47E4;
+    .sub_8004698 : AT(0x47E4) { build/c/proc.o(.text.sub_8004698) }
+    . = 0x08000000 + 0x4810;
+    .Proc_BlockEachMarked : AT(0x4810) { build/c/proc.o(.text.Proc_BlockEachMarked) }
+    . = 0x08000000 + 0x4838;
+    .Proc_UnblockEachMarked : AT(0x4838) { build/c/proc.o(.text.Proc_UnblockEachMarked) }
+    . = 0x08000000 + 0x4864;
+    .Proc_EndEachMarked : AT(0x4864) { build/c/proc.o(.text.Proc_EndEachMarked) }
+    . = 0x08000000 + 0x4890;
+    .sub_807FB34 : AT(0x4890) { build/c/eventcall_0807F9EC.o(.text.sub_807FB34) }
+    . = 0x08000000 + 0x489C;
+    .fill_0018 : AT(0x489C) { build/gen/fill_0018.o(.text) }
     . = 0x08000000 + 0x48AC;
     .ClearNativeCallback : AT(0x48AC) { build/c/proc.o(.text.ClearNativeCallback) }
     . = 0x08000000 + 0x48B8;
-    .fill_0017 : AT(0x48B8) { build/gen/fill_0017.o(.text) }
+    .fill_0019 : AT(0x48B8) { build/gen/fill_0019.o(.text) }
+    . = 0x08000000 + 0x48C8;
+    .ForAllFollowingProcs : AT(0x48C8) { build/c/proc.o(.text.ForAllFollowingProcs) }
+    . = 0x08000000 + 0x48F0;
+    .sub_800479C : AT(0x48F0) { build/c/proc.o(.text.sub_800479C) }
     . = 0x08000000 + 0x490C;
     .sub_80047B8 : AT(0x490C) { build/c/proc.o(.text.sub_80047B8) }
     . = 0x08000000 + 0x4918;
     .sub_80047C4 : AT(0x4918) { build/c/proc.o(.text.sub_80047C4) }
     . = 0x08000000 + 0x4928;
-    .fill_0018 : AT(0x4928) { build/gen/fill_0018.o(.text) }
+    .sub_80047D4 : AT(0x4928) { build/c/proc.o(.text.sub_80047D4) }
+    . = 0x08000000 + 0x493C;
+    .sub_80047E8 : AT(0x493C) { build/c/proc.o(.text.sub_80047E8) }
+    . = 0x08000000 + 0x4954;
+    .sub_8004800 : AT(0x4954) { build/c/proc.o(.text.sub_8004800) }
+    . = 0x08000000 + 0x4974;
+    .sub_8004820 : AT(0x4974) { build/c/proc.o(.text.sub_8004820) }
     . = 0x08000000 + 0x49A0;
     .sub_800484C : AT(0x49A0) { build/c/proc.o(.text.sub_800484C) }
     . = 0x08000000 + 0x49B0;
-    .fill_0019 : AT(0x49B0) { build/gen/fill_0019.o(.text) }
+    .sub_800485C : AT(0x49B0) { build/c/proc.o(.text.sub_800485C) }
     . = 0x08000000 + 0x49CC;
     .sub_8004878 : AT(0x49CC) { build/c/proc.o(.text.sub_8004878) }
     . = 0x08000000 + 0x49E8;
@@ -5973,7 +6105,11 @@ SECTIONS
     . = 0x08000000 + 0x4A04;
     .sub_80048B0 : AT(0x4A04) { build/c/proc.o(.text.sub_80048B0) }
     . = 0x08000000 + 0x4A24;
-    .fill_0020 : AT(0x4A24) { build/gen/fill_0020.o(.text) }
+    .sub_80048D0 : AT(0x4A24) { build/c/proc.o(.text.sub_80048D0) }
+    . = 0x08000000 + 0x4A4C;
+    .sub_80048F8 : AT(0x4A4C) { build/c/proc.o(.text.sub_80048F8) }
+    . = 0x08000000 + 0x4A68;
+    .sub_8004914 : AT(0x4A68) { build/c/proc.o(.text.sub_8004914) }
     . = 0x08000000 + 0x4A84;
     .sub_8004930 : AT(0x4A84) { build/c/proc.o(.text.sub_8004930) }
     . = 0x08000000 + 0x4A90;
@@ -5989,97 +6125,299 @@ SECTIONS
     . = 0x08000000 + 0x4B0C;
     .sub_80049B4 : AT(0x4B0C) { build/c/proc.o(.text.sub_80049B4) }
     . = 0x08000000 + 0x4B18;
-    .fill_0021 : AT(0x4B18) { build/gen/fill_0021.o(.text) }
+    .fill_0020 : AT(0x4B18) { build/gen/fill_0020.o(.text) }
+    . = 0x08000000 + 0x4B1C;
+    .sub_80049C4 : AT(0x4B1C) { build/c/proc.o(.text.sub_80049C4) }
+    . = 0x08000000 + 0x4B5C;
+    .fill_0021 : AT(0x4B5C) { build/gen/fill_0021.o(.text) }
     . = 0x08000000 + 0x4B94;
     .sub_8004A3C : AT(0x4B94) { build/c/proc.o(.text.sub_8004A3C) }
     . = 0x08000000 + 0x4BA0;
     .fill_0022 : AT(0x4BA0) { build/gen/fill_0022.o(.text) }
+    . = 0x08000000 + 0x4C04;
+    .sub_8004AAC : AT(0x4C04) { build/c/proc.o(.text.sub_8004AAC) }
+    . = 0x08000000 + 0x4C3C;
+    .sub_8004AE4 : AT(0x4C3C) { build/c/proc.o(.text.sub_8004AE4) }
+    . = 0x08000000 + 0x4C70;
+    .fill_0023 : AT(0x4C70) { build/gen/fill_0023.o(.text) }
     . = 0x08000000 + 0x4C78;
     .sub_8004B20 : AT(0x4C78) { build/c/proc.o(.text.sub_8004B20) }
     . = 0x08000000 + 0x4C84;
     .sub_8004B2C : AT(0x4C84) { build/c/proc.o(.text.sub_8004B2C) }
     . = 0x08000000 + 0x4C90;
-    .fill_0023 : AT(0x4C90) { build/gen/fill_0023.o(.text) }
+    .fill_0024 : AT(0x4C90) { build/gen/fill_0024.o(.text) }
+    . = 0x08000000 + 0x4CF8;
+    .sub_8004BA0 : AT(0x4CF8) { build/c/proc.o(.text.sub_8004BA0) }
+    . = 0x08000000 + 0x4D20;
+    .fill_0025 : AT(0x4D20) { build/gen/fill_0025.o(.text) }
     . = 0x08000000 + 0x4DB8;
     .IconSlot2Chr : AT(0x4DB8) { build/c/icon.o(.text.IconSlot2Chr) }
     . = 0x08000000 + 0x4DCC;
-    .fill_0024 : AT(0x4DCC) { build/gen/fill_0024.o(.text) }
+    .GetNewIconSlot : AT(0x4DCC) { build/c/icon.o(.text.GetNewIconSlot) }
+    . = 0x08000000 + 0x4DF8;
+    .GetIconChr : AT(0x4DF8) { build/c/icon.o(.text.GetIconChr) }
     . = 0x08000000 + 0x4E64;
     .PutIcon : AT(0x4E64) { build/c/icon.o(.text.PutIcon) }
     . = 0x08000000 + 0x4EB4;
-    .fill_0025 : AT(0x4EB4) { build/gen/fill_0025.o(.text) }
+    .fill_0026 : AT(0x4EB4) { build/gen/fill_0026.o(.text) }
+    . = 0x08000000 + 0x4ED4;
+    .PutIconObjImg : AT(0x4ED4) { build/c/icon.o(.text.PutIconObjImg) }
     . = 0x08000000 + 0x4F34;
     .debug_text : AT(0x4F34) { build/asm/eu/debug-text.o(.text) }
     . = 0x08000000 + 0x53DC;
-    .fill_0026 : AT(0x53DC) { build/gen/fill_0026.o(.text) }
+    .fill_0027 : AT(0x53DC) { build/gen/fill_0027.o(.text) }
     . = 0x08000000 + 0x53F4;
     .text : AT(0x53F4) { build/asm/eu/text.o(.text) }
     . = 0x08000000 + 0x65BC;
-    .fill_0027 : AT(0x65BC) { build/gen/fill_0027.o(.text) }
+    .fill_0028 : AT(0x65BC) { build/gen/fill_0028.o(.text) }
+    . = 0x08000000 + 0x6664;
+    .AnimCreate_unused : AT(0x6664) { build/c/anime.o(.text.AnimCreate_unused) }
+    . = 0x08000000 + 0x66C4;
+    .AnimCreate : AT(0x66C4) { build/c/anime.o(.text.AnimCreate) }
+    . = 0x08000000 + 0x6728;
+    .AnimSort : AT(0x6728) { build/c/anime.o(.text.AnimSort) }
+    . = 0x08000000 + 0x6780;
+    .AnimDelete : AT(0x6780) { build/c/anime.o(.text.AnimDelete) }
     . = 0x08000000 + 0x67B0;
     .AnimDisplay : AT(0x67B0) { build/c/anime.o(.text.AnimDisplay) }
     . = 0x08000000 + 0x67BC;
-    .fill_0028 : AT(0x67BC) { build/gen/fill_0028.o(.text) }
+    .AnimInterpret : AT(0x67BC) { build/c/anime.o(.text.AnimInterpret) }
+    . = 0x08000000 + 0x693C;
+    .fill_0029 : AT(0x693C) { build/gen/fill_0029.o(.text) }
     . = 0x08000000 + 0x6984;
     .anim_drv : AT(0x6984) { build/asm/eu/anim-drv.o(.text) }
     . = 0x08000000 + 0x6AB0;
-    .fill_0029 : AT(0x6AB0) { build/gen/fill_0029.o(.text) }
+    .PutSpriteAffine : AT(0x6AB0) { build/c/sprite.o(.text.PutSpriteAffine) }
+    . = 0x08000000 + 0x6AE4;
+    .fill_0030 : AT(0x6AE4) { build/gen/fill_0030.o(.text) }
+    . = 0x08000000 + 0x6B98;
+    .PutSpriteLayerOam : AT(0x6B98) { build/c/sprite.o(.text.PutSpriteLayerOam) }
+    . = 0x08000000 + 0x6BC8;
+    .SpriteRefresher_OnIdle : AT(0x6BC8) { build/c/sprite.o(.text.SpriteRefresher_OnIdle) }
+    . = 0x08000000 + 0x6BF0;
+    .StartSpriteRefresher : AT(0x6BF0) { build/c/sprite.o(.text.StartSpriteRefresher) }
+    . = 0x08000000 + 0x6C34;
+    .fill_0031 : AT(0x6C34) { build/gen/fill_0031.o(.text) }
+    . = 0x08000000 + 0x6C68;
+    .InitFaces : AT(0x6C68) { build/c/face.o(.text.InitFaces) }
+    . = 0x08000000 + 0x6C84;
+    .fill_0032 : AT(0x6C84) { build/gen/fill_0032.o(.text) }
+    . = 0x08000000 + 0x6CFC;
+    .Face_OnIdle : AT(0x6CFC) { build/c/face.o(.text.Face_OnIdle) }
+    . = 0x08000000 + 0x6D40;
+    .StartFaceAuto : AT(0x6D40) { build/c/face.o(.text.StartFaceAuto) }
+    . = 0x08000000 + 0x6D6C;
+    .StartFace : AT(0x6D6C) { build/c/face.o(.text.StartFace) }
+    . = 0x08000000 + 0x6E68;
+    .fill_0033 : AT(0x6E68) { build/gen/fill_0033.o(.text) }
     . = 0x08000000 + 0x6EA0;
     .SetFaceDisp : AT(0x6EA0) { build/c/face.o(.text.SetFaceDisp) }
     . = 0x08000000 + 0x6EBC;
-    .fill_0030 : AT(0x6EBC) { build/gen/fill_0030.o(.text) }
+    .fill_0034 : AT(0x6EBC) { build/gen/fill_0034.o(.text) }
+    . = 0x08000000 + 0x6EF0;
+    .FaceRefreshSprite : AT(0x6EF0) { build/c/face.o(.text.FaceRefreshSprite) }
     . = 0x08000000 + 0x6FC4;
     .PutFaceTm : AT(0x6FC4) { build/c/face.o(.text.PutFaceTm) }
     . = 0x08000000 + 0x7054;
-    .fill_0031 : AT(0x7054) { build/gen/fill_0031.o(.text) }
+    .UnpackFaceChibiGraphics : AT(0x7054) { build/c/face.o(.text.UnpackFaceChibiGraphics) }
+    . = 0x08000000 + 0x70B8;
+    .PutFaceChibi : AT(0x70B8) { build/c/face.o(.text.PutFaceChibi) }
+    . = 0x08000000 + 0x70FC;
+    .UnpackFaceChibiSprGraphics : AT(0x70FC) { build/c/face.o(.text.UnpackFaceChibiSprGraphics) }
+    . = 0x08000000 + 0x7204;
+    .FaceChibiSpr_OnIdle : AT(0x7204) { build/c/face.o(.text.FaceChibiSpr_OnIdle) }
+    . = 0x08000000 + 0x7234;
+    .StartFaceChibiStr : AT(0x7234) { build/c/face.o(.text.StartFaceChibiStr) }
+    . = 0x08000000 + 0x7298;
+    .fill_0035 : AT(0x7298) { build/gen/fill_0035.o(.text) }
+    . = 0x08000000 + 0x72A8;
+    .PutFace80x72_Standard : AT(0x72A8) { build/c/face.o(.text.PutFace80x72_Standard) }
+    . = 0x08000000 + 0x72FC;
+    .PutFace80x72_Raised : AT(0x72FC) { build/c/face.o(.text.PutFace80x72_Raised) }
+    . = 0x08000000 + 0x7354;
+    .fill_0036 : AT(0x7354) { build/gen/fill_0036.o(.text) }
+    . = 0x08000000 + 0x7410;
+    .PutFace80x72_Core : AT(0x7410) { build/c/face.o(.text.PutFace80x72_Core) }
     . = 0x08000000 + 0x74D0;
     .BgFaceEyeBlink_Init : AT(0x74D0) { build/c/face.o(.text.BgFaceEyeBlink_Init) }
     . = 0x08000000 + 0x74DC;
-    .fill_0032 : AT(0x74DC) { build/gen/fill_0032.o(.text) }
+    .BgFaceEyeBlink_Delay : AT(0x74DC) { build/c/face.o(.text.BgFaceEyeBlink_Delay) }
+    . = 0x08000000 + 0x7504;
+    .fill_0037 : AT(0x7504) { build/gen/fill_0037.o(.text) }
+    . = 0x08000000 + 0x7604;
+    .PutFace80x72 : AT(0x7604) { build/c/face.o(.text.PutFace80x72) }
+    . = 0x08000000 + 0x7638;
+    .fill_0038 : AT(0x7638) { build/gen/fill_0038.o(.text) }
+    . = 0x08000000 + 0x765C;
+    .StartFaceFadeIn : AT(0x765C) { build/c/face.o(.text.StartFaceFadeIn) }
+    . = 0x08000000 + 0x76A4;
+    .StartFaceFadeOut : AT(0x76A4) { build/c/face.o(.text.StartFaceFadeOut) }
+    . = 0x08000000 + 0x76D8;
+    .GetFactionFaceImg : AT(0x76D8) { build/c/face.o(.text.GetFactionFaceImg) }
+    . = 0x08000000 + 0x7708;
+    .ApplyFactionFacePal : AT(0x7708) { build/c/face.o(.text.ApplyFactionFacePal) }
     . = 0x08000000 + 0x7740;
     .FaceMouth_Init : AT(0x7740) { build/c/face.o(.text.FaceMouth_Init) }
     . = 0x08000000 + 0x774C;
-    .fill_0033 : AT(0x774C) { build/gen/fill_0033.o(.text) }
+    .FaceMouth_Loop : AT(0x774C) { build/c/face.o(.text.FaceMouth_Loop) }
+    . = 0x08000000 + 0x78A0;
+    .PutFaceEyeSprite : AT(0x78A0) { build/c/face.o(.text.PutFaceEyeSprite) }
+    . = 0x08000000 + 0x79A8;
+    .FaceEye_Init : AT(0x79A8) { build/c/face.o(.text.FaceEye_Init) }
+    . = 0x08000000 + 0x79EC;
+    .FaceEye_Delay : AT(0x79EC) { build/c/face.o(.text.FaceEye_Delay) }
+    . = 0x08000000 + 0x7A24;
+    .fill_0039 : AT(0x7A24) { build/gen/fill_0039.o(.text) }
     . = 0x08000000 + 0x7A90;
     .FaceEye_InitDisplayFrame0 : AT(0x7A90) { build/c/face.o(.text.FaceEye_InitDisplayFrame0) }
     . = 0x08000000 + 0x7A98;
-    .fill_0034 : AT(0x7A98) { build/gen/fill_0034.o(.text) }
+    .FaceEye_DisplayFrame0 : AT(0x7A98) { build/c/face.o(.text.FaceEye_DisplayFrame0) }
     . = 0x08000000 + 0x7ACC;
     .FaceEye_InitDisplayFrame1 : AT(0x7ACC) { build/c/face.o(.text.FaceEye_InitDisplayFrame1) }
     . = 0x08000000 + 0x7AD4;
-    .fill_0035 : AT(0x7AD4) { build/gen/fill_0035.o(.text) }
+    .FaceEye_DisplayFrame1 : AT(0x7AD4) { build/c/face.o(.text.FaceEye_DisplayFrame1) }
     . = 0x08000000 + 0x7B08;
     .FaceEye_InitDisplayFrameFlip : AT(0x7B08) { build/c/face.o(.text.FaceEye_InitDisplayFrameFlip) }
     . = 0x08000000 + 0x7B10;
-    .fill_0036 : AT(0x7B10) { build/gen/fill_0036.o(.text) }
+    .fill_0040 : AT(0x7B10) { build/gen/fill_0040.o(.text) }
+    . = 0x08000000 + 0x7B84;
+    .SetFaceBlinkControl : AT(0x7B84) { build/c/face.o(.text.SetFaceBlinkControl) }
+    . = 0x08000000 + 0x7BA4;
+    .fill_0041 : AT(0x7BA4) { build/gen/fill_0041.o(.text) }
     . = 0x08000000 + 0x7C20;
     .SetFaceEyeState : AT(0x7C20) { build/c/face.o(.text.SetFaceEyeState) }
     . = 0x08000000 + 0x7C28;
-    .fill_0037 : AT(0x7C28) { build/gen/fill_0037.o(.text) }
+    .fill_0042 : AT(0x7C28) { build/gen/fill_0042.o(.text) }
+    . = 0x08000000 + 0x7CB4;
+    .sub_8007A00 : AT(0x7CB4) { build/c/face.o(.text.sub_8007A00) }
+    . = 0x08000000 + 0x7D10;
+    .StartBmFace : AT(0x7D10) { build/c/face.o(.text.StartBmFace) }
+    . = 0x08000000 + 0x7E34;
+    .fill_0043 : AT(0x7E34) { build/gen/fill_0043.o(.text) }
+    . = 0x08000000 + 0x7E48;
+    .sub_8007B94 : AT(0x7E48) { build/c/face.o(.text.sub_8007B94) }
+    . = 0x08000000 + 0x7E6C;
+    .sub_8007BB8 : AT(0x7E6C) { build/c/face.o(.text.sub_8007BB8) }
+    . = 0x08000000 + 0x7EC4;
+    .sub_8007C10 : AT(0x7EC4) { build/c/face.o(.text.sub_8007C10) }
+    . = 0x08000000 + 0x7EFC;
+    .fill_0044 : AT(0x7EFC) { build/gen/fill_0044.o(.text) }
+    . = 0x08000000 + 0x7F3C;
+    .InitTalk : AT(0x7F3C) { build/c/talk.o(.text.InitTalk) }
+    . = 0x08000000 + 0x7FDC;
+    .InitSpriteTalk : AT(0x7FDC) { build/c/talk.o(.text.InitSpriteTalk) }
+    . = 0x08000000 + 0x8094;
+    .fill_0045 : AT(0x8094) { build/gen/fill_0045.o(.text) }
+    . = 0x08000000 + 0x80BC;
+    .StartTalkExt : AT(0x80BC) { build/c/talk.o(.text.StartTalkExt) }
+    . = 0x08000000 + 0x8160;
+    .fill_0046 : AT(0x8160) { build/gen/fill_0046.o(.text) }
+    . = 0x08000000 + 0x8178;
+    .StartTalkMsg : AT(0x8178) { build/c/talk.o(.text.StartTalkMsg) }
+    . = 0x08000000 + 0x8198;
+    .StartTalkMsgExt : AT(0x8198) { build/c/talk.o(.text.StartTalkMsgExt) }
+    . = 0x08000000 + 0x81B8;
+    .fill_0047 : AT(0x81B8) { build/gen/fill_0047.o(.text) }
+    . = 0x08000000 + 0x833C;
+    .sub_8008074 : AT(0x833C) { build/c/talk.o(.text.sub_8008074) }
+    . = 0x08000000 + 0x8370;
+    .fill_0048 : AT(0x8370) { build/gen/fill_0048.o(.text) }
+    . = 0x08000000 + 0x84E4;
+    .sub_800821C : AT(0x84E4) { build/c/talk.o(.text.sub_800821C) }
+    . = 0x08000000 + 0x85D0;
+    .fill_0049 : AT(0x85D0) { build/gen/fill_0049.o(.text) }
+    . = 0x08000000 + 0x8F8C;
+    .sub_8008CC4 : AT(0x8F8C) { build/c/talk.o(.text.sub_8008CC4) }
+    . = 0x08000000 + 0x9070;
+    .fill_0050 : AT(0x9070) { build/gen/fill_0050.o(.text) }
+    . = 0x08000000 + 0x9090;
+    .sub_8008DC8 : AT(0x9090) { build/c/talk.o(.text.sub_8008DC8) }
+    . = 0x08000000 + 0x90C4;
+    .sub_8008DFC : AT(0x90C4) { build/c/talk.o(.text.sub_8008DFC) }
+    . = 0x08000000 + 0x9120;
+    .sub_8008E58 : AT(0x9120) { build/c/talk.o(.text.sub_8008E58) }
+    . = 0x08000000 + 0x9178;
+    .fill_0051 : AT(0x9178) { build/gen/fill_0051.o(.text) }
+    . = 0x08000000 + 0x9194;
+    .sub_8008ECC : AT(0x9194) { build/c/talk.o(.text.sub_8008ECC) }
+    . = 0x08000000 + 0x91EC;
+    .sub_8008F24 : AT(0x91EC) { build/c/talk.o(.text.sub_8008F24) }
+    . = 0x08000000 + 0x9248;
+    .sub_8008F80 : AT(0x9248) { build/c/talk.o(.text.sub_8008F80) }
+    . = 0x08000000 + 0x9348;
+    .fill_0052 : AT(0x9348) { build/gen/fill_0052.o(.text) }
     . = 0x08000000 + 0x9364;
     .sub_800909C : AT(0x9364) { build/c/talk.o(.text.sub_800909C) }
     . = 0x08000000 + 0x9388;
-    .fill_0038 : AT(0x9388) { build/gen/fill_0038.o(.text) }
+    .sub_80090C0 : AT(0x9388) { build/c/talk.o(.text.sub_80090C0) }
+    . = 0x08000000 + 0x9410;
+    .fill_0053 : AT(0x9410) { build/gen/fill_0053.o(.text) }
+    . = 0x08000000 + 0x9414;
+    .sub_800914C : AT(0x9414) { build/c/talk.o(.text.sub_800914C) }
+    . = 0x08000000 + 0x9440;
+    .sub_8009178 : AT(0x9440) { build/c/talk.o(.text.sub_8009178) }
+    . = 0x08000000 + 0x9474;
+    .sub_80091AC : AT(0x9474) { build/c/talk.o(.text.sub_80091AC) }
     . = 0x08000000 + 0x94E0;
     .sub_8009218 : AT(0x94E0) { build/c/talk.o(.text.sub_8009218) }
     . = 0x08000000 + 0x9524;
-    .fill_0039 : AT(0x9524) { build/gen/fill_0039.o(.text) }
+    .sub_800925C : AT(0x9524) { build/c/talk.o(.text.sub_800925C) }
+    . = 0x08000000 + 0x95D8;
+    .fill_0054 : AT(0x95D8) { build/gen/fill_0054.o(.text) }
+    . = 0x08000000 + 0x9724;
+    .sub_8009458 : AT(0x9724) { build/c/talk.o(.text.sub_8009458) }
+    . = 0x08000000 + 0x9818;
+    .fill_0055 : AT(0x9818) { build/gen/fill_0055.o(.text) }
+    . = 0x08000000 + 0x98F4;
+    .sub_8009628 : AT(0x98F4) { build/c/talk.o(.text.sub_8009628) }
+    . = 0x08000000 + 0x9958;
+    .sub_800968C : AT(0x9958) { build/c/talk.o(.text.sub_800968C) }
+    . = 0x08000000 + 0x99AC;
+    .sub_80096E0 : AT(0x99AC) { build/c/talk.o(.text.sub_80096E0) }
+    . = 0x08000000 + 0x9AE8;
+    .fill_0056 : AT(0x9AE8) { build/gen/fill_0056.o(.text) }
+    . = 0x08000000 + 0x9B00;
+    .sub_8009834 : AT(0x9B00) { build/c/talk.o(.text.sub_8009834) }
+    . = 0x08000000 + 0x9B6C;
+    .sub_80098A0 : AT(0x9B6C) { build/c/talk.o(.text.sub_80098A0) }
+    . = 0x08000000 + 0x9BE8;
+    .fill_0057 : AT(0x9BE8) { build/gen/fill_0057.o(.text) }
     . = 0x08000000 + 0x9D70;
     .sub_8009AA8 : AT(0x9D70) { build/c/talk.o(.text.sub_8009AA8) }
     . = 0x08000000 + 0x9EAC;
-    .fill_0040 : AT(0x9EAC) { build/gen/fill_0040.o(.text) }
+    .fill_0058 : AT(0x9EAC) { build/gen/fill_0058.o(.text) }
+    . = 0x08000000 + 0x9EB0;
+    .sub_8009BE8 : AT(0x9EB0) { build/c/talk.o(.text.sub_8009BE8) }
     . = 0x08000000 + 0x9F20;
     .sub_8009C58 : AT(0x9F20) { build/c/talk.o(.text.sub_8009C58) }
     . = 0x08000000 + 0x9F54;
-    .fill_0041 : AT(0x9F54) { build/gen/fill_0041.o(.text) }
+    .sub_8009C8C : AT(0x9F54) { build/c/talk.o(.text.sub_8009C8C) }
+    . = 0x08000000 + 0x9FD4;
+    .sub_8009D0C : AT(0x9FD4) { build/c/talk.o(.text.sub_8009D0C) }
+    . = 0x08000000 + 0xA038;
+    .fill_0059 : AT(0xA038) { build/gen/fill_0059.o(.text) }
+    . = 0x08000000 + 0xA08C;
+    .SetTalkFaceDisp : AT(0xA08C) { build/c/talk.o(.text.SetTalkFaceDisp) }
+    . = 0x08000000 + 0xA0E4;
+    .fill_0060 : AT(0xA0E4) { build/gen/fill_0060.o(.text) }
+    . = 0x08000000 + 0xA168;
+    .PrintStringToTexts : AT(0xA168) { build/c/talk.o(.text.PrintStringToTexts) }
+    . = 0x08000000 + 0xA1D4;
+    .TalkPutSpriteText_OnIdle : AT(0xA1D4) { build/c/talk.o(.text.TalkPutSpriteText_OnIdle) }
+    . = 0x08000000 + 0xA250;
+    .fill_0061 : AT(0xA250) { build/gen/fill_0061.o(.text) }
+    . = 0x08000000 + 0xA690;
+    .CleanTalkObjects : AT(0xA690) { build/c/talk-advance.o(.text.CleanTalkObjects) }
     . = 0x08000000 + 0xA6D8;
     .TalkAdvance_Init : AT(0xA6D8) { build/c/talk-advance.o(.text.TalkAdvance_Init) }
     . = 0x08000000 + 0xA6E0;
-    .fill_0042 : AT(0xA6E0) { build/gen/fill_0042.o(.text) }
+    .TalkAdvance_Loop : AT(0xA6E0) { build/c/talk-advance.o(.text.TalkAdvance_Loop) }
+    . = 0x08000000 + 0xA764;
+    .fill_0062 : AT(0xA764) { build/gen/fill_0062.o(.text) }
     . = 0x08000000 + 0xA864;
     .event_engine : AT(0xA864) { build/asm/eu/event-engine.o(.text) }
     . = 0x08000000 + 0xB5F0;
-    .fill_0043 : AT(0xB5F0) { build/gen/fill_0043.o(.text) }
+    .fill_0063 : AT(0xB5F0) { build/gen/fill_0063.o(.text) }
     . = 0x08000000 + 0xB618;
     .EvtCmd_Sleep : AT(0xB618) { build/c/eventscr.o(.text.EvtCmd_Sleep) }
     . = 0x08000000 + 0xB64C;
@@ -6087,43 +6425,77 @@ SECTIONS
     . = 0x08000000 + 0xB680;
     .EvtCmd_SleepText : AT(0xB680) { build/c/eventscr.o(.text.EvtCmd_SleepText) }
     . = 0x08000000 + 0xB6B4;
-    .fill_0044 : AT(0xB6B4) { build/gen/fill_0044.o(.text) }
+    .EvtCmd_Background : AT(0xB6B4) { build/c/eventscr.o(.text.EvtCmd_Background) }
+    . = 0x08000000 + 0xB714;
+    .fill_0064 : AT(0xB714) { build/gen/fill_0064.o(.text) }
+    . = 0x08000000 + 0xB798;
+    .EvtCmd_BackgroundRandom : AT(0xB798) { build/c/eventscr.o(.text.EvtCmd_BackgroundRandom) }
     . = 0x08000000 + 0xB7CC;
     .EvtCmd_BackgroundMore : AT(0xB7CC) { build/c/eventscr.o(.text.EvtCmd_BackgroundMore) }
     . = 0x08000000 + 0xB810;
-    .fill_0045 : AT(0xB810) { build/gen/fill_0045.o(.text) }
+    .EvtCmd_ClearTalk : AT(0xB810) { build/c/eventscr.o(.text.EvtCmd_ClearTalk) }
     . = 0x08000000 + 0xB85C;
     .EvtCmd_ClearSkip : AT(0xB85C) { build/c/eventscr.o(.text.EvtCmd_ClearSkip) }
     . = 0x08000000 + 0xB898;
-    .fill_0046 : AT(0xB898) { build/gen/fill_0046.o(.text) }
+    .EvtCmd_ClearSkipFadeToPrep : AT(0xB898) { build/c/eventscr.o(.text.EvtCmd_ClearSkipFadeToPrep) }
     . = 0x08000000 + 0xB92C;
     .EvtCmd_FadeFromOpening : AT(0xB92C) { build/c/eventscr.o(.text.EvtCmd_FadeFromOpening) }
     . = 0x08000000 + 0xB94C;
-    .fill_0047 : AT(0xB94C) { build/gen/fill_0047.o(.text) }
+    .DisplayBackground : AT(0xB94C) { build/c/eventscr.o(.text.DisplayBackground) }
+    . = 0x08000000 + 0xB9DC;
+    .DisplayBackgroundNoClear : AT(0xB9DC) { build/c/eventscr.o(.text.DisplayBackgroundNoClear) }
+    . = 0x08000000 + 0xBA68;
+    .fill_0065 : AT(0xBA68) { build/gen/fill_0065.o(.text) }
     . = 0x08000000 + 0xBBBC;
     .eventscr : AT(0xBBBC) { build/asm/eu/eventscr.o(.text) }
     . = 0x08000000 + 0x102E8;
-    .fill_0048 : AT(0x102E8) { build/gen/fill_0048.o(.text) }
+    .fill_0066 : AT(0x102E8) { build/gen/fill_0066.o(.text) }
     . = 0x08000000 + 0x103D8;
     .event_08010630 : AT(0x103D8) { build/asm/eu/event-08010630.o(.text) }
     . = 0x08000000 + 0x112E8;
-    .fill_0049 : AT(0x112E8) { build/gen/fill_0049.o(.text) }
+    .fill_0067 : AT(0x112E8) { build/gen/fill_0067.o(.text) }
+    . = 0x08000000 + 0x113B0;
+    .EventSnowStormfx_Init : AT(0x113B0) { build/c/eventscr_snowstormfx.o(.text.EventSnowStormfx_Init) }
+    . = 0x08000000 + 0x11470;
+    .EventSnowStormfx_Loop1 : AT(0x11470) { build/c/eventscr_snowstormfx.o(.text.EventSnowStormfx_Loop1) }
     . = 0x08000000 + 0x114F0;
     .EventSnowStormfx_Loop2 : AT(0x114F0) { build/c/eventscr_snowstormfx.o(.text.EventSnowStormfx_Loop2) }
     . = 0x08000000 + 0x11538;
-    .eventscr_snowstorm : AT(0x11538) { build/asm/eu/eventscr_snowstorm.o(.text) }
-    . = 0x08000000 + 0x1158C;
-    .fill_0050 : AT(0x1158C) { build/gen/fill_0050.o(.text) }
+    .EventSnowStormfx_Loop3 : AT(0x11538) { build/c/eventscr_snowstormfx.o(.text.EventSnowStormfx_Loop3) }
+    . = 0x08000000 + 0x115B4;
+    .fill_0068 : AT(0x115B4) { build/gen/fill_0068.o(.text) }
+    . = 0x08000000 + 0x115F4;
+    .EventDF_SnowStormfx : AT(0x115F4) { build/c/eventscr_snowstormfx.o(.text.EventDF_SnowStormfx) }
+    . = 0x08000000 + 0x11624;
+    .EventThunderfx_Init : AT(0x11624) { build/c/eventscr_thunderfx.o(.text.EventThunderfx_Init) }
+    . = 0x08000000 + 0x116C8;
+    .EventThunderfx_End : AT(0x116C8) { build/c/eventscr_thunderfx.o(.text.EventThunderfx_End) }
+    . = 0x08000000 + 0x116F8;
+    .EventE2_Thunderfx : AT(0x116F8) { build/c/eventscr_thunderfx.o(.text.EventE2_Thunderfx) }
+    . = 0x08000000 + 0x1172C;
+    .fill_0069 : AT(0x1172C) { build/gen/fill_0069.o(.text) }
+    . = 0x08000000 + 0x11748;
+    .NinianAppear_Init : AT(0x11748) { build/c/eventscr_niniandisp.o(.text.NinianAppear_Init) }
     . = 0x08000000 + 0x117C4;
     .NinianDisp_FadeIn_Unused : AT(0x117C4) { build/c/eventscr_niniandisp.o(.text.NinianDisp_FadeIn_Unused) }
     . = 0x08000000 + 0x117F8;
     .NinianDisp_FadeOut_Unused : AT(0x117F8) { build/c/eventscr_niniandisp.o(.text.NinianDisp_FadeOut_Unused) }
     . = 0x08000000 + 0x11828;
-    .fill_0051 : AT(0x11828) { build/gen/fill_0051.o(.text) }
+    .NinianDisp_AnimLoopEnd_Unused : AT(0x11828) { build/c/eventscr_niniandisp.o(.text.NinianDisp_AnimLoopEnd_Unused) }
+    . = 0x08000000 + 0x1184C;
+    .NinianAppear_Anim1 : AT(0x1184C) { build/c/eventscr_niniandisp.o(.text.NinianAppear_Anim1) }
+    . = 0x08000000 + 0x118AC;
+    .NinianAppear_LoopAnim1 : AT(0x118AC) { build/c/eventscr_niniandisp.o(.text.NinianAppear_LoopAnim1) }
     . = 0x08000000 + 0x119C8;
     .NinianAppear_EndAnim1 : AT(0x119C8) { build/c/eventscr_niniandisp.o(.text.NinianAppear_EndAnim1) }
     . = 0x08000000 + 0x119E4;
-    .fill_0052 : AT(0x119E4) { build/gen/fill_0052.o(.text) }
+    .NinianAppear_Anim2 : AT(0x119E4) { build/c/eventscr_niniandisp.o(.text.NinianAppear_Anim2) }
+    . = 0x08000000 + 0x11A38;
+    .NinianAppear_LoadUnit : AT(0x11A38) { build/c/eventscr_niniandisp.o(.text.NinianAppear_LoadUnit) }
+    . = 0x08000000 + 0x11A7C;
+    .NinianAppear_End : AT(0x11A7C) { build/c/eventscr_niniandisp.o(.text.NinianAppear_End) }
+    . = 0x08000000 + 0x11AAC;
+    .EventE4_NinianDisplay : AT(0x11AAC) { build/c/eventscr_niniandisp.o(.text.EventE4_NinianDisplay) }
     . = 0x08000000 + 0x11B00;
     .ScreenFlash_Init : AT(0x11B00) { build/c/eventscr_screenflashfx.o(.text.ScreenFlash_Init) }
     . = 0x08000000 + 0x11B10;
@@ -6131,43 +6503,51 @@ SECTIONS
     . = 0x08000000 + 0x11BC4;
     .ScreenFlash_FadeOut : AT(0x11BC4) { build/c/eventscr_screenflashfx.o(.text.ScreenFlash_FadeOut) }
     . = 0x08000000 + 0x11C20;
-    .fill_0053 : AT(0x11C20) { build/gen/fill_0053.o(.text) }
+    .StartScreenFlashing : AT(0x11C20) { build/c/eventscr_screenflashfx.o(.text.StartScreenFlashing) }
+    . = 0x08000000 + 0x11C5C;
+    .EventE3_ScreenFlashing : AT(0x11C5C) { build/c/eventscr_screenflashfx.o(.text.EventE3_ScreenFlashing) }
     . = 0x08000000 + 0x11CC8;
     .EventFadefx_Init : AT(0x11CC8) { build/c/eventscr_fadefx.o(.text.EventFadefx_Init) }
     . = 0x08000000 + 0x11CD0;
     .EventFadefx_Loop : AT(0x11CD0) { build/c/eventscr_fadefx.o(.text.EventFadefx_Loop) }
     . = 0x08000000 + 0x11D40;
-    .fill_0054 : AT(0x11D40) { build/gen/fill_0054.o(.text) }
+    .NewEventFadefx : AT(0x11D40) { build/c/eventscr_fadefx.o(.text.NewEventFadefx) }
     . = 0x08000000 + 0x11D94;
     .EventE5_FadeSteps : AT(0x11D94) { build/c/eventscr_fadefx.o(.text.EventE5_FadeSteps) }
     . = 0x08000000 + 0x11DE0;
     .EventE6_StartFade : AT(0x11DE0) { build/c/eventscr_fadefx.o(.text.EventE6_StartFade) }
     . = 0x08000000 + 0x11DEC;
-    .fill_0055 : AT(0x11DEC) { build/gen/fill_0055.o(.text) }
+    .EventE7_EndFade : AT(0x11DEC) { build/c/eventscr_fadefx.o(.text.EventE7_EndFade) }
+    . = 0x08000000 + 0x11E04;
+    .EventSpriteAnim_Init : AT(0x11E04) { build/c/eventscr_spriteanim.o(.text.EventSpriteAnim_Init) }
+    . = 0x08000000 + 0x11E6C;
+    .EventSpriteAnim_Loop : AT(0x11E6C) { build/c/eventscr_spriteanim.o(.text.EventSpriteAnim_Loop) }
     . = 0x08000000 + 0x11EBC;
     .EventSpriteAnim_End : AT(0x11EBC) { build/c/eventscr_spriteanim.o(.text.EventSpriteAnim_End) }
     . = 0x08000000 + 0x11ECC;
-    .fill_0056 : AT(0x11ECC) { build/gen/fill_0056.o(.text) }
+    .fill_0070 : AT(0x11ECC) { build/gen/fill_0070.o(.text) }
     . = 0x08000000 + 0x11FC0;
     .eventscr_08012378 : AT(0x11FC0) { build/asm/eu/eventscr_08012378.o(.text) }
     . = 0x08000000 + 0x12238;
-    .fill_0057 : AT(0x12238) { build/gen/fill_0057.o(.text) }
+    .fill_0071 : AT(0x12238) { build/gen/fill_0071.o(.text) }
+    . = 0x08000000 + 0x12254;
+    .StartSpriteAnim : AT(0x12254) { build/c/sprite-anim.o(.text.StartSpriteAnim) }
     . = 0x08000000 + 0x1227C;
     .EndSpriteAnim : AT(0x1227C) { build/c/sprite-anim.o(.text.EndSpriteAnim) }
     . = 0x08000000 + 0x12294;
     .DisplaySpriteAnim : AT(0x12294) { build/c/sprite-anim.o(.text.DisplaySpriteAnim) }
     . = 0x08000000 + 0x122BC;
-    .fill_0058 : AT(0x122BC) { build/gen/fill_0058.o(.text) }
+    .PutAnim : AT(0x122BC) { build/c/sprite-anim.o(.text.PutAnim) }
     . = 0x08000000 + 0x12318;
     .ExecAnim : AT(0x12318) { build/c/sprite-anim.o(.text.ExecAnim) }
     . = 0x08000000 + 0x12408;
-    .fill_0059 : AT(0x12408) { build/gen/fill_0059.o(.text) }
+    .PutAnimAffine : AT(0x12408) { build/c/sprite-anim.o(.text.PutAnimAffine) }
     . = 0x08000000 + 0x124F0;
     .SetSpriteAnimId : AT(0x124F0) { build/c/sprite-anim.o(.text.SetSpriteAnimId) }
     . = 0x08000000 + 0x12520;
     .SetSpriteAnimInfo : AT(0x12520) { build/c/sprite-anim.o(.text.SetSpriteAnimInfo) }
     . = 0x08000000 + 0x12540;
-    .fill_0060 : AT(0x12540) { build/gen/fill_0060.o(.text) }
+    .SyncAnimImg : AT(0x12540) { build/c/sprite-anim.o(.text.SyncAnimImg) }
     . = 0x08000000 + 0x1264C;
     .SetAnimInfo : AT(0x1264C) { build/c/sprite-anim.o(.text.SetAnimInfo) }
     . = 0x08000000 + 0x12670;
@@ -6175,55 +6555,149 @@ SECTIONS
     . = 0x08000000 + 0x12690;
     .InitAnim : AT(0x12690) { build/c/sprite-anim.o(.text.InitAnim) }
     . = 0x08000000 + 0x126C8;
-    .fill_0061 : AT(0x126C8) { build/gen/fill_0061.o(.text) }
+    .fill_0072 : AT(0x126C8) { build/gen/fill_0072.o(.text) }
+    . = 0x08000000 + 0x126F0;
+    .StartSpriteAnimProc : AT(0x126F0) { build/c/sprite-anim.o(.text.StartSpriteAnimProc) }
     . = 0x08000000 + 0x12738;
     .AnimProc_Update : AT(0x12738) { build/c/sprite-anim.o(.text.AnimProc_Update) }
     . = 0x08000000 + 0x12764;
-    .fill_0062 : AT(0x12764) { build/gen/fill_0062.o(.text) }
+    .fill_0073 : AT(0x12764) { build/gen/fill_0073.o(.text) }
     . = 0x08000000 + 0x12770;
     .SetSpriteAnimProcParameters : AT(0x12770) { build/c/sprite-anim.o(.text.SetSpriteAnimProcParameters) }
     . = 0x08000000 + 0x1278C;
     .EndSpriteAnimProc : AT(0x1278C) { build/c/sprite-anim.o(.text.EndSpriteAnimProc) }
     . = 0x08000000 + 0x12798;
-    .fill_0063 : AT(0x12798) { build/gen/fill_0063.o(.text) }
+    .fill_0074 : AT(0x12798) { build/gen/fill_0074.o(.text) }
+    . = 0x08000000 + 0x12864;
+    .GC_StartClassReel : AT(0x12864) { build/c/game-ctrl.o(.text.GC_StartClassReel) }
+    . = 0x08000000 + 0x12880;
+    .fill_0075 : AT(0x12880) { build/gen/fill_0075.o(.text) }
+    . = 0x08000000 + 0x128A4;
+    .GC_InitSramResetScreen : AT(0x128A4) { build/c/game-ctrl.o(.text.GC_InitSramResetScreen) }
     . = 0x08000000 + 0x128D8;
     .GC_InitFastStartCheck : AT(0x128D8) { build/c/game-ctrl.o(.text.GC_InitFastStartCheck) }
     . = 0x08000000 + 0x128E0;
-    .fill_0064 : AT(0x128E0) { build/gen/fill_0064.o(.text) }
+    .fill_0076 : AT(0x128E0) { build/gen/fill_0076.o(.text) }
     . = 0x08000000 + 0x12964;
     .EndProcIfNotMarkedB : AT(0x12964) { build/c/game-ctrl.o(.text.EndProcIfNotMarkedB) }
     . = 0x08000000 + 0x1297C;
-    .fill_0065 : AT(0x1297C) { build/gen/fill_0065.o(.text) }
+    .fill_0077 : AT(0x1297C) { build/gen/fill_0077.o(.text) }
+    . = 0x08000000 + 0x129B4;
+    .GC_RestoreMainBGM : AT(0x129B4) { build/c/game-ctrl.o(.text.GC_RestoreMainBGM) }
+    . = 0x08000000 + 0x129D0;
+    .sub_8012DB4 : AT(0x129D0) { build/c/game-ctrl.o(.text.sub_8012DB4) }
     . = 0x08000000 + 0x129E4;
     .GC_PostIntro : AT(0x129E4) { build/c/game-ctrl.o(.text.GC_PostIntro) }
     . = 0x08000000 + 0x12A5C;
     .sub_8012E40 : AT(0x12A5C) { build/c/game-ctrl.o(.text.sub_8012E40) }
     . = 0x08000000 + 0x12A80;
-    .fill_0066 : AT(0x12A80) { build/gen/fill_0066.o(.text) }
+    .fill_0078 : AT(0x12A80) { build/gen/fill_0078.o(.text) }
     . = 0x08000000 + 0x12B48;
     .sub_8012F2C : AT(0x12B48) { build/c/game-ctrl.o(.text.sub_8012F2C) }
     . = 0x08000000 + 0x12B60;
-    .fill_0067 : AT(0x12B60) { build/gen/fill_0067.o(.text) }
+    .fill_0079 : AT(0x12B60) { build/gen/fill_0079.o(.text) }
     . = 0x08000000 + 0x12B6C;
     .sub_8012F50 : AT(0x12B6C) { build/c/game-ctrl.o(.text.sub_8012F50) }
     . = 0x08000000 + 0x12B88;
-    .fill_0068 : AT(0x12B88) { build/gen/fill_0068.o(.text) }
+    .sub_8012F6C : AT(0x12B88) { build/c/game-ctrl.o(.text.sub_8012F6C) }
+    . = 0x08000000 + 0x12BCC;
+    .fill_0080 : AT(0x12BCC) { build/gen/fill_0080.o(.text) }
+    . = 0x08000000 + 0x12C50;
+    .GC_PostLoadSuspend : AT(0x12C50) { build/c/game-ctrl.o(.text.GC_PostLoadSuspend) }
+    . = 0x08000000 + 0x12C7C;
+    .fill_0081 : AT(0x12C7C) { build/gen/fill_0081.o(.text) }
+    . = 0x08000000 + 0x12CCC;
+    .GC_DarkenScreen : AT(0x12CCC) { build/c/game-ctrl.o(.text.GC_DarkenScreen) }
+    . = 0x08000000 + 0x12D0C;
+    .fill_0082 : AT(0x12D0C) { build/gen/fill_0082.o(.text) }
+    . = 0x08000000 + 0x12DE4;
+    .SetNextGameAction : AT(0x12DE4) { build/c/game-ctrl.o(.text.SetNextGameAction) }
+    . = 0x08000000 + 0x12DF8;
+    .SetNextChapterId : AT(0x12DF8) { build/c/game-ctrl.o(.text.SetNextChapterId) }
+    . = 0x08000000 + 0x12E0C;
+    .HasNextChapter : AT(0x12E0C) { build/c/game-ctrl.o(.text.HasNextChapter) }
+    . = 0x08000000 + 0x12E20;
+    .fill_0083 : AT(0x12E20) { build/gen/fill_0083.o(.text) }
+    . = 0x08000000 + 0x12EA8;
+    .sub_80132C8 : AT(0x12EA8) { build/c/game-ctrl.o(.text.sub_80132C8) }
+    . = 0x08000000 + 0x12EF8;
+    .fill_0084 : AT(0x12EF8) { build/gen/fill_0084.o(.text) }
     . = 0x08000000 + 0x12F5C;
     .msg : AT(0x12F5C) { build/asm/eu/msg.o(.text) }
     . = 0x08000000 + 0x13070;
-    .fill_0069 : AT(0x13070) { build/gen/fill_0069.o(.text) }
+    .fill_0085 : AT(0x13070) { build/gen/fill_0085.o(.text) }
     . = 0x08000000 + 0x13350;
     .utils : AT(0x13350) { build/asm/eu/utils.o(.text) }
     . = 0x08000000 + 0x154F4;
-    .fill_0070 : AT(0x154F4) { build/gen/fill_0070.o(.text) }
+    .fill_0086 : AT(0x154F4) { build/gen/fill_0086.o(.text) }
+    . = 0x08000000 + 0x15644;
+    .BmMain_ChangePhase : AT(0x15644) { build/c/bm.o(.text.BmMain_ChangePhase) }
     . = 0x08000000 + 0x1566C;
     .sub_8015840 : AT(0x1566C) { build/c/bm.o(.text.sub_8015840) }
     . = 0x08000000 + 0x15688;
-    .fill_0071 : AT(0x15688) { build/gen/fill_0071.o(.text) }
+    .fill_0087 : AT(0x15688) { build/gen/fill_0087.o(.text) }
+    . = 0x08000000 + 0x157C8;
+    .InitBmBgLayers : AT(0x157C8) { build/c/bm.o(.text.InitBmBgLayers) }
+    . = 0x08000000 + 0x15840;
+    .fill_0088 : AT(0x15840) { build/gen/fill_0088.o(.text) }
+    . = 0x08000000 + 0x158DC;
+    .HandleMapCursorInput : AT(0x158DC) { build/c/bm.o(.text.HandleMapCursorInput) }
+    . = 0x08000000 + 0x15A04;
+    .HandleMoveMapCursor : AT(0x15A04) { build/c/bm.o(.text.HandleMoveMapCursor) }
+    . = 0x08000000 + 0x15A58;
+    .HandleMoveCameraWithMapCursor : AT(0x15A58) { build/c/bm.o(.text.HandleMoveCameraWithMapCursor) }
+    . = 0x08000000 + 0x15B84;
+    .GetCameraAdjustedX : AT(0x15B84) { build/c/bm.o(.text.GetCameraAdjustedX) }
+    . = 0x08000000 + 0x15BC8;
+    .GetCameraAdjustedY : AT(0x15BC8) { build/c/bm.o(.text.GetCameraAdjustedY) }
+    . = 0x08000000 + 0x15C0C;
+    .GetCameraCenteredX : AT(0x15C0C) { build/c/bm.o(.text.GetCameraCenteredX) }
+    . = 0x08000000 + 0x15C38;
+    .GetCameraCenteredY : AT(0x15C38) { build/c/bm.o(.text.GetCameraCenteredY) }
+    . = 0x08000000 + 0x15C64;
+    .fill_0089 : AT(0x15C64) { build/gen/fill_0089.o(.text) }
+    . = 0x08000000 + 0x15D54;
+    .DisplayBmTextShadow : AT(0x15D54) { build/c/bm.o(.text.DisplayBmTextShadow) }
+    . = 0x08000000 + 0x15D88;
+    .fill_0090 : AT(0x15D88) { build/gen/fill_0090.o(.text) }
+    . = 0x08000000 + 0x15DA0;
+    .PutSysArrow : AT(0x15DA0) { build/c/bm.o(.text.PutSysArrow) }
+    . = 0x08000000 + 0x15DE8;
+    .CamMove_Init : AT(0x15DE8) { build/c/bm.o(.text.CamMove_Init) }
+    . = 0x08000000 + 0x15E7C;
+    .CamMove_OnLoop : AT(0x15E7C) { build/c/bm.o(.text.CamMove_OnLoop) }
+    . = 0x08000000 + 0x15EFC;
+    .StoreAdjustedCameraPositions : AT(0x15EFC) { build/c/bm.o(.text.StoreAdjustedCameraPositions) }
+    . = 0x08000000 + 0x15F50;
+    .EnsureCameraOntoCenteredPosition : AT(0x15F50) { build/c/bm.o(.text.EnsureCameraOntoCenteredPosition) }
+    . = 0x08000000 + 0x15FD8;
+    .EnsureCameraOntoPosition : AT(0x15FD8) { build/c/bm.o(.text.EnsureCameraOntoPosition) }
+    . = 0x08000000 + 0x16068;
+    .IsCameraNotWatchingPosition : AT(0x16068) { build/c/bm.o(.text.IsCameraNotWatchingPosition) }
+    . = 0x08000000 + 0x160A8;
+    .fill_0091 : AT(0x160A8) { build/gen/fill_0091.o(.text) }
+    . = 0x08000000 + 0x1610C;
+    .UnkMapCursor_OnLoop : AT(0x1610C) { build/c/bm.o(.text.UnkMapCursor_OnLoop) }
+    . = 0x08000000 + 0x1615C;
+    .fill_0092 : AT(0x1615C) { build/gen/fill_0092.o(.text) }
+    . = 0x08000000 + 0x16290;
+    .sub_8016410 : AT(0x16290) { build/c/bm.o(.text.sub_8016410) }
+    . = 0x08000000 + 0x162EC;
+    .fill_0093 : AT(0x162EC) { build/gen/fill_0093.o(.text) }
     . = 0x08000000 + 0x162F0;
     .item : AT(0x162F0) { build/asm/eu/item.o(.text) }
     . = 0x08000000 + 0x178C0;
-    .fill_0072 : AT(0x178C0) { build/gen/fill_0072.o(.text) }
+    .InitUnits : AT(0x178C0) { build/c/unit.o(.text.InitUnits) }
+    . = 0x08000000 + 0x178F0;
+    .ClearUnit : AT(0x178F0) { build/c/unit.o(.text.ClearUnit) }
+    . = 0x08000000 + 0x17918;
+    .CopyUnit : AT(0x17918) { build/c/unit.o(.text.CopyUnit) }
+    . = 0x08000000 + 0x17934;
+    .GetFreeUnit : AT(0x17934) { build/c/unit.o(.text.GetFreeUnit) }
+    . = 0x08000000 + 0x1796C;
+    .GetFreeBlueUnit : AT(0x1796C) { build/c/unit.o(.text.GetFreeBlueUnit) }
+    . = 0x08000000 + 0x179A4;
+    .GetUnitFogViewRange : AT(0x179A4) { build/c/unit.o(.text.GetUnitFogViewRange) }
     . = 0x08000000 + 0x179D4;
     .SetUnitStatus : AT(0x179D4) { build/c/unit.o(.text.SetUnitStatus) }
     . = 0x08000000 + 0x179F0;
@@ -6245,55 +6719,115 @@ SECTIONS
     . = 0x08000000 + 0x17B50;
     .sub_8017B44 : AT(0x17B50) { build/c/unit.o(.text.sub_8017B44) }
     . = 0x08000000 + 0x17B88;
-    .fill_0073 : AT(0x17B88) { build/gen/fill_0073.o(.text) }
+    .LoadUnit : AT(0x17B88) { build/c/unit.o(.text.LoadUnit) }
+    . = 0x08000000 + 0x17C6C;
+    .UnitInitFromDefinition : AT(0x17C6C) { build/c/unit.o(.text.UnitInitFromDefinition) }
+    . = 0x08000000 + 0x17CF8;
+    .UnitLoadItemsFromDefinition : AT(0x17CF8) { build/c/unit.o(.text.UnitLoadItemsFromDefinition) }
     . = 0x08000000 + 0x17D34;
     .UnitLoadStatsFromChracter : AT(0x17D34) { build/c/unit.o(.text.UnitLoadStatsFromChracter) }
     . = 0x08000000 + 0x17DC4;
-    .fill_0074 : AT(0x17DC4) { build/gen/fill_0074.o(.text) }
+    .FixROMUnitStructPtr : AT(0x17DC4) { build/c/unit.o(.text.FixROMUnitStructPtr) }
     . = 0x08000000 + 0x17DFC;
     .UnitLoadSupports : AT(0x17DFC) { build/c/unit.o(.text.UnitLoadSupports) }
     . = 0x08000000 + 0x17E28;
-    .fill_0075 : AT(0x17E28) { build/gen/fill_0075.o(.text) }
+    .UnitAutolevelWExp : AT(0x17E28) { build/c/unit.o(.text.UnitAutolevelWExp) }
     . = 0x08000000 + 0x17ECC;
     .UnitAutolevelCore : AT(0x17ECC) { build/c/unit.o(.text.UnitAutolevelCore) }
     . = 0x08000000 + 0x17F58;
-    .fill_0076 : AT(0x17F58) { build/gen/fill_0076.o(.text) }
+    .UnitApplyBonusLevels : AT(0x17F58) { build/c/unit.o(.text.UnitApplyBonusLevels) }
+    . = 0x08000000 + 0x17F8C;
+    .UnitAutolevel : AT(0x17F8C) { build/c/unit.o(.text.UnitAutolevel) }
     . = 0x08000000 + 0x17FCC;
     .UnitAutolevelPlayer : AT(0x17FCC) { build/c/unit.o(.text.UnitAutolevelPlayer) }
     . = 0x08000000 + 0x18070;
     .UnitCheckStatCaps : AT(0x18070) { build/c/unit.o(.text.UnitCheckStatCaps) }
     . = 0x08000000 + 0x18144;
-    .fill_0077 : AT(0x18144) { build/gen/fill_0077.o(.text) }
+    .GetUnitFromCharId : AT(0x18144) { build/c/unit.o(.text.GetUnitFromCharId) }
+    . = 0x08000000 + 0x18180;
+    .GetUnitFromCharIdAndFaction : AT(0x18180) { build/c/unit.o(.text.GetUnitFromCharIdAndFaction) }
     . = 0x08000000 + 0x181C4;
     .CanUnitRescue : AT(0x181C4) { build/c/unit.o(.text.CanUnitRescue) }
     . = 0x08000000 + 0x181F4;
     .UnitRescue : AT(0x181F4) { build/c/unit.o(.text.UnitRescue) }
     . = 0x08000000 + 0x18218;
-    .fill_0078 : AT(0x18218) { build/gen/fill_0078.o(.text) }
+    .UnitDrop : AT(0x18218) { build/c/unit.o(.text.UnitDrop) }
+    . = 0x08000000 + 0x18270;
+    .UnitGive : AT(0x18270) { build/c/unit.o(.text.UnitGive) }
     . = 0x08000000 + 0x182A4;
     .UnitKill : AT(0x182A4) { build/c/unit.o(.text.UnitKill) }
     . = 0x08000000 + 0x182CC;
-    .fill_0079 : AT(0x182CC) { build/gen/fill_0079.o(.text) }
+    .UnitChangeFaction : AT(0x182CC) { build/c/unit.o(.text.UnitChangeFaction) }
+    . = 0x08000000 + 0x18338;
+    .UnitSyncMovement : AT(0x18338) { build/c/unit.o(.text.UnitSyncMovement) }
+    . = 0x08000000 + 0x1837C;
+    .UnitGetDeathDropLocation : AT(0x1837C) { build/c/unit.o(.text.UnitGetDeathDropLocation) }
+    . = 0x08000000 + 0x184F8;
+    .UnitBeginAction : AT(0x184F8) { build/c/unit.o(.text.UnitBeginAction) }
+    . = 0x08000000 + 0x18570;
+    .UnitBeginCantoAction : AT(0x18570) { build/c/unit.o(.text.UnitBeginCantoAction) }
+    . = 0x08000000 + 0x185DC;
+    .MoveActiveUnit : AT(0x185DC) { build/c/unit.o(.text.MoveActiveUnit) }
+    . = 0x08000000 + 0x18674;
+    .ClearActiveFactionGrayedStates : AT(0x18674) { build/c/unit.o(.text.ClearActiveFactionGrayedStates) }
+    . = 0x08000000 + 0x1870C;
+    .TickActiveFactionTurn : AT(0x1870C) { build/c/unit.o(.text.TickActiveFactionTurn) }
+    . = 0x08000000 + 0x18800;
+    .SetAllUnitNotBackSprite : AT(0x18800) { build/c/unit.o(.text.SetAllUnitNotBackSprite) }
+    . = 0x08000000 + 0x18838;
+    .UnitUpdateUsedItem : AT(0x18838) { build/c/unit.o(.text.UnitUpdateUsedItem) }
     . = 0x08000000 + 0x1885C;
     .GetUnitAid : AT(0x1885C) { build/c/unit.o(.text.GetUnitAid) }
     . = 0x08000000 + 0x188C0;
-    .fill_0080 : AT(0x188C0) { build/gen/fill_0080.o(.text) }
+    .GetUnitMagRange : AT(0x188C0) { build/c/unit.o(.text.GetUnitMagRange) }
     . = 0x08000000 + 0x188E8;
     .UnitHasMagicRank : AT(0x188E8) { build/c/unit.o(.text.UnitHasMagicRank) }
     . = 0x08000000 + 0x1890C;
     .sub_80188F4 : AT(0x1890C) { build/c/unit.o(.text.sub_80188F4) }
     . = 0x08000000 + 0x1892C;
-    .fill_0081 : AT(0x1892C) { build/gen/fill_0081.o(.text) }
+    .GetUnitKeyItemSlotForTerrain : AT(0x1892C) { build/c/unit.o(.text.GetUnitKeyItemSlotForTerrain) }
     . = 0x08000000 + 0x18980;
     .GetUnitAidIconId : AT(0x18980) { build/c/unit.o(.text.GetUnitAidIconId) }
     . = 0x08000000 + 0x189B8;
-    .fill_0082 : AT(0x189B8) { build/gen/fill_0082.o(.text) }
+    .GetUnitWeaponUsabilityBits : AT(0x189B8) { build/c/unit.o(.text.GetUnitWeaponUsabilityBits) }
+    . = 0x08000000 + 0x18A30;
+    .GetCombinedEnemyWeaponUsabilityBits : AT(0x18A30) { build/c/unit.o(.text.GetCombinedEnemyWeaponUsabilityBits) }
+    . = 0x08000000 + 0x18A68;
+    .CanActiveUnitStillMove : AT(0x18A68) { build/c/unit.o(.text.CanActiveUnitStillMove) }
+    . = 0x08000000 + 0x18B28;
+    .IsPositionMagicSealed : AT(0x18B28) { build/c/unit.o(.text.IsPositionMagicSealed) }
     . = 0x08000000 + 0x18B98;
     .IsUnitMagicSealed : AT(0x18B98) { build/c/unit.o(.text.IsUnitMagicSealed) }
     . = 0x08000000 + 0x18BC4;
     .GetUnitLastItem : AT(0x18BC4) { build/c/unit.o(.text.GetUnitLastItem) }
     . = 0x08000000 + 0x18BDC;
-    .fill_0083 : AT(0x18BDC) { build/gen/fill_0083.o(.text) }
+    .fill_0094 : AT(0x18BDC) { build/gen/fill_0094.o(.text) }
+    . = 0x08000000 + 0x18C20;
+    .GetClassSMSId : AT(0x18C20) { build/c/unit.o(.text.GetClassSMSId) }
+    . = 0x08000000 + 0x18C40;
+    .UpdatePrevDeployStates : AT(0x18C40) { build/c/unit.o(.text.UpdatePrevDeployStates) }
+    . = 0x08000000 + 0x18C98;
+    .sub_8018C78 : AT(0x18C98) { build/c/unit.o(.text.sub_8018C78) }
+    . = 0x08000000 + 0x18CE4;
+    .fill_0095 : AT(0x18CE4) { build/gen/fill_0095.o(.text) }
+    . = 0x08000000 + 0x18D90;
+    .sub_8018D70 : AT(0x18D90) { build/c/unit.o(.text.sub_8018D70) }
+    . = 0x08000000 + 0x18E80;
+    .GetUnitCurrentHp : AT(0x18E80) { build/c/unit.o(.text.GetUnitCurrentHp) }
+    . = 0x08000000 + 0x18EC0;
+    .GetUnitMaxHp : AT(0x18EC0) { build/c/unit.o(.text.GetUnitMaxHp) }
+    . = 0x08000000 + 0x18EE0;
+    .GetUnitPower : AT(0x18EE0) { build/c/unit.o(.text.GetUnitPower) }
+    . = 0x08000000 + 0x18F00;
+    .GetUnitSkill : AT(0x18F00) { build/c/unit.o(.text.GetUnitSkill) }
+    . = 0x08000000 + 0x18F40;
+    .GetUnitSpeed : AT(0x18F40) { build/c/unit.o(.text.GetUnitSpeed) }
+    . = 0x08000000 + 0x18F80;
+    .GetUnitDefense : AT(0x18F80) { build/c/unit.o(.text.GetUnitDefense) }
+    . = 0x08000000 + 0x18FA0;
+    .GetUnitResistance : AT(0x18FA0) { build/c/unit.o(.text.GetUnitResistance) }
+    . = 0x08000000 + 0x18FC8;
+    .GetUnitLuck : AT(0x18FC8) { build/c/unit.o(.text.GetUnitLuck) }
     . = 0x08000000 + 0x18FE8;
     .GetUnitPortraitId : AT(0x18FE8) { build/c/unit.o(.text.GetUnitPortraitId) }
     . = 0x08000000 + 0x19008;
@@ -6303,11 +6837,19 @@ SECTIONS
     . = 0x08000000 + 0x19054;
     .SetUnitLeaderCharId : AT(0x19054) { build/c/unit.o(.text.SetUnitLeaderCharId) }
     . = 0x08000000 + 0x1905C;
-    .fill_0084 : AT(0x1905C) { build/gen/fill_0084.o(.text) }
+    .SetUnitHp : AT(0x1905C) { build/c/unit.o(.text.SetUnitHp) }
+    . = 0x08000000 + 0x19098;
+    .AddUnitHp : AT(0x19098) { build/c/unit.o(.text.AddUnitHp) }
+    . = 0x08000000 + 0x190DC;
+    .fill_0096 : AT(0x190DC) { build/gen/fill_0096.o(.text) }
+    . = 0x08000000 + 0x19138;
+    .GetClassData : AT(0x19138) { build/c/unit.o(.text.GetClassData) }
+    . = 0x08000000 + 0x19158;
+    .GetCharacterData : AT(0x19158) { build/c/unit.o(.text.GetCharacterData) }
     . = 0x08000000 + 0x19178;
     .UnitRemoveItem : AT(0x19178) { build/c/unit.o(.text.UnitRemoveItem) }
     . = 0x08000000 + 0x19190;
-    .fill_0085 : AT(0x19190) { build/gen/fill_0085.o(.text) }
+    .CanUnitCrossTerrain : AT(0x19190) { build/c/unit.o(.text.CanUnitCrossTerrain) }
     . = 0x08000000 + 0x191B0;
     .map : AT(0x191B0) { build/asm/eu/map.o(.text) }
     . = 0x08000000 + 0x1A00C;
@@ -6317,53 +6859,113 @@ SECTIONS
     . = 0x08000000 + 0x1C59C;
     .player_phase : AT(0x1C59C) { build/asm/eu/player-phase.o(.text) }
     . = 0x08000000 + 0x1D80C;
-    .fill_0086 : AT(0x1D80C) { build/gen/fill_0086.o(.text) }
+    .fill_0097 : AT(0x1D80C) { build/gen/fill_0097.o(.text) }
     . = 0x08000000 + 0x1D80E;
     .bmfx : AT(0x1D80E) { build/asm/eu/bmfx.o(.text) }
     . = 0x08000000 + 0x1F5E0;
-    .fill_0087 : AT(0x1F5E0) { build/gen/fill_0087.o(.text) }
+    .fill_0098 : AT(0x1F5E0) { build/gen/fill_0098.o(.text) }
+    . = 0x08000000 + 0x1F75C;
+    .ChapterIntro_Bg3Scroll_Loop : AT(0x1F75C) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_Bg3Scroll_Loop) }
     . = 0x08000000 + 0x1F778;
     .ChapterIntroDeamon_Init : AT(0x1F778) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntroDeamon_Init) }
     . = 0x08000000 + 0x1F788;
-    .fill_0088 : AT(0x1F788) { build/gen/fill_0088.o(.text) }
+    .ChapterIntroDeamon_Loop : AT(0x1F788) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntroDeamon_Loop) }
+    . = 0x08000000 + 0x1F7E0;
+    .PutChapterIntroMotif : AT(0x1F7E0) { build/c/bmfx-chapterintrofx.o(.text.PutChapterIntroMotif) }
+    . = 0x08000000 + 0x1F84C;
+    .PutScreenFogEffect : AT(0x1F84C) { build/c/bmfx-chapterintrofx.o(.text.PutScreenFogEffect) }
+    . = 0x08000000 + 0x1F920;
+    .PutScreenFogEffectOverlayed : AT(0x1F920) { build/c/bmfx-chapterintrofx.o(.text.PutScreenFogEffectOverlayed) }
+    . = 0x08000000 + 0x1FA08;
+    .ChapterIntro_Init : AT(0x1FA08) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_Init) }
+    . = 0x08000000 + 0x1FBC4;
+    .ChapterIntro_BeginFadeIn : AT(0x1FBC4) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginFadeIn) }
+    . = 0x08000000 + 0x1FC08;
+    .ChapterIntro_LoopFadeIn : AT(0x1FC08) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopFadeIn) }
+    . = 0x08000000 + 0x1FC9C;
+    .ChapterIntro_BeginMotifFadeIn : AT(0x1FC9C) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginMotifFadeIn) }
+    . = 0x08000000 + 0x1FD00;
+    .ChapterIntro_LoopMotifFadeIn : AT(0x1FD00) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopMotifFadeIn) }
+    . = 0x08000000 + 0x1FDA8;
+    .fill_0099 : AT(0x1FDA8) { build/gen/fill_0099.o(.text) }
+    . = 0x08000000 + 0x1FDE8;
+    .ChapterIntro_LoopHOpenText : AT(0x1FDE8) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopHOpenText) }
     . = 0x08000000 + 0x1FE64;
     .ChapterIntro_BeginVOpenText : AT(0x1FE64) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginVOpenText) }
     . = 0x08000000 + 0x1FE6C;
-    .fill_0089 : AT(0x1FE6C) { build/gen/fill_0089.o(.text) }
+    .ChapterIntro_LoopVOpenText : AT(0x1FE6C) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopVOpenText) }
+    . = 0x08000000 + 0x1FEC8;
+    .ChapterIntro_Begin_0801FE98 : AT(0x1FEC8) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_Begin_0801FE98) }
+    . = 0x08000000 + 0x1FF20;
+    .ChapterIntro_Loop_0801E1F8 : AT(0x1FF20) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_Loop_0801E1F8) }
+    . = 0x08000000 + 0x1FF48;
+    .fill_0100 : AT(0x1FF48) { build/gen/fill_0100.o(.text) }
+    . = 0x08000000 + 0x1FF6C;
+    .ChapterIntro_Loop_0801FF3C : AT(0x1FF6C) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_Loop_0801FF3C) }
+    . = 0x08000000 + 0x1FFD8;
+    .fill_0101 : AT(0x1FFD8) { build/gen/fill_0101.o(.text) }
+    . = 0x08000000 + 0x20010;
+    .ChapterIntro_InitMapDisplay : AT(0x20010) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_InitMapDisplay) }
+    . = 0x08000000 + 0x200FC;
+    .ChapterIntro_BeginFadeToMap : AT(0x200FC) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginFadeToMap) }
+    . = 0x08000000 + 0x20174;
+    .fill_0102 : AT(0x20174) { build/gen/fill_0102.o(.text) }
     . = 0x08000000 + 0x202E8;
     .ChapterIntro_BeginCloseText : AT(0x202E8) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginCloseText) }
     . = 0x08000000 + 0x202F0;
-    .fill_0090 : AT(0x202F0) { build/gen/fill_0090.o(.text) }
+    .ChapterIntro_LoopCloseText : AT(0x202F0) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopCloseText) }
     . = 0x08000000 + 0x2033C;
     .ChapterIntro_BeginFastCloseText : AT(0x2033C) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginFastCloseText) }
     . = 0x08000000 + 0x20344;
-    .fill_0091 : AT(0x20344) { build/gen/fill_0091.o(.text) }
+    .ChapterIntro_LoopFastCloseText : AT(0x20344) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopFastCloseText) }
+    . = 0x08000000 + 0x20390;
+    .fill_0103 : AT(0x20390) { build/gen/fill_0103.o(.text) }
+    . = 0x08000000 + 0x203BC;
+    .ChapterIntro_LoopFadeOut : AT(0x203BC) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopFadeOut) }
+    . = 0x08000000 + 0x20410;
+    .ChapterIntro_BeginFastFadeToMap : AT(0x20410) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginFastFadeToMap) }
+    . = 0x08000000 + 0x204C0;
+    .fill_0104 : AT(0x204C0) { build/gen/fill_0104.o(.text) }
     . = 0x08000000 + 0x20540;
     .ChapterIntro_SetSkipTarget : AT(0x20540) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_SetSkipTarget) }
     . = 0x08000000 + 0x20548;
     .ChapterIntro_SetTimer : AT(0x20548) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_SetTimer) }
     . = 0x08000000 + 0x20550;
-    .fill_0092 : AT(0x20550) { build/gen/fill_0092.o(.text) }
+    .ChapterIntro_TickTimer : AT(0x20550) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_TickTimer) }
     . = 0x08000000 + 0x20580;
     .ChapterIntro_SetFasten : AT(0x20580) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_SetFasten) }
     . = 0x08000000 + 0x20588;
     .bmfx_08020508 : AT(0x20588) { build/asm/eu/bmfx_08020508.o(.text) }
     . = 0x08000000 + 0x2162C;
-    .fill_0093 : AT(0x2162C) { build/gen/fill_0093.o(.text) }
+    .SwingSwordfx_Init : AT(0x2162C) { build/c/bmfx-swingsword.o(.text.SwingSwordfx_Init) }
+    . = 0x08000000 + 0x21664;
+    .SwingSwordfx_Loop : AT(0x21664) { build/c/bmfx-swingsword.o(.text.SwingSwordfx_Loop) }
+    . = 0x08000000 + 0x216C4;
+    .fill_0105 : AT(0x216C4) { build/gen/fill_0105.o(.text) }
+    . = 0x08000000 + 0x217B0;
+    .StartMineAnim : AT(0x217B0) { build/c/bmfx-minefx.o(.text.StartMineAnim) }
     . = 0x08000000 + 0x2182C;
     .sub_80217EC : AT(0x2182C) { build/c/bmfx-niniantransform.o(.text.sub_80217EC) }
     . = 0x08000000 + 0x21860;
-    .fill_0094 : AT(0x21860) { build/gen/fill_0094.o(.text) }
+    .sub_8021820 : AT(0x21860) { build/c/bmfx-niniantransform.o(.text.sub_8021820) }
+    . = 0x08000000 + 0x21938;
+    .fill_0106 : AT(0x21938) { build/gen/fill_0106.o(.text) }
+    . = 0x08000000 + 0x219AC;
+    .NinianStartTransformToHunman : AT(0x219AC) { build/c/bmfx-niniantransform.o(.text.NinianStartTransformToHunman) }
+    . = 0x08000000 + 0x219F8;
+    .fill_0107 : AT(0x219F8) { build/gen/fill_0107.o(.text) }
     . = 0x08000000 + 0x21A44;
     .map_menu : AT(0x21A44) { build/asm/eu/map-menu.o(.text) }
     . = 0x08000000 + 0x23CFC;
-    .fill_0095 : AT(0x23CFC) { build/gen/fill_0095.o(.text) }
+    .CountFactionMoveableUnits : AT(0x23CFC) { build/c/faction.o(.text.CountFactionMoveableUnits) }
+    . = 0x08000000 + 0x23D60;
+    .CountFactionUnitsWithoutFlags : AT(0x23D60) { build/c/faction.o(.text.CountFactionUnitsWithoutFlags) }
     . = 0x08000000 + 0x23D9C;
     .AreUnitIdsAllied : AT(0x23D9C) { build/c/faction.o(.text.AreUnitIdsAllied) }
     . = 0x08000000 + 0x23DB4;
     .AreUnitIdsSameFaction : AT(0x23DB4) { build/c/faction.o(.text.AreUnitIdsSameFaction) }
     . = 0x08000000 + 0x23DCC;
-    .fill_0096 : AT(0x23DCC) { build/gen/fill_0096.o(.text) }
+    .fill_0108 : AT(0x23DCC) { build/gen/fill_0108.o(.text) }
     . = 0x08000000 + 0x23E40;
     .target_sel : AT(0x23E40) { build/asm/eu/target-sel.o(.text) }
     . = 0x08000000 + 0x2518C;
@@ -6373,13 +6975,17 @@ SECTIONS
     . = 0x08000000 + 0x26B5C;
     .GetUnitSupportPid : AT(0x26B5C) { build/c/support.o(.text.GetUnitSupportPid) }
     . = 0x08000000 + 0x26B74;
-    .fill_0097 : AT(0x26B74) { build/gen/fill_0097.o(.text) }
+    .GetUnitSupportUnit : AT(0x26B74) { build/c/support.o(.text.GetUnitSupportUnit) }
     . = 0x08000000 + 0x26BBC;
     .GetUnitSupportLevel : AT(0x26BBC) { build/c/support.o(.text.GetUnitSupportLevel) }
     . = 0x08000000 + 0x26BE4;
     .GetUnitTotalSupportLevel : AT(0x26BE4) { build/c/support.o(.text.GetUnitTotalSupportLevel) }
     . = 0x08000000 + 0x26C10;
-    .fill_0098 : AT(0x26C10) { build/gen/fill_0098.o(.text) }
+    .UnitGainSupportExp : AT(0x26C10) { build/c/support.o(.text.UnitGainSupportExp) }
+    . = 0x08000000 + 0x26C6C;
+    .UnitGainSupportLevel : AT(0x26C6C) { build/c/support.o(.text.UnitGainSupportLevel) }
+    . = 0x08000000 + 0x26CA0;
+    .CanUnitSupportNow : AT(0x26CA0) { build/c/support.o(.text.CanUnitSupportNow) }
     . = 0x08000000 + 0x26D1C;
     .GetUnitInitialSupportExp : AT(0x26D1C) { build/c/support.o(.text.GetUnitInitialSupportExp) }
     . = 0x08000000 + 0x26D38;
@@ -6387,47 +6993,77 @@ SECTIONS
     . = 0x08000000 + 0x26D70;
     .ClearUnitSupports : AT(0x26D70) { build/c/support.o(.text.ClearUnitSupports) }
     . = 0x08000000 + 0x26DC4;
-    .fill_0099 : AT(0x26DC4) { build/gen/fill_0099.o(.text) }
+    .DoTurnSupportExp : AT(0x26DC4) { build/c/support.o(.text.DoTurnSupportExp) }
+    . = 0x08000000 + 0x26EBC;
+    .fill_0109 : AT(0x26EBC) { build/gen/fill_0109.o(.text) }
+    . = 0x08000000 + 0x26EE0;
+    .ApplyAffinityBonuses : AT(0x26EE0) { build/c/support.o(.text.ApplyAffinityBonuses) }
     . = 0x08000000 + 0x26F30;
     .InitBonuses : AT(0x26F30) { build/c/support.o(.text.InitBonuses) }
     . = 0x08000000 + 0x26F40;
-    .fill_0100 : AT(0x26F40) { build/gen/fill_0100.o(.text) }
+    .GetUnitSupportBonuses : AT(0x26F40) { build/c/support.o(.text.GetUnitSupportBonuses) }
     . = 0x08000000 + 0x2704C;
     .GetUnitAffinityIcon : AT(0x2704C) { build/c/support.o(.text.GetUnitAffinityIcon) }
     . = 0x08000000 + 0x27064;
-    .fill_0101 : AT(0x27064) { build/gen/fill_0101.o(.text) }
+    .GetAffinityIconByPid : AT(0x27064) { build/c/support.o(.text.GetAffinityIconByPid) }
+    . = 0x08000000 + 0x2707C;
+    .fill_0110 : AT(0x2707C) { build/gen/fill_0110.o(.text) }
     . = 0x08000000 + 0x270CC;
     .SetSupportLevelGained : AT(0x270CC) { build/c/support.o(.text.SetSupportLevelGained) }
     . = 0x08000000 + 0x2711C;
     .HasUnitGainedSupportLevel : AT(0x2711C) { build/c/support.o(.text.HasUnitGainedSupportLevel) }
     . = 0x08000000 + 0x27134;
-    .fill_0102 : AT(0x27134) { build/gen/fill_0102.o(.text) }
+    .ArePidsAtMaxSupport : AT(0x27134) { build/c/support.o(.text.ArePidsAtMaxSupport) }
     . = 0x08000000 + 0x27164;
     .SwapUnitStats : AT(0x27164) { build/c/support.o(.text.SwapUnitStats) }
     . = 0x08000000 + 0x27200;
     .item_use : AT(0x27200) { build/asm/eu/item-use.o(.text) }
     . = 0x08000000 + 0x2872C;
-    .fill_0103 : AT(0x2872C) { build/gen/fill_0103.o(.text) }
+    .BattleGenerateSimulationInternal : AT(0x2872C) { build/c/battle.o(.text.BattleGenerateSimulationInternal) }
+    . = 0x08000000 + 0x287FC;
+    .BattleGenerateRealInternal : AT(0x287FC) { build/c/battle.o(.text.BattleGenerateRealInternal) }
+    . = 0x08000000 + 0x288E4;
+    .fill_0111 : AT(0x288E4) { build/gen/fill_0111.o(.text) }
+    . = 0x08000000 + 0x28908;
+    .BattleGenerateSimulation : AT(0x28908) { build/c/battle.o(.text.BattleGenerateSimulation) }
+    . = 0x08000000 + 0x28940;
+    .fill_0112 : AT(0x28940) { build/gen/fill_0112.o(.text) }
+    . = 0x08000000 + 0x289F0;
+    .BattleGenerateUiStats : AT(0x289F0) { build/c/battle.o(.text.BattleGenerateUiStats) }
+    . = 0x08000000 + 0x28AE4;
+    .BattleRoll1RN : AT(0x28AE4) { build/c/battle.o(.text.BattleRoll1RN) }
+    . = 0x08000000 + 0x28B10;
+    .BattleRoll2RN : AT(0x28B10) { build/c/battle.o(.text.BattleRoll2RN) }
+    . = 0x08000000 + 0x28B3C;
+    .InitBattleUnit : AT(0x28B3C) { build/c/battle.o(.text.InitBattleUnit) }
     . = 0x08000000 + 0x28C20;
     .InitBattleUnitWithoutBonuses : AT(0x28C20) { build/c/battle.o(.text.InitBattleUnitWithoutBonuses) }
     . = 0x08000000 + 0x28C58;
     .SetBattleUnitTerrainBonuses : AT(0x28C58) { build/c/battle.o(.text.SetBattleUnitTerrainBonuses) }
     . = 0x08000000 + 0x28C94;
-    .fill_0104 : AT(0x28C94) { build/gen/fill_0104.o(.text) }
+    .SetBattleUnitTerrainBonusesAuto : AT(0x28C94) { build/c/battle.o(.text.SetBattleUnitTerrainBonusesAuto) }
+    . = 0x08000000 + 0x28CE8;
+    .fill_0113 : AT(0x28CE8) { build/gen/fill_0113.o(.text) }
+    . = 0x08000000 + 0x28ED0;
+    .SetBattleUnitWeaponBallista : AT(0x28ED0) { build/c/battle.o(.text.SetBattleUnitWeaponBallista) }
+    . = 0x08000000 + 0x28F10;
+    .fill_0114 : AT(0x28F10) { build/gen/fill_0114.o(.text) }
+    . = 0x08000000 + 0x28F14;
+    .ComputeBattleUnitStats : AT(0x28F14) { build/c/battle.o(.text.ComputeBattleUnitStats) }
     . = 0x08000000 + 0x28F60;
     .ComputeBattleUnitEffectiveStats : AT(0x28F60) { build/c/battle.o(.text.ComputeBattleUnitEffectiveStats) }
     . = 0x08000000 + 0x28F88;
-    .fill_0105 : AT(0x28F88) { build/gen/fill_0105.o(.text) }
+    .ComputeBattleUnitSupportBonuses : AT(0x28F88) { build/c/battle.o(.text.ComputeBattleUnitSupportBonuses) }
     . = 0x08000000 + 0x28FFC;
     .ComputeBattleUnitDefense : AT(0x28FFC) { build/c/battle.o(.text.ComputeBattleUnitDefense) }
     . = 0x08000000 + 0x2905C;
     .ComputeBattleUnitBaseDefense : AT(0x2905C) { build/c/battle.o(.text.ComputeBattleUnitBaseDefense) }
     . = 0x08000000 + 0x29074;
-    .fill_0106 : AT(0x29074) { build/gen/fill_0106.o(.text) }
+    .fill_0115 : AT(0x29074) { build/gen/fill_0115.o(.text) }
     . = 0x08000000 + 0x290CC;
     .ComputeBattleUnitSpeed : AT(0x290CC) { build/c/battle.o(.text.ComputeBattleUnitSpeed) }
     . = 0x08000000 + 0x29104;
-    .fill_0107 : AT(0x29104) { build/gen/fill_0107.o(.text) }
+    .fill_0116 : AT(0x29104) { build/gen/fill_0116.o(.text) }
     . = 0x08000000 + 0x29264;
     .ComputeBattleUnitCritRate : AT(0x29264) { build/c/battle.o(.text.ComputeBattleUnitCritRate) }
     . = 0x08000000 + 0x292A0;
@@ -6435,27 +7071,49 @@ SECTIONS
     . = 0x08000000 + 0x292AC;
     .ComputeBattleUnitEffectiveHitRate : AT(0x292AC) { build/c/battle.o(.text.ComputeBattleUnitEffectiveHitRate) }
     . = 0x08000000 + 0x292DC;
-    .fill_0108 : AT(0x292DC) { build/gen/fill_0108.o(.text) }
+    .ComputeBattleUnitEffectiveCritRate : AT(0x292DC) { build/c/battle.o(.text.ComputeBattleUnitEffectiveCritRate) }
     . = 0x08000000 + 0x29384;
     .ComputeBattleUnitSilencerRate : AT(0x29384) { build/c/battle.o(.text.ComputeBattleUnitSilencerRate) }
     . = 0x08000000 + 0x293E0;
-    .fill_0109 : AT(0x293E0) { build/gen/fill_0109.o(.text) }
+    .ComputeBattleUnitWeaponRankBonuses : AT(0x293E0) { build/c/battle.o(.text.ComputeBattleUnitWeaponRankBonuses) }
     . = 0x08000000 + 0x2941C;
     .ComputeBattleUnitStatusBonuses : AT(0x2941C) { build/c/battle.o(.text.ComputeBattleUnitStatusBonuses) }
     . = 0x08000000 + 0x29458;
     .ComputeBattleUnitSpecialWeaponStats : AT(0x29458) { build/c/battle.o(.text.ComputeBattleUnitSpecialWeaponStats) }
     . = 0x08000000 + 0x294F0;
-    .fill_0110 : AT(0x294F0) { build/gen/fill_0110.o(.text) }
+    .fill_0117 : AT(0x294F0) { build/gen/fill_0117.o(.text) }
+    . = 0x08000000 + 0x2951C;
+    .BattleUnwind : AT(0x2951C) { build/c/battle.o(.text.BattleUnwind) }
+    . = 0x08000000 + 0x29594;
+    .fill_0118 : AT(0x29594) { build/gen/fill_0118.o(.text) }
+    . = 0x08000000 + 0x29624;
+    .BattleGenerateRoundHits : AT(0x29624) { build/c/battle.o(.text.BattleGenerateRoundHits) }
     . = 0x08000000 + 0x29680;
     .GetBattleUnitHitCount : AT(0x29680) { build/c/battle.o(.text.GetBattleUnitHitCount) }
     . = 0x08000000 + 0x29694;
-    .fill_0111 : AT(0x29694) { build/gen/fill_0111.o(.text) }
+    .BattleCheckBraveEffect : AT(0x29694) { build/c/battle.o(.text.BattleCheckBraveEffect) }
+    . = 0x08000000 + 0x296BC;
+    .BattleCheckTriangleAttack : AT(0x296BC) { build/c/battle.o(.text.BattleCheckTriangleAttack) }
+    . = 0x08000000 + 0x297A4;
+    .BattleUpdateBattleStats : AT(0x297A4) { build/c/battle.o(.text.BattleUpdateBattleStats) }
+    . = 0x08000000 + 0x297D4;
+    .fill_0119 : AT(0x297D4) { build/gen/fill_0119.o(.text) }
+    . = 0x08000000 + 0x29894;
+    .BattleGenerateHitTriangleAttack : AT(0x29894) { build/c/battle.o(.text.BattleGenerateHitTriangleAttack) }
+    . = 0x08000000 + 0x2990C;
+    .BattleGenerateHitEffects : AT(0x2990C) { build/c/battle.o(.text.BattleGenerateHitEffects) }
+    . = 0x08000000 + 0x29A4C;
+    .BattleGenerateHit : AT(0x29A4C) { build/c/battle.o(.text.BattleGenerateHit) }
+    . = 0x08000000 + 0x29AE0;
+    .BattleApplyExpGains : AT(0x29AE0) { build/c/battle.o(.text.BattleApplyExpGains) }
     . = 0x08000000 + 0x29B54;
     .GetStatIncrease : AT(0x29B54) { build/c/battle.o(.text.GetStatIncrease) }
     . = 0x08000000 + 0x29B78;
     .GetAutoleveledStatIncrease : AT(0x29B78) { build/c/battle.o(.text.GetAutoleveledStatIncrease) }
     . = 0x08000000 + 0x29BA8;
-    .fill_0112 : AT(0x29BA8) { build/gen/fill_0112.o(.text) }
+    .CanBattleUnitGainLevels : AT(0x29BA8) { build/c/battle.o(.text.CanBattleUnitGainLevels) }
+    . = 0x08000000 + 0x29BDC;
+    .CheckBattleUnitLevelUp : AT(0x29BDC) { build/c/battle.o(.text.CheckBattleUnitLevelUp) }
     . = 0x08000000 + 0x29D94;
     .UnitPromote : AT(0x29D94) { build/c/battle.o(.text.UnitPromote) }
     . = 0x08000000 + 0x29EA4;
@@ -6463,47 +7121,85 @@ SECTIONS
     . = 0x08000000 + 0x29F08;
     .CheckBattleUnitStatCaps : AT(0x29F08) { build/c/battle.o(.text.CheckBattleUnitStatCaps) }
     . = 0x08000000 + 0x2A00C;
-    .fill_0113 : AT(0x2A00C) { build/gen/fill_0113.o(.text) }
+    .BattleApplyUnitUpdates : AT(0x2A00C) { build/c/battle.o(.text.BattleApplyUnitUpdates) }
+    . = 0x08000000 + 0x2A094;
+    .fill_0120 : AT(0x2A094) { build/gen/fill_0120.o(.text) }
+    . = 0x08000000 + 0x2A098;
+    .GetBattleUnitUpdatedWeaponExp : AT(0x2A098) { build/c/battle.o(.text.GetBattleUnitUpdatedWeaponExp) }
+    . = 0x08000000 + 0x2A184;
+    .HasBattleUnitGainedWeaponLevel : AT(0x2A184) { build/c/battle.o(.text.HasBattleUnitGainedWeaponLevel) }
+    . = 0x08000000 + 0x2A1C0;
+    .UpdateUnitFromBattle : AT(0x2A1C0) { build/c/battle.o(.text.UpdateUnitFromBattle) }
     . = 0x08000000 + 0x2A2A8;
     .UpdateUnitDuringBattle : AT(0x2A2A8) { build/c/battle.o(.text.UpdateUnitDuringBattle) }
     . = 0x08000000 + 0x2A2D4;
-    .fill_0114 : AT(0x2A2D4) { build/gen/fill_0114.o(.text) }
+    .fill_0121 : AT(0x2A2D4) { build/gen/fill_0121.o(.text) }
     . = 0x08000000 + 0x2A318;
     .GetUnitExpLevel : AT(0x2A318) { build/c/battle.o(.text.GetUnitExpLevel) }
     . = 0x08000000 + 0x2A33C;
-    .fill_0115 : AT(0x2A33C) { build/gen/fill_0115.o(.text) }
+    .GetUnitRoundExp : AT(0x2A33C) { build/c/battle.o(.text.GetUnitRoundExp) }
     . = 0x08000000 + 0x2A36C;
     .GetUnitPowerLevel : AT(0x2A36C) { build/c/battle.o(.text.GetUnitPowerLevel) }
     . = 0x08000000 + 0x2A3A8;
     .GetUnitClassKillExpBonus : AT(0x2A3A8) { build/c/battle.o(.text.GetUnitClassKillExpBonus) }
     . = 0x08000000 + 0x2A3D4;
-    .fill_0116 : AT(0x2A3D4) { build/gen/fill_0116.o(.text) }
+    .GetUnitExpMultiplier : AT(0x2A3D4) { build/c/battle.o(.text.GetUnitExpMultiplier) }
+    . = 0x08000000 + 0x2A418;
+    .GetUnitKillExpBonus : AT(0x2A418) { build/c/battle.o(.text.GetUnitKillExpBonus) }
     . = 0x08000000 + 0x2A4B4;
     .GetBattleUnitExpGain : AT(0x2A4B4) { build/c/battle.o(.text.GetBattleUnitExpGain) }
     . = 0x08000000 + 0x2A520;
-    .fill_0117 : AT(0x2A520) { build/gen/fill_0117.o(.text) }
+    .BattleApplyItemExpGains : AT(0x2A520) { build/c/battle.o(.text.BattleApplyItemExpGains) }
+    . = 0x08000000 + 0x2A5A0;
+    .GetBattleUnitStaffExp : AT(0x2A5A0) { build/c/battle.o(.text.GetBattleUnitStaffExp) }
+    . = 0x08000000 + 0x2A604;
+    .BattleApplyMiscActionExpGains : AT(0x2A604) { build/c/battle.o(.text.BattleApplyMiscActionExpGains) }
+    . = 0x08000000 + 0x2A650;
+    .BattleUnitTargetSetEquippedWeapon : AT(0x2A650) { build/c/battle.o(.text.BattleUnitTargetSetEquippedWeapon) }
     . = 0x08000000 + 0x2A6A4;
     .BattleUnitTargetCheckCanCounter : AT(0x2A6A4) { build/c/battle.o(.text.BattleUnitTargetCheckCanCounter) }
     . = 0x08000000 + 0x2A6D0;
     .BattleApplyReaverEffect : AT(0x2A6D0) { build/c/battle.o(.text.BattleApplyReaverEffect) }
     . = 0x08000000 + 0x2A724;
-    .fill_0118 : AT(0x2A724) { build/gen/fill_0118.o(.text) }
+    .fill_0122 : AT(0x2A724) { build/gen/fill_0122.o(.text) }
+    . = 0x08000000 + 0x2A7A8;
+    .BattleInitTargetCanCounter : AT(0x2A7A8) { build/c/battle.o(.text.BattleInitTargetCanCounter) }
+    . = 0x08000000 + 0x2A808;
+    .InitObstacleBattleUnit : AT(0x2A808) { build/c/battle.o(.text.InitObstacleBattleUnit) }
+    . = 0x08000000 + 0x2A88C;
+    .fill_0123 : AT(0x2A88C) { build/gen/fill_0123.o(.text) }
+    . = 0x08000000 + 0x2A8C8;
+    .UpdateObstacleFromBattle : AT(0x2A8C8) { build/c/battle.o(.text.UpdateObstacleFromBattle) }
+    . = 0x08000000 + 0x2A964;
+    .fill_0124 : AT(0x2A964) { build/gen/fill_0124.o(.text) }
     . = 0x08000000 + 0x2A9C0;
     .GetUnitSoloBattleAnimType : AT(0x2A9C0) { build/c/battle.o(.text.GetUnitSoloBattleAnimType) }
     . = 0x08000000 + 0x2A9E8;
-    .fill_0119 : AT(0x2A9E8) { build/gen/fill_0119.o(.text) }
+    .fill_0125 : AT(0x2A9E8) { build/gen/fill_0125.o(.text) }
+    . = 0x08000000 + 0x2AA70;
+    .BattleInitItemEffect : AT(0x2AA70) { build/c/battle.o(.text.BattleInitItemEffect) }
+    . = 0x08000000 + 0x2AB14;
+    .fill_0126 : AT(0x2AB14) { build/gen/fill_0126.o(.text) }
+    . = 0x08000000 + 0x2ABA0;
+    .BattleApplyItemEffect : AT(0x2ABA0) { build/c/battle.o(.text.BattleApplyItemEffect) }
     . = 0x08000000 + 0x2AC20;
     .GetOffensiveStaffAccuracy : AT(0x2AC20) { build/c/battle.o(.text.GetOffensiveStaffAccuracy) }
     . = 0x08000000 + 0x2AC94;
-    .fill_0120 : AT(0x2AC94) { build/gen/fill_0120.o(.text) }
+    .BattleGenerateArena : AT(0x2AC94) { build/c/battle.o(.text.BattleGenerateArena) }
+    . = 0x08000000 + 0x2ADB8;
+    .fill_0127 : AT(0x2ADB8) { build/gen/fill_0127.o(.text) }
     . = 0x08000000 + 0x2ADC8;
     .DidBattleUnitBreakWeapon : AT(0x2ADC8) { build/c/battle.o(.text.DidBattleUnitBreakWeapon) }
     . = 0x08000000 + 0x2ADE8;
-    .fill_0121 : AT(0x2ADE8) { build/gen/fill_0121.o(.text) }
+    .fill_0128 : AT(0x2ADE8) { build/gen/fill_0128.o(.text) }
+    . = 0x08000000 + 0x2ADF4;
+    .BattleGenerateHitScriptedDamage : AT(0x2ADF4) { build/c/battle.o(.text.BattleGenerateHitScriptedDamage) }
+    . = 0x08000000 + 0x2AE60;
+    .fill_0129 : AT(0x2AE60) { build/gen/fill_0129.o(.text) }
     . = 0x08000000 + 0x2AF44;
     .UnitLevelUp : AT(0x2AF44) { build/c/battle.o(.text.UnitLevelUp) }
     . = 0x08000000 + 0x2B144;
-    .fill_0122 : AT(0x2B144) { build/gen/fill_0122.o(.text) }
+    .fill_0130 : AT(0x2B144) { build/gen/fill_0130.o(.text) }
     . = 0x08000000 + 0x2B168;
     .trade_menu : AT(0x2B168) { build/asm/eu/trade-menu.o(.text) }
     . = 0x08000000 + 0x2C014;
@@ -6527,73 +7223,223 @@ SECTIONS
     . = 0x08000000 + 0x3C814;
     .code_sio : AT(0x3C814) { build/asm/eu/code-sio.o(.text) }
     . = 0x08000000 + 0x49810;
-    .fill_0123 : AT(0x49810) { build/gen/fill_0123.o(.text) }
+    .fill_0131 : AT(0x49810) { build/gen/fill_0131.o(.text) }
+    . = 0x08000000 + 0x498A0;
+    .UnpackUiWindowFrameGraphics2 : AT(0x498A0) { build/c/ui.o(.text.UnpackUiWindowFrameGraphics2) }
     . = 0x08000000 + 0x498F4;
     .uiutils : AT(0x498F4) { build/asm/eu/uiutils.o(.text) }
     . = 0x08000000 + 0x49FA0;
     .ui_menu : AT(0x49FA0) { build/asm/eu/ui-menu.o(.text) }
     . = 0x08000000 + 0x4AA48;
-    .fill_0124 : AT(0x4AA48) { build/gen/fill_0124.o(.text) }
+    .fill_0132 : AT(0x4AA48) { build/gen/fill_0132.o(.text) }
     . = 0x08000000 + 0x4AA5C;
     .map_sel : AT(0x4AA5C) { build/asm/eu/map-sel.o(.text) }
     . = 0x08000000 + 0x4AF0C;
     .banim_ekrbattle : AT(0x4AF0C) { build/asm/eu/banim-ekrbattle.o(.text) }
     . = 0x08000000 + 0x4BED4;
-    .fill_0125 : AT(0x4BED4) { build/gen/fill_0125.o(.text) }
+    .fill_0133 : AT(0x4BED4) { build/gen/fill_0133.o(.text) }
     . = 0x08000000 + 0x4BEF4;
     .banim_ekrgauge : AT(0x4BEF4) { build/asm/eu/banim-ekrgauge.o(.text) }
     . = 0x08000000 + 0x4D424;
-    .fill_0126 : AT(0x4D424) { build/gen/fill_0126.o(.text) }
+    .fill_0134 : AT(0x4D424) { build/gen/fill_0134.o(.text) }
     . = 0x08000000 + 0x4D426;
     .banim_efxbattle : AT(0x4D426) { build/asm/eu/banim-efxbattle.o(.text) }
     . = 0x08000000 + 0x50868;
     .code_banim1 : AT(0x50868) { build/asm/eu/code-banim1.o(.text) }
     . = 0x08000000 + 0x5337C;
-    .fill_0127 : AT(0x5337C) { build/gen/fill_0127.o(.text) }
+    .fill_0135 : AT(0x5337C) { build/gen/fill_0135.o(.text) }
+    . = 0x08000000 + 0x53398;
+    .BattleAIS_ExecCommands : AT(0x53398) { build/c/banim-main.o(.text.BattleAIS_ExecCommands) }
+    . = 0x08000000 + 0x53E54;
+    .AnimScrAdvance : AT(0x53E54) { build/c/banim-mainutils.o(.text.AnimScrAdvance) }
+    . = 0x08000000 + 0x53E94;
+    .fill_0136 : AT(0x53E94) { build/gen/fill_0136.o(.text) }
     . = 0x08000000 + 0x53EAC;
     .EkrChienCHRMain : AT(0x53EAC) { build/c/banim-mainutils.o(.text.EkrChienCHRMain) }
     . = 0x08000000 + 0x53EC4;
-    .fill_0128 : AT(0x53EC4) { build/gen/fill_0128.o(.text) }
+    .RegisterAISSheetGraphics : AT(0x53EC4) { build/c/banim-mainutils.o(.text.RegisterAISSheetGraphics) }
+    . = 0x08000000 + 0x53EF8;
+    .ApplyBanimUniquePalette : AT(0x53EF8) { build/c/banim-mainutils.o(.text.ApplyBanimUniquePalette) }
+    . = 0x08000000 + 0x53F24;
+    .fill_0137 : AT(0x53F24) { build/gen/fill_0137.o(.text) }
     . = 0x08000000 + 0x53F70;
     .code_banim : AT(0x53F70) { build/asm/eu/code-banim.o(.text) }
     . = 0x08000000 + 0x63D0C;
-    .fill_0129 : AT(0x63D0C) { build/gen/fill_0129.o(.text) }
+    .fill_0138 : AT(0x63D0C) { build/gen/fill_0138.o(.text) }
+    . = 0x08000000 + 0x63D2C;
+    .EfxDrsmmoya_Loop : AT(0x63D2C) { build/c/banim-efxdrsmmoya.o(.text.EfxDrsmmoya_Loop) }
+    . = 0x08000000 + 0x63DE0;
+    .NewEfxDrsmmoyaBG : AT(0x63DE0) { build/c/banim-efxdrsmmoya.o(.text.NewEfxDrsmmoyaBG) }
+    . = 0x08000000 + 0x63E88;
+    .EfxDrsmmoyaBG_Loop : AT(0x63E88) { build/c/banim-efxdrsmmoya.o(.text.EfxDrsmmoyaBG_Loop) }
+    . = 0x08000000 + 0x63EF8;
+    .fill_0139 : AT(0x63EF8) { build/gen/fill_0139.o(.text) }
+    . = 0x08000000 + 0x63F20;
+    .EfxDrsmmoyaScroll_Loop : AT(0x63F20) { build/c/banim-efxdrsmmoya.o(.text.EfxDrsmmoyaScroll_Loop) }
+    . = 0x08000000 + 0x63FA0;
+    .NewEfxDrsmmoyaScrollCOL : AT(0x63FA0) { build/c/banim-efxdrsmmoya.o(.text.NewEfxDrsmmoyaScrollCOL) }
+    . = 0x08000000 + 0x63FD8;
+    .EfxDrsmmoyaScrollCOL_Loop1 : AT(0x63FD8) { build/c/banim-efxdrsmmoya.o(.text.EfxDrsmmoyaScrollCOL_Loop1) }
     . = 0x08000000 + 0x64018;
     .EfxDrsmmoyaScrollCOL_Delay : AT(0x64018) { build/c/banim-efxdrsmmoya.o(.text.EfxDrsmmoyaScrollCOL_Delay) }
     . = 0x08000000 + 0x6403C;
-    .fill_0130 : AT(0x6403C) { build/gen/fill_0130.o(.text) }
+    .EfxDrsmmoyaScrollCOL_Loop3 : AT(0x6403C) { build/c/banim-efxdrsmmoya.o(.text.EfxDrsmmoyaScrollCOL_Loop3) }
     . = 0x08000000 + 0x6407C;
     .code_banim_08064458 : AT(0x6407C) { build/asm/eu/code-banim-08064458.o(.text) }
     . = 0x08000000 + 0x64AC8;
-    .fill_0131 : AT(0x64AC8) { build/gen/fill_0131.o(.text) }
+    .fill_0140 : AT(0x64AC8) { build/gen/fill_0140.o(.text) }
+    . = 0x08000000 + 0x64B28;
+    .GetEkrDragonStatusAttr : AT(0x64B28) { build/c/banim-ekrdragon.o(.text.GetEkrDragonStatusAttr) }
+    . = 0x08000000 + 0x64B34;
+    .AddEkrDragonStatusAttr : AT(0x64B34) { build/c/banim-ekrdragon.o(.text.AddEkrDragonStatusAttr) }
+    . = 0x08000000 + 0x64B4C;
+    .fill_0141 : AT(0x64B4C) { build/gen/fill_0141.o(.text) }
+    . = 0x08000000 + 0x64B58;
+    .GetEkrDragonStatusType_ : AT(0x64B58) { build/c/banim-ekrdragon.o(.text.GetEkrDragonStatusType_) }
+    . = 0x08000000 + 0x64B64;
+    .AddEkrDragonStatusType : AT(0x64B64) { build/c/banim-ekrdragon.o(.text.AddEkrDragonStatusType) }
+    . = 0x08000000 + 0x64B7C;
+    .fill_0142 : AT(0x64B7C) { build/gen/fill_0142.o(.text) }
+    . = 0x08000000 + 0x64B88;
+    .EkrDragonTmCpyHFlip : AT(0x64B88) { build/c/banim-ekrdragon.o(.text.EkrDragonTmCpyHFlip) }
+    . = 0x08000000 + 0x64BD4;
+    .EkrDragonTmCpyExt : AT(0x64BD4) { build/c/banim-ekrdragon.o(.text.EkrDragonTmCpyExt) }
+    . = 0x08000000 + 0x64C34;
+    .EkrDragonTmCpyWithDistance : AT(0x64C34) { build/c/banim-ekrdragon.o(.text.EkrDragonTmCpyWithDistance) }
     . = 0x08000000 + 0x64C74;
     .EkrDragonIntroDone : AT(0x64C74) { build/c/banim-ekrdragon.o(.text.EkrDragonIntroDone) }
     . = 0x08000000 + 0x64C90;
     .CheckEkrDragonEndingDone : AT(0x64C90) { build/c/banim-ekrdragon.o(.text.CheckEkrDragonEndingDone) }
     . = 0x08000000 + 0x64CAC;
-    .fill_0132 : AT(0x64CAC) { build/gen/fill_0132.o(.text) }
+    .NewEkrDragon : AT(0x64CAC) { build/c/banim-ekrdragon.o(.text.NewEkrDragon) }
+    . = 0x08000000 + 0x64CDC;
+    .fill_0143 : AT(0x64CDC) { build/gen/fill_0143.o(.text) }
     . = 0x08000000 + 0x64CE8;
     .SetEfxDragonDeadFallHead : AT(0x64CE8) { build/c/banim-ekrdragon.o(.text.SetEfxDragonDeadFallHead) }
     . = 0x08000000 + 0x64CF8;
     .CheckEfxDragonDeadFallHead : AT(0x64CF8) { build/c/banim-ekrdragon.o(.text.CheckEfxDragonDeadFallHead) }
     . = 0x08000000 + 0x64D18;
-    .fill_0133 : AT(0x64D18) { build/gen/fill_0133.o(.text) }
+    .fill_0144 : AT(0x64D18) { build/gen/fill_0144.o(.text) }
+    . = 0x08000000 + 0x64E10;
+    .EkrDragon_CustomBgFadeIn : AT(0x64E10) { build/c/banim-ekrdragon.o(.text.EkrDragon_CustomBgFadeIn) }
+    . = 0x08000000 + 0x64E4C;
+    .EkrDragon_StartDragonTailIntro : AT(0x64E4C) { build/c/banim-ekrdragon.o(.text.EkrDragon_StartDragonTailIntro) }
+    . = 0x08000000 + 0x64F0C;
+    .EkrDragon_DragonTailDisplay : AT(0x64F0C) { build/c/banim-ekrdragon.o(.text.EkrDragon_DragonTailDisplay) }
+    . = 0x08000000 + 0x64F88;
+    .EkrDragon_StartMainBodyIntro : AT(0x64F88) { build/c/banim-ekrdragon.o(.text.EkrDragon_StartMainBodyIntro) }
+    . = 0x08000000 + 0x64FFC;
+    .EkrDragon_PreMainBodyIntro : AT(0x64FFC) { build/c/banim-ekrdragon.o(.text.EkrDragon_PreMainBodyIntro) }
+    . = 0x08000000 + 0x65088;
+    .EkrDragon_StartMainBodyFallIn : AT(0x65088) { build/c/banim-ekrdragon.o(.text.EkrDragon_StartMainBodyFallIn) }
+    . = 0x08000000 + 0x651B0;
+    .EkrDragon_WaitMainBodyFallIn : AT(0x651B0) { build/c/banim-ekrdragon.o(.text.EkrDragon_WaitMainBodyFallIn) }
+    . = 0x08000000 + 0x65368;
+    .fill_0145 : AT(0x65368) { build/gen/fill_0145.o(.text) }
+    . = 0x08000000 + 0x65458;
+    .EkrDragon_TriggerIntroDone : AT(0x65458) { build/c/banim-ekrdragon.o(.text.EkrDragon_TriggerIntroDone) }
+    . = 0x08000000 + 0x65478;
+    .EkrDragon_InBattleIDLE : AT(0x65478) { build/c/banim-ekrdragon.o(.text.EkrDragon_InBattleIDLE) }
     . = 0x08000000 + 0x654CC;
     .EkrDragon_WaitForFadeOut : AT(0x654CC) { build/c/banim-ekrdragon.o(.text.EkrDragon_WaitForFadeOut) }
     . = 0x08000000 + 0x654F0;
-    .fill_0134 : AT(0x654F0) { build/gen/fill_0134.o(.text) }
+    .EkrDragon_ReloadTerrainEtc : AT(0x654F0) { build/c/banim-ekrdragon.o(.text.EkrDragon_ReloadTerrainEtc) }
+    . = 0x08000000 + 0x65584;
+    .EkrDragon_ReloadCustomBgAndFadeOut : AT(0x65584) { build/c/banim-ekrdragon.o(.text.EkrDragon_ReloadCustomBgAndFadeOut) }
+    . = 0x08000000 + 0x655DC;
+    .EkrDragon_TriggerEnding : AT(0x655DC) { build/c/banim-ekrdragon.o(.text.EkrDragon_TriggerEnding) }
+    . = 0x08000000 + 0x655F4;
+    .fill_0146 : AT(0x655F4) { build/gen/fill_0146.o(.text) }
+    . = 0x08000000 + 0x65618;
+    .EkrDragonBaseHide_Loop : AT(0x65618) { build/c/banim-ekrdragonfx.o(.text.EkrDragonBaseHide_Loop) }
+    . = 0x08000000 + 0x65680;
+    .fill_0147 : AT(0x65680) { build/gen/fill_0147.o(.text) }
+    . = 0x08000000 + 0x6568C;
+    .NewEkrDragonBaseAppear : AT(0x6568C) { build/c/banim-ekrdragonfx.o(.text.NewEkrDragonBaseAppear) }
+    . = 0x08000000 + 0x656F4;
+    .EkrDragonBaseAppear_Loop : AT(0x656F4) { build/c/banim-ekrdragonfx.o(.text.EkrDragonBaseAppear_Loop) }
+    . = 0x08000000 + 0x6575C;
+    .fill_0148 : AT(0x6575C) { build/gen/fill_0148.o(.text) }
     . = 0x08000000 + 0x657C8;
     .EkrDragonTunkFace_Loop : AT(0x657C8) { build/c/banim-ekrdragonfx.o(.text.EkrDragonTunkFace_Loop) }
     . = 0x08000000 + 0x657F4;
-    .fill_0135 : AT(0x657F4) { build/gen/fill_0135.o(.text) }
+    .NewEfxDragonDeadFallBody : AT(0x657F4) { build/c/banim-ekrdragonfx.o(.text.NewEfxDragonDeadFallBody) }
+    . = 0x08000000 + 0x65848;
+    .fill_0149 : AT(0x65848) { build/gen/fill_0149.o(.text) }
+    . = 0x08000000 + 0x65854;
+    .EfxDragonDeadFallBody_Loop1 : AT(0x65854) { build/c/banim-ekrdragonfx.o(.text.EfxDragonDeadFallBody_Loop1) }
+    . = 0x08000000 + 0x658A8;
+    .fill_0150 : AT(0x658A8) { build/gen/fill_0150.o(.text) }
     . = 0x08000000 + 0x658EC;
     .EfxDragonDeadFallBody_Blocking : AT(0x658EC) { build/c/banim-ekrdragonfx.o(.text.EfxDragonDeadFallBody_Blocking) }
     . = 0x08000000 + 0x658F8;
-    .fill_0136 : AT(0x658F8) { build/gen/fill_0136.o(.text) }
+    .NewEfxDragonDeadFallHeadFx : AT(0x658F8) { build/c/banim-ekrdragonfx.o(.text.NewEfxDragonDeadFallHeadFx) }
+    . = 0x08000000 + 0x6594C;
+    .fill_0151 : AT(0x6594C) { build/gen/fill_0151.o(.text) }
     . = 0x08000000 + 0x65958;
     .EfxDragonDeadFallHead_Loop1 : AT(0x65958) { build/c/banim-ekrdragonfx.o(.text.EfxDragonDeadFallHead_Loop1) }
     . = 0x08000000 + 0x65984;
-    .fill_0137 : AT(0x65984) { build/gen/fill_0137.o(.text) }
+    .EfxDragonDeadFallHead_Loop2 : AT(0x65984) { build/c/banim-ekrdragonfx.o(.text.EfxDragonDeadFallHead_Loop2) }
+    . = 0x08000000 + 0x659B4;
+    .fill_0152 : AT(0x659B4) { build/gen/fill_0152.o(.text) }
+    . = 0x08000000 + 0x659D8;
+    .EkrDragonFlashingWingBg_Loop : AT(0x659D8) { build/c/banim-ekrdragonfx.o(.text.EkrDragonFlashingWingBg_Loop) }
+    . = 0x08000000 + 0x65AC0;
+    .fill_0153 : AT(0x65AC0) { build/gen/fill_0153.o(.text) }
+    . = 0x08000000 + 0x65BB4;
+    .NewEkrDragonFireBG2 : AT(0x65BB4) { build/c/banim-ekrdragonfx.o(.text.NewEkrDragonFireBG2) }
+    . = 0x08000000 + 0x65C38;
+    .fill_0154 : AT(0x65C38) { build/gen/fill_0154.o(.text) }
+    . = 0x08000000 + 0x65C58;
+    .EkrDragonBg2ScrollHandler_Loop : AT(0x65C58) { build/c/banim-ekrdragonfx.o(.text.EkrDragonBg2ScrollHandler_Loop) }
+    . = 0x08000000 + 0x65CAC;
+    .EkrDragonBg2Scroll_OnVBlank : AT(0x65CAC) { build/c/banim-ekrdragonfx.o(.text.EkrDragonBg2Scroll_OnVBlank) }
+    . = 0x08000000 + 0x65CD8;
+    .fill_0155 : AT(0x65CD8) { build/gen/fill_0155.o(.text) }
+    . = 0x08000000 + 0x65D94;
+    .NewEkrDragonBg3HfScrollHandler : AT(0x65D94) { build/c/banim-ekrdragonfx.o(.text.NewEkrDragonBg3HfScrollHandler) }
+    . = 0x08000000 + 0x65DC8;
+    .fill_0156 : AT(0x65DC8) { build/gen/fill_0156.o(.text) }
+    . = 0x08000000 + 0x65E58;
+    .EkrDragonBg3HfScroll_OnVBlank : AT(0x65E58) { build/c/banim-ekrdragonfx.o(.text.EkrDragonBg3HfScroll_OnVBlank) }
+    . = 0x08000000 + 0x65E84;
+    .fill_0157 : AT(0x65E84) { build/gen/fill_0157.o(.text) }
+    . = 0x08000000 + 0x660F4;
+    .EkrDragonBodyBlack_Loop : AT(0x660F4) { build/c/banim-ekrdragonfx.o(.text.EkrDragonBodyBlack_Loop) }
+    . = 0x08000000 + 0x66180;
+    .fill_0158 : AT(0x66180) { build/gen/fill_0158.o(.text) }
+    . = 0x08000000 + 0x66184;
+    .sub_80668B8 : AT(0x66184) { build/c/banim-ekrdragonfx.o(.text.sub_80668B8) }
+    . = 0x08000000 + 0x6621C;
+    .sub_8066950 : AT(0x6621C) { build/c/banim-ekrdragonfx.o(.text.sub_8066950) }
+    . = 0x08000000 + 0x66270;
+    .fill_0159 : AT(0x66270) { build/gen/fill_0159.o(.text) }
+    . = 0x08000000 + 0x662B4;
+    .EkrDragonTunk_Loop1 : AT(0x662B4) { build/c/banim-ekrdragonfx.o(.text.EkrDragonTunk_Loop1) }
+    . = 0x08000000 + 0x663B4;
+    .EkrDragonTunk_Loop2 : AT(0x663B4) { build/c/banim-ekrdragonfx.o(.text.EkrDragonTunk_Loop2) }
+    . = 0x08000000 + 0x66584;
+    .fill_0160 : AT(0x66584) { build/gen/fill_0160.o(.text) }
+    . = 0x08000000 + 0x66588;
+    .NewEkrDragonFireBg3 : AT(0x66588) { build/c/banim-ekrdragonfx.o(.text.NewEkrDragonFireBg3) }
+    . = 0x08000000 + 0x6660C;
+    .fill_0161 : AT(0x6660C) { build/gen/fill_0161.o(.text) }
+    . = 0x08000000 + 0x6661C;
+    .EkrDragonFireBG3_Loop : AT(0x6661C) { build/c/banim-ekrdragonfx.o(.text.EkrDragonFireBG3_Loop) }
+    . = 0x08000000 + 0x6667C;
+    .NewEkrDragonBarkQuake : AT(0x6667C) { build/c/banim-ekrdragonfx.o(.text.NewEkrDragonBarkQuake) }
+    . = 0x08000000 + 0x666B4;
+    .EkrDragonBarkQuake_Loop : AT(0x666B4) { build/c/banim-ekrdragonfx.o(.text.EkrDragonBarkQuake_Loop) }
+    . = 0x08000000 + 0x6685C;
+    .fill_0162 : AT(0x6685C) { build/gen/fill_0162.o(.text) }
+    . = 0x08000000 + 0x6689C;
+    .EkrDragonScreenFlashing_Loop1 : AT(0x6689C) { build/c/banim-ekrdragonfx.o(.text.EkrDragonScreenFlashing_Loop1) }
+    . = 0x08000000 + 0x6690C;
+    .EkrDragonScreenFlashing_Loop2 : AT(0x6690C) { build/c/banim-ekrdragonfx.o(.text.EkrDragonScreenFlashing_Loop2) }
+    . = 0x08000000 + 0x66964;
+    .EkrDragonScreenFlashing_Loop3 : AT(0x66964) { build/c/banim-ekrdragonfx.o(.text.EkrDragonScreenFlashing_Loop3) }
+    . = 0x08000000 + 0x669D4;
+    .EkrDragonScreenFlashing_RefrainPalette : AT(0x669D4) { build/c/banim-ekrdragonfx.o(.text.EkrDragonScreenFlashing_RefrainPalette) }
     . = 0x08000000 + 0x66A04;
     .code_banim2 : AT(0x66A04) { build/asm/eu/code-banim2.o(.text) }
     . = 0x08000000 + 0x6BAA4;
@@ -6605,21 +7451,75 @@ SECTIONS
     . = 0x08000000 + 0x781D8;
     .eventcall : AT(0x781D8) { build/asm/eu/eventcall.o(.text) }
     . = 0x08000000 + 0x7AC08;
-    .fill_0138 : AT(0x7AC08) { build/gen/fill_0138.o(.text) }
+    .fill_0163 : AT(0x7AC08) { build/gen/fill_0163.o(.text) }
     . = 0x08000000 + 0x7AF5C;
     .EventQuakefx_Init : AT(0x7AF5C) { build/c/eventcall_quakefx.o(.text.EventQuakefx_Init) }
     . = 0x08000000 + 0x7AF64;
-    .fill_0139 : AT(0x7AF64) { build/gen/fill_0139.o(.text) }
+    .EventQuakefx_Loop : AT(0x7AF64) { build/c/eventcall_quakefx.o(.text.EventQuakefx_Loop) }
+    . = 0x08000000 + 0x7AFE4;
+    .fill_0164 : AT(0x7AFE4) { build/gen/fill_0164.o(.text) }
+    . = 0x08000000 + 0x7B050;
+    .DragonGatefx_DistortionHandler : AT(0x7B050) { build/c/eventcall_dragongate.o(.text.DragonGatefx_DistortionHandler) }
+    . = 0x08000000 + 0x7B0B8;
+    .DragonGatefx_DrawLight : AT(0x7B0B8) { build/c/eventcall_dragongate.o(.text.DragonGatefx_DrawLight) }
+    . = 0x08000000 + 0x7B180;
+    .DragonGatefx_DrawDragon : AT(0x7B180) { build/c/eventcall_dragongate.o(.text.DragonGatefx_DrawDragon) }
+    . = 0x08000000 + 0x7B250;
+    .DragonGatefx_MergeDragon : AT(0x7B250) { build/c/eventcall_dragongate.o(.text.DragonGatefx_MergeDragon) }
+    . = 0x08000000 + 0x7B2B4;
+    .sub_807BB48 : AT(0x7B2B4) { build/c/eventcall_dragongate.o(.text.sub_807BB48) }
+    . = 0x08000000 + 0x7B35C;
+    .fill_0165 : AT(0x7B35C) { build/gen/fill_0165.o(.text) }
+    . = 0x08000000 + 0x7B36C;
+    .DragonGatefx_End : AT(0x7B36C) { build/c/eventcall_dragongate.o(.text.DragonGatefx_End) }
+    . = 0x08000000 + 0x7B3C4;
+    .fill_0166 : AT(0x7B3C4) { build/gen/fill_0166.o(.text) }
     . = 0x08000000 + 0x7B404;
     .DragonSpriteBlinking_Init : AT(0x7B404) { build/c/eventcall_dragongate.o(.text.DragonSpriteBlinking_Init) }
     . = 0x08000000 + 0x7B40C;
     .DragonSpriteBlinking_Loop : AT(0x7B40C) { build/c/eventcall_dragongate.o(.text.DragonSpriteBlinking_Loop) }
     . = 0x08000000 + 0x7B448;
-    .fill_0140 : AT(0x7B448) { build/gen/fill_0140.o(.text) }
+    .fill_0167 : AT(0x7B448) { build/gen/fill_0167.o(.text) }
+    . = 0x08000000 + 0x7B470;
+    .PutDragonGateFlame : AT(0x7B470) { build/c/eventcall_dragonflamefx.o(.text.PutDragonGateFlame) }
+    . = 0x08000000 + 0x7B4DC;
+    .sub_807BD6C : AT(0x7B4DC) { build/c/eventcall_dragonflamefx.o(.text.sub_807BD6C) }
+    . = 0x08000000 + 0x7B538;
+    .DragonFlamefx_Handler : AT(0x7B538) { build/c/eventcall_dragonflamefx.o(.text.DragonFlamefx_Handler) }
+    . = 0x08000000 + 0x7B56C;
+    .DragonFlamefx_Init : AT(0x7B56C) { build/c/eventcall_dragonflamefx.o(.text.DragonFlamefx_Init) }
+    . = 0x08000000 + 0x7B678;
+    .DragonFlamefx_Rotation : AT(0x7B678) { build/c/eventcall_dragonflamefx.o(.text.DragonFlamefx_Rotation) }
+    . = 0x08000000 + 0x7B6CC;
+    .DragonFlamefx_EndRing : AT(0x7B6CC) { build/c/eventcall_dragonflamefx.o(.text.DragonFlamefx_EndRing) }
+    . = 0x08000000 + 0x7B70C;
+    .DragonFlamefx_RefrainBlendAlpha : AT(0x7B70C) { build/c/eventcall_dragonflamefx.o(.text.DragonFlamefx_RefrainBlendAlpha) }
+    . = 0x08000000 + 0x7B75C;
+    .sub_807BFEC : AT(0x7B75C) { build/c/eventcall_dragonflamefx.o(.text.sub_807BFEC) }
+    . = 0x08000000 + 0x7B7F0;
+    .sub_807C080 : AT(0x7B7F0) { build/c/eventcall_dragonflamefx.o(.text.sub_807C080) }
+    . = 0x08000000 + 0x7B878;
+    .sub_807C108 : AT(0x7B878) { build/c/eventcall_dragonflamefx.o(.text.sub_807C108) }
+    . = 0x08000000 + 0x7B8E0;
+    .fill_0168 : AT(0x7B8E0) { build/gen/fill_0168.o(.text) }
+    . = 0x08000000 + 0x7B998;
+    .sub_807C228 : AT(0x7B998) { build/c/eventcall_dragonflamefx.o(.text.sub_807C228) }
+    . = 0x08000000 + 0x7B9FC;
+    .DeadDragonFlame_Init : AT(0x7B9FC) { build/c/eventcall_dragonflamefx.o(.text.DeadDragonFlame_Init) }
+    . = 0x08000000 + 0x7BAF4;
+    .DeadDragonFlame_Rotation : AT(0x7BAF4) { build/c/eventcall_dragonflamefx.o(.text.DeadDragonFlame_Rotation) }
+    . = 0x08000000 + 0x7BB58;
+    .sub_807C3E8 : AT(0x7BB58) { build/c/eventcall_dragonflamefx.o(.text.sub_807C3E8) }
+    . = 0x08000000 + 0x7BBD4;
+    .sub_807C464 : AT(0x7BBD4) { build/c/eventcall_dragonflamefx.o(.text.sub_807C464) }
+    . = 0x08000000 + 0x7BC04;
+    .sub_807C490 : AT(0x7BC04) { build/c/eventcall_dragonflamefx.o(.text.sub_807C490) }
     . = 0x08000000 + 0x7BCF8;
     .sub_807C58C : AT(0x7BCF8) { build/c/eventcall_dragonflamefx.o(.text.sub_807C58C) }
     . = 0x08000000 + 0x7BD10;
-    .fill_0141 : AT(0x7BD10) { build/gen/fill_0141.o(.text) }
+    .sub_807C5A4 : AT(0x7BD10) { build/c/eventcall_dragonflamefx.o(.text.sub_807C5A4) }
+    . = 0x08000000 + 0x7BDC4;
+    .fill_0169 : AT(0x7BDC4) { build/gen/fill_0169.o(.text) }
     . = 0x08000000 + 0x7BE5C;
     .QuintessenceFx_ParallelWorker : AT(0x7BE5C) { build/c/quintessence-fx.o(.text.QuintessenceFx_ParallelWorker) }
     . = 0x08000000 + 0x7BEC0;
@@ -6627,19 +7527,49 @@ SECTIONS
     . = 0x08000000 + 0x7BEC8;
     .QuintFxBg2_Loop : AT(0x7BEC8) { build/c/quintessence-fx.o(.text.QuintFxBg2_Loop) }
     . = 0x08000000 + 0x7BEE4;
-    .fill_0142 : AT(0x7BEE4) { build/gen/fill_0142.o(.text) }
+    .QuintessenceFx_Init_Main : AT(0x7BEE4) { build/c/quintessence-fx.o(.text.QuintessenceFx_Init_Main) }
+    . = 0x08000000 + 0x7BFAC;
+    .ZephielEpilogue_Loop_BlendCgs : AT(0x7BFAC) { build/c/eventcall_zephielepilogue.o(.text.ZephielEpilogue_Loop_BlendCgs) }
+    . = 0x08000000 + 0x7BFFC;
+    .QuintessenceFx_ResetBlend : AT(0x7BFFC) { build/c/quintessence-fx.o(.text.QuintessenceFx_ResetBlend) }
+    . = 0x08000000 + 0x7C058;
+    .QuintessenceFx_Loop_B : AT(0x7C058) { build/c/quintessence-fx.o(.text.QuintessenceFx_Loop_B) }
+    . = 0x08000000 + 0x7C0A8;
+    .QuintessenceFx_Loop_C : AT(0x7C0A8) { build/c/quintessence-fx.o(.text.QuintessenceFx_Loop_C) }
+    . = 0x08000000 + 0x7C0F8;
+    .QuintessenceFx_OnEnd : AT(0x7C0F8) { build/c/quintessence-fx.o(.text.QuintessenceFx_OnEnd) }
+    . = 0x08000000 + 0x7C160;
+    .fill_0170 : AT(0x7C160) { build/gen/fill_0170.o(.text) }
     . = 0x08000000 + 0x7C1C0;
     .UnitTornOut_Loop : AT(0x7C1C0) { build/c/eventcall_unittornout.o(.text.UnitTornOut_Loop) }
     . = 0x08000000 + 0x7C200;
-    .fill_0143 : AT(0x7C200) { build/gen/fill_0143.o(.text) }
+    .fill_0171 : AT(0x7C200) { build/gen/fill_0171.o(.text) }
     . = 0x08000000 + 0x7C218;
     .sub_807CDEC : AT(0x7C218) { build/c/eventcall_unittornout.o(.text.sub_807CDEC) }
     . = 0x08000000 + 0x7C22C;
-    .fill_0144 : AT(0x7C22C) { build/gen/fill_0144.o(.text) }
+    .sub_807CE00 : AT(0x7C22C) { build/c/eventcall_unittornout.o(.text.sub_807CE00) }
+    . = 0x08000000 + 0x7C240;
+    .sub_807CE14 : AT(0x7C240) { build/c/eventcall_flamebreath.o(.text.sub_807CE14) }
+    . = 0x08000000 + 0x7C2BC;
+    .sub_807CE90 : AT(0x7C2BC) { build/c/eventcall_flamebreath.o(.text.sub_807CE90) }
+    . = 0x08000000 + 0x7C3C0;
+    .sub_807CF94 : AT(0x7C3C0) { build/c/eventcall_flamebreath.o(.text.sub_807CF94) }
+    . = 0x08000000 + 0x7C418;
+    .fill_0172 : AT(0x7C418) { build/gen/fill_0172.o(.text) }
     . = 0x08000000 + 0x7C4B8;
     .eventcall_flamebreath : AT(0x7C4B8) { build/asm/eu/eventcall_flamebreath.o(.text) }
     . = 0x08000000 + 0x7C510;
-    .fill_0145 : AT(0x7C510) { build/gen/fill_0145.o(.text) }
+    .fill_0173 : AT(0x7C510) { build/gen/fill_0173.o(.text) }
+    . = 0x08000000 + 0x7C570;
+    .IceCrystalfx_Start : AT(0x7C570) { build/c/eventcall_icecrystal.o(.text.IceCrystalfx_Start) }
+    . = 0x08000000 + 0x7C658;
+    .IceCrystalfx_ResetPalette : AT(0x7C658) { build/c/eventcall_icecrystal.o(.text.IceCrystalfx_ResetPalette) }
+    . = 0x08000000 + 0x7C678;
+    .IceCrystalfx_RefrainPalette : AT(0x7C678) { build/c/eventcall_icecrystal.o(.text.IceCrystalfx_RefrainPalette) }
+    . = 0x08000000 + 0x7C6B8;
+    .IceCrystalfx_Paluse : AT(0x7C6B8) { build/c/eventcall_icecrystal.o(.text.IceCrystalfx_Paluse) }
+    . = 0x08000000 + 0x7C748;
+    .fill_0174 : AT(0x7C748) { build/gen/fill_0174.o(.text) }
     . = 0x08000000 + 0x7C75C;
     .eventcallfx : AT(0x7C75C) { build/asm/eu/eventcallfx.o(.text) }
     . = 0x08000000 + 0x7E370;
@@ -6647,7 +7577,17 @@ SECTIONS
     . = 0x08000000 + 0x7E3AC;
     .EventDragonsSpritefx_End : AT(0x7E3AC) { build/c/eventcall_firedragonsprite.o(.text.EventDragonsSpritefx_End) }
     . = 0x08000000 + 0x7E3CC;
-    .fill_0146 : AT(0x7E3CC) { build/gen/fill_0146.o(.text) }
+    .EventDragonsSpritefx_Loop : AT(0x7E3CC) { build/c/eventcall_firedragonsprite.o(.text.EventDragonsSpritefx_Loop) }
+    . = 0x08000000 + 0x7E578;
+    .StartEventDragonsSpriteDeamon : AT(0x7E578) { build/c/eventcall_firedragonsprite.o(.text.StartEventDragonsSpriteDeamon) }
+    . = 0x08000000 + 0x7E5B4;
+    .fill_0175 : AT(0x7E5B4) { build/gen/fill_0175.o(.text) }
+    . = 0x08000000 + 0x7E5C4;
+    .PutFireDragonSpritefx : AT(0x7E5C4) { build/c/eventcall_firedragonsprite.o(.text.PutFireDragonSpritefx) }
+    . = 0x08000000 + 0x7E6CC;
+    .RemoveFireDragonSpritefx : AT(0x7E6CC) { build/c/eventcall_firedragonsprite.o(.text.RemoveFireDragonSpritefx) }
+    . = 0x08000000 + 0x7E70C;
+    .sub_807F590 : AT(0x7E70C) { build/c/eventcall_firedragonsprite.o(.text.sub_807F590) }
     . = 0x08000000 + 0x7E744;
     .EventCall_PutFireDragonSprite : AT(0x7E744) { build/c/eventcall_firedragonsprite.o(.text.EventCall_PutFireDragonSprite) }
     . = 0x08000000 + 0x7E78C;
@@ -6667,25 +7607,39 @@ SECTIONS
     . = 0x08000000 + 0x7E8B4;
     .sub_807F738 : AT(0x7E8B4) { build/c/eventcall_firedragonsprite.o(.text.sub_807F738) }
     . = 0x08000000 + 0x7E8D4;
-    .fill_0147 : AT(0x7E8D4) { build/gen/fill_0147.o(.text) }
+    .sub_807F758 : AT(0x7E8D4) { build/c/eventcall_firedragonsprite.o(.text.sub_807F758) }
+    . = 0x08000000 + 0x7E908;
+    .sub_807F78C : AT(0x7E908) { build/c/eventcall_firedragonsprite.o(.text.sub_807F78C) }
     . = 0x08000000 + 0x7E938;
     .StartEventDragonsSpriteMovefx : AT(0x7E938) { build/c/eventcall_firedragonsprite.o(.text.StartEventDragonsSpriteMovefx) }
     . = 0x08000000 + 0x7E968;
-    .fill_0148 : AT(0x7E968) { build/gen/fill_0148.o(.text) }
+    .DragonFlameImpact_Init : AT(0x7E968) { build/c/eventcall_firedragonsprite.o(.text.DragonFlameImpact_Init) }
+    . = 0x08000000 + 0x7EA18;
+    .DragonFlameImpact_Loop : AT(0x7EA18) { build/c/eventcall_firedragonsprite.o(.text.DragonFlameImpact_Loop) }
+    . = 0x08000000 + 0x7EA58;
+    .fill_0176 : AT(0x7EA58) { build/gen/fill_0176.o(.text) }
     . = 0x08000000 + 0x7EA94;
     .EventCall_FireDragonScreamingInPain : AT(0x7EA94) { build/c/eventcall_firedragonsprite.o(.text.EventCall_FireDragonScreamingInPain) }
     . = 0x08000000 + 0x7EAD4;
-    .fill_0149 : AT(0x7EAD4) { build/gen/fill_0149.o(.text) }
+    .EventCall_FireDragonFellWeakly : AT(0x7EAD4) { build/c/eventcall_firedragonsprite.o(.text.EventCall_FireDragonFellWeakly) }
     . = 0x08000000 + 0x7EB1C;
     .EventCall_FireDragonFadeOut : AT(0x7EB1C) { build/c/eventcall_firedragonsprite.o(.text.EventCall_FireDragonFadeOut) }
     . = 0x08000000 + 0x7EB4C;
     .EventCall_FinalFireDragonReStandUp : AT(0x7EB4C) { build/c/eventcall_firedragonsprite.o(.text.EventCall_FinalFireDragonReStandUp) }
     . = 0x08000000 + 0x7EB68;
-    .fill_0150 : AT(0x7EB68) { build/gen/fill_0150.o(.text) }
+    .sub_807F9EC : AT(0x7EB68) { build/c/eventcall_firedragonsprite.o(.text.sub_807F9EC) }
+    . = 0x08000000 + 0x7EBE0;
+    .sub_807FA64 : AT(0x7EBE0) { build/c/eventcall_firedragonsprite.o(.text.sub_807FA64) }
+    . = 0x08000000 + 0x7EC64;
+    .fill_0177 : AT(0x7EC64) { build/gen/fill_0177.o(.text) }
+    . = 0x08000000 + 0x7EC78;
+    .ForceCenteredDragon : AT(0x7EC78) { build/c/eventcall_firedragonsprite.o(.text.ForceCenteredDragon) }
+    . = 0x08000000 + 0x7ECB0;
+    .fill_0178 : AT(0x7ECB0) { build/gen/fill_0178.o(.text) }
     . = 0x08000000 + 0x7ED78;
     .GetLynModeDeathFlag : AT(0x7ED78) { build/c/eventcall_0807F9EC.o(.text.GetLynModeDeathFlag) }
     . = 0x08000000 + 0x7ED88;
-    .fill_0151 : AT(0x7ED88) { build/gen/fill_0151.o(.text) }
+    .fill_0179 : AT(0x7ED88) { build/gen/fill_0179.o(.text) }
     . = 0x08000000 + 0x7ED94;
     .IsDorcasRecruited : AT(0x7ED94) { build/c/eventcall_0807F9EC.o(.text.IsDorcasRecruited) }
     . = 0x08000000 + 0x7EDB4;
@@ -6693,17 +7647,45 @@ SECTIONS
     . = 0x08000000 + 0x7EDD4;
     .IsErkRecruited : AT(0x7EDD4) { build/c/eventcall_0807F9EC.o(.text.IsErkRecruited) }
     . = 0x08000000 + 0x7EDF4;
-    .fill_0152 : AT(0x7EDF4) { build/gen/fill_0152.o(.text) }
+    .fill_0180 : AT(0x7EDF4) { build/gen/fill_0180.o(.text) }
     . = 0x08000000 + 0x7EEA4;
     .IsNinoRecruited : AT(0x7EEA4) { build/c/eventcall_0807F9EC.o(.text.IsNinoRecruited) }
     . = 0x08000000 + 0x7EEC4;
     .IsRathRecruited : AT(0x7EEC4) { build/c/eventcall_0807F9EC.o(.text.IsRathRecruited) }
     . = 0x08000000 + 0x7EEE4;
-    .fill_0153 : AT(0x7EEE4) { build/gen/fill_0153.o(.text) }
+    .fill_0181 : AT(0x7EEE4) { build/gen/fill_0181.o(.text) }
+    . = 0x08000000 + 0x7EF54;
+    .TransferLynModeUnits : AT(0x7EF54) { build/c/eventcall_0807F9EC.o(.text.TransferLynModeUnits) }
+    . = 0x08000000 + 0x7F04C;
+    .fill_0182 : AT(0x7F04C) { build/gen/fill_0182.o(.text) }
+    . = 0x08000000 + 0x7F174;
+    .NilsEpilogueIntro_Init : AT(0x7F174) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueIntro_Init) }
+    . = 0x08000000 + 0x7F1BC;
+    .NilsEpilogueIntro_CopyBg3ToBg1 : AT(0x7F1BC) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueIntro_CopyBg3ToBg1) }
+    . = 0x08000000 + 0x7F268;
+    .NilsEpilogueIntro_LoadCg : AT(0x7F268) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueIntro_LoadCg) }
+    . = 0x08000000 + 0x7F2B8;
+    .NilsEpilogueIntro_Loop_BlendCg : AT(0x7F2B8) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueIntro_Loop_BlendCg) }
+    . = 0x08000000 + 0x7F324;
+    .NilsEpilogueIntro_ClearBg1Bg2 : AT(0x7F324) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueIntro_ClearBg1Bg2) }
+    . = 0x08000000 + 0x7F39C;
+    .fill_0183 : AT(0x7F39C) { build/gen/fill_0183.o(.text) }
+    . = 0x08000000 + 0x7F3F4;
+    .NilsEpilogueOutro_Init : AT(0x7F3F4) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueOutro_Init) }
+    . = 0x08000000 + 0x7F490;
+    .fill_0184 : AT(0x7F490) { build/gen/fill_0184.o(.text) }
+    . = 0x08000000 + 0x7F518;
+    .NilsEpilogueOutro_Loop_BlendCgs : AT(0x7F518) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueOutro_Loop_BlendCgs) }
+    . = 0x08000000 + 0x7F584;
+    .fill_0185 : AT(0x7F584) { build/gen/fill_0185.o(.text) }
+    . = 0x08000000 + 0x7F59C;
+    .NilsEpilogueOutro_FadeNilsToWhite : AT(0x7F59C) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueOutro_FadeNilsToWhite) }
     . = 0x08000000 + 0x7F60C;
     .NilsEpilogueOutro_FadeDragonsGateToBlack : AT(0x7F60C) { build/c/eventcall_0807F9EC.o(.text.NilsEpilogueOutro_FadeDragonsGateToBlack) }
     . = 0x08000000 + 0x7F63C;
-    .fill_0154 : AT(0x7F63C) { build/gen/fill_0154.o(.text) }
+    .fill_0186 : AT(0x7F63C) { build/gen/fill_0186.o(.text) }
+    . = 0x08000000 + 0x7F650;
+    .sub_8080480 : AT(0x7F650) { build/c/eventcall_0807F9EC.o(.text.sub_8080480) }
     . = 0x08000000 + 0x7F674;
     .DrawUiGaugeBitmapEdgeColumn : AT(0x7F674) { build/c/statscreenfx.o(.text.DrawUiGaugeBitmapEdgeColumn) }
     . = 0x08000000 + 0x7F698;
@@ -6713,7 +7695,7 @@ SECTIONS
     . = 0x08000000 + 0x7F6E4;
     .DrawUiGaugeBitmapBonusColumn : AT(0x7F6E4) { build/c/statscreenfx.o(.text.DrawUiGaugeBitmapBonusColumn) }
     . = 0x08000000 + 0x7F700;
-    .fill_0155 : AT(0x7F700) { build/gen/fill_0155.o(.text) }
+    .DrawUiGauge : AT(0x7F700) { build/c/statscreenfx.o(.text.DrawUiGauge) }
     . = 0x08000000 + 0x7F7D0;
     .PutDrawUiGauge : AT(0x7F7D0) { build/c/statscreenfx.o(.text.PutDrawUiGauge) }
     . = 0x08000000 + 0x7F818;
@@ -6721,91 +7703,255 @@ SECTIONS
     . = 0x08000000 + 0x7F820;
     .BackgroundSlide_Loop : AT(0x7F820) { build/c/statscreenfx.o(.text.BackgroundSlide_Loop) }
     . = 0x08000000 + 0x7F85C;
-    .fill_0156 : AT(0x7F85C) { build/gen/fill_0156.o(.text) }
+    .fill_0187 : AT(0x7F85C) { build/gen/fill_0187.o(.text) }
+    . = 0x08000000 + 0x7FCAC;
+    .PutStatScreenStatWithBar : AT(0x7FCAC) { build/c/statscreenfx.o(.text.PutStatScreenStatWithBar) }
+    . = 0x08000000 + 0x7FD74;
+    .fill_0188 : AT(0x7FD74) { build/gen/fill_0188.o(.text) }
+    . = 0x08000000 + 0x80218;
+    .PutStatScreenSupportList : AT(0x80218) { build/c/statscreenfx.o(.text.PutStatScreenSupportList) }
+    . = 0x08000000 + 0x80308;
+    .fill_0189 : AT(0x80308) { build/gen/fill_0189.o(.text) }
+    . = 0x08000000 + 0x80470;
+    .PutStatScreenPage : AT(0x80470) { build/c/statscreenfx.o(.text.PutStatScreenPage) }
+    . = 0x08000000 + 0x804C4;
+    .FindNextStatScreenUnit : AT(0x804C4) { build/c/statscreen-util.o(.text.FindNextStatScreenUnit) }
+    . = 0x08000000 + 0x80580;
+    .StatScreenPageSlide_Loop : AT(0x80580) { build/c/statscreen-util.o(.text.StatScreenPageSlide_Loop) }
+    . = 0x08000000 + 0x80698;
+    .fill_0190 : AT(0x80698) { build/gen/fill_0190.o(.text) }
+    . = 0x08000000 + 0x806A4;
+    .StartStatScreenPageSlide : AT(0x806A4) { build/c/statscreen-util.o(.text.StartStatScreenPageSlide) }
+    . = 0x08000000 + 0x80710;
+    .StatScreenUnitSlide_FadeOutInit : AT(0x80710) { build/c/statscreen-util.o(.text.StatScreenUnitSlide_FadeOutInit) }
+    . = 0x08000000 + 0x807A0;
+    .StatScreenUnitSlide_FadeOutLoop : AT(0x807A0) { build/c/statscreen-util.o(.text.StatScreenUnitSlide_FadeOutLoop) }
+    . = 0x08000000 + 0x80820;
+    .StatScreenUnitSlide_FadeInInit : AT(0x80820) { build/c/statscreen-util.o(.text.StatScreenUnitSlide_FadeInInit) }
+    . = 0x08000000 + 0x80898;
+    .StatScreenUnitSlide_FadeInLoop : AT(0x80898) { build/c/statscreen-util.o(.text.StatScreenUnitSlide_FadeInLoop) }
+    . = 0x08000000 + 0x80914;
+    .fill_0191 : AT(0x80914) { build/gen/fill_0191.o(.text) }
+    . = 0x08000000 + 0x80944;
+    .StatScreenUnitSlide_End : AT(0x80944) { build/c/statscreen-util.o(.text.StatScreenUnitSlide_End) }
+    . = 0x08000000 + 0x809D8;
+    .fill_0192 : AT(0x809D8) { build/gen/fill_0192.o(.text) }
     . = 0x08000000 + 0x80A90;
     .statscreen_util : AT(0x80A90) { build/asm/eu/statscreen-util.o(.text) }
     . = 0x08000000 + 0x80CF4;
     .StatScreenSprites_Init : AT(0x80CF4) { build/c/statscreen.o(.text.StatScreenSprites_Init) }
     . = 0x08000000 + 0x80D0C;
-    .fill_0157 : AT(0x80D0C) { build/gen/fill_0157.o(.text) }
+    .StatScreenSprites_BumpCheck : AT(0x80D0C) { build/c/statscreen.o(.text.StatScreenSprites_BumpCheck) }
+    . = 0x08000000 + 0x80D44;
+    .StatScreenSprites_PutArrows : AT(0x80D44) { build/c/statscreen.o(.text.StatScreenSprites_PutArrows) }
+    . = 0x08000000 + 0x80E2C;
+    .fill_0193 : AT(0x80E2C) { build/gen/fill_0193.o(.text) }
+    . = 0x08000000 + 0x80FD4;
+    .StatScreen_DisableScreen : AT(0x80FD4) { build/c/statscreen.o(.text.StatScreen_DisableScreen) }
+    . = 0x08000000 + 0x81044;
+    .fill_0194 : AT(0x81044) { build/gen/fill_0194.o(.text) }
+    . = 0x08000000 + 0x8118C;
+    .StatScreen_InitUnit : AT(0x8118C) { build/c/statscreen.o(.text.StatScreen_InitUnit) }
+    . = 0x08000000 + 0x8126C;
+    .StatScreen_Main : AT(0x8126C) { build/c/statscreen.o(.text.StatScreen_Main) }
+    . = 0x08000000 + 0x813FC;
+    .fill_0195 : AT(0x813FC) { build/gen/fill_0195.o(.text) }
+    . = 0x08000000 + 0x81448;
+    .SyncStatScreenBgOffset : AT(0x81448) { build/c/statscreen.o(.text.SyncStatScreenBgOffset) }
+    . = 0x08000000 + 0x81480;
+    .fill_0196 : AT(0x81480) { build/gen/fill_0196.o(.text) }
+    . = 0x08000000 + 0x8148C;
+    .StartStatScreen : AT(0x8148C) { build/c/statscreen.o(.text.StartStatScreen) }
+    . = 0x08000000 + 0x814E4;
+    .fill_0197 : AT(0x814E4) { build/gen/fill_0197.o(.text) }
+    . = 0x08000000 + 0x81544;
+    .HelpBoxPopulateStatScreenItem : AT(0x81544) { build/c/statscreen.o(.text.HelpBoxPopulateStatScreenItem) }
+    . = 0x08000000 + 0x81570;
+    .fill_0198 : AT(0x81570) { build/gen/fill_0198.o(.text) }
+    . = 0x08000000 + 0x8165C;
+    .HelpBoxRedirectStatScreenItem : AT(0x8165C) { build/c/statscreen.o(.text.HelpBoxRedirectStatScreenItem) }
+    . = 0x08000000 + 0x816B0;
+    .fill_0199 : AT(0x816B0) { build/gen/fill_0199.o(.text) }
+    . = 0x08000000 + 0x81730;
+    .HelpBoxRedirectStatScreenSupports : AT(0x81730) { build/c/statscreen.o(.text.HelpBoxRedirectStatScreenSupports) }
+    . = 0x08000000 + 0x81764;
+    .UpdateHelpBoxDisplay : AT(0x81764) { build/c/statscreen-helpbox.o(.text.UpdateHelpBoxDisplay) }
+    . = 0x08000000 + 0x81818;
+    .fill_0200 : AT(0x81818) { build/gen/fill_0200.o(.text) }
     . = 0x08000000 + 0x8185C;
     .HelpBox_OnLoop : AT(0x8185C) { build/c/statscreen-helpbox.o(.text.HelpBox_OnLoop) }
     . = 0x08000000 + 0x81884;
-    .fill_0158 : AT(0x81884) { build/gen/fill_0158.o(.text) }
+    .HelpBox_OnClose : AT(0x81884) { build/c/statscreen-helpbox.o(.text.HelpBox_OnClose) }
     . = 0x08000000 + 0x818DC;
     .HelpBox_WaitClose : AT(0x818DC) { build/c/statscreen-helpbox.o(.text.HelpBox_WaitClose) }
     . = 0x08000000 + 0x81904;
-    .fill_0159 : AT(0x81904) { build/gen/fill_0159.o(.text) }
+    .fill_0201 : AT(0x81904) { build/gen/fill_0201.o(.text) }
+    . = 0x08000000 + 0x81938;
+    .StartHelpBox_Unk : AT(0x81938) { build/c/statscreen-helpbox.o(.text.StartHelpBox_Unk) }
+    . = 0x08000000 + 0x81984;
+    .fill_0202 : AT(0x81984) { build/gen/fill_0202.o(.text) }
+    . = 0x08000000 + 0x81A98;
+    .StartHelpBoxExt_Unk : AT(0x81A98) { build/c/statscreen-helpbox.o(.text.StartHelpBoxExt_Unk) }
+    . = 0x08000000 + 0x81B48;
+    .fill_0203 : AT(0x81B48) { build/gen/fill_0203.o(.text) }
+    . = 0x08000000 + 0x81B90;
+    .HelpBoxMoveControl_OnInitBox : AT(0x81B90) { build/c/statscreen-helpbox.o(.text.HelpBoxMoveControl_OnInitBox) }
+    . = 0x08000000 + 0x81BB8;
+    .HelpBoxMoveControl_OnIdle : AT(0x81BB8) { build/c/statscreen-helpbox.o(.text.HelpBoxMoveControl_OnIdle) }
+    . = 0x08000000 + 0x81C84;
+    .fill_0204 : AT(0x81C84) { build/gen/fill_0204.o(.text) }
+    . = 0x08000000 + 0x81D44;
+    .ApplyHelpBoxPosition : AT(0x81D44) { build/c/statscreen-helpbox.o(.text.ApplyHelpBoxPosition) }
+    . = 0x08000000 + 0x81DD0;
+    .fill_0205 : AT(0x81DD0) { build/gen/fill_0205.o(.text) }
     . = 0x08000000 + 0x81DF4;
     .ResetHelpBoxInitSize : AT(0x81DF4) { build/c/statscreen-helpbox.o(.text.ResetHelpBoxInitSize) }
     . = 0x08000000 + 0x81E04;
-    .fill_0160 : AT(0x81E04) { build/gen/fill_0160.o(.text) }
+    .fill_0206 : AT(0x81E04) { build/gen/fill_0206.o(.text) }
+    . = 0x08000000 + 0x81E54;
+    .HelpBoxPopulateAutoItem : AT(0x81E54) { build/c/statscreen-helpbox.o(.text.HelpBoxPopulateAutoItem) }
+    . = 0x08000000 + 0x81E88;
+    .HelpBoxTryRelocateUp : AT(0x81E88) { build/c/statscreen-helpbox.o(.text.HelpBoxTryRelocateUp) }
+    . = 0x08000000 + 0x81EB8;
+    .HelpBoxTryRelocateDown : AT(0x81EB8) { build/c/statscreen-helpbox.o(.text.HelpBoxTryRelocateDown) }
+    . = 0x08000000 + 0x81EE8;
+    .HelpBoxTryRelocateLeft : AT(0x81EE8) { build/c/statscreen-helpbox.o(.text.HelpBoxTryRelocateLeft) }
+    . = 0x08000000 + 0x81F18;
+    .HelpBoxTryRelocateRight : AT(0x81F18) { build/c/statscreen-helpbox.o(.text.HelpBoxTryRelocateRight) }
+    . = 0x08000000 + 0x81F48;
+    .fill_0207 : AT(0x81F48) { build/gen/fill_0207.o(.text) }
+    . = 0x08000000 + 0x81F6C;
+    .StartLockingHelpBox : AT(0x81F6C) { build/c/statscreen-helpbox.o(.text.StartLockingHelpBox) }
+    . = 0x08000000 + 0x81FA4;
+    .fill_0208 : AT(0x81FA4) { build/gen/fill_0208.o(.text) }
+    . = 0x08000000 + 0x81FC0;
+    .StartHelpPromptSprite : AT(0x81FC0) { build/c/statscreen-helpbox.o(.text.StartHelpPromptSprite) }
+    . = 0x08000000 + 0x81FEC;
+    .StartHelpPromptSpriteBlocking : AT(0x81FEC) { build/c/statscreen-helpbox.o(.text.StartHelpPromptSpriteBlocking) }
+    . = 0x08000000 + 0x82018;
+    .fill_0209 : AT(0x82018) { build/gen/fill_0209.o(.text) }
+    . = 0x08000000 + 0x8205C;
+    .PutChapterTitlePalette : AT(0x8205C) { build/c/chapter-title.o(.text.PutChapterTitlePalette) }
+    . = 0x08000000 + 0x820D0;
+    .fill_0210 : AT(0x820D0) { build/gen/fill_0210.o(.text) }
     . = 0x08000000 + 0x8273C;
     .helpbox : AT(0x8273C) { build/asm/eu/helpbox.o(.text) }
     . = 0x08000000 + 0x848E0;
-    .fill_0161 : AT(0x848E0) { build/gen/fill_0161.o(.text) }
+    .fill_0211 : AT(0x848E0) { build/gen/fill_0211.o(.text) }
     . = 0x08000000 + 0x848E2;
     .mapui : AT(0x848E2) { build/asm/eu/mapui.o(.text) }
     . = 0x08000000 + 0x867FC;
-    .fill_0162 : AT(0x867FC) { build/gen/fill_0162.o(.text) }
+    .OnVBlank_SioError : AT(0x867FC) { build/c/sioerror.o(.text.OnVBlank_SioError) }
+    . = 0x08000000 + 0x86820;
+    .fill_0212 : AT(0x86820) { build/gen/fill_0212.o(.text) }
     . = 0x08000000 + 0x8684C;
     .sioerror : AT(0x8684C) { build/asm/eu/sioerror.o(.text) }
     . = 0x08000000 + 0x869D8;
     .chapter_status : AT(0x869D8) { build/asm/eu/chapter-status.o(.text) }
     . = 0x08000000 + 0x8767C;
-    .fill_0163 : AT(0x8767C) { build/gen/fill_0163.o(.text) }
+    .fill_0213 : AT(0x8767C) { build/gen/fill_0213.o(.text) }
     . = 0x08000000 + 0x87684;
     .cgtext : AT(0x87684) { build/asm/eu/cgtext.o(.text) }
     . = 0x08000000 + 0x88DE8;
     .unitlistscreen : AT(0x88DE8) { build/asm/eu/unitlistscreen.o(.text) }
     . = 0x08000000 + 0x8DC04;
-    .fill_0164 : AT(0x8DC04) { build/gen/fill_0164.o(.text) }
+    .fill_0214 : AT(0x8DC04) { build/gen/fill_0214.o(.text) }
     . = 0x08000000 + 0x8DC54;
     .PrepOptionCountToRealIndexByMask : AT(0x8DC54) { build/c/prepscreen.o(.text.PrepOptionCountToRealIndexByMask) }
     . = 0x08000000 + 0x8DC84;
     .GetPrepOptionCount : AT(0x8DC84) { build/c/prepscreen.o(.text.GetPrepOptionCount) }
     . = 0x08000000 + 0x8DCA8;
-    .fill_0165 : AT(0x8DCA8) { build/gen/fill_0165.o(.text) }
+    .PutPrepMenuUiImg : AT(0x8DCA8) { build/c/prepscreen.o(.text.PutPrepMenuUiImg) }
+    . = 0x08000000 + 0x8DCF8;
+    .sub_808E454 : AT(0x8DCF8) { build/c/prepscreen.o(.text.sub_808E454) }
     . = 0x08000000 + 0x8DD78;
     .PrepScreenMenu_OnPickUnits : AT(0x8DD78) { build/c/prepscreen.o(.text.PrepScreenMenu_OnPickUnits) }
     . = 0x08000000 + 0x8DD8C;
     .PrepScreenMenu_OnItems : AT(0x8DD8C) { build/c/prepscreen.o(.text.PrepScreenMenu_OnItems) }
     . = 0x08000000 + 0x8DDA0;
-    .fill_0166 : AT(0x8DDA0) { build/gen/fill_0166.o(.text) }
+    .fill_0215 : AT(0x8DDA0) { build/gen/fill_0215.o(.text) }
+    . = 0x08000000 + 0x8DDC8;
+    .PrepScreenMenu_OnSave : AT(0x8DDC8) { build/c/prepscreen.o(.text.PrepScreenMenu_OnSave) }
+    . = 0x08000000 + 0x8DDFC;
+    .PrepScreenMenu_OnStartPress : AT(0x8DDFC) { build/c/prepscreen.o(.text.PrepScreenMenu_OnStartPress) }
+    . = 0x08000000 + 0x8DE20;
+    .fill_0216 : AT(0x8DE20) { build/gen/fill_0216.o(.text) }
+    . = 0x08000000 + 0x8DEA4;
+    .RegisterSioPid : AT(0x8DEA4) { build/c/prepscreen.o(.text.RegisterSioPid) }
+    . = 0x08000000 + 0x8DECC;
+    .RemoveSioPid : AT(0x8DECC) { build/c/prepscreen.o(.text.RemoveSioPid) }
+    . = 0x08000000 + 0x8DF0C;
+    .fill_0217 : AT(0x8DF0C) { build/gen/fill_0217.o(.text) }
+    . = 0x08000000 + 0x8E05C;
+    .CalcForceDeployedUnitCounts : AT(0x8E05C) { build/c/prepscreen.o(.text.CalcForceDeployedUnitCounts) }
+    . = 0x08000000 + 0x8E09C;
+    .sub_808E7D4 : AT(0x8E09C) { build/c/prepscreen.o(.text.sub_808E7D4) }
     . = 0x08000000 + 0x8E0EC;
     .IsUnitInCurrentRoster : AT(0x8E0EC) { build/c/prepscreen.o(.text.IsUnitInCurrentRoster) }
     . = 0x08000000 + 0x8E124;
-    .fill_0167 : AT(0x8E124) { build/gen/fill_0167.o(.text) }
+    .fill_0218 : AT(0x8E124) { build/gen/fill_0218.o(.text) }
     . = 0x08000000 + 0x8E2E4;
     .preputil_unitlist : AT(0x8E2E4) { build/asm/eu/preputil_unitlist.o(.text) }
     . = 0x08000000 + 0x8E4B0;
-    .fill_0168 : AT(0x8E4B0) { build/gen/fill_0168.o(.text) }
+    .RemoveSomeUnitItems : AT(0x8E4B0) { build/c/preputil_unitlist.o(.text.RemoveSomeUnitItems) }
+    . = 0x08000000 + 0x8E534;
+    .MakePrepUnitList : AT(0x8E534) { build/c/preputil_unitlist.o(.text.MakePrepUnitList) }
+    . = 0x08000000 + 0x8E574;
+    .UnitGetIndexInPrepList : AT(0x8E574) { build/c/preputil_unitlist.o(.text.UnitGetIndexInPrepList) }
+    . = 0x08000000 + 0x8E5A0;
+    .PrepUpdateSMS : AT(0x8E5A0) { build/c/preputil_unitlist.o(.text.PrepUpdateSMS) }
+    . = 0x08000000 + 0x8E5E8;
+    .PrepAutoCapDeployUnits : AT(0x8E5E8) { build/c/preputil_unitlist.o(.text.PrepAutoCapDeployUnits) }
+    . = 0x08000000 + 0x8E650;
+    .PrepRestartMuralBackground : AT(0x8E650) { build/c/prep_atmenu.o(.text.PrepRestartMuralBackground) }
+    . = 0x08000000 + 0x8E674;
+    .fill_0219 : AT(0x8E674) { build/gen/fill_0219.o(.text) }
+    . = 0x08000000 + 0x8E714;
+    .PrepAtMenu_OnInit : AT(0x8E714) { build/c/prep_atmenu.o(.text.PrepAtMenu_OnInit) }
+    . = 0x08000000 + 0x8E76C;
+    .fill_0220 : AT(0x8E76C) { build/gen/fill_0220.o(.text) }
+    . = 0x08000000 + 0x8E7A0;
+    .ParsePrepMenuDescTexts : AT(0x8E7A0) { build/c/prep_atmenu.o(.text.ParsePrepMenuDescTexts) }
+    . = 0x08000000 + 0x8E7D0;
+    .fill_0221 : AT(0x8E7D0) { build/gen/fill_0221.o(.text) }
+    . = 0x08000000 + 0x8E804;
+    .PrepMenuDescOnInit : AT(0x8E804) { build/c/prep_atmenu.o(.text.PrepMenuDescOnInit) }
+    . = 0x08000000 + 0x8E814;
+    .fill_0222 : AT(0x8E814) { build/gen/fill_0222.o(.text) }
+    . = 0x08000000 + 0x8EB64;
+    .EndPrepAtMenuIfNoUnitAvailable : AT(0x8EB64) { build/c/prep_atmenu.o(.text.EndPrepAtMenuIfNoUnitAvailable) }
     . = 0x08000000 + 0x8EBD4;
     .prep_atmenu : AT(0x8EBD4) { build/asm/eu/prep_atmenu.o(.text) }
     . = 0x08000000 + 0x8FAA4;
-    .fill_0169 : AT(0x8FAA4) { build/gen/fill_0169.o(.text) }
+    .sub_8090148 : AT(0x8FAA4) { build/c/prepscreenfx.o(.text.sub_8090148) }
+    . = 0x08000000 + 0x8FBA0;
+    .fill_0223 : AT(0x8FBA0) { build/gen/fill_0223.o(.text) }
     . = 0x08000000 + 0x8FCE8;
     .ProcPrepSpChar_Idle : AT(0x8FCE8) { build/c/prepscreenfx.o(.text.ProcPrepSpChar_Idle) }
     . = 0x08000000 + 0x8FCFC;
-    .fill_0170 : AT(0x8FCFC) { build/gen/fill_0170.o(.text) }
+    .fill_0224 : AT(0x8FCFC) { build/gen/fill_0224.o(.text) }
     . = 0x08000000 + 0x8FD5C;
     .prep_menu : AT(0x8FD5C) { build/asm/eu/prep_menu.o(.text) }
     . = 0x08000000 + 0x90458;
     .prep_menuscroll : AT(0x90458) { build/asm/eu/prep_menuscroll.o(.text) }
     . = 0x08000000 + 0x907DC;
-    .fill_0171 : AT(0x907DC) { build/gen/fill_0171.o(.text) }
+    .sub_8090E80 : AT(0x907DC) { build/c/prep_bgscroll.o(.text.sub_8090E80) }
+    . = 0x08000000 + 0x9081C;
+    .sub_8090EC0 : AT(0x9081C) { build/c/prep_bgscroll.o(.text.sub_8090EC0) }
+    . = 0x08000000 + 0x90870;
+    .fill_0225 : AT(0x90870) { build/gen/fill_0225.o(.text) }
     . = 0x08000000 + 0x90A04;
     .prep_sallycir : AT(0x90A04) { build/asm/eu/prep_sallycir.o(.text) }
     . = 0x08000000 + 0x90EF0;
-    .fill_0172 : AT(0x90EF0) { build/gen/fill_0172.o(.text) }
+    .fill_0226 : AT(0x90EF0) { build/gen/fill_0226.o(.text) }
     . = 0x08000000 + 0x90EF4;
     .prep_utils : AT(0x90EF4) { build/asm/eu/prep_utils.o(.text) }
     . = 0x08000000 + 0x915A2;
-    .fill_0173 : AT(0x915A2) { build/gen/fill_0173.o(.text) }
+    .fill_0227 : AT(0x915A2) { build/gen/fill_0227.o(.text) }
     . = 0x08000000 + 0x915DC;
     .PrepItemScreen_OnHBlank : AT(0x915DC) { build/c/prep_itemscreen.o(.text.PrepItemScreen_OnHBlank) }
     . = 0x08000000 + 0x91610;
-    .fill_0174 : AT(0x91610) { build/gen/fill_0174.o(.text) }
+    .fill_0228 : AT(0x91610) { build/gen/fill_0228.o(.text) }
     . = 0x08000000 + 0x91688;
     .prep_itemscreen : AT(0x91688) { build/asm/eu/prep_itemscreen.o(.text) }
     . = 0x08000000 + 0x93218;
@@ -6813,49 +7959,75 @@ SECTIONS
     . = 0x08000000 + 0x942D4;
     .prep_itemtrade : AT(0x942D4) { build/asm/eu/prep_itemtrade.o(.text) }
     . = 0x08000000 + 0x94C88;
-    .fill_0175 : AT(0x94C88) { build/gen/fill_0175.o(.text) }
+    .fill_0229 : AT(0x94C88) { build/gen/fill_0229.o(.text) }
     . = 0x08000000 + 0x94CA8;
     .prep_itemuse : AT(0x94CA8) { build/asm/eu/prep_itemuse.o(.text) }
     . = 0x08000000 + 0x95BD4;
-    .fill_0176 : AT(0x95BD4) { build/gen/fill_0176.o(.text) }
+    .fill_0230 : AT(0x95BD4) { build/gen/fill_0230.o(.text) }
     . = 0x08000000 + 0x95CBC;
     .prep_itemusemind : AT(0x95CBC) { build/asm/eu/prep_itemusemind.o(.text) }
     . = 0x08000000 + 0x95F00;
     .prep_itemsupply : AT(0x95F00) { build/asm/eu/prep_itemsupply.o(.text) }
     . = 0x08000000 + 0x97674;
-    .fill_0177 : AT(0x97674) { build/gen/fill_0177.o(.text) }
+    .fill_0231 : AT(0x97674) { build/gen/fill_0231.o(.text) }
     . = 0x08000000 + 0x9785C;
     .prep_itemlist : AT(0x9785C) { build/asm/eu/prep_itemlist.o(.text) }
     . = 0x08000000 + 0x988DC;
-    .fill_0178 : AT(0x988DC) { build/gen/fill_0178.o(.text) }
+    .fill_0232 : AT(0x988DC) { build/gen/fill_0232.o(.text) }
     . = 0x08000000 + 0x98956;
     .prep_itemsell : AT(0x98956) { build/asm/eu/prep_itemsell.o(.text) }
     . = 0x08000000 + 0x99148;
-    .fill_0179 : AT(0x99148) { build/gen/fill_0179.o(.text) }
+    .fill_0233 : AT(0x99148) { build/gen/fill_0233.o(.text) }
     . = 0x08000000 + 0x992B8;
     .prep_fortune : AT(0x992B8) { build/asm/eu/prep_fortune.o(.text) }
     . = 0x08000000 + 0x99692;
-    .fill_0180 : AT(0x99692) { build/gen/fill_0180.o(.text) }
+    .fill_0234 : AT(0x99692) { build/gen/fill_0234.o(.text) }
     . = 0x08000000 + 0x99740;
     .prep_8099D18 : AT(0x99740) { build/asm/eu/prep_8099D18.o(.text) }
     . = 0x08000000 + 0x9B320;
-    .fill_0181 : AT(0x9B320) { build/gen/fill_0181.o(.text) }
+    .fill_0235 : AT(0x9B320) { build/gen/fill_0235.o(.text) }
     . = 0x08000000 + 0x9B360;
     .prep_uisupport : AT(0x9B360) { build/asm/eu/prep_uisupport.o(.text) }
     . = 0x08000000 + 0x9DAC8;
-    .fill_0182 : AT(0x9DAC8) { build/gen/fill_0182.o(.text) }
+    .fill_0236 : AT(0x9DAC8) { build/gen/fill_0236.o(.text) }
     . = 0x08000000 + 0x9DADC;
     .prep : AT(0x9DADC) { build/asm/eu/prep.o(.text) }
     . = 0x08000000 + 0x9E74C;
-    .fill_0183 : AT(0x9E74C) { build/gen/fill_0183.o(.text) }
+    .fill_0237 : AT(0x9E74C) { build/gen/fill_0237.o(.text) }
+    . = 0x08000000 + 0x9E750;
+    .SramInit : AT(0x9E750) { build/c/save_core.o(.text.SramInit) }
+    . = 0x08000000 + 0x9E7C4;
+    .fill_0238 : AT(0x9E7C4) { build/gen/fill_0238.o(.text) }
+    . = 0x08000000 + 0x9E7D4;
+    .WipeSram : AT(0x9E7D4) { build/c/save_core.o(.text.WipeSram) }
     . = 0x08000000 + 0x9E810;
     .Checksum16 : AT(0x9E810) { build/c/save_core.o(.text.Checksum16) }
     . = 0x08000000 + 0x9E83C;
-    .fill_0184 : AT(0x9E83C) { build/gen/fill_0184.o(.text) }
+    .ReadGlobalSaveInfo : AT(0x9E83C) { build/c/save_core.o(.text.ReadGlobalSaveInfo) }
+    . = 0x08000000 + 0x9E8BC;
+    .fill_0239 : AT(0x9E8BC) { build/gen/fill_0239.o(.text) }
+    . = 0x08000000 + 0x9E9D0;
+    .ResetFe6LinkSaveInfo : AT(0x9E9D0) { build/c/save_core.o(.text.ResetFe6LinkSaveInfo) }
+    . = 0x08000000 + 0x9E9F4;
+    .EraseBonusContentData : AT(0x9E9F4) { build/c/save_core.o(.text.EraseBonusContentData) }
+    . = 0x08000000 + 0x9EA20;
+    .fill_0240 : AT(0x9EA20) { build/gen/fill_0240.o(.text) }
+    . = 0x08000000 + 0x9EA44;
+    .ReadSaveBlockInfo : AT(0x9EA44) { build/c/save_core.o(.text.ReadSaveBlockInfo) }
+    . = 0x08000000 + 0x9EAE8;
+    .WriteSaveBlockInfo : AT(0x9EAE8) { build/c/save_core.o(.text.WriteSaveBlockInfo) }
+    . = 0x08000000 + 0x9EB78;
+    .EraseSaveBlockInfo : AT(0x9EB78) { build/c/save_core.o(.text.EraseSaveBlockInfo) }
+    . = 0x08000000 + 0x9EBB8;
+    .fill_0241 : AT(0x9EBB8) { build/gen/fill_0241.o(.text) }
+    . = 0x08000000 + 0x9EC64;
+    .GetSaveReadAddr : AT(0x9EC64) { build/c/save_core.o(.text.GetSaveReadAddr) }
     . = 0x08000000 + 0x9EC80;
     .save : AT(0x9EC80) { build/asm/eu/save.o(.text) }
     . = 0x08000000 + 0xA3664;
-    .fill_0185 : AT(0xA3664) { build/gen/fill_0185.o(.text) }
+    .fill_0242 : AT(0xA3664) { build/gen/fill_0242.o(.text) }
+    . = 0x08000000 + 0xA36E4;
+    .SaveMenu_HandleExtraMiscOption : AT(0xA36E4) { build/c/savemenu.o(.text.SaveMenu_HandleExtraMiscOption) }
     . = 0x08000000 + 0xA36FC;
     .SaveMenuIndexToValidBitfile : AT(0xA36FC) { build/c/savemenu.o(.text.SaveMenuIndexToValidBitfile) }
     . = 0x08000000 + 0xA3734;
@@ -6863,71 +8035,189 @@ SECTIONS
     . = 0x08000000 + 0xA3770;
     .sub_80A4054 : AT(0xA3770) { build/c/savemenu.o(.text.sub_80A4054) }
     . = 0x08000000 + 0xA3798;
-    .fill_0186 : AT(0xA3798) { build/gen/fill_0186.o(.text) }
+    .fill_0243 : AT(0xA3798) { build/gen/fill_0243.o(.text) }
     . = 0x08000000 + 0xA3970;
     .savemenu : AT(0xA3970) { build/asm/eu/savemenu.o(.text) }
     . = 0x08000000 + 0xA5258;
-    .fill_0187 : AT(0xA5258) { build/gen/fill_0187.o(.text) }
+    .sub_80A5B44 : AT(0xA5258) { build/c/savedraw.o(.text.sub_80A5B44) }
+    . = 0x08000000 + 0xA5374;
+    .fill_0244 : AT(0xA5374) { build/gen/fill_0244.o(.text) }
     . = 0x08000000 + 0xA543C;
     .savedraw : AT(0xA543C) { build/asm/eu/savedraw.o(.text) }
     . = 0x08000000 + 0xA60B0;
-    .fill_0188 : AT(0xA60B0) { build/gen/fill_0188.o(.text) }
+    .fill_0245 : AT(0xA60B0) { build/gen/fill_0245.o(.text) }
     . = 0x08000000 + 0xA60D4;
     .SpinRotation_Init : AT(0xA60D4) { build/c/savedrawfx.o(.text.SpinRotation_Init) }
     . = 0x08000000 + 0xA6108;
     .SpinRotation_Loop : AT(0xA6108) { build/c/savedrawfx.o(.text.SpinRotation_Loop) }
     . = 0x08000000 + 0xA6158;
-    .fill_0189 : AT(0xA6158) { build/gen/fill_0189.o(.text) }
+    .fill_0246 : AT(0xA6158) { build/gen/fill_0246.o(.text) }
     . = 0x08000000 + 0xA6170;
     .savedrawfx : AT(0xA6170) { build/asm/eu/savedrawfx.o(.text) }
     . = 0x08000000 + 0xA6814;
     .savemenu_difficulty : AT(0xA6814) { build/asm/eu/savemenu_difficulty.o(.text) }
     . = 0x08000000 + 0xA6AE0;
-    .fill_0190 : AT(0xA6AE0) { build/gen/fill_0190.o(.text) }
+    .fill_0247 : AT(0xA6AE0) { build/gen/fill_0247.o(.text) }
+    . = 0x08000000 + 0xA6B2C;
+    .TactInfo_CloseHelpbox : AT(0xA6B2C) { build/c/savemenu_tactician.o(.text.TactInfo_CloseHelpbox) }
+    . = 0x08000000 + 0xA6B40;
+    .fill_0248 : AT(0xA6B40) { build/gen/fill_0248.o(.text) }
+    . = 0x08000000 + 0xA6E9C;
+    .sub_80A76C8 : AT(0xA6E9C) { build/c/savemenu_tactician.o(.text.sub_80A76C8) }
+    . = 0x08000000 + 0xA6ED0;
+    .fill_0249 : AT(0xA6ED0) { build/gen/fill_0249.o(.text) }
+    . = 0x08000000 + 0xA7224;
+    .TactInfo_HandleCheckParticipantPrompt : AT(0xA7224) { build/c/savemenu_tactician.o(.text.TactInfo_HandleCheckParticipantPrompt) }
+    . = 0x08000000 + 0xA7258;
+    .fill_0250 : AT(0xA7258) { build/gen/fill_0250.o(.text) }
+    . = 0x08000000 + 0xA72AC;
+    .Tact_ClearNrVrams : AT(0xA72AC) { build/c/savemenu_tactician.o(.text.Tact_ClearNrVrams) }
+    . = 0x08000000 + 0xA72F0;
+    .fill_0251 : AT(0xA72F0) { build/gen/fill_0251.o(.text) }
     . = 0x08000000 + 0xA72F8;
     .savemenu_tactician : AT(0xA72F8) { build/asm/eu/savemenu_tactician.o(.text) }
     . = 0x08000000 + 0xA7948;
-    .fill_0191 : AT(0xA7948) { build/gen/fill_0191.o(.text) }
+    .InitModeSelectAnims : AT(0xA7948) { build/c/savemenu_modeselect.o(.text.InitModeSelectAnims) }
+    . = 0x08000000 + 0xA7A94;
+    .EndModeSelectAnims : AT(0xA7A94) { build/c/savemenu_modeselect.o(.text.EndModeSelectAnims) }
+    . = 0x08000000 + 0xA7AB8;
+    .fill_0252 : AT(0xA7AB8) { build/gen/fill_0252.o(.text) }
+    . = 0x08000000 + 0xA7C8C;
+    .StartModeSelectFace : AT(0xA7C8C) { build/c/savemenu_modeselect.o(.text.StartModeSelectFace) }
+    . = 0x08000000 + 0xA7CC4;
+    .fill_0253 : AT(0xA7CC4) { build/gen/fill_0253.o(.text) }
     . = 0x08000000 + 0xA7E14;
     .sub_80A8850 : AT(0xA7E14) { build/c/savemenu_modeselect.o(.text.sub_80A8850) }
     . = 0x08000000 + 0xA7E44;
     .ModeSelectSpriteDraw_Init : AT(0xA7E44) { build/c/savemenu_modeselect.o(.text.ModeSelectSpriteDraw_Init) }
     . = 0x08000000 + 0xA7E7C;
-    .fill_0192 : AT(0xA7E7C) { build/gen/fill_0192.o(.text) }
+    .fill_0254 : AT(0xA7E7C) { build/gen/fill_0254.o(.text) }
     . = 0x08000000 + 0xA8168;
     .sub_80A8B74 : AT(0xA8168) { build/c/savemenu_modeselect.o(.text.sub_80A8B74) }
     . = 0x08000000 + 0xA8178;
     .ModeSelect_InitGfxMaybe : AT(0xA8178) { build/c/savemenu_modeselect.o(.text.ModeSelect_InitGfxMaybe) }
     . = 0x08000000 + 0xA8190;
-    .fill_0193 : AT(0xA8190) { build/gen/fill_0193.o(.text) }
+    .fill_0255 : AT(0xA8190) { build/gen/fill_0255.o(.text) }
+    . = 0x08000000 + 0xA8578;
+    .ModeSelect_TransitionSplitOpen : AT(0xA8578) { build/c/savemenu_modeselect.o(.text.ModeSelect_TransitionSplitOpen) }
+    . = 0x08000000 + 0xA85E8;
+    .ModeSelect_TransitionSplitClose : AT(0xA85E8) { build/c/savemenu_modeselect.o(.text.ModeSelect_TransitionSplitClose) }
+    . = 0x08000000 + 0xA8644;
+    .sub_80A9034 : AT(0xA8644) { build/c/savemenu_modeselect.o(.text.sub_80A9034) }
+    . = 0x08000000 + 0xA8674;
+    .sub_80A9064 : AT(0xA8674) { build/c/savemenu_modeselect.o(.text.sub_80A9064) }
+    . = 0x08000000 + 0xA86A0;
+    .ModeSelect_Loop_KeyHandler : AT(0xA86A0) { build/c/savemenu_modeselect.o(.text.ModeSelect_Loop_KeyHandler) }
+    . = 0x08000000 + 0xA8944;
+    .ModeSelect_RotateRight : AT(0xA8944) { build/c/savemenu_modeselect.o(.text.ModeSelect_RotateRight) }
+    . = 0x08000000 + 0xA89AC;
+    .ModeSelect_RotateLeft : AT(0xA89AC) { build/c/savemenu_modeselect.o(.text.ModeSelect_RotateLeft) }
+    . = 0x08000000 + 0xA8A18;
+    .ModeSelect_Loop_RotateCarousel : AT(0xA8A18) { build/c/savemenu_modeselect.o(.text.ModeSelect_Loop_RotateCarousel) }
+    . = 0x08000000 + 0xA8B48;
+    .ModeSelect_End : AT(0xA8B48) { build/c/savemenu_modeselect.o(.text.ModeSelect_End) }
+    . = 0x08000000 + 0xA8B88;
+    .fill_0256 : AT(0xA8B88) { build/gen/fill_0256.o(.text) }
+    . = 0x08000000 + 0xA8BC4;
+    .sub_80A95B4 : AT(0xA8BC4) { build/c/scrolling_util.o(.text.sub_80A95B4) }
+    . = 0x08000000 + 0xA8C9C;
+    .sub_80A968C : AT(0xA8C9C) { build/c/scrolling_util.o(.text.sub_80A968C) }
+    . = 0x08000000 + 0xA8D5C;
+    .sub_80A974C : AT(0xA8D5C) { build/c/scrolling_util.o(.text.sub_80A974C) }
     . = 0x08000000 + 0xA8E1C;
     .UiCursorHand_Init : AT(0xA8E1C) { build/c/cursor-hand.o(.text.UiCursorHand_Init) }
     . = 0x08000000 + 0xA8E48;
-    .fill_0194 : AT(0xA8E48) { build/gen/fill_0194.o(.text) }
+    .UiCursorHand_Loop : AT(0xA8E48) { build/c/cursor-hand.o(.text.UiCursorHand_Loop) }
+    . = 0x08000000 + 0xA8ED8;
+    .fill_0257 : AT(0xA8ED8) { build/gen/fill_0257.o(.text) }
+    . = 0x08000000 + 0xA8EEC;
+    .SetUiCursorHandConfig : AT(0xA8EEC) { build/c/cursor-hand.o(.text.SetUiCursorHandConfig) }
+    . = 0x08000000 + 0xA8F64;
+    .UiCursorHand_SetPosition : AT(0xA8F64) { build/c/cursor-hand.o(.text.UiCursorHand_SetPosition) }
+    . = 0x08000000 + 0xA8F9C;
+    .fill_0258 : AT(0xA8F9C) { build/gen/fill_0258.o(.text) }
     . = 0x08000000 + 0xA902C;
     .spinning_arrow : AT(0xA902C) { build/asm/eu/spinning_arrow.o(.text) }
     . = 0x08000000 + 0xA9308;
     .ParallelFiniteLoop_Init : AT(0xA9308) { build/c/sysutil.o(.text.ParallelFiniteLoop_Init) }
     . = 0x08000000 + 0xA9310;
-    .fill_0195 : AT(0xA9310) { build/gen/fill_0195.o(.text) }
+    .ParallelFiniteLoop_Loop : AT(0xA9310) { build/c/sysutil.o(.text.ParallelFiniteLoop_Loop) }
+    . = 0x08000000 + 0xA9338;
+    .fill_0259 : AT(0xA9338) { build/gen/fill_0259.o(.text) }
     . = 0x08000000 + 0xA9354;
     .SysBlackBox_Init : AT(0xA9354) { build/c/sysutil.o(.text.SysBlackBox_Init) }
     . = 0x08000000 + 0xA936C;
-    .fill_0196 : AT(0xA936C) { build/gen/fill_0196.o(.text) }
+    .SysBlackBox_Main : AT(0xA936C) { build/c/sysutil.o(.text.SysBlackBox_Main) }
+    . = 0x08000000 + 0xA96C4;
+    .fill_0260 : AT(0xA96C4) { build/gen/fill_0260.o(.text) }
+    . = 0x08000000 + 0xA971C;
+    .EnableSysBlackBox : AT(0xA971C) { build/c/sysutil.o(.text.EnableSysBlackBox) }
+    . = 0x08000000 + 0xA9784;
+    .fill_0261 : AT(0xA9784) { build/gen/fill_0261.o(.text) }
+    . = 0x08000000 + 0xA9800;
+    .ParallelWorker_OnLoop : AT(0xA9800) { build/c/sysutil.o(.text.ParallelWorker_OnLoop) }
+    . = 0x08000000 + 0xA9810;
+    .fill_0262 : AT(0xA9810) { build/gen/fill_0262.o(.text) }
+    . = 0x08000000 + 0xA9850;
+    .GetParallelWorker : AT(0xA9850) { build/c/sysutil.o(.text.GetParallelWorker) }
+    . = 0x08000000 + 0xA987C;
+    .DisplayExtendedSysHand : AT(0xA987C) { build/c/sysutil.o(.text.DisplayExtendedSysHand) }
     . = 0x08000000 + 0xA994C;
     .SysHandCursor_Init : AT(0xA994C) { build/c/sysutil.o(.text.SysHandCursor_Init) }
     . = 0x08000000 + 0xA9954;
     .SysHandCursor_Loop : AT(0xA9954) { build/c/sysutil.o(.text.SysHandCursor_Loop) }
     . = 0x08000000 + 0xA9994;
-    .fill_0197 : AT(0xA9994) { build/gen/fill_0197.o(.text) }
+    .fill_0263 : AT(0xA9994) { build/gen/fill_0263.o(.text) }
+    . = 0x08000000 + 0xA9A34;
+    .ShowSysHandCursor : AT(0xA9A34) { build/c/sysutil.o(.text.ShowSysHandCursor) }
+    . = 0x08000000 + 0xA9A7C;
+    .fill_0264 : AT(0xA9A7C) { build/gen/fill_0264.o(.text) }
     . = 0x08000000 + 0xA9B10;
     .SysGrayBox_Init : AT(0xA9B10) { build/c/sysutil.o(.text.SysGrayBox_Init) }
     . = 0x08000000 + 0xA9B28;
-    .fill_0198 : AT(0xA9B28) { build/gen/fill_0198.o(.text) }
+    .SysGrayBox_Loop : AT(0xA9B28) { build/c/sysutil.o(.text.SysGrayBox_Loop) }
+    . = 0x08000000 + 0xA9E68;
+    .fill_0265 : AT(0xA9E68) { build/gen/fill_0265.o(.text) }
+    . = 0x08000000 + 0xA9EB0;
+    .EnableUnransportWindow : AT(0xA9EB0) { build/c/sysutil.o(.text.EnableUnransportWindow) }
+    . = 0x08000000 + 0xA9F00;
+    .fill_0266 : AT(0xA9F00) { build/gen/fill_0266.o(.text) }
     . = 0x08000000 + 0xA9F3C;
     .SysBrownBox_Init : AT(0xA9F3C) { build/c/sysutil.o(.text.SysBrownBox_Init) }
     . = 0x08000000 + 0xA9F54;
-    .fill_0199 : AT(0xA9F54) { build/gen/fill_0199.o(.text) }
+    .SysBrownBox_Loop : AT(0xA9F54) { build/c/sysutil.o(.text.SysBrownBox_Loop) }
+    . = 0x08000000 + 0xAA094;
+    .StartSysBrownBox : AT(0xAA094) { build/c/sysutil.o(.text.StartSysBrownBox) }
+    . = 0x08000000 + 0xAA114;
+    .EnableSysBrownBox : AT(0xAA114) { build/c/sysutil.o(.text.EnableSysBrownBox) }
+    . = 0x08000000 + 0xAA15C;
+    .fill_0267 : AT(0xAA15C) { build/gen/fill_0267.o(.text) }
+    . = 0x08000000 + 0xAA1BC;
+    .SysboxTextMain : AT(0xAA1BC) { build/c/sysutil.o(.text.SysboxTextMain) }
+    . = 0x08000000 + 0xAA228;
+    .fill_0268 : AT(0xAA228) { build/gen/fill_0268.o(.text) }
+    . = 0x08000000 + 0xAA2E0;
+    .EndAllProcChildren : AT(0xAA2E0) { build/c/sysutil.o(.text.EndAllProcChildren) }
+    . = 0x08000000 + 0xAA304;
+    .fill_0269 : AT(0xAA304) { build/gen/fill_0269.o(.text) }
+    . = 0x08000000 + 0xAA308;
+    .BgAffinRotScaling : AT(0xAA308) { build/c/sysutil.o(.text.BgAffinRotScaling) }
+    . = 0x08000000 + 0xAA39C;
+    .BgAffinScaling : AT(0xAA39C) { build/c/sysutil.o(.text.BgAffinScaling) }
+    . = 0x08000000 + 0xAA3EC;
+    .BgAffinAnchoring : AT(0xAA3EC) { build/c/sysutil.o(.text.BgAffinAnchoring) }
+    . = 0x08000000 + 0xAA454;
+    .BgAffinRotScalingHighPrecision : AT(0xAA454) { build/c/sysutil.o(.text.BgAffinRotScalingHighPrecision) }
+    . = 0x08000000 + 0xAA4C8;
+    .BgAffinScalingHighPrecision : AT(0xAA4C8) { build/c/sysutil.o(.text.BgAffinScalingHighPrecision) }
+    . = 0x08000000 + 0xAA508;
+    .BgAffinAnchoringHighPrecision : AT(0xAA508) { build/c/sysutil.o(.text.BgAffinAnchoringHighPrecision) }
+    . = 0x08000000 + 0xAA550;
+    .sub_80AAEF8 : AT(0xAA550) { build/c/sysutil.o(.text.sub_80AAEF8) }
+    . = 0x08000000 + 0xAA5FC;
+    .sub_80AAFA4 : AT(0xAA5FC) { build/c/sysutil.o(.text.sub_80AAFA4) }
+    . = 0x08000000 + 0xAA674;
+    .fill_0270 : AT(0xAA674) { build/gen/fill_0270.o(.text) }
     . = 0x08000000 + 0xAA698;
     .FadeInOut_Init : AT(0xAA698) { build/c/sysutil.o(.text.FadeInOut_Init) }
     . = 0x08000000 + 0xAA6AC;
@@ -6935,52 +8225,110 @@ SECTIONS
     . = 0x08000000 + 0xAA6F0;
     .FadeOut_Loop : AT(0xAA6F0) { build/c/sysutil.o(.text.FadeOut_Loop) }
     . = 0x08000000 + 0xAA738;
-    .fill_0200 : AT(0xAA738) { build/gen/fill_0200.o(.text) }
+    .FadeInOut_DisableGfx : AT(0xAA738) { build/c/sysutil.o(.text.FadeInOut_DisableGfx) }
+    . = 0x08000000 + 0xAA790;
+    .fill_0271 : AT(0xAA790) { build/gen/fill_0271.o(.text) }
     . = 0x08000000 + 0xAA9C8;
     .BmBgfx_Init : AT(0xAA9C8) { build/c/sysutil.o(.text.BmBgfx_Init) }
     . = 0x08000000 + 0xAAA08;
-    .fill_0201 : AT(0xAAA08) { build/gen/fill_0201.o(.text) }
+    .BmBgfx_Loop : AT(0xAAA08) { build/c/sysutil.o(.text.BmBgfx_Loop) }
+    . = 0x08000000 + 0xAAC0C;
+    .BmBgfx_End : AT(0xAAC0C) { build/c/sysutil.o(.text.BmBgfx_End) }
+    . = 0x08000000 + 0xAAC40;
+    .fill_0272 : AT(0xAAC40) { build/gen/fill_0272.o(.text) }
+    . = 0x08000000 + 0xAACB4;
+    .StartBmBgfx : AT(0xAACB4) { build/c/sysutil.o(.text.StartBmBgfx) }
+    . = 0x08000000 + 0xAAD5C;
+    .MixPaletteCore : AT(0xAAD5C) { build/c/sysutil.o(.text.MixPaletteCore) }
     . = 0x08000000 + 0xAAE20;
     .MixPalette_Init : AT(0xAAE20) { build/c/sysutil.o(.text.MixPalette_Init) }
     . = 0x08000000 + 0xAAE28;
     .MixPalette_Loop : AT(0xAAE28) { build/c/sysutil.o(.text.MixPalette_Loop) }
     . = 0x08000000 + 0xAAE54;
-    .fill_0202 : AT(0xAAE54) { build/gen/fill_0202.o(.text) }
+    .StartMixPalette : AT(0xAAE54) { build/c/sysutil.o(.text.StartMixPalette) }
+    . = 0x08000000 + 0xAAE8C;
+    .fill_0273 : AT(0xAAE8C) { build/gen/fill_0273.o(.text) }
+    . = 0x08000000 + 0xAAEA0;
+    .StartSpriteAnimfx : AT(0xAAEA0) { build/c/sysutil.o(.text.StartSpriteAnimfx) }
+    . = 0x08000000 + 0xAAF14;
+    .fill_0274 : AT(0xAAF14) { build/gen/fill_0274.o(.text) }
+    . = 0x08000000 + 0xAAFAC;
+    .AppendString : AT(0xAAFAC) { build/c/sysutil.o(.text.AppendString) }
     . = 0x08000000 + 0xAAFCC;
     .AppendCharacter : AT(0xAAFCC) { build/c/sysutil.o(.text.AppendCharacter) }
     . = 0x08000000 + 0xAAFD8;
-    .fill_0203 : AT(0xAAFD8) { build/gen/fill_0203.o(.text) }
+    .fill_0275 : AT(0xAAFD8) { build/gen/fill_0275.o(.text) }
     . = 0x08000000 + 0xAB100;
     .code_080AB6FC : AT(0xAB100) { build/asm/eu/code_080AB6FC.o(.text) }
     . = 0x08000000 + 0xAF5E0;
-    .fill_0204 : AT(0xAF5E0) { build/gen/fill_0204.o(.text) }
+    .sub_80AFC3C : AT(0xAF5E0) { build/c/lord-select.o(.text.sub_80AFC3C) }
+    . = 0x08000000 + 0xAF668;
+    .fill_0276 : AT(0xAF668) { build/gen/fill_0276.o(.text) }
+    . = 0x08000000 + 0xAF6CC;
+    .sub_80AFD28 : AT(0xAF6CC) { build/c/lord-select.o(.text.sub_80AFD28) }
+    . = 0x08000000 + 0xAF750;
+    .sub_80AFDAC : AT(0xAF750) { build/c/lord-select.o(.text.sub_80AFDAC) }
+    . = 0x08000000 + 0xAF780;
+    .fill_0277 : AT(0xAF780) { build/gen/fill_0277.o(.text) }
     . = 0x08000000 + 0xAFD2C;
     .code_080AFE38 : AT(0xAFD2C) { build/asm/eu/code_080AFE38.o(.text) }
     . = 0x08000000 + 0xBAE90;
-    .fill_0205 : AT(0xBAE90) { build/gen/fill_0205.o(.text) }
+    .fill_0278 : AT(0xBAE90) { build/gen/fill_0278.o(.text) }
     . = 0x08000000 + 0xBAEC0;
     .HBlank_TitleScreen : AT(0xBAEC0) { build/c/titlescreen.o(.text.HBlank_TitleScreen) }
     . = 0x08000000 + 0xBAEEC;
-    .fill_0206 : AT(0xBAEEC) { build/gen/fill_0206.o(.text) }
+    .ResetTitleBgAffin : AT(0xBAEEC) { build/c/titlescreen.o(.text.ResetTitleBgAffin) }
+    . = 0x08000000 + 0xBAF24;
+    .fill_0279 : AT(0xBAF24) { build/gen/fill_0279.o(.text) }
+    . = 0x08000000 + 0xBAFE8;
+    .Title_InitBg : AT(0xBAFE8) { build/c/titlescreen.o(.text.Title_InitBg) }
+    . = 0x08000000 + 0xBB090;
+    .fill_0280 : AT(0xBB090) { build/gen/fill_0280.o(.text) }
+    . = 0x08000000 + 0xBB204;
+    .Title_StartBmBgfxAnim : AT(0xBB204) { build/c/titlescreen.o(.text.Title_StartBmBgfxAnim) }
+    . = 0x08000000 + 0xBB290;
+    .fill_0281 : AT(0xBB290) { build/gen/fill_0281.o(.text) }
+    . = 0x08000000 + 0xBB3C4;
+    .Title_ResetBmBgfxConf : AT(0xBB3C4) { build/c/titlescreen.o(.text.Title_ResetBmBgfxConf) }
+    . = 0x08000000 + 0xBB444;
+    .fill_0282 : AT(0xBB444) { build/gen/fill_0282.o(.text) }
+    . = 0x08000000 + 0xBB984;
+    .TitleSprite_Init : AT(0xBB984) { build/c/titlescreen.o(.text.TitleSprite_Init) }
+    . = 0x08000000 + 0xBB9FC;
+    .TitleSprite_Loop : AT(0xBB9FC) { build/c/titlescreen.o(.text.TitleSprite_Loop) }
+    . = 0x08000000 + 0xBBB20;
+    .TitleSpriteBlendIN : AT(0xBBB20) { build/c/titlescreen.o(.text.TitleSpriteBlendIN) }
+    . = 0x08000000 + 0xBBB60;
+    .TitleSpriteBlendOUT : AT(0xBBB60) { build/c/titlescreen.o(.text.TitleSpriteBlendOUT) }
+    . = 0x08000000 + 0xBBBA8;
+    .fill_0283 : AT(0xBBBA8) { build/gen/fill_0283.o(.text) }
+    . = 0x08000000 + 0xBBBB8;
+    .InitOpScanlineBuf : AT(0xBBBB8) { build/c/opanim_scanline.o(.text.InitOpScanlineBuf) }
+    . = 0x08000000 + 0xBBC08;
+    .fill_0284 : AT(0xBBC08) { build/gen/fill_0284.o(.text) }
     . = 0x08000000 + 0xBBC18;
     .opanim_scanline : AT(0xBBC18) { build/asm/eu/opanim_scanline.o(.text) }
     . = 0x08000000 + 0xBC020;
-    .fill_0207 : AT(0xBC020) { build/gen/fill_0207.o(.text) }
+    .fill_0285 : AT(0xBC020) { build/gen/fill_0285.o(.text) }
     . = 0x08000000 + 0xBC024;
-    .opanim : AT(0xBC024) { build/asm/eu/opanim.o(.text) }
+    .opanim_p0 : AT(0xBC024) { build/asm/eu/opanim_p0.o(.text) }
+    . = 0x08000000 + 0xBD54C;
+    .sub_800A3B8 : AT(0xBD54C) { build/c/talk.o(.text.sub_800A3B8) }
+    . = 0x08000000 + 0xBD55C;
+    .opanim_p1 : AT(0xBD55C) { build/asm/eu/opanim_p1.o(.text) }
     . = 0x08000000 + 0xBE41C;
-    .fill_0208 : AT(0xBE41C) { build/gen/fill_0208.o(.text) }
+    .fill_0286 : AT(0xBE41C) { build/gen/fill_0286.o(.text) }
     . = 0x08000000 + 0xBE420;
     .m4a_1 : AT(0xBE420) { build/asm/eu/m4a_1.o(.text) }
     . = 0x08000000 + 0xBF038;
     .m4a : AT(0xBF038) { build/asm/eu/m4a.o(.text) }
     . = 0x08000000 + 0xC05CC;
-    .fill_0209 : AT(0xC05CC) { build/gen/fill_0209.o(.text) }
+    .fill_0287 : AT(0xC05CC) { build/gen/fill_0287.o(.text) }
     . = 0x08000000 + 0xC05E4;
     .gba_syscall : AT(0xC05E4) { build/asm/eu/gba-syscall.o(.text) }
     . = 0x08000000 + 0xC0640;
     .agb_sram : AT(0xC0640) { build/asm/eu/agb-sram.o(.text) }
     . = 0x08000000 + 0xC07E4;
-    .fill_0210 : AT(0xC07E4) { build/gen/fill_0210.o(.text) }
+    .fill_0288 : AT(0xC07E4) { build/gen/fill_0288.o(.text) }
     /DISCARD/ : { *(*) }
 }

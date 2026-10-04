@@ -6,6 +6,30 @@
   "addr": 134220732
  },
  {
+  "name": "NextRN",
+  "file": "random.c",
+  "size": 200,
+  "addr": 134220780
+ },
+ {
+  "name": "RandInit",
+  "file": "random.c",
+  "size": 204,
+  "addr": 134220980
+ },
+ {
+  "name": "RandSetSt",
+  "file": "random.c",
+  "size": 92,
+  "addr": 134221184
+ },
+ {
+  "name": "RandGetSt",
+  "file": "random.c",
+  "size": 52,
+  "addr": 134221276
+ },
+ {
   "name": "RandNext_100",
   "file": "random.c",
   "size": 44,
@@ -30,10 +54,106 @@
   "addr": 134221456
  },
  {
+  "name": "RandNextB",
+  "file": "random.c",
+  "size": 56,
+  "addr": 134221544
+ },
+ {
+  "name": "IncGameTime",
+  "file": "hardware.c",
+  "size": 56,
+  "addr": 134221652
+ },
+ {
+  "name": "FormatTime",
+  "file": "hardware.c",
+  "size": 124,
+  "addr": 134221708
+ },
+ {
+  "name": "ApplyPaletteExt",
+  "file": "hardware.c",
+  "size": 112,
+  "addr": 134221968
+ },
+ {
+  "name": "sub_80010CC",
+  "file": "hardware.c",
+  "size": 188,
+  "addr": 134222080
+ },
+ {
+  "name": "SyncDispIo",
+  "file": "hardware.c",
+  "size": 408,
+  "addr": 134222268
+ },
+ {
+  "name": "GetBgChrOffset",
+  "file": "hardware.c",
+  "size": 52,
+  "addr": 134222756
+ },
+ {
   "name": "GetBgChrId",
   "file": "hardware.c",
   "size": 52,
   "addr": 134222808
+ },
+ {
+  "name": "GetBgTilemapOffset",
+  "file": "hardware.c",
+  "size": 52,
+  "addr": 134222860
+ },
+ {
+  "name": "SetBgChrOffset",
+  "file": "hardware.c",
+  "size": 68,
+  "addr": 134222912
+ },
+ {
+  "name": "SetBgTilemapOffset",
+  "file": "hardware.c",
+  "size": 100,
+  "addr": 134222980
+ },
+ {
+  "name": "SetBgScreenSize",
+  "file": "hardware.c",
+  "size": 60,
+  "addr": 134223080
+ },
+ {
+  "name": "SetBgBpp",
+  "file": "hardware.c",
+  "size": 68,
+  "addr": 134223140
+ },
+ {
+  "name": "ApplyColorAddition_ClampMax",
+  "file": "hardware.c",
+  "size": 200,
+  "addr": 134223208
+ },
+ {
+  "name": "ApplyColorAddition_ClampMin",
+  "file": "hardware.c",
+  "size": 200,
+  "addr": 134223408
+ },
+ {
+  "name": "SyncBgsAndPal",
+  "file": "hardware.c",
+  "size": 292,
+  "addr": 134223608
+ },
+ {
+  "name": "TmFill",
+  "file": "hardware.c",
+  "size": 48,
+  "addr": 134223900
  },
  {
   "name": "SetBlankChr",
@@ -42,10 +162,40 @@
   "addr": 134223948
  },
  {
+  "name": "SetOnVBlank",
+  "file": "hardware.c",
+  "size": 108,
+  "addr": 134223984
+ },
+ {
+  "name": "SetOnVMatch",
+  "file": "hardware.c",
+  "size": 120,
+  "addr": 134224092
+ },
+ {
   "name": "SetNextVCount",
   "file": "hardware.c",
   "size": 72,
   "addr": 134224212
+ },
+ {
+  "name": "SetVCount",
+  "file": "hardware.c",
+  "size": 40,
+  "addr": 134224284
+ },
+ {
+  "name": "SetMainFunc",
+  "file": "hardware.c",
+  "size": 28,
+  "addr": 134224324
+ },
+ {
+  "name": "RunMainFunc",
+  "file": "hardware.c",
+  "size": 32,
+  "addr": 134224352
  },
  {
   "name": "RefreshKeyStFromKeys",
@@ -54,10 +204,40 @@
   "addr": 134224384
  },
  {
+  "name": "RefreshKeySt",
+  "file": "hardware.c",
+  "size": 84,
+  "addr": 134224852
+ },
+ {
   "name": "ClearKeySt",
   "file": "hardware.c",
   "size": 52,
   "addr": 134224936
+ },
+ {
+  "name": "InitKeySt",
+  "file": "hardware.c",
+  "size": 128,
+  "addr": 134224988
+ },
+ {
+  "name": "KeyProcMain",
+  "file": "hardware.c",
+  "size": 104,
+  "addr": 134225144
+ },
+ {
+  "name": "NewKeyStSetter",
+  "file": "hardware.c",
+  "size": 56,
+  "addr": 134225248
+ },
+ {
+  "name": "SetBgOffset",
+  "file": "hardware.c",
+  "size": 264,
+  "addr": 134225304
  },
  {
   "name": "sub_8001ED4",
@@ -78,16 +258,136 @@
   "addr": 134225956
  },
  {
+  "name": "ColorFadeInit",
+  "file": "hardware.c",
+  "size": 56,
+  "addr": 134226120
+ },
+ {
+  "name": "sub_80020CC",
+  "file": "hardware.c",
+  "size": 292,
+  "addr": 134226176
+ },
+ {
+  "name": "sub_80021F0",
+  "file": "hardware.c",
+  "size": 288,
+  "addr": 134226468
+ },
+ {
+  "name": "sub_8002310",
+  "file": "hardware.c",
+  "size": 76,
+  "addr": 134226756
+ },
+ {
+  "name": "ColorFadeSetupFromColorToBlack",
+  "file": "hardware.c",
+  "size": 312,
+  "addr": 134226832
+ },
+ {
+  "name": "ColorFadeSetupFromBlack",
+  "file": "hardware.c",
+  "size": 296,
+  "addr": 134227144
+ },
+ {
+  "name": "ColorFadeSetupFromColorToWhite",
+  "file": "hardware.c",
+  "size": 312,
+  "addr": 134227440
+ },
+ {
+  "name": "ColorFadeSetupFromWhite",
+  "file": "hardware.c",
+  "size": 312,
+  "addr": 134227752
+ },
+ {
+  "name": "ColorFadeTick2",
+  "file": "hardware.c",
+  "size": 536,
+  "addr": 134228064
+ },
+ {
+  "name": "InitBgs",
+  "file": "hardware.c",
+  "size": 380,
+  "addr": 134228600
+ },
+ {
+  "name": "GetBgTilemap",
+  "file": "hardware.c",
+  "size": 36,
+  "addr": 134228980
+ },
+ {
   "name": "sub_8002C24",
   "file": "hardware.c",
   "size": 128,
   "addr": 134229332
  },
  {
+  "name": "ClearMoveList",
+  "file": "move-data.c",
+  "size": 156,
+  "addr": 134229992
+ },
+ {
+  "name": "RegisterDataMove",
+  "file": "move-data.c",
+  "size": 132,
+  "addr": 134230148
+ },
+ {
+  "name": "RegisterDataFill",
+  "file": "move-data.c",
+  "size": 124,
+  "addr": 134230280
+ },
+ {
+  "name": "InitOam",
+  "file": "oam.c",
+  "size": 156,
+  "addr": 134230584
+ },
+ {
+  "name": "SyncHiOam",
+  "file": "oam.c",
+  "size": 88,
+  "addr": 134230764
+ },
+ {
+  "name": "SetObjAffine",
+  "file": "oam.c",
+  "size": 200,
+  "addr": 134230932
+ },
+ {
+  "name": "Proc_Init",
+  "file": "proc.c",
+  "size": 116,
+  "addr": 134235180
+ },
+ {
+  "name": "Proc_Start",
+  "file": "proc.c",
+  "size": 100,
+  "addr": 134235296
+ },
+ {
   "name": "Proc_StartBlocking",
   "file": "proc.c",
   "size": 48,
   "addr": 134235396
+ },
+ {
+  "name": "DeleteProcessRecursive",
+  "file": "proc.c",
+  "size": 92,
+  "addr": 134235444
  },
  {
   "name": "Proc_End",
@@ -102,6 +402,18 @@
   "addr": 134235628
  },
  {
+  "name": "UnlinkProcess",
+  "file": "proc.c",
+  "size": 72,
+  "addr": 134235652
+ },
+ {
+  "name": "RunProcessRecursive",
+  "file": "proc.c",
+  "size": 92,
+  "addr": 134235724
+ },
+ {
   "name": "Proc_Run",
   "file": "proc.c",
   "size": 16,
@@ -112,6 +424,18 @@
   "file": "proc.c",
   "size": 8,
   "addr": 134235832
+ },
+ {
+  "name": "Proc_FindNonBlocked",
+  "file": "proc.c",
+  "size": 48,
+  "addr": 134235880
+ },
+ {
+  "name": "sub_80045D0",
+  "file": "proc.c",
+  "size": 48,
+  "addr": 134235928
  },
  {
   "name": "Proc_Goto",
@@ -132,10 +456,52 @@
   "addr": 134236040
  },
  {
+  "name": "sub_8004698",
+  "file": "proc.c",
+  "size": 44,
+  "addr": 134236132
+ },
+ {
+  "name": "Proc_BlockEachMarked",
+  "file": "proc.c",
+  "size": 40,
+  "addr": 134236176
+ },
+ {
+  "name": "Proc_UnblockEachMarked",
+  "file": "proc.c",
+  "size": 44,
+  "addr": 134236216
+ },
+ {
+  "name": "Proc_EndEachMarked",
+  "file": "proc.c",
+  "size": 44,
+  "addr": 134236260
+ },
+ {
+  "name": "sub_807FB34",
+  "file": "eventcall_0807F9EC.c",
+  "size": 12,
+  "addr": 134236304
+ },
+ {
   "name": "ClearNativeCallback",
   "file": "proc.c",
   "size": 12,
   "addr": 134236332
+ },
+ {
+  "name": "ForAllFollowingProcs",
+  "file": "proc.c",
+  "size": 40,
+  "addr": 134236360
+ },
+ {
+  "name": "sub_800479C",
+  "file": "proc.c",
+  "size": 28,
+  "addr": 134236400
  },
  {
   "name": "sub_80047B8",
@@ -150,10 +516,40 @@
   "addr": 134236440
  },
  {
+  "name": "sub_80047D4",
+  "file": "proc.c",
+  "size": 20,
+  "addr": 134236456
+ },
+ {
+  "name": "sub_80047E8",
+  "file": "proc.c",
+  "size": 24,
+  "addr": 134236476
+ },
+ {
+  "name": "sub_8004800",
+  "file": "proc.c",
+  "size": 32,
+  "addr": 134236500
+ },
+ {
+  "name": "sub_8004820",
+  "file": "proc.c",
+  "size": 44,
+  "addr": 134236532
+ },
+ {
   "name": "sub_800484C",
   "file": "proc.c",
   "size": 16,
   "addr": 134236576
+ },
+ {
+  "name": "sub_800485C",
+  "file": "proc.c",
+  "size": 28,
+  "addr": 134236592
  },
  {
   "name": "sub_8004878",
@@ -172,6 +568,24 @@
   "file": "proc.c",
   "size": 32,
   "addr": 134236676
+ },
+ {
+  "name": "sub_80048D0",
+  "file": "proc.c",
+  "size": 40,
+  "addr": 134236708
+ },
+ {
+  "name": "sub_80048F8",
+  "file": "proc.c",
+  "size": 28,
+  "addr": 134236748
+ },
+ {
+  "name": "sub_8004914",
+  "file": "proc.c",
+  "size": 28,
+  "addr": 134236776
  },
  {
   "name": "sub_8004930",
@@ -216,10 +630,28 @@
   "addr": 134236940
  },
  {
+  "name": "sub_80049C4",
+  "file": "proc.c",
+  "size": 64,
+  "addr": 134236956
+ },
+ {
   "name": "sub_8004A3C",
   "file": "proc.c",
   "size": 12,
   "addr": 134237076
+ },
+ {
+  "name": "sub_8004AAC",
+  "file": "proc.c",
+  "size": 56,
+  "addr": 134237188
+ },
+ {
+  "name": "sub_8004AE4",
+  "file": "proc.c",
+  "size": 52,
+  "addr": 134237244
  },
  {
   "name": "sub_8004B20",
@@ -234,10 +666,28 @@
   "addr": 134237316
  },
  {
+  "name": "sub_8004BA0",
+  "file": "proc.c",
+  "size": 40,
+  "addr": 134237432
+ },
+ {
   "name": "IconSlot2Chr",
   "file": "icon.c",
   "size": 20,
   "addr": 134237624
+ },
+ {
+  "name": "GetNewIconSlot",
+  "file": "icon.c",
+  "size": 44,
+  "addr": 134237644
+ },
+ {
+  "name": "GetIconChr",
+  "file": "icon.c",
+  "size": 108,
+  "addr": 134237688
  },
  {
   "name": "PutIcon",
@@ -246,10 +696,94 @@
   "addr": 134237796
  },
  {
+  "name": "PutIconObjImg",
+  "file": "icon.c",
+  "size": 96,
+  "addr": 134237908
+ },
+ {
+  "name": "AnimCreate_unused",
+  "file": "anime.c",
+  "size": 96,
+  "addr": 134243940
+ },
+ {
+  "name": "AnimCreate",
+  "file": "anime.c",
+  "size": 100,
+  "addr": 134244036
+ },
+ {
+  "name": "AnimSort",
+  "file": "anime.c",
+  "size": 88,
+  "addr": 134244136
+ },
+ {
+  "name": "AnimDelete",
+  "file": "anime.c",
+  "size": 48,
+  "addr": 134244224
+ },
+ {
   "name": "AnimDisplay",
   "file": "anime.c",
   "size": 12,
   "addr": 134244272
+ },
+ {
+  "name": "AnimInterpret",
+  "file": "anime.c",
+  "size": 384,
+  "addr": 134244284
+ },
+ {
+  "name": "PutSpriteAffine",
+  "file": "sprite.c",
+  "size": 52,
+  "addr": 134245040
+ },
+ {
+  "name": "PutSpriteLayerOam",
+  "file": "sprite.c",
+  "size": 48,
+  "addr": 134245272
+ },
+ {
+  "name": "SpriteRefresher_OnIdle",
+  "file": "sprite.c",
+  "size": 40,
+  "addr": 134245320
+ },
+ {
+  "name": "StartSpriteRefresher",
+  "file": "sprite.c",
+  "size": 68,
+  "addr": 134245360
+ },
+ {
+  "name": "InitFaces",
+  "file": "face.c",
+  "size": 28,
+  "addr": 134245480
+ },
+ {
+  "name": "Face_OnIdle",
+  "file": "face.c",
+  "size": 68,
+  "addr": 134245628
+ },
+ {
+  "name": "StartFaceAuto",
+  "file": "face.c",
+  "size": 44,
+  "addr": 134245696
+ },
+ {
+  "name": "StartFace",
+  "file": "face.c",
+  "size": 252,
+  "addr": 134245740
  },
  {
   "name": "SetFaceDisp",
@@ -258,10 +792,64 @@
   "addr": 134246048
  },
  {
+  "name": "FaceRefreshSprite",
+  "file": "face.c",
+  "size": 212,
+  "addr": 134246128
+ },
+ {
   "name": "PutFaceTm",
   "file": "face.c",
   "size": 144,
   "addr": 134246340
+ },
+ {
+  "name": "UnpackFaceChibiGraphics",
+  "file": "face.c",
+  "size": 100,
+  "addr": 134246484
+ },
+ {
+  "name": "PutFaceChibi",
+  "file": "face.c",
+  "size": 68,
+  "addr": 134246584
+ },
+ {
+  "name": "UnpackFaceChibiSprGraphics",
+  "file": "face.c",
+  "size": 264,
+  "addr": 134246652
+ },
+ {
+  "name": "FaceChibiSpr_OnIdle",
+  "file": "face.c",
+  "size": 48,
+  "addr": 134246916
+ },
+ {
+  "name": "StartFaceChibiStr",
+  "file": "face.c",
+  "size": 100,
+  "addr": 134246964
+ },
+ {
+  "name": "PutFace80x72_Standard",
+  "file": "face.c",
+  "size": 84,
+  "addr": 134247080
+ },
+ {
+  "name": "PutFace80x72_Raised",
+  "file": "face.c",
+  "size": 88,
+  "addr": 134247164
+ },
+ {
+  "name": "PutFace80x72_Core",
+  "file": "face.c",
+  "size": 192,
+  "addr": 134247440
  },
  {
   "name": "BgFaceEyeBlink_Init",
@@ -270,10 +858,70 @@
   "addr": 134247632
  },
  {
+  "name": "BgFaceEyeBlink_Delay",
+  "file": "face.c",
+  "size": 40,
+  "addr": 134247644
+ },
+ {
+  "name": "PutFace80x72",
+  "file": "face.c",
+  "size": 52,
+  "addr": 134247940
+ },
+ {
+  "name": "StartFaceFadeIn",
+  "file": "face.c",
+  "size": 72,
+  "addr": 134248028
+ },
+ {
+  "name": "StartFaceFadeOut",
+  "file": "face.c",
+  "size": 52,
+  "addr": 134248100
+ },
+ {
+  "name": "GetFactionFaceImg",
+  "file": "face.c",
+  "size": 48,
+  "addr": 134248152
+ },
+ {
+  "name": "ApplyFactionFacePal",
+  "file": "face.c",
+  "size": 56,
+  "addr": 134248200
+ },
+ {
   "name": "FaceMouth_Init",
   "file": "face.c",
   "size": 12,
   "addr": 134248256
+ },
+ {
+  "name": "FaceMouth_Loop",
+  "file": "face.c",
+  "size": 340,
+  "addr": 134248268
+ },
+ {
+  "name": "PutFaceEyeSprite",
+  "file": "face.c",
+  "size": 264,
+  "addr": 134248608
+ },
+ {
+  "name": "FaceEye_Init",
+  "file": "face.c",
+  "size": 68,
+  "addr": 134248872
+ },
+ {
+  "name": "FaceEye_Delay",
+  "file": "face.c",
+  "size": 56,
+  "addr": 134248940
  },
  {
   "name": "FaceEye_InitDisplayFrame0",
@@ -282,10 +930,22 @@
   "addr": 134249104
  },
  {
+  "name": "FaceEye_DisplayFrame0",
+  "file": "face.c",
+  "size": 52,
+  "addr": 134249112
+ },
+ {
   "name": "FaceEye_InitDisplayFrame1",
   "file": "face.c",
   "size": 8,
   "addr": 134249164
+ },
+ {
+  "name": "FaceEye_DisplayFrame1",
+  "file": "face.c",
+  "size": 52,
+  "addr": 134249172
  },
  {
   "name": "FaceEye_InitDisplayFrameFlip",
@@ -294,10 +954,130 @@
   "addr": 134249224
  },
  {
+  "name": "SetFaceBlinkControl",
+  "file": "face.c",
+  "size": 32,
+  "addr": 134249348
+ },
+ {
   "name": "SetFaceEyeState",
   "file": "face.c",
   "size": 8,
   "addr": 134249504
+ },
+ {
+  "name": "sub_8007A00",
+  "file": "face.c",
+  "size": 92,
+  "addr": 134249652
+ },
+ {
+  "name": "StartBmFace",
+  "file": "face.c",
+  "size": 292,
+  "addr": 134249744
+ },
+ {
+  "name": "sub_8007B94",
+  "file": "face.c",
+  "size": 36,
+  "addr": 134250056
+ },
+ {
+  "name": "sub_8007BB8",
+  "file": "face.c",
+  "size": 88,
+  "addr": 134250092
+ },
+ {
+  "name": "sub_8007C10",
+  "file": "face.c",
+  "size": 56,
+  "addr": 134250180
+ },
+ {
+  "name": "InitTalk",
+  "file": "talk.c",
+  "size": 160,
+  "addr": 134250300
+ },
+ {
+  "name": "InitSpriteTalk",
+  "file": "talk.c",
+  "size": 184,
+  "addr": 134250460
+ },
+ {
+  "name": "StartTalkExt",
+  "file": "talk.c",
+  "size": 164,
+  "addr": 134250684
+ },
+ {
+  "name": "StartTalkMsg",
+  "file": "talk.c",
+  "size": 32,
+  "addr": 134250872
+ },
+ {
+  "name": "StartTalkMsgExt",
+  "file": "talk.c",
+  "size": 32,
+  "addr": 134250904
+ },
+ {
+  "name": "sub_8008074",
+  "file": "talk.c",
+  "size": 52,
+  "addr": 134251324
+ },
+ {
+  "name": "sub_800821C",
+  "file": "talk.c",
+  "size": 236,
+  "addr": 134251748
+ },
+ {
+  "name": "sub_8008CC4",
+  "file": "talk.c",
+  "size": 228,
+  "addr": 134254476
+ },
+ {
+  "name": "sub_8008DC8",
+  "file": "talk.c",
+  "size": 52,
+  "addr": 134254736
+ },
+ {
+  "name": "sub_8008DFC",
+  "file": "talk.c",
+  "size": 92,
+  "addr": 134254788
+ },
+ {
+  "name": "sub_8008E58",
+  "file": "talk.c",
+  "size": 88,
+  "addr": 134254880
+ },
+ {
+  "name": "sub_8008ECC",
+  "file": "talk.c",
+  "size": 88,
+  "addr": 134254996
+ },
+ {
+  "name": "sub_8008F24",
+  "file": "talk.c",
+  "size": 92,
+  "addr": 134255084
+ },
+ {
+  "name": "sub_8008F80",
+  "file": "talk.c",
+  "size": 256,
+  "addr": 134255176
  },
  {
   "name": "sub_800909C",
@@ -306,10 +1086,76 @@
   "addr": 134255460
  },
  {
+  "name": "sub_80090C0",
+  "file": "talk.c",
+  "size": 136,
+  "addr": 134255496
+ },
+ {
+  "name": "sub_800914C",
+  "file": "talk.c",
+  "size": 44,
+  "addr": 134255636
+ },
+ {
+  "name": "sub_8009178",
+  "file": "talk.c",
+  "size": 52,
+  "addr": 134255680
+ },
+ {
+  "name": "sub_80091AC",
+  "file": "talk.c",
+  "size": 108,
+  "addr": 134255732
+ },
+ {
   "name": "sub_8009218",
   "file": "talk.c",
   "size": 68,
   "addr": 134255840
+ },
+ {
+  "name": "sub_800925C",
+  "file": "talk.c",
+  "size": 180,
+  "addr": 134255908
+ },
+ {
+  "name": "sub_8009458",
+  "file": "talk.c",
+  "size": 244,
+  "addr": 134256420
+ },
+ {
+  "name": "sub_8009628",
+  "file": "talk.c",
+  "size": 100,
+  "addr": 134256884
+ },
+ {
+  "name": "sub_800968C",
+  "file": "talk.c",
+  "size": 84,
+  "addr": 134256984
+ },
+ {
+  "name": "sub_80096E0",
+  "file": "talk.c",
+  "size": 316,
+  "addr": 134257068
+ },
+ {
+  "name": "sub_8009834",
+  "file": "talk.c",
+  "size": 108,
+  "addr": 134257408
+ },
+ {
+  "name": "sub_80098A0",
+  "file": "talk.c",
+  "size": 124,
+  "addr": 134257516
  },
  {
   "name": "sub_8009AA8",
@@ -318,16 +1164,64 @@
   "addr": 134258032
  },
  {
+  "name": "sub_8009BE8",
+  "file": "talk.c",
+  "size": 112,
+  "addr": 134258352
+ },
+ {
   "name": "sub_8009C58",
   "file": "talk.c",
   "size": 52,
   "addr": 134258464
  },
  {
+  "name": "sub_8009C8C",
+  "file": "talk.c",
+  "size": 128,
+  "addr": 134258516
+ },
+ {
+  "name": "sub_8009D0C",
+  "file": "talk.c",
+  "size": 100,
+  "addr": 134258644
+ },
+ {
+  "name": "SetTalkFaceDisp",
+  "file": "talk.c",
+  "size": 88,
+  "addr": 134258828
+ },
+ {
+  "name": "PrintStringToTexts",
+  "file": "talk.c",
+  "size": 108,
+  "addr": 134259048
+ },
+ {
+  "name": "TalkPutSpriteText_OnIdle",
+  "file": "talk.c",
+  "size": 124,
+  "addr": 134259156
+ },
+ {
+  "name": "CleanTalkObjects",
+  "file": "talk-advance.c",
+  "size": 72,
+  "addr": 134260368
+ },
+ {
   "name": "TalkAdvance_Init",
   "file": "talk-advance.c",
   "size": 8,
   "addr": 134260440
+ },
+ {
+  "name": "TalkAdvance_Loop",
+  "file": "talk-advance.c",
+  "size": 132,
+  "addr": 134260448
  },
  {
   "name": "EvtCmd_Sleep",
@@ -348,10 +1242,28 @@
   "addr": 134264448
  },
  {
+  "name": "EvtCmd_Background",
+  "file": "eventscr.c",
+  "size": 96,
+  "addr": 134264500
+ },
+ {
+  "name": "EvtCmd_BackgroundRandom",
+  "file": "eventscr.c",
+  "size": 52,
+  "addr": 134264728
+ },
+ {
   "name": "EvtCmd_BackgroundMore",
   "file": "eventscr.c",
   "size": 68,
   "addr": 134264780
+ },
+ {
+  "name": "EvtCmd_ClearTalk",
+  "file": "eventscr.c",
+  "size": 76,
+  "addr": 134264848
  },
  {
   "name": "EvtCmd_ClearSkip",
@@ -360,16 +1272,82 @@
   "addr": 134264924
  },
  {
+  "name": "EvtCmd_ClearSkipFadeToPrep",
+  "file": "eventscr.c",
+  "size": 148,
+  "addr": 134264984
+ },
+ {
   "name": "EvtCmd_FadeFromOpening",
   "file": "eventscr.c",
   "size": 32,
   "addr": 134265132
  },
  {
+  "name": "DisplayBackground",
+  "file": "eventscr.c",
+  "size": 144,
+  "addr": 134265164
+ },
+ {
+  "name": "DisplayBackgroundNoClear",
+  "file": "eventscr.c",
+  "size": 140,
+  "addr": 134265308
+ },
+ {
+  "name": "EventSnowStormfx_Init",
+  "file": "eventscr_snowstormfx.c",
+  "size": 192,
+  "addr": 134288304
+ },
+ {
+  "name": "EventSnowStormfx_Loop1",
+  "file": "eventscr_snowstormfx.c",
+  "size": 128,
+  "addr": 134288496
+ },
+ {
   "name": "EventSnowStormfx_Loop2",
   "file": "eventscr_snowstormfx.c",
   "size": 72,
   "addr": 134288624
+ },
+ {
+  "name": "EventSnowStormfx_Loop3",
+  "file": "eventscr_snowstormfx.c",
+  "size": 124,
+  "addr": 134288696
+ },
+ {
+  "name": "EventDF_SnowStormfx",
+  "file": "eventscr_snowstormfx.c",
+  "size": 48,
+  "addr": 134288884
+ },
+ {
+  "name": "EventThunderfx_Init",
+  "file": "eventscr_thunderfx.c",
+  "size": 164,
+  "addr": 134288932
+ },
+ {
+  "name": "EventThunderfx_End",
+  "file": "eventscr_thunderfx.c",
+  "size": 48,
+  "addr": 134289096
+ },
+ {
+  "name": "EventE2_Thunderfx",
+  "file": "eventscr_thunderfx.c",
+  "size": 52,
+  "addr": 134289144
+ },
+ {
+  "name": "NinianAppear_Init",
+  "file": "eventscr_niniandisp.c",
+  "size": 124,
+  "addr": 134289224
  },
  {
   "name": "NinianDisp_FadeIn_Unused",
@@ -384,10 +1362,52 @@
   "addr": 134289400
  },
  {
+  "name": "NinianDisp_AnimLoopEnd_Unused",
+  "file": "eventscr_niniandisp.c",
+  "size": 36,
+  "addr": 134289448
+ },
+ {
+  "name": "NinianAppear_Anim1",
+  "file": "eventscr_niniandisp.c",
+  "size": 96,
+  "addr": 134289484
+ },
+ {
+  "name": "NinianAppear_LoopAnim1",
+  "file": "eventscr_niniandisp.c",
+  "size": 284,
+  "addr": 134289580
+ },
+ {
   "name": "NinianAppear_EndAnim1",
   "file": "eventscr_niniandisp.c",
   "size": 28,
   "addr": 134289864
+ },
+ {
+  "name": "NinianAppear_Anim2",
+  "file": "eventscr_niniandisp.c",
+  "size": 84,
+  "addr": 134289892
+ },
+ {
+  "name": "NinianAppear_LoadUnit",
+  "file": "eventscr_niniandisp.c",
+  "size": 68,
+  "addr": 134289976
+ },
+ {
+  "name": "NinianAppear_End",
+  "file": "eventscr_niniandisp.c",
+  "size": 48,
+  "addr": 134290044
+ },
+ {
+  "name": "EventE4_NinianDisplay",
+  "file": "eventscr_niniandisp.c",
+  "size": 84,
+  "addr": 134290092
  },
  {
   "name": "ScreenFlash_Init",
@@ -408,6 +1428,18 @@
   "addr": 134290372
  },
  {
+  "name": "StartScreenFlashing",
+  "file": "eventscr_screenflashfx.c",
+  "size": 60,
+  "addr": 134290464
+ },
+ {
+  "name": "EventE3_ScreenFlashing",
+  "file": "eventscr_screenflashfx.c",
+  "size": 108,
+  "addr": 134290524
+ },
+ {
   "name": "EventFadefx_Init",
   "file": "eventscr_fadefx.c",
   "size": 8,
@@ -418,6 +1450,12 @@
   "file": "eventscr_fadefx.c",
   "size": 112,
   "addr": 134290640
+ },
+ {
+  "name": "NewEventFadefx",
+  "file": "eventscr_fadefx.c",
+  "size": 84,
+  "addr": 134290752
  },
  {
   "name": "EventE5_FadeSteps",
@@ -432,10 +1470,34 @@
   "addr": 134290912
  },
  {
+  "name": "EventE7_EndFade",
+  "file": "eventscr_fadefx.c",
+  "size": 24,
+  "addr": 134290924
+ },
+ {
+  "name": "EventSpriteAnim_Init",
+  "file": "eventscr_spriteanim.c",
+  "size": 104,
+  "addr": 134290948
+ },
+ {
+  "name": "EventSpriteAnim_Loop",
+  "file": "eventscr_spriteanim.c",
+  "size": 80,
+  "addr": 134291052
+ },
+ {
   "name": "EventSpriteAnim_End",
   "file": "eventscr_spriteanim.c",
   "size": 16,
   "addr": 134291132
+ },
+ {
+  "name": "StartSpriteAnim",
+  "file": "sprite-anim.c",
+  "size": 40,
+  "addr": 134292052
  },
  {
   "name": "EndSpriteAnim",
@@ -450,10 +1512,22 @@
   "addr": 134292116
  },
  {
+  "name": "PutAnim",
+  "file": "sprite-anim.c",
+  "size": 92,
+  "addr": 134292156
+ },
+ {
   "name": "ExecAnim",
   "file": "sprite-anim.c",
   "size": 240,
   "addr": 134292248
+ },
+ {
+  "name": "PutAnimAffine",
+  "file": "sprite-anim.c",
+  "size": 232,
+  "addr": 134292488
  },
  {
   "name": "SetSpriteAnimId",
@@ -466,6 +1540,12 @@
   "file": "sprite-anim.c",
   "size": 32,
   "addr": 134292768
+ },
+ {
+  "name": "SyncAnimImg",
+  "file": "sprite-anim.c",
+  "size": 268,
+  "addr": 134292800
  },
  {
   "name": "SetAnimInfo",
@@ -486,6 +1566,12 @@
   "addr": 134293136
  },
  {
+  "name": "StartSpriteAnimProc",
+  "file": "sprite-anim.c",
+  "size": 72,
+  "addr": 134293232
+ },
+ {
   "name": "AnimProc_Update",
   "file": "sprite-anim.c",
   "size": 44,
@@ -504,6 +1590,18 @@
   "addr": 134293388
  },
  {
+  "name": "GC_StartClassReel",
+  "file": "game-ctrl.c",
+  "size": 28,
+  "addr": 134293604
+ },
+ {
+  "name": "GC_InitSramResetScreen",
+  "file": "game-ctrl.c",
+  "size": 52,
+  "addr": 134293668
+ },
+ {
   "name": "GC_InitFastStartCheck",
   "file": "game-ctrl.c",
   "size": 8,
@@ -514,6 +1612,18 @@
   "file": "game-ctrl.c",
   "size": 24,
   "addr": 134293860
+ },
+ {
+  "name": "GC_RestoreMainBGM",
+  "file": "game-ctrl.c",
+  "size": 28,
+  "addr": 134293940
+ },
+ {
+  "name": "sub_8012DB4",
+  "file": "game-ctrl.c",
+  "size": 20,
+  "addr": 134293968
  },
  {
   "name": "GC_PostIntro",
@@ -540,10 +1650,202 @@
   "addr": 134294380
  },
  {
+  "name": "sub_8012F6C",
+  "file": "game-ctrl.c",
+  "size": 68,
+  "addr": 134294408
+ },
+ {
+  "name": "GC_PostLoadSuspend",
+  "file": "game-ctrl.c",
+  "size": 44,
+  "addr": 134294608
+ },
+ {
+  "name": "GC_DarkenScreen",
+  "file": "game-ctrl.c",
+  "size": 64,
+  "addr": 134294732
+ },
+ {
+  "name": "SetNextGameAction",
+  "file": "game-ctrl.c",
+  "size": 20,
+  "addr": 134295012
+ },
+ {
+  "name": "SetNextChapterId",
+  "file": "game-ctrl.c",
+  "size": 20,
+  "addr": 134295032
+ },
+ {
+  "name": "HasNextChapter",
+  "file": "game-ctrl.c",
+  "size": 20,
+  "addr": 134295052
+ },
+ {
+  "name": "sub_80132C8",
+  "file": "game-ctrl.c",
+  "size": 80,
+  "addr": 134295208
+ },
+ {
+  "name": "BmMain_ChangePhase",
+  "file": "bm.c",
+  "size": 40,
+  "addr": 134305348
+ },
+ {
   "name": "sub_8015840",
   "file": "bm.c",
   "size": 28,
   "addr": 134305388
+ },
+ {
+  "name": "InitBmBgLayers",
+  "file": "bm.c",
+  "size": 120,
+  "addr": 134305736
+ },
+ {
+  "name": "HandleMapCursorInput",
+  "file": "bm.c",
+  "size": 296,
+  "addr": 134306012
+ },
+ {
+  "name": "HandleMoveMapCursor",
+  "file": "bm.c",
+  "size": 84,
+  "addr": 134306308
+ },
+ {
+  "name": "HandleMoveCameraWithMapCursor",
+  "file": "bm.c",
+  "size": 300,
+  "addr": 134306392
+ },
+ {
+  "name": "GetCameraAdjustedX",
+  "file": "bm.c",
+  "size": 68,
+  "addr": 134306692
+ },
+ {
+  "name": "GetCameraAdjustedY",
+  "file": "bm.c",
+  "size": 68,
+  "addr": 134306760
+ },
+ {
+  "name": "GetCameraCenteredX",
+  "file": "bm.c",
+  "size": 44,
+  "addr": 134306828
+ },
+ {
+  "name": "GetCameraCenteredY",
+  "file": "bm.c",
+  "size": 44,
+  "addr": 134306872
+ },
+ {
+  "name": "DisplayBmTextShadow",
+  "file": "bm.c",
+  "size": 52,
+  "addr": 134307156
+ },
+ {
+  "name": "PutSysArrow",
+  "file": "bm.c",
+  "size": 72,
+  "addr": 134307232
+ },
+ {
+  "name": "CamMove_Init",
+  "file": "bm.c",
+  "size": 148,
+  "addr": 134307304
+ },
+ {
+  "name": "CamMove_OnLoop",
+  "file": "bm.c",
+  "size": 128,
+  "addr": 134307452
+ },
+ {
+  "name": "StoreAdjustedCameraPositions",
+  "file": "bm.c",
+  "size": 84,
+  "addr": 134307580
+ },
+ {
+  "name": "EnsureCameraOntoCenteredPosition",
+  "file": "bm.c",
+  "size": 136,
+  "addr": 134307664
+ },
+ {
+  "name": "EnsureCameraOntoPosition",
+  "file": "bm.c",
+  "size": 144,
+  "addr": 134307800
+ },
+ {
+  "name": "IsCameraNotWatchingPosition",
+  "file": "bm.c",
+  "size": 64,
+  "addr": 134307944
+ },
+ {
+  "name": "UnkMapCursor_OnLoop",
+  "file": "bm.c",
+  "size": 80,
+  "addr": 134308108
+ },
+ {
+  "name": "sub_8016410",
+  "file": "bm.c",
+  "size": 92,
+  "addr": 134308496
+ },
+ {
+  "name": "InitUnits",
+  "file": "unit.c",
+  "size": 48,
+  "addr": 134314176
+ },
+ {
+  "name": "ClearUnit",
+  "file": "unit.c",
+  "size": 40,
+  "addr": 134314224
+ },
+ {
+  "name": "CopyUnit",
+  "file": "unit.c",
+  "size": 28,
+  "addr": 134314264
+ },
+ {
+  "name": "GetFreeUnit",
+  "file": "unit.c",
+  "size": 56,
+  "addr": 134314292
+ },
+ {
+  "name": "GetFreeBlueUnit",
+  "file": "unit.c",
+  "size": 56,
+  "addr": 134314348
+ },
+ {
+  "name": "GetUnitFogViewRange",
+  "file": "unit.c",
+  "size": 48,
+  "addr": 134314404
  },
  {
   "name": "SetUnitStatus",
@@ -606,10 +1908,34 @@
   "addr": 134314832
  },
  {
+  "name": "LoadUnit",
+  "file": "unit.c",
+  "size": 228,
+  "addr": 134314888
+ },
+ {
+  "name": "UnitInitFromDefinition",
+  "file": "unit.c",
+  "size": 140,
+  "addr": 134315116
+ },
+ {
+  "name": "UnitLoadItemsFromDefinition",
+  "file": "unit.c",
+  "size": 60,
+  "addr": 134315256
+ },
+ {
   "name": "UnitLoadStatsFromChracter",
   "file": "unit.c",
   "size": 144,
   "addr": 134315316
+ },
+ {
+  "name": "FixROMUnitStructPtr",
+  "file": "unit.c",
+  "size": 56,
+  "addr": 134315460
  },
  {
   "name": "UnitLoadSupports",
@@ -618,10 +1944,28 @@
   "addr": 134315516
  },
  {
+  "name": "UnitAutolevelWExp",
+  "file": "unit.c",
+  "size": 164,
+  "addr": 134315560
+ },
+ {
   "name": "UnitAutolevelCore",
   "file": "unit.c",
   "size": 140,
   "addr": 134315724
+ },
+ {
+  "name": "UnitApplyBonusLevels",
+  "file": "unit.c",
+  "size": 52,
+  "addr": 134315864
+ },
+ {
+  "name": "UnitAutolevel",
+  "file": "unit.c",
+  "size": 64,
+  "addr": 134315916
  },
  {
   "name": "UnitAutolevelPlayer",
@@ -636,6 +1980,18 @@
   "addr": 134316144
  },
  {
+  "name": "GetUnitFromCharId",
+  "file": "unit.c",
+  "size": 60,
+  "addr": 134316356
+ },
+ {
+  "name": "GetUnitFromCharIdAndFaction",
+  "file": "unit.c",
+  "size": 68,
+  "addr": 134316416
+ },
+ {
   "name": "CanUnitRescue",
   "file": "unit.c",
   "size": 48,
@@ -648,16 +2004,94 @@
   "addr": 134316532
  },
  {
+  "name": "UnitDrop",
+  "file": "unit.c",
+  "size": 88,
+  "addr": 134316568
+ },
+ {
+  "name": "UnitGive",
+  "file": "unit.c",
+  "size": 52,
+  "addr": 134316656
+ },
+ {
   "name": "UnitKill",
   "file": "unit.c",
   "size": 40,
   "addr": 134316708
  },
  {
+  "name": "UnitChangeFaction",
+  "file": "unit.c",
+  "size": 108,
+  "addr": 134316748
+ },
+ {
+  "name": "UnitSyncMovement",
+  "file": "unit.c",
+  "size": 68,
+  "addr": 134316856
+ },
+ {
+  "name": "UnitGetDeathDropLocation",
+  "file": "unit.c",
+  "size": 380,
+  "addr": 134316924
+ },
+ {
+  "name": "UnitBeginAction",
+  "file": "unit.c",
+  "size": 120,
+  "addr": 134317304
+ },
+ {
+  "name": "UnitBeginCantoAction",
+  "file": "unit.c",
+  "size": 108,
+  "addr": 134317424
+ },
+ {
+  "name": "MoveActiveUnit",
+  "file": "unit.c",
+  "size": 152,
+  "addr": 134317532
+ },
+ {
+  "name": "ClearActiveFactionGrayedStates",
+  "file": "unit.c",
+  "size": 152,
+  "addr": 134317684
+ },
+ {
+  "name": "TickActiveFactionTurn",
+  "file": "unit.c",
+  "size": 244,
+  "addr": 134317836
+ },
+ {
+  "name": "SetAllUnitNotBackSprite",
+  "file": "unit.c",
+  "size": 56,
+  "addr": 134318080
+ },
+ {
+  "name": "UnitUpdateUsedItem",
+  "file": "unit.c",
+  "size": 36,
+  "addr": 134318136
+ },
+ {
   "name": "GetUnitAid",
   "file": "unit.c",
   "size": 100,
   "addr": 134318172
+ },
+ {
+  "name": "GetUnitMagRange",
+  "file": "unit.c",
+  "size": 40,
+  "addr": 134318272
  },
  {
   "name": "UnitHasMagicRank",
@@ -672,10 +2106,40 @@
   "addr": 134318348
  },
  {
+  "name": "GetUnitKeyItemSlotForTerrain",
+  "file": "unit.c",
+  "size": 84,
+  "addr": 134318380
+ },
+ {
   "name": "GetUnitAidIconId",
   "file": "unit.c",
   "size": 56,
   "addr": 134318464
+ },
+ {
+  "name": "GetUnitWeaponUsabilityBits",
+  "file": "unit.c",
+  "size": 120,
+  "addr": 134318520
+ },
+ {
+  "name": "GetCombinedEnemyWeaponUsabilityBits",
+  "file": "unit.c",
+  "size": 56,
+  "addr": 134318640
+ },
+ {
+  "name": "CanActiveUnitStillMove",
+  "file": "unit.c",
+  "size": 192,
+  "addr": 134318696
+ },
+ {
+  "name": "IsPositionMagicSealed",
+  "file": "unit.c",
+  "size": 112,
+  "addr": 134318888
  },
  {
   "name": "IsUnitMagicSealed",
@@ -688,6 +2152,78 @@
   "file": "unit.c",
   "size": 24,
   "addr": 134319044
+ },
+ {
+  "name": "GetClassSMSId",
+  "file": "unit.c",
+  "size": 32,
+  "addr": 134319136
+ },
+ {
+  "name": "UpdatePrevDeployStates",
+  "file": "unit.c",
+  "size": 88,
+  "addr": 134319168
+ },
+ {
+  "name": "sub_8018C78",
+  "file": "unit.c",
+  "size": 76,
+  "addr": 134319256
+ },
+ {
+  "name": "sub_8018D70",
+  "file": "unit.c",
+  "size": 240,
+  "addr": 134319504
+ },
+ {
+  "name": "GetUnitCurrentHp",
+  "file": "unit.c",
+  "size": 64,
+  "addr": 134319744
+ },
+ {
+  "name": "GetUnitMaxHp",
+  "file": "unit.c",
+  "size": 32,
+  "addr": 134319808
+ },
+ {
+  "name": "GetUnitPower",
+  "file": "unit.c",
+  "size": 32,
+  "addr": 134319840
+ },
+ {
+  "name": "GetUnitSkill",
+  "file": "unit.c",
+  "size": 64,
+  "addr": 134319872
+ },
+ {
+  "name": "GetUnitSpeed",
+  "file": "unit.c",
+  "size": 64,
+  "addr": 134319936
+ },
+ {
+  "name": "GetUnitDefense",
+  "file": "unit.c",
+  "size": 32,
+  "addr": 134320000
+ },
+ {
+  "name": "GetUnitResistance",
+  "file": "unit.c",
+  "size": 40,
+  "addr": 134320032
+ },
+ {
+  "name": "GetUnitLuck",
+  "file": "unit.c",
+  "size": 32,
+  "addr": 134320072
  },
  {
   "name": "GetUnitPortraitId",
@@ -714,10 +2250,46 @@
   "addr": 134320212
  },
  {
+  "name": "SetUnitHp",
+  "file": "unit.c",
+  "size": 60,
+  "addr": 134320220
+ },
+ {
+  "name": "AddUnitHp",
+  "file": "unit.c",
+  "size": 68,
+  "addr": 134320280
+ },
+ {
+  "name": "GetClassData",
+  "file": "unit.c",
+  "size": 32,
+  "addr": 134320440
+ },
+ {
+  "name": "GetCharacterData",
+  "file": "unit.c",
+  "size": 32,
+  "addr": 134320472
+ },
+ {
   "name": "UnitRemoveItem",
   "file": "unit.c",
   "size": 24,
   "addr": 134320504
+ },
+ {
+  "name": "CanUnitCrossTerrain",
+  "file": "unit.c",
+  "size": 32,
+  "addr": 134320528
+ },
+ {
+  "name": "ChapterIntro_Bg3Scroll_Loop",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 28,
+  "addr": 134346588
  },
  {
   "name": "ChapterIntroDeamon_Init",
@@ -726,10 +2298,106 @@
   "addr": 134346616
  },
  {
+  "name": "ChapterIntroDeamon_Loop",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 88,
+  "addr": 134346632
+ },
+ {
+  "name": "PutChapterIntroMotif",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 108,
+  "addr": 134346720
+ },
+ {
+  "name": "PutScreenFogEffect",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 212,
+  "addr": 134346828
+ },
+ {
+  "name": "PutScreenFogEffectOverlayed",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 232,
+  "addr": 134347040
+ },
+ {
+  "name": "ChapterIntro_Init",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 444,
+  "addr": 134347272
+ },
+ {
+  "name": "ChapterIntro_BeginFadeIn",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 68,
+  "addr": 134347716
+ },
+ {
+  "name": "ChapterIntro_LoopFadeIn",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 148,
+  "addr": 134347784
+ },
+ {
+  "name": "ChapterIntro_BeginMotifFadeIn",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 100,
+  "addr": 134347932
+ },
+ {
+  "name": "ChapterIntro_LoopMotifFadeIn",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 168,
+  "addr": 134348032
+ },
+ {
+  "name": "ChapterIntro_LoopHOpenText",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 124,
+  "addr": 134348264
+ },
+ {
   "name": "ChapterIntro_BeginVOpenText",
   "file": "bmfx-chapterintrofx.c",
   "size": 8,
   "addr": 134348388
+ },
+ {
+  "name": "ChapterIntro_LoopVOpenText",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 92,
+  "addr": 134348396
+ },
+ {
+  "name": "ChapterIntro_Begin_0801FE98",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 88,
+  "addr": 134348488
+ },
+ {
+  "name": "ChapterIntro_Loop_0801E1F8",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 40,
+  "addr": 134348576
+ },
+ {
+  "name": "ChapterIntro_Loop_0801FF3C",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 108,
+  "addr": 134348652
+ },
+ {
+  "name": "ChapterIntro_InitMapDisplay",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 236,
+  "addr": 134348816
+ },
+ {
+  "name": "ChapterIntro_BeginFadeToMap",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 120,
+  "addr": 134349052
  },
  {
   "name": "ChapterIntro_BeginCloseText",
@@ -738,10 +2406,34 @@
   "addr": 134349544
  },
  {
+  "name": "ChapterIntro_LoopCloseText",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 76,
+  "addr": 134349552
+ },
+ {
   "name": "ChapterIntro_BeginFastCloseText",
   "file": "bmfx-chapterintrofx.c",
   "size": 8,
   "addr": 134349628
+ },
+ {
+  "name": "ChapterIntro_LoopFastCloseText",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 76,
+  "addr": 134349636
+ },
+ {
+  "name": "ChapterIntro_LoopFadeOut",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 84,
+  "addr": 134349756
+ },
+ {
+  "name": "ChapterIntro_BeginFastFadeToMap",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 176,
+  "addr": 134349840
  },
  {
   "name": "ChapterIntro_SetSkipTarget",
@@ -756,16 +2448,64 @@
   "addr": 134350152
  },
  {
+  "name": "ChapterIntro_TickTimer",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 48,
+  "addr": 134350160
+ },
+ {
   "name": "ChapterIntro_SetFasten",
   "file": "bmfx-chapterintrofx.c",
   "size": 8,
   "addr": 134350208
  },
  {
+  "name": "SwingSwordfx_Init",
+  "file": "bmfx-swingsword.c",
+  "size": 56,
+  "addr": 134354476
+ },
+ {
+  "name": "SwingSwordfx_Loop",
+  "file": "bmfx-swingsword.c",
+  "size": 96,
+  "addr": 134354532
+ },
+ {
+  "name": "StartMineAnim",
+  "file": "bmfx-minefx.c",
+  "size": 124,
+  "addr": 134354864
+ },
+ {
   "name": "sub_80217EC",
   "file": "bmfx-niniantransform.c",
   "size": 52,
   "addr": 134354988
+ },
+ {
+  "name": "sub_8021820",
+  "file": "bmfx-niniantransform.c",
+  "size": 216,
+  "addr": 134355040
+ },
+ {
+  "name": "NinianStartTransformToHunman",
+  "file": "bmfx-niniantransform.c",
+  "size": 76,
+  "addr": 134355372
+ },
+ {
+  "name": "CountFactionMoveableUnits",
+  "file": "faction.c",
+  "size": 100,
+  "addr": 134364412
+ },
+ {
+  "name": "CountFactionUnitsWithoutFlags",
+  "file": "faction.c",
+  "size": 60,
+  "addr": 134364512
  },
  {
   "name": "AreUnitIdsAllied",
@@ -792,6 +2532,12 @@
   "addr": 134376284
  },
  {
+  "name": "GetUnitSupportUnit",
+  "file": "support.c",
+  "size": 72,
+  "addr": 134376308
+ },
+ {
   "name": "GetUnitSupportLevel",
   "file": "support.c",
   "size": 40,
@@ -802,6 +2548,24 @@
   "file": "support.c",
   "size": 44,
   "addr": 134376420
+ },
+ {
+  "name": "UnitGainSupportExp",
+  "file": "support.c",
+  "size": 92,
+  "addr": 134376464
+ },
+ {
+  "name": "UnitGainSupportLevel",
+  "file": "support.c",
+  "size": 52,
+  "addr": 134376556
+ },
+ {
+  "name": "CanUnitSupportNow",
+  "file": "support.c",
+  "size": 124,
+  "addr": 134376608
  },
  {
   "name": "GetUnitInitialSupportExp",
@@ -822,16 +2586,40 @@
   "addr": 134376816
  },
  {
+  "name": "DoTurnSupportExp",
+  "file": "support.c",
+  "size": 248,
+  "addr": 134376900
+ },
+ {
+  "name": "ApplyAffinityBonuses",
+  "file": "support.c",
+  "size": 80,
+  "addr": 134377184
+ },
+ {
   "name": "InitBonuses",
   "file": "support.c",
   "size": 16,
   "addr": 134377264
  },
  {
+  "name": "GetUnitSupportBonuses",
+  "file": "support.c",
+  "size": 268,
+  "addr": 134377280
+ },
+ {
   "name": "GetUnitAffinityIcon",
   "file": "support.c",
   "size": 24,
   "addr": 134377548
+ },
+ {
+  "name": "GetAffinityIconByPid",
+  "file": "support.c",
+  "size": 24,
+  "addr": 134377572
  },
  {
   "name": "SetSupportLevelGained",
@@ -846,10 +2634,58 @@
   "addr": 134377756
  },
  {
+  "name": "ArePidsAtMaxSupport",
+  "file": "support.c",
+  "size": 48,
+  "addr": 134377780
+ },
+ {
   "name": "SwapUnitStats",
   "file": "support.c",
   "size": 156,
   "addr": 134377828
+ },
+ {
+  "name": "BattleGenerateSimulationInternal",
+  "file": "battle.c",
+  "size": 208,
+  "addr": 134383404
+ },
+ {
+  "name": "BattleGenerateRealInternal",
+  "file": "battle.c",
+  "size": 232,
+  "addr": 134383612
+ },
+ {
+  "name": "BattleGenerateSimulation",
+  "file": "battle.c",
+  "size": 56,
+  "addr": 134383880
+ },
+ {
+  "name": "BattleGenerateUiStats",
+  "file": "battle.c",
+  "size": 244,
+  "addr": 134384112
+ },
+ {
+  "name": "BattleRoll1RN",
+  "file": "battle.c",
+  "size": 44,
+  "addr": 134384356
+ },
+ {
+  "name": "BattleRoll2RN",
+  "file": "battle.c",
+  "size": 44,
+  "addr": 134384400
+ },
+ {
+  "name": "InitBattleUnit",
+  "file": "battle.c",
+  "size": 228,
+  "addr": 134384444
  },
  {
   "name": "InitBattleUnitWithoutBonuses",
@@ -864,10 +2700,34 @@
   "addr": 134384728
  },
  {
+  "name": "SetBattleUnitTerrainBonusesAuto",
+  "file": "battle.c",
+  "size": 84,
+  "addr": 134384788
+ },
+ {
+  "name": "SetBattleUnitWeaponBallista",
+  "file": "battle.c",
+  "size": 64,
+  "addr": 134385360
+ },
+ {
+  "name": "ComputeBattleUnitStats",
+  "file": "battle.c",
+  "size": 76,
+  "addr": 134385428
+ },
+ {
   "name": "ComputeBattleUnitEffectiveStats",
   "file": "battle.c",
   "size": 40,
   "addr": 134385504
+ },
+ {
+  "name": "ComputeBattleUnitSupportBonuses",
+  "file": "battle.c",
+  "size": 116,
+  "addr": 134385544
  },
  {
   "name": "ComputeBattleUnitDefense",
@@ -906,10 +2766,22 @@
   "addr": 134386348
  },
  {
+  "name": "ComputeBattleUnitEffectiveCritRate",
+  "file": "battle.c",
+  "size": 168,
+  "addr": 134386396
+ },
+ {
   "name": "ComputeBattleUnitSilencerRate",
   "file": "battle.c",
   "size": 92,
   "addr": 134386564
+ },
+ {
+  "name": "ComputeBattleUnitWeaponRankBonuses",
+  "file": "battle.c",
+  "size": 60,
+  "addr": 134386656
  },
  {
   "name": "ComputeBattleUnitStatusBonuses",
@@ -924,10 +2796,64 @@
   "addr": 134386776
  },
  {
+  "name": "BattleUnwind",
+  "file": "battle.c",
+  "size": 120,
+  "addr": 134386972
+ },
+ {
+  "name": "BattleGenerateRoundHits",
+  "file": "battle.c",
+  "size": 92,
+  "addr": 134387236
+ },
+ {
   "name": "GetBattleUnitHitCount",
   "file": "battle.c",
   "size": 20,
   "addr": 134387328
+ },
+ {
+  "name": "BattleCheckBraveEffect",
+  "file": "battle.c",
+  "size": 40,
+  "addr": 134387348
+ },
+ {
+  "name": "BattleCheckTriangleAttack",
+  "file": "battle.c",
+  "size": 232,
+  "addr": 134387388
+ },
+ {
+  "name": "BattleUpdateBattleStats",
+  "file": "battle.c",
+  "size": 48,
+  "addr": 134387620
+ },
+ {
+  "name": "BattleGenerateHitTriangleAttack",
+  "file": "battle.c",
+  "size": 120,
+  "addr": 134387860
+ },
+ {
+  "name": "BattleGenerateHitEffects",
+  "file": "battle.c",
+  "size": 320,
+  "addr": 134387980
+ },
+ {
+  "name": "BattleGenerateHit",
+  "file": "battle.c",
+  "size": 148,
+  "addr": 134388300
+ },
+ {
+  "name": "BattleApplyExpGains",
+  "file": "battle.c",
+  "size": 116,
+  "addr": 134388448
  },
  {
   "name": "GetStatIncrease",
@@ -940,6 +2866,18 @@
   "file": "battle.c",
   "size": 48,
   "addr": 134388600
+ },
+ {
+  "name": "CanBattleUnitGainLevels",
+  "file": "battle.c",
+  "size": 52,
+  "addr": 134388648
+ },
+ {
+  "name": "CheckBattleUnitLevelUp",
+  "file": "battle.c",
+  "size": 440,
+  "addr": 134388700
  },
  {
   "name": "UnitPromote",
@@ -960,6 +2898,30 @@
   "addr": 134389512
  },
  {
+  "name": "BattleApplyUnitUpdates",
+  "file": "battle.c",
+  "size": 136,
+  "addr": 134389772
+ },
+ {
+  "name": "GetBattleUnitUpdatedWeaponExp",
+  "file": "battle.c",
+  "size": 236,
+  "addr": 134389912
+ },
+ {
+  "name": "HasBattleUnitGainedWeaponLevel",
+  "file": "battle.c",
+  "size": 60,
+  "addr": 134390148
+ },
+ {
+  "name": "UpdateUnitFromBattle",
+  "file": "battle.c",
+  "size": 232,
+  "addr": 134390208
+ },
+ {
   "name": "UpdateUnitDuringBattle",
   "file": "battle.c",
   "size": 44,
@@ -970,6 +2932,12 @@
   "file": "battle.c",
   "size": 36,
   "addr": 134390552
+ },
+ {
+  "name": "GetUnitRoundExp",
+  "file": "battle.c",
+  "size": 48,
+  "addr": 134390588
  },
  {
   "name": "GetUnitPowerLevel",
@@ -984,10 +2952,46 @@
   "addr": 134390696
  },
  {
+  "name": "GetUnitExpMultiplier",
+  "file": "battle.c",
+  "size": 68,
+  "addr": 134390740
+ },
+ {
+  "name": "GetUnitKillExpBonus",
+  "file": "battle.c",
+  "size": 156,
+  "addr": 134390808
+ },
+ {
   "name": "GetBattleUnitExpGain",
   "file": "battle.c",
   "size": 108,
   "addr": 134390964
+ },
+ {
+  "name": "BattleApplyItemExpGains",
+  "file": "battle.c",
+  "size": 128,
+  "addr": 134391072
+ },
+ {
+  "name": "GetBattleUnitStaffExp",
+  "file": "battle.c",
+  "size": 100,
+  "addr": 134391200
+ },
+ {
+  "name": "BattleApplyMiscActionExpGains",
+  "file": "battle.c",
+  "size": 76,
+  "addr": 134391300
+ },
+ {
+  "name": "BattleUnitTargetSetEquippedWeapon",
+  "file": "battle.c",
+  "size": 84,
+  "addr": 134391376
  },
  {
   "name": "BattleUnitTargetCheckCanCounter",
@@ -1002,10 +3006,40 @@
   "addr": 134391504
  },
  {
+  "name": "BattleInitTargetCanCounter",
+  "file": "battle.c",
+  "size": 96,
+  "addr": 134391720
+ },
+ {
+  "name": "InitObstacleBattleUnit",
+  "file": "battle.c",
+  "size": 132,
+  "addr": 134391816
+ },
+ {
+  "name": "UpdateObstacleFromBattle",
+  "file": "battle.c",
+  "size": 156,
+  "addr": 134392008
+ },
+ {
   "name": "GetUnitSoloBattleAnimType",
   "file": "battle.c",
   "size": 40,
   "addr": 134392256
+ },
+ {
+  "name": "BattleInitItemEffect",
+  "file": "battle.c",
+  "size": 164,
+  "addr": 134392432
+ },
+ {
+  "name": "BattleApplyItemEffect",
+  "file": "battle.c",
+  "size": 128,
+  "addr": 134392736
  },
  {
   "name": "GetOffensiveStaffAccuracy",
@@ -1014,10 +3048,22 @@
   "addr": 134392864
  },
  {
+  "name": "BattleGenerateArena",
+  "file": "battle.c",
+  "size": 292,
+  "addr": 134392980
+ },
+ {
   "name": "DidBattleUnitBreakWeapon",
   "file": "battle.c",
   "size": 32,
   "addr": 134393288
+ },
+ {
+  "name": "BattleGenerateHitScriptedDamage",
+  "file": "battle.c",
+  "size": 108,
+  "addr": 134393332
  },
  {
   "name": "UnitLevelUp",
@@ -1038,16 +3084,130 @@
   "addr": 134428508
  },
  {
+  "name": "UnpackUiWindowFrameGraphics2",
+  "file": "ui.c",
+  "size": 84,
+  "addr": 134518944
+ },
+ {
+  "name": "BattleAIS_ExecCommands",
+  "file": "banim-main.c",
+  "size": 2748,
+  "addr": 134558616
+ },
+ {
+  "name": "AnimScrAdvance",
+  "file": "banim-mainutils.c",
+  "size": 64,
+  "addr": 134561364
+ },
+ {
   "name": "EkrChienCHRMain",
   "file": "banim-mainutils.c",
   "size": 24,
   "addr": 134561452
  },
  {
+  "name": "RegisterAISSheetGraphics",
+  "file": "banim-mainutils.c",
+  "size": 52,
+  "addr": 134561476
+ },
+ {
+  "name": "ApplyBanimUniquePalette",
+  "file": "banim-mainutils.c",
+  "size": 44,
+  "addr": 134561528
+ },
+ {
+  "name": "EfxDrsmmoya_Loop",
+  "file": "banim-efxdrsmmoya.c",
+  "size": 180,
+  "addr": 134626604
+ },
+ {
+  "name": "NewEfxDrsmmoyaBG",
+  "file": "banim-efxdrsmmoya.c",
+  "size": 168,
+  "addr": 134626784
+ },
+ {
+  "name": "EfxDrsmmoyaBG_Loop",
+  "file": "banim-efxdrsmmoya.c",
+  "size": 112,
+  "addr": 134626952
+ },
+ {
+  "name": "EfxDrsmmoyaScroll_Loop",
+  "file": "banim-efxdrsmmoya.c",
+  "size": 128,
+  "addr": 134627104
+ },
+ {
+  "name": "NewEfxDrsmmoyaScrollCOL",
+  "file": "banim-efxdrsmmoya.c",
+  "size": 56,
+  "addr": 134627232
+ },
+ {
+  "name": "EfxDrsmmoyaScrollCOL_Loop1",
+  "file": "banim-efxdrsmmoya.c",
+  "size": 64,
+  "addr": 134627288
+ },
+ {
   "name": "EfxDrsmmoyaScrollCOL_Delay",
   "file": "banim-efxdrsmmoya.c",
   "size": 36,
   "addr": 134627352
+ },
+ {
+  "name": "EfxDrsmmoyaScrollCOL_Loop3",
+  "file": "banim-efxdrsmmoya.c",
+  "size": 64,
+  "addr": 134627388
+ },
+ {
+  "name": "GetEkrDragonStatusAttr",
+  "file": "banim-ekrdragon.c",
+  "size": 12,
+  "addr": 134630184
+ },
+ {
+  "name": "AddEkrDragonStatusAttr",
+  "file": "banim-ekrdragon.c",
+  "size": 24,
+  "addr": 134630196
+ },
+ {
+  "name": "GetEkrDragonStatusType_",
+  "file": "banim-ekrdragon.c",
+  "size": 12,
+  "addr": 134630232
+ },
+ {
+  "name": "AddEkrDragonStatusType",
+  "file": "banim-ekrdragon.c",
+  "size": 24,
+  "addr": 134630244
+ },
+ {
+  "name": "EkrDragonTmCpyHFlip",
+  "file": "banim-ekrdragon.c",
+  "size": 76,
+  "addr": 134630280
+ },
+ {
+  "name": "EkrDragonTmCpyExt",
+  "file": "banim-ekrdragon.c",
+  "size": 96,
+  "addr": 134630356
+ },
+ {
+  "name": "EkrDragonTmCpyWithDistance",
+  "file": "banim-ekrdragon.c",
+  "size": 64,
+  "addr": 134630452
  },
  {
   "name": "EkrDragonIntroDone",
@@ -1062,6 +3222,12 @@
   "addr": 134630544
  },
  {
+  "name": "NewEkrDragon",
+  "file": "banim-ekrdragon.c",
+  "size": 48,
+  "addr": 134630572
+ },
+ {
   "name": "SetEfxDragonDeadFallHead",
   "file": "banim-ekrdragon.c",
   "size": 16,
@@ -1074,10 +3240,100 @@
   "addr": 134630648
  },
  {
+  "name": "EkrDragon_CustomBgFadeIn",
+  "file": "banim-ekrdragon.c",
+  "size": 60,
+  "addr": 134630928
+ },
+ {
+  "name": "EkrDragon_StartDragonTailIntro",
+  "file": "banim-ekrdragon.c",
+  "size": 192,
+  "addr": 134630988
+ },
+ {
+  "name": "EkrDragon_DragonTailDisplay",
+  "file": "banim-ekrdragon.c",
+  "size": 124,
+  "addr": 134631180
+ },
+ {
+  "name": "EkrDragon_StartMainBodyIntro",
+  "file": "banim-ekrdragon.c",
+  "size": 116,
+  "addr": 134631304
+ },
+ {
+  "name": "EkrDragon_PreMainBodyIntro",
+  "file": "banim-ekrdragon.c",
+  "size": 140,
+  "addr": 134631420
+ },
+ {
+  "name": "EkrDragon_StartMainBodyFallIn",
+  "file": "banim-ekrdragon.c",
+  "size": 296,
+  "addr": 134631560
+ },
+ {
+  "name": "EkrDragon_WaitMainBodyFallIn",
+  "file": "banim-ekrdragon.c",
+  "size": 440,
+  "addr": 134631856
+ },
+ {
+  "name": "EkrDragon_TriggerIntroDone",
+  "file": "banim-ekrdragon.c",
+  "size": 32,
+  "addr": 134632536
+ },
+ {
+  "name": "EkrDragon_InBattleIDLE",
+  "file": "banim-ekrdragon.c",
+  "size": 84,
+  "addr": 134632568
+ },
+ {
   "name": "EkrDragon_WaitForFadeOut",
   "file": "banim-ekrdragon.c",
   "size": 36,
   "addr": 134632652
+ },
+ {
+  "name": "EkrDragon_ReloadTerrainEtc",
+  "file": "banim-ekrdragon.c",
+  "size": 148,
+  "addr": 134632688
+ },
+ {
+  "name": "EkrDragon_ReloadCustomBgAndFadeOut",
+  "file": "banim-ekrdragon.c",
+  "size": 88,
+  "addr": 134632836
+ },
+ {
+  "name": "EkrDragon_TriggerEnding",
+  "file": "banim-ekrdragon.c",
+  "size": 24,
+  "addr": 134632924
+ },
+ {
+  "name": "EkrDragonBaseHide_Loop",
+  "file": "banim-ekrdragonfx.c",
+  "size": 104,
+  "addr": 134632984
+ },
+ {
+  "name": "NewEkrDragonBaseAppear",
+  "file": "banim-ekrdragonfx.c",
+  "size": 104,
+  "addr": 134633100
+ },
+ {
+  "name": "EkrDragonBaseAppear_Loop",
+  "file": "banim-ekrdragonfx.c",
+  "size": 104,
+  "addr": 134633204
  },
  {
   "name": "EkrDragonTunkFace_Loop",
@@ -1086,10 +3342,28 @@
   "addr": 134633416
  },
  {
+  "name": "NewEfxDragonDeadFallBody",
+  "file": "banim-ekrdragonfx.c",
+  "size": 84,
+  "addr": 134633460
+ },
+ {
+  "name": "EfxDragonDeadFallBody_Loop1",
+  "file": "banim-ekrdragonfx.c",
+  "size": 84,
+  "addr": 134633556
+ },
+ {
   "name": "EfxDragonDeadFallBody_Blocking",
   "file": "banim-ekrdragonfx.c",
   "size": 12,
   "addr": 134633708
+ },
+ {
+  "name": "NewEfxDragonDeadFallHeadFx",
+  "file": "banim-ekrdragonfx.c",
+  "size": 84,
+  "addr": 134633720
  },
  {
   "name": "EfxDragonDeadFallHead_Loop1",
@@ -1098,10 +3372,172 @@
   "addr": 134633816
  },
  {
+  "name": "EfxDragonDeadFallHead_Loop2",
+  "file": "banim-ekrdragonfx.c",
+  "size": 48,
+  "addr": 134633860
+ },
+ {
+  "name": "EkrDragonFlashingWingBg_Loop",
+  "file": "banim-ekrdragonfx.c",
+  "size": 232,
+  "addr": 134633944
+ },
+ {
+  "name": "NewEkrDragonFireBG2",
+  "file": "banim-ekrdragonfx.c",
+  "size": 132,
+  "addr": 134634420
+ },
+ {
+  "name": "EkrDragonBg2ScrollHandler_Loop",
+  "file": "banim-ekrdragonfx.c",
+  "size": 84,
+  "addr": 134634584
+ },
+ {
+  "name": "EkrDragonBg2Scroll_OnVBlank",
+  "file": "banim-ekrdragonfx.c",
+  "size": 44,
+  "addr": 134634668
+ },
+ {
+  "name": "NewEkrDragonBg3HfScrollHandler",
+  "file": "banim-ekrdragonfx.c",
+  "size": 52,
+  "addr": 134634900
+ },
+ {
+  "name": "EkrDragonBg3HfScroll_OnVBlank",
+  "file": "banim-ekrdragonfx.c",
+  "size": 44,
+  "addr": 134635096
+ },
+ {
+  "name": "EkrDragonBodyBlack_Loop",
+  "file": "banim-ekrdragonfx.c",
+  "size": 140,
+  "addr": 134635764
+ },
+ {
+  "name": "sub_80668B8",
+  "file": "banim-ekrdragonfx.c",
+  "size": 152,
+  "addr": 134635908
+ },
+ {
+  "name": "sub_8066950",
+  "file": "banim-ekrdragonfx.c",
+  "size": 84,
+  "addr": 134636060
+ },
+ {
+  "name": "EkrDragonTunk_Loop1",
+  "file": "banim-ekrdragonfx.c",
+  "size": 256,
+  "addr": 134636212
+ },
+ {
+  "name": "EkrDragonTunk_Loop2",
+  "file": "banim-ekrdragonfx.c",
+  "size": 464,
+  "addr": 134636468
+ },
+ {
+  "name": "NewEkrDragonFireBg3",
+  "file": "banim-ekrdragonfx.c",
+  "size": 132,
+  "addr": 134636936
+ },
+ {
+  "name": "EkrDragonFireBG3_Loop",
+  "file": "banim-ekrdragonfx.c",
+  "size": 96,
+  "addr": 134637084
+ },
+ {
+  "name": "NewEkrDragonBarkQuake",
+  "file": "banim-ekrdragonfx.c",
+  "size": 56,
+  "addr": 134637180
+ },
+ {
+  "name": "EkrDragonBarkQuake_Loop",
+  "file": "banim-ekrdragonfx.c",
+  "size": 424,
+  "addr": 134637236
+ },
+ {
+  "name": "EkrDragonScreenFlashing_Loop1",
+  "file": "banim-ekrdragonfx.c",
+  "size": 112,
+  "addr": 134637724
+ },
+ {
+  "name": "EkrDragonScreenFlashing_Loop2",
+  "file": "banim-ekrdragonfx.c",
+  "size": 88,
+  "addr": 134637836
+ },
+ {
+  "name": "EkrDragonScreenFlashing_Loop3",
+  "file": "banim-ekrdragonfx.c",
+  "size": 112,
+  "addr": 134637924
+ },
+ {
+  "name": "EkrDragonScreenFlashing_RefrainPalette",
+  "file": "banim-ekrdragonfx.c",
+  "size": 48,
+  "addr": 134638036
+ },
+ {
   "name": "EventQuakefx_Init",
   "file": "eventcall_quakefx.c",
   "size": 8,
   "addr": 134721372
+ },
+ {
+  "name": "EventQuakefx_Loop",
+  "file": "eventcall_quakefx.c",
+  "size": 128,
+  "addr": 134721380
+ },
+ {
+  "name": "DragonGatefx_DistortionHandler",
+  "file": "eventcall_dragongate.c",
+  "size": 104,
+  "addr": 134721616
+ },
+ {
+  "name": "DragonGatefx_DrawLight",
+  "file": "eventcall_dragongate.c",
+  "size": 200,
+  "addr": 134721720
+ },
+ {
+  "name": "DragonGatefx_DrawDragon",
+  "file": "eventcall_dragongate.c",
+  "size": 208,
+  "addr": 134721920
+ },
+ {
+  "name": "DragonGatefx_MergeDragon",
+  "file": "eventcall_dragongate.c",
+  "size": 100,
+  "addr": 134722128
+ },
+ {
+  "name": "sub_807BB48",
+  "file": "eventcall_dragongate.c",
+  "size": 168,
+  "addr": 134722228
+ },
+ {
+  "name": "DragonGatefx_End",
+  "file": "eventcall_dragongate.c",
+  "size": 88,
+  "addr": 134722412
  },
  {
   "name": "DragonSpriteBlinking_Init",
@@ -1116,10 +3552,112 @@
   "addr": 134722572
  },
  {
+  "name": "PutDragonGateFlame",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 108,
+  "addr": 134722672
+ },
+ {
+  "name": "sub_807BD6C",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 92,
+  "addr": 134722780
+ },
+ {
+  "name": "DragonFlamefx_Handler",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 52,
+  "addr": 134722872
+ },
+ {
+  "name": "DragonFlamefx_Init",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 268,
+  "addr": 134722924
+ },
+ {
+  "name": "DragonFlamefx_Rotation",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 84,
+  "addr": 134723192
+ },
+ {
+  "name": "DragonFlamefx_EndRing",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 64,
+  "addr": 134723276
+ },
+ {
+  "name": "DragonFlamefx_RefrainBlendAlpha",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 80,
+  "addr": 134723340
+ },
+ {
+  "name": "sub_807BFEC",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 148,
+  "addr": 134723420
+ },
+ {
+  "name": "sub_807C080",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 136,
+  "addr": 134723568
+ },
+ {
+  "name": "sub_807C108",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 104,
+  "addr": 134723704
+ },
+ {
+  "name": "sub_807C228",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 100,
+  "addr": 134723992
+ },
+ {
+  "name": "DeadDragonFlame_Init",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 248,
+  "addr": 134724092
+ },
+ {
+  "name": "DeadDragonFlame_Rotation",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 100,
+  "addr": 134724340
+ },
+ {
+  "name": "sub_807C3E8",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 124,
+  "addr": 134724440
+ },
+ {
+  "name": "sub_807C464",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 48,
+  "addr": 134724564
+ },
+ {
+  "name": "sub_807C490",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 244,
+  "addr": 134724612
+ },
+ {
   "name": "sub_807C58C",
   "file": "eventcall_dragonflamefx.c",
   "size": 24,
   "addr": 134724856
+ },
+ {
+  "name": "sub_807C5A4",
+  "file": "eventcall_dragonflamefx.c",
+  "size": 180,
+  "addr": 134724880
  },
  {
   "name": "QuintessenceFx_ParallelWorker",
@@ -1140,6 +3678,42 @@
   "addr": 134725320
  },
  {
+  "name": "QuintessenceFx_Init_Main",
+  "file": "quintessence-fx.c",
+  "size": 200,
+  "addr": 134725348
+ },
+ {
+  "name": "ZephielEpilogue_Loop_BlendCgs",
+  "file": "eventcall_zephielepilogue.c",
+  "size": 80,
+  "addr": 134725548
+ },
+ {
+  "name": "QuintessenceFx_ResetBlend",
+  "file": "quintessence-fx.c",
+  "size": 92,
+  "addr": 134725628
+ },
+ {
+  "name": "QuintessenceFx_Loop_B",
+  "file": "quintessence-fx.c",
+  "size": 80,
+  "addr": 134725720
+ },
+ {
+  "name": "QuintessenceFx_Loop_C",
+  "file": "quintessence-fx.c",
+  "size": 80,
+  "addr": 134725800
+ },
+ {
+  "name": "QuintessenceFx_OnEnd",
+  "file": "quintessence-fx.c",
+  "size": 104,
+  "addr": 134725880
+ },
+ {
   "name": "UnitTornOut_Loop",
   "file": "eventcall_unittornout.c",
   "size": 64,
@@ -1152,6 +3726,54 @@
   "addr": 134726168
  },
  {
+  "name": "sub_807CE00",
+  "file": "eventcall_unittornout.c",
+  "size": 20,
+  "addr": 134726188
+ },
+ {
+  "name": "sub_807CE14",
+  "file": "eventcall_flamebreath.c",
+  "size": 124,
+  "addr": 134726208
+ },
+ {
+  "name": "sub_807CE90",
+  "file": "eventcall_flamebreath.c",
+  "size": 260,
+  "addr": 134726332
+ },
+ {
+  "name": "sub_807CF94",
+  "file": "eventcall_flamebreath.c",
+  "size": 88,
+  "addr": 134726592
+ },
+ {
+  "name": "IceCrystalfx_Start",
+  "file": "eventcall_icecrystal.c",
+  "size": 232,
+  "addr": 134727024
+ },
+ {
+  "name": "IceCrystalfx_ResetPalette",
+  "file": "eventcall_icecrystal.c",
+  "size": 32,
+  "addr": 134727256
+ },
+ {
+  "name": "IceCrystalfx_RefrainPalette",
+  "file": "eventcall_icecrystal.c",
+  "size": 64,
+  "addr": 134727288
+ },
+ {
+  "name": "IceCrystalfx_Paluse",
+  "file": "eventcall_icecrystal.c",
+  "size": 144,
+  "addr": 134727352
+ },
+ {
   "name": "EventDragonsSpritefx_Init",
   "file": "eventcall_firedragonsprite.c",
   "size": 60,
@@ -1162,6 +3784,36 @@
   "file": "eventcall_firedragonsprite.c",
   "size": 32,
   "addr": 134734764
+ },
+ {
+  "name": "EventDragonsSpritefx_Loop",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 428,
+  "addr": 134734796
+ },
+ {
+  "name": "StartEventDragonsSpriteDeamon",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 60,
+  "addr": 134735224
+ },
+ {
+  "name": "PutFireDragonSpritefx",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 264,
+  "addr": 134735300
+ },
+ {
+  "name": "RemoveFireDragonSpritefx",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 64,
+  "addr": 134735564
+ },
+ {
+  "name": "sub_807F590",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 56,
+  "addr": 134735628
  },
  {
   "name": "EventCall_PutFireDragonSprite",
@@ -1218,16 +3870,46 @@
   "addr": 134736052
  },
  {
+  "name": "sub_807F758",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 52,
+  "addr": 134736084
+ },
+ {
+  "name": "sub_807F78C",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 48,
+  "addr": 134736136
+ },
+ {
   "name": "StartEventDragonsSpriteMovefx",
   "file": "eventcall_firedragonsprite.c",
   "size": 48,
   "addr": 134736184
  },
  {
+  "name": "DragonFlameImpact_Init",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 176,
+  "addr": 134736232
+ },
+ {
+  "name": "DragonFlameImpact_Loop",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 64,
+  "addr": 134736408
+ },
+ {
   "name": "EventCall_FireDragonScreamingInPain",
   "file": "eventcall_firedragonsprite.c",
   "size": 64,
   "addr": 134736532
+ },
+ {
+  "name": "EventCall_FireDragonFellWeakly",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 72,
+  "addr": 134736596
  },
  {
   "name": "EventCall_FireDragonFadeOut",
@@ -1240,6 +3922,24 @@
   "file": "eventcall_firedragonsprite.c",
   "size": 28,
   "addr": 134736716
+ },
+ {
+  "name": "sub_807F9EC",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 120,
+  "addr": 134736744
+ },
+ {
+  "name": "sub_807FA64",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 132,
+  "addr": 134736864
+ },
+ {
+  "name": "ForceCenteredDragon",
+  "file": "eventcall_firedragonsprite.c",
+  "size": 56,
+  "addr": 134737016
  },
  {
   "name": "GetLynModeDeathFlag",
@@ -1278,10 +3978,70 @@
   "addr": 134737604
  },
  {
+  "name": "TransferLynModeUnits",
+  "file": "eventcall_0807F9EC.c",
+  "size": 248,
+  "addr": 134737748
+ },
+ {
+  "name": "NilsEpilogueIntro_Init",
+  "file": "eventcall_0807F9EC.c",
+  "size": 72,
+  "addr": 134738292
+ },
+ {
+  "name": "NilsEpilogueIntro_CopyBg3ToBg1",
+  "file": "eventcall_0807F9EC.c",
+  "size": 172,
+  "addr": 134738364
+ },
+ {
+  "name": "NilsEpilogueIntro_LoadCg",
+  "file": "eventcall_0807F9EC.c",
+  "size": 80,
+  "addr": 134738536
+ },
+ {
+  "name": "NilsEpilogueIntro_Loop_BlendCg",
+  "file": "eventcall_0807F9EC.c",
+  "size": 108,
+  "addr": 134738616
+ },
+ {
+  "name": "NilsEpilogueIntro_ClearBg1Bg2",
+  "file": "eventcall_0807F9EC.c",
+  "size": 120,
+  "addr": 134738724
+ },
+ {
+  "name": "NilsEpilogueOutro_Init",
+  "file": "eventcall_0807F9EC.c",
+  "size": 156,
+  "addr": 134738932
+ },
+ {
+  "name": "NilsEpilogueOutro_Loop_BlendCgs",
+  "file": "eventcall_0807F9EC.c",
+  "size": 108,
+  "addr": 134739224
+ },
+ {
+  "name": "NilsEpilogueOutro_FadeNilsToWhite",
+  "file": "eventcall_0807F9EC.c",
+  "size": 112,
+  "addr": 134739356
+ },
+ {
   "name": "NilsEpilogueOutro_FadeDragonsGateToBlack",
   "file": "eventcall_0807F9EC.c",
   "size": 48,
   "addr": 134739468
+ },
+ {
+  "name": "sub_8080480",
+  "file": "eventcall_0807F9EC.c",
+  "size": 36,
+  "addr": 134739536
  },
  {
   "name": "DrawUiGaugeBitmapEdgeColumn",
@@ -1308,6 +4068,12 @@
   "addr": 134739684
  },
  {
+  "name": "DrawUiGauge",
+  "file": "statscreenfx.c",
+  "size": 208,
+  "addr": 134739712
+ },
+ {
   "name": "PutDrawUiGauge",
   "file": "statscreenfx.c",
   "size": 72,
@@ -1326,10 +4092,142 @@
   "addr": 134740000
  },
  {
+  "name": "PutStatScreenStatWithBar",
+  "file": "statscreenfx.c",
+  "size": 200,
+  "addr": 134741164
+ },
+ {
+  "name": "PutStatScreenSupportList",
+  "file": "statscreenfx.c",
+  "size": 240,
+  "addr": 134742552
+ },
+ {
+  "name": "PutStatScreenPage",
+  "file": "statscreenfx.c",
+  "size": 84,
+  "addr": 134743152
+ },
+ {
+  "name": "FindNextStatScreenUnit",
+  "file": "statscreen-util.c",
+  "size": 188,
+  "addr": 134743236
+ },
+ {
+  "name": "StatScreenPageSlide_Loop",
+  "file": "statscreen-util.c",
+  "size": 280,
+  "addr": 134743424
+ },
+ {
+  "name": "StartStatScreenPageSlide",
+  "file": "statscreen-util.c",
+  "size": 108,
+  "addr": 134743716
+ },
+ {
+  "name": "StatScreenUnitSlide_FadeOutInit",
+  "file": "statscreen-util.c",
+  "size": 144,
+  "addr": 134743824
+ },
+ {
+  "name": "StatScreenUnitSlide_FadeOutLoop",
+  "file": "statscreen-util.c",
+  "size": 128,
+  "addr": 134743968
+ },
+ {
+  "name": "StatScreenUnitSlide_FadeInInit",
+  "file": "statscreen-util.c",
+  "size": 120,
+  "addr": 134744096
+ },
+ {
+  "name": "StatScreenUnitSlide_FadeInLoop",
+  "file": "statscreen-util.c",
+  "size": 124,
+  "addr": 134744216
+ },
+ {
+  "name": "StatScreenUnitSlide_End",
+  "file": "statscreen-util.c",
+  "size": 148,
+  "addr": 134744388
+ },
+ {
   "name": "StatScreenSprites_Init",
   "file": "statscreen.c",
   "size": 24,
   "addr": 134745332
+ },
+ {
+  "name": "StatScreenSprites_BumpCheck",
+  "file": "statscreen.c",
+  "size": 56,
+  "addr": 134745356
+ },
+ {
+  "name": "StatScreenSprites_PutArrows",
+  "file": "statscreen.c",
+  "size": 232,
+  "addr": 134745412
+ },
+ {
+  "name": "StatScreen_DisableScreen",
+  "file": "statscreen.c",
+  "size": 112,
+  "addr": 134746068
+ },
+ {
+  "name": "StatScreen_InitUnit",
+  "file": "statscreen.c",
+  "size": 224,
+  "addr": 134746508
+ },
+ {
+  "name": "StatScreen_Main",
+  "file": "statscreen.c",
+  "size": 400,
+  "addr": 134746732
+ },
+ {
+  "name": "SyncStatScreenBgOffset",
+  "file": "statscreen.c",
+  "size": 56,
+  "addr": 134747208
+ },
+ {
+  "name": "StartStatScreen",
+  "file": "statscreen.c",
+  "size": 88,
+  "addr": 134747276
+ },
+ {
+  "name": "HelpBoxPopulateStatScreenItem",
+  "file": "statscreen.c",
+  "size": 44,
+  "addr": 134747460
+ },
+ {
+  "name": "HelpBoxRedirectStatScreenItem",
+  "file": "statscreen.c",
+  "size": 84,
+  "addr": 134747740
+ },
+ {
+  "name": "HelpBoxRedirectStatScreenSupports",
+  "file": "statscreen.c",
+  "size": 52,
+  "addr": 134747952
+ },
+ {
+  "name": "UpdateHelpBoxDisplay",
+  "file": "statscreen-helpbox.c",
+  "size": 180,
+  "addr": 134748004
  },
  {
   "name": "HelpBox_OnLoop",
@@ -1338,16 +4236,112 @@
   "addr": 134748252
  },
  {
+  "name": "HelpBox_OnClose",
+  "file": "statscreen-helpbox.c",
+  "size": 88,
+  "addr": 134748292
+ },
+ {
   "name": "HelpBox_WaitClose",
   "file": "statscreen-helpbox.c",
   "size": 40,
   "addr": 134748380
  },
  {
+  "name": "StartHelpBox_Unk",
+  "file": "statscreen-helpbox.c",
+  "size": 76,
+  "addr": 134748472
+ },
+ {
+  "name": "StartHelpBoxExt_Unk",
+  "file": "statscreen-helpbox.c",
+  "size": 176,
+  "addr": 134748824
+ },
+ {
+  "name": "HelpBoxMoveControl_OnInitBox",
+  "file": "statscreen-helpbox.c",
+  "size": 40,
+  "addr": 134749072
+ },
+ {
+  "name": "HelpBoxMoveControl_OnIdle",
+  "file": "statscreen-helpbox.c",
+  "size": 204,
+  "addr": 134749112
+ },
+ {
+  "name": "ApplyHelpBoxPosition",
+  "file": "statscreen-helpbox.c",
+  "size": 140,
+  "addr": 134749508
+ },
+ {
   "name": "ResetHelpBoxInitSize",
   "file": "statscreen-helpbox.c",
   "size": 16,
   "addr": 134749684
+ },
+ {
+  "name": "HelpBoxPopulateAutoItem",
+  "file": "statscreen-helpbox.c",
+  "size": 52,
+  "addr": 134749780
+ },
+ {
+  "name": "HelpBoxTryRelocateUp",
+  "file": "statscreen-helpbox.c",
+  "size": 48,
+  "addr": 134749832
+ },
+ {
+  "name": "HelpBoxTryRelocateDown",
+  "file": "statscreen-helpbox.c",
+  "size": 48,
+  "addr": 134749880
+ },
+ {
+  "name": "HelpBoxTryRelocateLeft",
+  "file": "statscreen-helpbox.c",
+  "size": 48,
+  "addr": 134749928
+ },
+ {
+  "name": "HelpBoxTryRelocateRight",
+  "file": "statscreen-helpbox.c",
+  "size": 48,
+  "addr": 134749976
+ },
+ {
+  "name": "StartLockingHelpBox",
+  "file": "statscreen-helpbox.c",
+  "size": 56,
+  "addr": 134750060
+ },
+ {
+  "name": "StartHelpPromptSprite",
+  "file": "statscreen-helpbox.c",
+  "size": 44,
+  "addr": 134750144
+ },
+ {
+  "name": "StartHelpPromptSpriteBlocking",
+  "file": "statscreen-helpbox.c",
+  "size": 44,
+  "addr": 134750188
+ },
+ {
+  "name": "PutChapterTitlePalette",
+  "file": "chapter-title.c",
+  "size": 116,
+  "addr": 134750300
+ },
+ {
+  "name": "OnVBlank_SioError",
+  "file": "sioerror.c",
+  "size": 36,
+  "addr": 134768636
  },
  {
   "name": "PrepOptionCountToRealIndexByMask",
@@ -1362,6 +4356,18 @@
   "addr": 134798468
  },
  {
+  "name": "PutPrepMenuUiImg",
+  "file": "prepscreen.c",
+  "size": 80,
+  "addr": 134798504
+ },
+ {
+  "name": "sub_808E454",
+  "file": "prepscreen.c",
+  "size": 128,
+  "addr": 134798584
+ },
+ {
   "name": "PrepScreenMenu_OnPickUnits",
   "file": "prepscreen.c",
   "size": 20,
@@ -1374,10 +4380,112 @@
   "addr": 134798732
  },
  {
+  "name": "PrepScreenMenu_OnSave",
+  "file": "prepscreen.c",
+  "size": 52,
+  "addr": 134798792
+ },
+ {
+  "name": "PrepScreenMenu_OnStartPress",
+  "file": "prepscreen.c",
+  "size": 36,
+  "addr": 134798844
+ },
+ {
+  "name": "RegisterSioPid",
+  "file": "prepscreen.c",
+  "size": 40,
+  "addr": 134799012
+ },
+ {
+  "name": "RemoveSioPid",
+  "file": "prepscreen.c",
+  "size": 64,
+  "addr": 134799052
+ },
+ {
+  "name": "CalcForceDeployedUnitCounts",
+  "file": "prepscreen.c",
+  "size": 64,
+  "addr": 134799452
+ },
+ {
+  "name": "sub_808E7D4",
+  "file": "prepscreen.c",
+  "size": 80,
+  "addr": 134799516
+ },
+ {
   "name": "IsUnitInCurrentRoster",
   "file": "prepscreen.c",
   "size": 56,
   "addr": 134799596
+ },
+ {
+  "name": "RemoveSomeUnitItems",
+  "file": "preputil_unitlist.c",
+  "size": 132,
+  "addr": 134800560
+ },
+ {
+  "name": "MakePrepUnitList",
+  "file": "preputil_unitlist.c",
+  "size": 64,
+  "addr": 134800692
+ },
+ {
+  "name": "UnitGetIndexInPrepList",
+  "file": "preputil_unitlist.c",
+  "size": 44,
+  "addr": 134800756
+ },
+ {
+  "name": "PrepUpdateSMS",
+  "file": "preputil_unitlist.c",
+  "size": 72,
+  "addr": 134800800
+ },
+ {
+  "name": "PrepAutoCapDeployUnits",
+  "file": "preputil_unitlist.c",
+  "size": 104,
+  "addr": 134800872
+ },
+ {
+  "name": "PrepRestartMuralBackground",
+  "file": "prep_atmenu.c",
+  "size": 36,
+  "addr": 134800976
+ },
+ {
+  "name": "PrepAtMenu_OnInit",
+  "file": "prep_atmenu.c",
+  "size": 88,
+  "addr": 134801172
+ },
+ {
+  "name": "ParsePrepMenuDescTexts",
+  "file": "prep_atmenu.c",
+  "size": 48,
+  "addr": 134801312
+ },
+ {
+  "name": "PrepMenuDescOnInit",
+  "file": "prep_atmenu.c",
+  "size": 16,
+  "addr": 134801412
+ },
+ {
+  "name": "EndPrepAtMenuIfNoUnitAvailable",
+  "file": "prep_atmenu.c",
+  "size": 112,
+  "addr": 134802276
+ },
+ {
+  "name": "sub_8090148",
+  "file": "prepscreenfx.c",
+  "size": 252,
+  "addr": 134806180
  },
  {
   "name": "ProcPrepSpChar_Idle",
@@ -1386,16 +4494,88 @@
   "addr": 134806760
  },
  {
+  "name": "sub_8090E80",
+  "file": "prep_bgscroll.c",
+  "size": 64,
+  "addr": 134809564
+ },
+ {
+  "name": "sub_8090EC0",
+  "file": "prep_bgscroll.c",
+  "size": 84,
+  "addr": 134809628
+ },
+ {
   "name": "PrepItemScreen_OnHBlank",
   "file": "prep_itemscreen.c",
   "size": 52,
   "addr": 134813148
  },
  {
+  "name": "SramInit",
+  "file": "save_core.c",
+  "size": 116,
+  "addr": 134866768
+ },
+ {
+  "name": "WipeSram",
+  "file": "save_core.c",
+  "size": 60,
+  "addr": 134866900
+ },
+ {
   "name": "Checksum16",
   "file": "save_core.c",
   "size": 44,
   "addr": 134866960
+ },
+ {
+  "name": "ReadGlobalSaveInfo",
+  "file": "save_core.c",
+  "size": 128,
+  "addr": 134867004
+ },
+ {
+  "name": "ResetFe6LinkSaveInfo",
+  "file": "save_core.c",
+  "size": 36,
+  "addr": 134867408
+ },
+ {
+  "name": "EraseBonusContentData",
+  "file": "save_core.c",
+  "size": 44,
+  "addr": 134867444
+ },
+ {
+  "name": "ReadSaveBlockInfo",
+  "file": "save_core.c",
+  "size": 164,
+  "addr": 134867524
+ },
+ {
+  "name": "WriteSaveBlockInfo",
+  "file": "save_core.c",
+  "size": 144,
+  "addr": 134867688
+ },
+ {
+  "name": "EraseSaveBlockInfo",
+  "file": "save_core.c",
+  "size": 64,
+  "addr": 134867832
+ },
+ {
+  "name": "GetSaveReadAddr",
+  "file": "save_core.c",
+  "size": 28,
+  "addr": 134868068
+ },
+ {
+  "name": "SaveMenu_HandleExtraMiscOption",
+  "file": "savemenu.c",
+  "size": 24,
+  "addr": 134887140
  },
  {
   "name": "SaveMenuIndexToValidBitfile",
@@ -1416,6 +4596,12 @@
   "addr": 134887280
  },
  {
+  "name": "sub_80A5B44",
+  "file": "savedraw.c",
+  "size": 284,
+  "addr": 134894168
+ },
+ {
   "name": "SpinRotation_Init",
   "file": "savedrawfx.c",
   "size": 52,
@@ -1426,6 +4612,48 @@
   "file": "savedrawfx.c",
   "size": 80,
   "addr": 134897928
+ },
+ {
+  "name": "TactInfo_CloseHelpbox",
+  "file": "savemenu_tactician.c",
+  "size": 20,
+  "addr": 134900524
+ },
+ {
+  "name": "sub_80A76C8",
+  "file": "savemenu_tactician.c",
+  "size": 52,
+  "addr": 134901404
+ },
+ {
+  "name": "TactInfo_HandleCheckParticipantPrompt",
+  "file": "savemenu_tactician.c",
+  "size": 52,
+  "addr": 134902308
+ },
+ {
+  "name": "Tact_ClearNrVrams",
+  "file": "savemenu_tactician.c",
+  "size": 68,
+  "addr": 134902444
+ },
+ {
+  "name": "InitModeSelectAnims",
+  "file": "savemenu_modeselect.c",
+  "size": 332,
+  "addr": 134904136
+ },
+ {
+  "name": "EndModeSelectAnims",
+  "file": "savemenu_modeselect.c",
+  "size": 36,
+  "addr": 134904468
+ },
+ {
+  "name": "StartModeSelectFace",
+  "file": "savemenu_modeselect.c",
+  "size": 56,
+  "addr": 134904972
  },
  {
   "name": "sub_80A8850",
@@ -1452,10 +4680,100 @@
   "addr": 134906232
  },
  {
+  "name": "ModeSelect_TransitionSplitOpen",
+  "file": "savemenu_modeselect.c",
+  "size": 112,
+  "addr": 134907256
+ },
+ {
+  "name": "ModeSelect_TransitionSplitClose",
+  "file": "savemenu_modeselect.c",
+  "size": 92,
+  "addr": 134907368
+ },
+ {
+  "name": "sub_80A9034",
+  "file": "savemenu_modeselect.c",
+  "size": 48,
+  "addr": 134907460
+ },
+ {
+  "name": "sub_80A9064",
+  "file": "savemenu_modeselect.c",
+  "size": 44,
+  "addr": 134907508
+ },
+ {
+  "name": "ModeSelect_Loop_KeyHandler",
+  "file": "savemenu_modeselect.c",
+  "size": 676,
+  "addr": 134907552
+ },
+ {
+  "name": "ModeSelect_RotateRight",
+  "file": "savemenu_modeselect.c",
+  "size": 104,
+  "addr": 134908228
+ },
+ {
+  "name": "ModeSelect_RotateLeft",
+  "file": "savemenu_modeselect.c",
+  "size": 108,
+  "addr": 134908332
+ },
+ {
+  "name": "ModeSelect_Loop_RotateCarousel",
+  "file": "savemenu_modeselect.c",
+  "size": 304,
+  "addr": 134908440
+ },
+ {
+  "name": "ModeSelect_End",
+  "file": "savemenu_modeselect.c",
+  "size": 64,
+  "addr": 134908744
+ },
+ {
+  "name": "sub_80A95B4",
+  "file": "scrolling_util.c",
+  "size": 216,
+  "addr": 134908868
+ },
+ {
+  "name": "sub_80A968C",
+  "file": "scrolling_util.c",
+  "size": 192,
+  "addr": 134909084
+ },
+ {
+  "name": "sub_80A974C",
+  "file": "scrolling_util.c",
+  "size": 192,
+  "addr": 134909276
+ },
+ {
   "name": "UiCursorHand_Init",
   "file": "cursor-hand.c",
   "size": 44,
   "addr": 134909468
+ },
+ {
+  "name": "UiCursorHand_Loop",
+  "file": "cursor-hand.c",
+  "size": 144,
+  "addr": 134909512
+ },
+ {
+  "name": "SetUiCursorHandConfig",
+  "file": "cursor-hand.c",
+  "size": 120,
+  "addr": 134909676
+ },
+ {
+  "name": "UiCursorHand_SetPosition",
+  "file": "cursor-hand.c",
+  "size": 56,
+  "addr": 134909796
  },
  {
   "name": "ParallelFiniteLoop_Init",
@@ -1464,10 +4782,46 @@
   "addr": 134910728
  },
  {
+  "name": "ParallelFiniteLoop_Loop",
+  "file": "sysutil.c",
+  "size": 40,
+  "addr": 134910736
+ },
+ {
   "name": "SysBlackBox_Init",
   "file": "sysutil.c",
   "size": 24,
   "addr": 134910804
+ },
+ {
+  "name": "SysBlackBox_Main",
+  "file": "sysutil.c",
+  "size": 856,
+  "addr": 134910828
+ },
+ {
+  "name": "EnableSysBlackBox",
+  "file": "sysutil.c",
+  "size": 104,
+  "addr": 134911772
+ },
+ {
+  "name": "ParallelWorker_OnLoop",
+  "file": "sysutil.c",
+  "size": 16,
+  "addr": 134912000
+ },
+ {
+  "name": "GetParallelWorker",
+  "file": "sysutil.c",
+  "size": 44,
+  "addr": 134912080
+ },
+ {
+  "name": "DisplayExtendedSysHand",
+  "file": "sysutil.c",
+  "size": 208,
+  "addr": 134912124
  },
  {
   "name": "SysHandCursor_Init",
@@ -1482,16 +4836,112 @@
   "addr": 134912340
  },
  {
+  "name": "ShowSysHandCursor",
+  "file": "sysutil.c",
+  "size": 72,
+  "addr": 134912564
+ },
+ {
   "name": "SysGrayBox_Init",
   "file": "sysutil.c",
   "size": 24,
   "addr": 134912784
  },
  {
+  "name": "SysGrayBox_Loop",
+  "file": "sysutil.c",
+  "size": 832,
+  "addr": 134912808
+ },
+ {
+  "name": "EnableUnransportWindow",
+  "file": "sysutil.c",
+  "size": 80,
+  "addr": 134913712
+ },
+ {
   "name": "SysBrownBox_Init",
   "file": "sysutil.c",
   "size": 24,
   "addr": 134913852
+ },
+ {
+  "name": "SysBrownBox_Loop",
+  "file": "sysutil.c",
+  "size": 320,
+  "addr": 134913876
+ },
+ {
+  "name": "StartSysBrownBox",
+  "file": "sysutil.c",
+  "size": 128,
+  "addr": 134914196
+ },
+ {
+  "name": "EnableSysBrownBox",
+  "file": "sysutil.c",
+  "size": 72,
+  "addr": 134914324
+ },
+ {
+  "name": "SysboxTextMain",
+  "file": "sysutil.c",
+  "size": 108,
+  "addr": 134914492
+ },
+ {
+  "name": "EndAllProcChildren",
+  "file": "sysutil.c",
+  "size": 36,
+  "addr": 134914784
+ },
+ {
+  "name": "BgAffinRotScaling",
+  "file": "sysutil.c",
+  "size": 148,
+  "addr": 134914824
+ },
+ {
+  "name": "BgAffinScaling",
+  "file": "sysutil.c",
+  "size": 80,
+  "addr": 134914972
+ },
+ {
+  "name": "BgAffinAnchoring",
+  "file": "sysutil.c",
+  "size": 104,
+  "addr": 134915052
+ },
+ {
+  "name": "BgAffinRotScalingHighPrecision",
+  "file": "sysutil.c",
+  "size": 116,
+  "addr": 134915156
+ },
+ {
+  "name": "BgAffinScalingHighPrecision",
+  "file": "sysutil.c",
+  "size": 64,
+  "addr": 134915272
+ },
+ {
+  "name": "BgAffinAnchoringHighPrecision",
+  "file": "sysutil.c",
+  "size": 72,
+  "addr": 134915336
+ },
+ {
+  "name": "sub_80AAEF8",
+  "file": "sysutil.c",
+  "size": 172,
+  "addr": 134915408
+ },
+ {
+  "name": "sub_80AAFA4",
+  "file": "sysutil.c",
+  "size": 120,
+  "addr": 134915580
  },
  {
   "name": "FadeInOut_Init",
@@ -1512,10 +4962,40 @@
   "addr": 134915824
  },
  {
+  "name": "FadeInOut_DisableGfx",
+  "file": "sysutil.c",
+  "size": 88,
+  "addr": 134915896
+ },
+ {
   "name": "BmBgfx_Init",
   "file": "sysutil.c",
   "size": 64,
   "addr": 134916552
+ },
+ {
+  "name": "BmBgfx_Loop",
+  "file": "sysutil.c",
+  "size": 516,
+  "addr": 134916616
+ },
+ {
+  "name": "BmBgfx_End",
+  "file": "sysutil.c",
+  "size": 52,
+  "addr": 134917132
+ },
+ {
+  "name": "StartBmBgfx",
+  "file": "sysutil.c",
+  "size": 168,
+  "addr": 134917300
+ },
+ {
+  "name": "MixPaletteCore",
+  "file": "sysutil.c",
+  "size": 196,
+  "addr": 134917468
  },
  {
   "name": "MixPalette_Init",
@@ -1530,15 +5010,111 @@
   "addr": 134917672
  },
  {
+  "name": "StartMixPalette",
+  "file": "sysutil.c",
+  "size": 56,
+  "addr": 134917716
+ },
+ {
+  "name": "StartSpriteAnimfx",
+  "file": "sysutil.c",
+  "size": 116,
+  "addr": 134917792
+ },
+ {
+  "name": "AppendString",
+  "file": "sysutil.c",
+  "size": 32,
+  "addr": 134918060
+ },
+ {
   "name": "AppendCharacter",
   "file": "sysutil.c",
   "size": 12,
   "addr": 134918092
  },
  {
+  "name": "sub_80AFC3C",
+  "file": "lord-select.c",
+  "size": 136,
+  "addr": 134936032
+ },
+ {
+  "name": "sub_80AFD28",
+  "file": "lord-select.c",
+  "size": 132,
+  "addr": 134936268
+ },
+ {
+  "name": "sub_80AFDAC",
+  "file": "lord-select.c",
+  "size": 48,
+  "addr": 134936400
+ },
+ {
   "name": "HBlank_TitleScreen",
   "file": "titlescreen.c",
   "size": 44,
   "addr": 134983360
+ },
+ {
+  "name": "ResetTitleBgAffin",
+  "file": "titlescreen.c",
+  "size": 56,
+  "addr": 134983404
+ },
+ {
+  "name": "Title_InitBg",
+  "file": "titlescreen.c",
+  "size": 168,
+  "addr": 134983656
+ },
+ {
+  "name": "Title_StartBmBgfxAnim",
+  "file": "titlescreen.c",
+  "size": 140,
+  "addr": 134984196
+ },
+ {
+  "name": "Title_ResetBmBgfxConf",
+  "file": "titlescreen.c",
+  "size": 128,
+  "addr": 134984644
+ },
+ {
+  "name": "TitleSprite_Init",
+  "file": "titlescreen.c",
+  "size": 120,
+  "addr": 134986116
+ },
+ {
+  "name": "TitleSprite_Loop",
+  "file": "titlescreen.c",
+  "size": 292,
+  "addr": 134986236
+ },
+ {
+  "name": "TitleSpriteBlendIN",
+  "file": "titlescreen.c",
+  "size": 64,
+  "addr": 134986528
+ },
+ {
+  "name": "TitleSpriteBlendOUT",
+  "file": "titlescreen.c",
+  "size": 72,
+  "addr": 134986592
+ },
+ {
+  "name": "InitOpScanlineBuf",
+  "file": "opanim_scanline.c",
+  "size": 80,
+  "addr": 134986680
+ },
+ {
+  "name": "sub_800A3B8",
+  "file": "talk.c",
+  "size": 16,
+  "addr": 134993228
  }
 ]

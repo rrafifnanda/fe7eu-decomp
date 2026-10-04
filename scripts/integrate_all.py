@@ -54,15 +54,6 @@ def object_info(obj):
     return sizes, refs
 
 
-def load_names(path):
-    names = set()
-    for line in Path(path).read_text().splitlines():
-        m = re.match(r"(\S+) = 0x", line)
-        if m:
-            names.add(m.group(1))
-    return names
-
-
 def write_manifest(candidates):
     manifest = [{"name": c["name"], "file": c["file"], "size": c["size"],
                  "addr": c["addr"]} for c in candidates]
@@ -104,19 +95,6 @@ def build_and_diff():
     return [i for i, (a, b) in enumerate(zip(got, want)) if a != b]
 
 
-def filter_linkable(candidates, mapped, ram):
-    """Transitively drop candidates whose references are not all known."""
-    while True:
-        names = {c["name"] for c in candidates}
-        known = mapped | ram | names
-        bad = {c["name"] for c in candidates
-               if any(not r.startswith((".", "@")) and r not in known
-                      for r in c["refs"])}
-        if not bad:
-            return candidates
-        candidates = [c for c in candidates if c["name"] not in bad]
-
-
 def main():
     # ---- candidates -------------------------------------------------------
     candidates = []
@@ -146,20 +124,9 @@ def main():
     candidates = kept
     print(f"[*] candidates: {len(candidates)}")
 
-    # functions referencing a bare section (.rodata strings/jump tables, .data)
-    # cannot link: those sections are discarded by the build skeleton
-    before = len(candidates)
-    candidates = [c for c in candidates
-                  if not any(r.startswith(".") for r in c["refs"])]
-    print(f"[*] no section refs: {len(candidates)} "
-          f"(dropped {before - len(candidates)})")
-
-    # ---- keep only linkable ones (all referenced symbols known) -----------
-    mapped = load_names("config/eu-symbols-all.txt")
-    ram = load_names("config/fe7j-symbols-extra.txt")
-    before = len(candidates)
-    candidates = filter_linkable(candidates, mapped, ram)
-    print(f"[*] linkable: {len(candidates)} (dropped {before - len(candidates)} with unknown refs)")
+    # every reference is resolved by patch_relocs_from_rom.py from the baserom
+    # bytes at the same offset, so no linkability pre-filter is needed: the
+    # differential loop below is the sole judge of which candidates match
 
     # ---- differential build loop -----------------------------------------
     removed_total = 0
@@ -189,12 +156,7 @@ def main():
             break
         candidates = [c for c in candidates if c["name"] not in bad]
         removed_total += len(bad)
-        before = len(candidates)
-        candidates = filter_linkable(candidates, mapped, ram)
-        cascade = before - len(candidates)
-        removed_total += cascade
-        print(f"    removed {len(bad)} mismatching functions"
-              + (f" + {cascade} cascaded" if cascade else ""))
+        print(f"    removed {len(bad)} mismatching functions")
 
     write_manifest(candidates)
     diff = build_and_diff()
