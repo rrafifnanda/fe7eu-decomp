@@ -19,7 +19,7 @@ import json
 import re
 import sys
 
-SEC = re.compile(r"^\t\.section\s+(\S+?)[,\s]")
+SEC = re.compile(r"^\t\.section\s+(\S+?)[,\s]|^[ \t]*\.(text|data|bss|rodata|kdata)\b")
 
 
 def main():
@@ -40,7 +40,7 @@ def main():
                 # otherwise pads the section end to 4 with Thumb NOPs
                 # (0x46C0) where the ROM uses 0x0000
                 out.append("\t.align\t2, 0\n")
-            fn = re.match(r"^\.text\.(.+)$", m.group(1))
+            fn = re.match(r"^\.text\.(.+)$", m.group(1) or "")
             dropping = not (fn and fn.group(1) in keep)
         if not dropping:
             out.append(line)

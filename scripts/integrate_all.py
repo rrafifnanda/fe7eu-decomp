@@ -130,9 +130,16 @@ def main():
 
     # ---- differential build loop -----------------------------------------
     removed_total = 0
+    oversize_total = 0
     for iteration in range(1, 8):
         write_manifest(candidates)
         diff = build_and_diff()
+        # candidates whose compiled code outgrew their EU hole were excluded
+        # from the layout by gen_eu_build.py; drop them here
+        if Path("config/c-oversized.json").exists():
+            bad = {e["name"] for e in json.load(open("config/c-oversized.json"))}
+            candidates = [c for c in candidates if c["name"] not in bad]
+            oversize_total += len(bad)
         print(f"[*] iteration {iteration}: {len(candidates)} candidates, "
               f"{len(diff)} differing bytes")
         if not diff:
@@ -167,8 +174,9 @@ def main():
     lines = [
         "# C integration report",
         "",
-        f"- candidates considered : {len(candidates) + removed_total}",
+        f"- candidates considered : {len(candidates) + removed_total + oversize_total}",
         f"- removed (mismatch)    : {removed_total}",
+        f"- excluded (oversized)  : {oversize_total}",
         f"- **integrated C functions** : **{len(candidates)}**",
         f"- bytes                   : {sum(c['size'] for c in candidates):,}",
         f"- final ROM sha1 match    : {'YES' if ok else 'NO'}",

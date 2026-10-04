@@ -6133,7 +6133,9 @@ SECTIONS
     . = 0x08000000 + 0x4B94;
     .sub_8004A3C : AT(0x4B94) { build/c/proc.o(.text.sub_8004A3C) }
     . = 0x08000000 + 0x4BA0;
-    .fill_0022 : AT(0x4BA0) { build/gen/fill_0022.o(.text) }
+    .sub_8004A48 : AT(0x4BA0) { build/c/proc.o(.text.sub_8004A48) }
+    . = 0x08000000 + 0x4BB8;
+    .fill_0022 : AT(0x4BB8) { build/gen/fill_0022.o(.text) }
     . = 0x08000000 + 0x4C04;
     .sub_8004AAC : AT(0x4C04) { build/c/proc.o(.text.sub_8004AAC) }
     . = 0x08000000 + 0x4C3C;
@@ -6367,7 +6369,9 @@ SECTIONS
     . = 0x08000000 + 0x9724;
     .sub_8009458 : AT(0x9724) { build/c/talk.o(.text.sub_8009458) }
     . = 0x08000000 + 0x9818;
-    .fill_0055 : AT(0x9818) { build/gen/fill_0055.o(.text) }
+    .sub_800954C : AT(0x9818) { build/c/talk.o(.text.sub_800954C) }
+    . = 0x08000000 + 0x9830;
+    .fill_0055 : AT(0x9830) { build/gen/fill_0055.o(.text) }
     . = 0x08000000 + 0x98F4;
     .sub_8009628 : AT(0x98F4) { build/c/talk.o(.text.sub_8009628) }
     . = 0x08000000 + 0x9958;
@@ -6680,10 +6684,14 @@ SECTIONS
     .UnkMapCursor_OnLoop : AT(0x1610C) { build/c/bm.o(.text.UnkMapCursor_OnLoop) }
     . = 0x08000000 + 0x1615C;
     .fill_0092 : AT(0x1615C) { build/gen/fill_0092.o(.text) }
+    . = 0x08000000 + 0x16194;
+    .GetActiveMapSong : AT(0x16194) { build/c/bm.o(.text.GetActiveMapSong) }
+    . = 0x08000000 + 0x16280;
+    .fill_0093 : AT(0x16280) { build/gen/fill_0093.o(.text) }
     . = 0x08000000 + 0x16290;
     .sub_8016410 : AT(0x16290) { build/c/bm.o(.text.sub_8016410) }
     . = 0x08000000 + 0x162EC;
-    .fill_0093 : AT(0x162EC) { build/gen/fill_0093.o(.text) }
+    .fill_0094 : AT(0x162EC) { build/gen/fill_0094.o(.text) }
     . = 0x08000000 + 0x162F0;
     .item : AT(0x162F0) { build/asm/eu/item.o(.text) }
     . = 0x08000000 + 0x178C0;
@@ -6801,7 +6809,7 @@ SECTIONS
     . = 0x08000000 + 0x18BC4;
     .GetUnitLastItem : AT(0x18BC4) { build/c/unit.o(.text.GetUnitLastItem) }
     . = 0x08000000 + 0x18BDC;
-    .fill_0094 : AT(0x18BDC) { build/gen/fill_0094.o(.text) }
+    .fill_0095 : AT(0x18BDC) { build/gen/fill_0095.o(.text) }
     . = 0x08000000 + 0x18C20;
     .GetClassSMSId : AT(0x18C20) { build/c/unit.o(.text.GetClassSMSId) }
     . = 0x08000000 + 0x18C40;
@@ -6809,7 +6817,7 @@ SECTIONS
     . = 0x08000000 + 0x18C98;
     .sub_8018C78 : AT(0x18C98) { build/c/unit.o(.text.sub_8018C78) }
     . = 0x08000000 + 0x18CE4;
-    .fill_0095 : AT(0x18CE4) { build/gen/fill_0095.o(.text) }
+    .fill_0096 : AT(0x18CE4) { build/gen/fill_0096.o(.text) }
     . = 0x08000000 + 0x18D90;
     .sub_8018D70 : AT(0x18D90) { build/c/unit.o(.text.sub_8018D70) }
     . = 0x08000000 + 0x18E80;
@@ -6841,7 +6849,7 @@ SECTIONS
     . = 0x08000000 + 0x19098;
     .AddUnitHp : AT(0x19098) { build/c/unit.o(.text.AddUnitHp) }
     . = 0x08000000 + 0x190DC;
-    .fill_0096 : AT(0x190DC) { build/gen/fill_0096.o(.text) }
+    .fill_0097 : AT(0x190DC) { build/gen/fill_0097.o(.text) }
     . = 0x08000000 + 0x19138;
     .GetClassData : AT(0x19138) { build/c/unit.o(.text.GetClassData) }
     . = 0x08000000 + 0x19158;
@@ -6859,11 +6867,11 @@ SECTIONS
     . = 0x08000000 + 0x1C59C;
     .player_phase : AT(0x1C59C) { build/asm/eu/player-phase.o(.text) }
     . = 0x08000000 + 0x1D80C;
-    .fill_0097 : AT(0x1D80C) { build/gen/fill_0097.o(.text) }
+    .fill_0098 : AT(0x1D80C) { build/gen/fill_0098.o(.text) }
     . = 0x08000000 + 0x1D80E;
     .bmfx : AT(0x1D80E) { build/asm/eu/bmfx.o(.text) }
     . = 0x08000000 + 0x1F5E0;
-    .fill_0098 : AT(0x1F5E0) { build/gen/fill_0098.o(.text) }
+    .fill_0099 : AT(0x1F5E0) { build/gen/fill_0099.o(.text) }
     . = 0x08000000 + 0x1F75C;
     .ChapterIntro_Bg3Scroll_Loop : AT(0x1F75C) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_Bg3Scroll_Loop) }
     . = 0x08000000 + 0x1F778;
@@ -6887,7 +6895,7 @@ SECTIONS
     . = 0x08000000 + 0x1FD00;
     .ChapterIntro_LoopMotifFadeIn : AT(0x1FD00) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopMotifFadeIn) }
     . = 0x08000000 + 0x1FDA8;
-    .fill_0099 : AT(0x1FDA8) { build/gen/fill_0099.o(.text) }
+    .fill_0100 : AT(0x1FDA8) { build/gen/fill_0100.o(.text) }
     . = 0x08000000 + 0x1FDE8;
     .ChapterIntro_LoopHOpenText : AT(0x1FDE8) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopHOpenText) }
     . = 0x08000000 + 0x1FE64;
@@ -6899,17 +6907,17 @@ SECTIONS
     . = 0x08000000 + 0x1FF20;
     .ChapterIntro_Loop_0801E1F8 : AT(0x1FF20) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_Loop_0801E1F8) }
     . = 0x08000000 + 0x1FF48;
-    .fill_0100 : AT(0x1FF48) { build/gen/fill_0100.o(.text) }
+    .fill_0101 : AT(0x1FF48) { build/gen/fill_0101.o(.text) }
     . = 0x08000000 + 0x1FF6C;
     .ChapterIntro_Loop_0801FF3C : AT(0x1FF6C) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_Loop_0801FF3C) }
     . = 0x08000000 + 0x1FFD8;
-    .fill_0101 : AT(0x1FFD8) { build/gen/fill_0101.o(.text) }
+    .fill_0102 : AT(0x1FFD8) { build/gen/fill_0102.o(.text) }
     . = 0x08000000 + 0x20010;
     .ChapterIntro_InitMapDisplay : AT(0x20010) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_InitMapDisplay) }
     . = 0x08000000 + 0x200FC;
     .ChapterIntro_BeginFadeToMap : AT(0x200FC) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginFadeToMap) }
     . = 0x08000000 + 0x20174;
-    .fill_0102 : AT(0x20174) { build/gen/fill_0102.o(.text) }
+    .ChapterIntro_LoopFadeToMap : AT(0x20174) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_LoopFadeToMap) }
     . = 0x08000000 + 0x202E8;
     .ChapterIntro_BeginCloseText : AT(0x202E8) { build/c/bmfx-chapterintrofx.o(.text.ChapterIntro_BeginCloseText) }
     . = 0x08000000 + 0x202F0;
@@ -7711,7 +7719,9 @@ SECTIONS
     . = 0x08000000 + 0x80218;
     .PutStatScreenSupportList : AT(0x80218) { build/c/statscreenfx.o(.text.PutStatScreenSupportList) }
     . = 0x08000000 + 0x80308;
-    .fill_0189 : AT(0x80308) { build/gen/fill_0189.o(.text) }
+    .PutStatScreenWeaponExpBar : AT(0x80308) { build/c/statscreenfx.o(.text.PutStatScreenWeaponExpBar) }
+    . = 0x08000000 + 0x803CC;
+    .fill_0189 : AT(0x803CC) { build/gen/fill_0189.o(.text) }
     . = 0x08000000 + 0x80470;
     .PutStatScreenPage : AT(0x80470) { build/c/statscreenfx.o(.text.PutStatScreenPage) }
     . = 0x08000000 + 0x804C4;
@@ -7746,6 +7756,8 @@ SECTIONS
     .StatScreenSprites_PutArrows : AT(0x80D44) { build/c/statscreen.o(.text.StatScreenSprites_PutArrows) }
     . = 0x08000000 + 0x80E2C;
     .fill_0193 : AT(0x80E2C) { build/gen/fill_0193.o(.text) }
+    . = 0x08000000 + 0x80F0C;
+    .StatScreenSprites_PutRescueMarkers : AT(0x80F0C) { build/c/statscreen.o(.text.StatScreenSprites_PutRescueMarkers) }
     . = 0x08000000 + 0x80FD4;
     .StatScreen_DisableScreen : AT(0x80FD4) { build/c/statscreen.o(.text.StatScreen_DisableScreen) }
     . = 0x08000000 + 0x81044;
@@ -7800,6 +7812,8 @@ SECTIONS
     .HelpBoxMoveControl_OnIdle : AT(0x81BB8) { build/c/statscreen-helpbox.o(.text.HelpBoxMoveControl_OnIdle) }
     . = 0x08000000 + 0x81C84;
     .fill_0204 : AT(0x81C84) { build/gen/fill_0204.o(.text) }
+    . = 0x08000000 + 0x81CE0;
+    .ApplyHelpBoxContentSize : AT(0x81CE0) { build/c/statscreen-helpbox.o(.text.ApplyHelpBoxContentSize) }
     . = 0x08000000 + 0x81D44;
     .ApplyHelpBoxPosition : AT(0x81D44) { build/c/statscreen-helpbox.o(.text.ApplyHelpBoxPosition) }
     . = 0x08000000 + 0x81DD0;
@@ -7906,6 +7920,8 @@ SECTIONS
     .PrepRestartMuralBackground : AT(0x8E650) { build/c/prep_atmenu.o(.text.PrepRestartMuralBackground) }
     . = 0x08000000 + 0x8E674;
     .fill_0219 : AT(0x8E674) { build/gen/fill_0219.o(.text) }
+    . = 0x08000000 + 0x8E690;
+    .Prep_DrawChapterGoal : AT(0x8E690) { build/c/prep_atmenu.o(.text.Prep_DrawChapterGoal) }
     . = 0x08000000 + 0x8E714;
     .PrepAtMenu_OnInit : AT(0x8E714) { build/c/prep_atmenu.o(.text.PrepAtMenu_OnInit) }
     . = 0x08000000 + 0x8E76C;
@@ -7925,7 +7941,11 @@ SECTIONS
     . = 0x08000000 + 0x8FAA4;
     .sub_8090148 : AT(0x8FAA4) { build/c/prepscreenfx.o(.text.sub_8090148) }
     . = 0x08000000 + 0x8FBA0;
-    .fill_0223 : AT(0x8FBA0) { build/gen/fill_0223.o(.text) }
+    .PrepScreenSprite_OnDraw : AT(0x8FBA0) { build/c/prepscreenfx.o(.text.PrepScreenSprite_OnDraw) }
+    . = 0x08000000 + 0x8FC48;
+    .fill_0223 : AT(0x8FC48) { build/gen/fill_0223.o(.text) }
+    . = 0x08000000 + 0x8FC4C;
+    .ProcPrepSpChar_OnInit : AT(0x8FC4C) { build/c/prepscreenfx.o(.text.ProcPrepSpChar_OnInit) }
     . = 0x08000000 + 0x8FCE8;
     .ProcPrepSpChar_Idle : AT(0x8FCE8) { build/c/prepscreenfx.o(.text.ProcPrepSpChar_Idle) }
     . = 0x08000000 + 0x8FCFC;
@@ -8025,7 +8045,7 @@ SECTIONS
     . = 0x08000000 + 0x9EC80;
     .save : AT(0x9EC80) { build/asm/eu/save.o(.text) }
     . = 0x08000000 + 0xA3664;
-    .fill_0242 : AT(0xA3664) { build/gen/fill_0242.o(.text) }
+    .SaveMenuOnHBlank : AT(0xA3664) { build/c/savemenu.o(.text.SaveMenuOnHBlank) }
     . = 0x08000000 + 0xA36E4;
     .SaveMenu_HandleExtraMiscOption : AT(0xA36E4) { build/c/savemenu.o(.text.SaveMenu_HandleExtraMiscOption) }
     . = 0x08000000 + 0xA36FC;
@@ -8035,45 +8055,51 @@ SECTIONS
     . = 0x08000000 + 0xA3770;
     .sub_80A4054 : AT(0xA3770) { build/c/savemenu.o(.text.sub_80A4054) }
     . = 0x08000000 + 0xA3798;
-    .fill_0243 : AT(0xA3798) { build/gen/fill_0243.o(.text) }
+    .SaveMenu_StartHelpBox : AT(0xA3798) { build/c/savemenu.o(.text.SaveMenu_StartHelpBox) }
+    . = 0x08000000 + 0xA3808;
+    .fill_0242 : AT(0xA3808) { build/gen/fill_0242.o(.text) }
     . = 0x08000000 + 0xA3970;
     .savemenu : AT(0xA3970) { build/asm/eu/savemenu.o(.text) }
     . = 0x08000000 + 0xA5258;
     .sub_80A5B44 : AT(0xA5258) { build/c/savedraw.o(.text.sub_80A5B44) }
     . = 0x08000000 + 0xA5374;
-    .fill_0244 : AT(0xA5374) { build/gen/fill_0244.o(.text) }
+    .fill_0243 : AT(0xA5374) { build/gen/fill_0243.o(.text) }
     . = 0x08000000 + 0xA543C;
     .savedraw : AT(0xA543C) { build/asm/eu/savedraw.o(.text) }
     . = 0x08000000 + 0xA60B0;
-    .fill_0245 : AT(0xA60B0) { build/gen/fill_0245.o(.text) }
+    .fill_0244 : AT(0xA60B0) { build/gen/fill_0244.o(.text) }
     . = 0x08000000 + 0xA60D4;
     .SpinRotation_Init : AT(0xA60D4) { build/c/savedrawfx.o(.text.SpinRotation_Init) }
     . = 0x08000000 + 0xA6108;
     .SpinRotation_Loop : AT(0xA6108) { build/c/savedrawfx.o(.text.SpinRotation_Loop) }
     . = 0x08000000 + 0xA6158;
-    .fill_0246 : AT(0xA6158) { build/gen/fill_0246.o(.text) }
+    .fill_0245 : AT(0xA6158) { build/gen/fill_0245.o(.text) }
     . = 0x08000000 + 0xA6170;
     .savedrawfx : AT(0xA6170) { build/asm/eu/savedrawfx.o(.text) }
     . = 0x08000000 + 0xA6814;
     .savemenu_difficulty : AT(0xA6814) { build/asm/eu/savemenu_difficulty.o(.text) }
     . = 0x08000000 + 0xA6AE0;
-    .fill_0247 : AT(0xA6AE0) { build/gen/fill_0247.o(.text) }
+    .fill_0246 : AT(0xA6AE0) { build/gen/fill_0246.o(.text) }
     . = 0x08000000 + 0xA6B2C;
     .TactInfo_CloseHelpbox : AT(0xA6B2C) { build/c/savemenu_tactician.o(.text.TactInfo_CloseHelpbox) }
     . = 0x08000000 + 0xA6B40;
-    .fill_0248 : AT(0xA6B40) { build/gen/fill_0248.o(.text) }
+    .fill_0247 : AT(0xA6B40) { build/gen/fill_0247.o(.text) }
     . = 0x08000000 + 0xA6E9C;
     .sub_80A76C8 : AT(0xA6E9C) { build/c/savemenu_tactician.o(.text.sub_80A76C8) }
     . = 0x08000000 + 0xA6ED0;
-    .fill_0249 : AT(0xA6ED0) { build/gen/fill_0249.o(.text) }
+    .TactInfo_IntroDialogue1 : AT(0xA6ED0) { build/c/savemenu_tactician.o(.text.TactInfo_IntroDialogue1) }
+    . = 0x08000000 + 0xA6F10;
+    .fill_0248 : AT(0xA6F10) { build/gen/fill_0248.o(.text) }
+    . = 0x08000000 + 0xA718C;
+    .TactInfo_CheckParticipantDialogue : AT(0xA718C) { build/c/savemenu_tactician.o(.text.TactInfo_CheckParticipantDialogue) }
     . = 0x08000000 + 0xA7224;
     .TactInfo_HandleCheckParticipantPrompt : AT(0xA7224) { build/c/savemenu_tactician.o(.text.TactInfo_HandleCheckParticipantPrompt) }
     . = 0x08000000 + 0xA7258;
-    .fill_0250 : AT(0xA7258) { build/gen/fill_0250.o(.text) }
+    .fill_0249 : AT(0xA7258) { build/gen/fill_0249.o(.text) }
     . = 0x08000000 + 0xA72AC;
     .Tact_ClearNrVrams : AT(0xA72AC) { build/c/savemenu_tactician.o(.text.Tact_ClearNrVrams) }
     . = 0x08000000 + 0xA72F0;
-    .fill_0251 : AT(0xA72F0) { build/gen/fill_0251.o(.text) }
+    .fill_0250 : AT(0xA72F0) { build/gen/fill_0250.o(.text) }
     . = 0x08000000 + 0xA72F8;
     .savemenu_tactician : AT(0xA72F8) { build/asm/eu/savemenu_tactician.o(.text) }
     . = 0x08000000 + 0xA7948;
@@ -8081,23 +8107,25 @@ SECTIONS
     . = 0x08000000 + 0xA7A94;
     .EndModeSelectAnims : AT(0xA7A94) { build/c/savemenu_modeselect.o(.text.EndModeSelectAnims) }
     . = 0x08000000 + 0xA7AB8;
-    .fill_0252 : AT(0xA7AB8) { build/gen/fill_0252.o(.text) }
+    .fill_0251 : AT(0xA7AB8) { build/gen/fill_0251.o(.text) }
     . = 0x08000000 + 0xA7C8C;
     .StartModeSelectFace : AT(0xA7C8C) { build/c/savemenu_modeselect.o(.text.StartModeSelectFace) }
     . = 0x08000000 + 0xA7CC4;
-    .fill_0253 : AT(0xA7CC4) { build/gen/fill_0253.o(.text) }
+    .fill_0252 : AT(0xA7CC4) { build/gen/fill_0252.o(.text) }
+    . = 0x08000000 + 0xA7D60;
+    .sub_80A87A4 : AT(0xA7D60) { build/c/savemenu_modeselect.o(.text.sub_80A87A4) }
     . = 0x08000000 + 0xA7E14;
     .sub_80A8850 : AT(0xA7E14) { build/c/savemenu_modeselect.o(.text.sub_80A8850) }
     . = 0x08000000 + 0xA7E44;
     .ModeSelectSpriteDraw_Init : AT(0xA7E44) { build/c/savemenu_modeselect.o(.text.ModeSelectSpriteDraw_Init) }
     . = 0x08000000 + 0xA7E7C;
-    .fill_0254 : AT(0xA7E7C) { build/gen/fill_0254.o(.text) }
+    .fill_0253 : AT(0xA7E7C) { build/gen/fill_0253.o(.text) }
     . = 0x08000000 + 0xA8168;
     .sub_80A8B74 : AT(0xA8168) { build/c/savemenu_modeselect.o(.text.sub_80A8B74) }
     . = 0x08000000 + 0xA8178;
     .ModeSelect_InitGfxMaybe : AT(0xA8178) { build/c/savemenu_modeselect.o(.text.ModeSelect_InitGfxMaybe) }
     . = 0x08000000 + 0xA8190;
-    .fill_0255 : AT(0xA8190) { build/gen/fill_0255.o(.text) }
+    .fill_0254 : AT(0xA8190) { build/gen/fill_0254.o(.text) }
     . = 0x08000000 + 0xA8578;
     .ModeSelect_TransitionSplitOpen : AT(0xA8578) { build/c/savemenu_modeselect.o(.text.ModeSelect_TransitionSplitOpen) }
     . = 0x08000000 + 0xA85E8;
@@ -8117,7 +8145,7 @@ SECTIONS
     . = 0x08000000 + 0xA8B48;
     .ModeSelect_End : AT(0xA8B48) { build/c/savemenu_modeselect.o(.text.ModeSelect_End) }
     . = 0x08000000 + 0xA8B88;
-    .fill_0256 : AT(0xA8B88) { build/gen/fill_0256.o(.text) }
+    .fill_0255 : AT(0xA8B88) { build/gen/fill_0255.o(.text) }
     . = 0x08000000 + 0xA8BC4;
     .sub_80A95B4 : AT(0xA8BC4) { build/c/scrolling_util.o(.text.sub_80A95B4) }
     . = 0x08000000 + 0xA8C9C;
@@ -8129,13 +8157,13 @@ SECTIONS
     . = 0x08000000 + 0xA8E48;
     .UiCursorHand_Loop : AT(0xA8E48) { build/c/cursor-hand.o(.text.UiCursorHand_Loop) }
     . = 0x08000000 + 0xA8ED8;
-    .fill_0257 : AT(0xA8ED8) { build/gen/fill_0257.o(.text) }
+    .fill_0256 : AT(0xA8ED8) { build/gen/fill_0256.o(.text) }
     . = 0x08000000 + 0xA8EEC;
     .SetUiCursorHandConfig : AT(0xA8EEC) { build/c/cursor-hand.o(.text.SetUiCursorHandConfig) }
     . = 0x08000000 + 0xA8F64;
     .UiCursorHand_SetPosition : AT(0xA8F64) { build/c/cursor-hand.o(.text.UiCursorHand_SetPosition) }
     . = 0x08000000 + 0xA8F9C;
-    .fill_0258 : AT(0xA8F9C) { build/gen/fill_0258.o(.text) }
+    .fill_0257 : AT(0xA8F9C) { build/gen/fill_0257.o(.text) }
     . = 0x08000000 + 0xA902C;
     .spinning_arrow : AT(0xA902C) { build/asm/eu/spinning_arrow.o(.text) }
     . = 0x08000000 + 0xA9308;
@@ -8143,21 +8171,21 @@ SECTIONS
     . = 0x08000000 + 0xA9310;
     .ParallelFiniteLoop_Loop : AT(0xA9310) { build/c/sysutil.o(.text.ParallelFiniteLoop_Loop) }
     . = 0x08000000 + 0xA9338;
-    .fill_0259 : AT(0xA9338) { build/gen/fill_0259.o(.text) }
+    .fill_0258 : AT(0xA9338) { build/gen/fill_0258.o(.text) }
     . = 0x08000000 + 0xA9354;
     .SysBlackBox_Init : AT(0xA9354) { build/c/sysutil.o(.text.SysBlackBox_Init) }
     . = 0x08000000 + 0xA936C;
     .SysBlackBox_Main : AT(0xA936C) { build/c/sysutil.o(.text.SysBlackBox_Main) }
     . = 0x08000000 + 0xA96C4;
-    .fill_0260 : AT(0xA96C4) { build/gen/fill_0260.o(.text) }
+    .fill_0259 : AT(0xA96C4) { build/gen/fill_0259.o(.text) }
     . = 0x08000000 + 0xA971C;
     .EnableSysBlackBox : AT(0xA971C) { build/c/sysutil.o(.text.EnableSysBlackBox) }
     . = 0x08000000 + 0xA9784;
-    .fill_0261 : AT(0xA9784) { build/gen/fill_0261.o(.text) }
+    .fill_0260 : AT(0xA9784) { build/gen/fill_0260.o(.text) }
     . = 0x08000000 + 0xA9800;
     .ParallelWorker_OnLoop : AT(0xA9800) { build/c/sysutil.o(.text.ParallelWorker_OnLoop) }
     . = 0x08000000 + 0xA9810;
-    .fill_0262 : AT(0xA9810) { build/gen/fill_0262.o(.text) }
+    .fill_0261 : AT(0xA9810) { build/gen/fill_0261.o(.text) }
     . = 0x08000000 + 0xA9850;
     .GetParallelWorker : AT(0xA9850) { build/c/sysutil.o(.text.GetParallelWorker) }
     . = 0x08000000 + 0xA987C;
@@ -8167,21 +8195,21 @@ SECTIONS
     . = 0x08000000 + 0xA9954;
     .SysHandCursor_Loop : AT(0xA9954) { build/c/sysutil.o(.text.SysHandCursor_Loop) }
     . = 0x08000000 + 0xA9994;
-    .fill_0263 : AT(0xA9994) { build/gen/fill_0263.o(.text) }
+    .fill_0262 : AT(0xA9994) { build/gen/fill_0262.o(.text) }
     . = 0x08000000 + 0xA9A34;
     .ShowSysHandCursor : AT(0xA9A34) { build/c/sysutil.o(.text.ShowSysHandCursor) }
     . = 0x08000000 + 0xA9A7C;
-    .fill_0264 : AT(0xA9A7C) { build/gen/fill_0264.o(.text) }
+    .fill_0263 : AT(0xA9A7C) { build/gen/fill_0263.o(.text) }
     . = 0x08000000 + 0xA9B10;
     .SysGrayBox_Init : AT(0xA9B10) { build/c/sysutil.o(.text.SysGrayBox_Init) }
     . = 0x08000000 + 0xA9B28;
     .SysGrayBox_Loop : AT(0xA9B28) { build/c/sysutil.o(.text.SysGrayBox_Loop) }
     . = 0x08000000 + 0xA9E68;
-    .fill_0265 : AT(0xA9E68) { build/gen/fill_0265.o(.text) }
+    .fill_0264 : AT(0xA9E68) { build/gen/fill_0264.o(.text) }
     . = 0x08000000 + 0xA9EB0;
     .EnableUnransportWindow : AT(0xA9EB0) { build/c/sysutil.o(.text.EnableUnransportWindow) }
     . = 0x08000000 + 0xA9F00;
-    .fill_0266 : AT(0xA9F00) { build/gen/fill_0266.o(.text) }
+    .fill_0265 : AT(0xA9F00) { build/gen/fill_0265.o(.text) }
     . = 0x08000000 + 0xA9F3C;
     .SysBrownBox_Init : AT(0xA9F3C) { build/c/sysutil.o(.text.SysBrownBox_Init) }
     . = 0x08000000 + 0xA9F54;
@@ -8191,15 +8219,15 @@ SECTIONS
     . = 0x08000000 + 0xAA114;
     .EnableSysBrownBox : AT(0xAA114) { build/c/sysutil.o(.text.EnableSysBrownBox) }
     . = 0x08000000 + 0xAA15C;
-    .fill_0267 : AT(0xAA15C) { build/gen/fill_0267.o(.text) }
+    .fill_0266 : AT(0xAA15C) { build/gen/fill_0266.o(.text) }
     . = 0x08000000 + 0xAA1BC;
     .SysboxTextMain : AT(0xAA1BC) { build/c/sysutil.o(.text.SysboxTextMain) }
     . = 0x08000000 + 0xAA228;
-    .fill_0268 : AT(0xAA228) { build/gen/fill_0268.o(.text) }
+    .fill_0267 : AT(0xAA228) { build/gen/fill_0267.o(.text) }
     . = 0x08000000 + 0xAA2E0;
     .EndAllProcChildren : AT(0xAA2E0) { build/c/sysutil.o(.text.EndAllProcChildren) }
     . = 0x08000000 + 0xAA304;
-    .fill_0269 : AT(0xAA304) { build/gen/fill_0269.o(.text) }
+    .fill_0268 : AT(0xAA304) { build/gen/fill_0268.o(.text) }
     . = 0x08000000 + 0xAA308;
     .BgAffinRotScaling : AT(0xAA308) { build/c/sysutil.o(.text.BgAffinRotScaling) }
     . = 0x08000000 + 0xAA39C;
@@ -8217,7 +8245,7 @@ SECTIONS
     . = 0x08000000 + 0xAA5FC;
     .sub_80AAFA4 : AT(0xAA5FC) { build/c/sysutil.o(.text.sub_80AAFA4) }
     . = 0x08000000 + 0xAA674;
-    .fill_0270 : AT(0xAA674) { build/gen/fill_0270.o(.text) }
+    .fill_0269 : AT(0xAA674) { build/gen/fill_0269.o(.text) }
     . = 0x08000000 + 0xAA698;
     .FadeInOut_Init : AT(0xAA698) { build/c/sysutil.o(.text.FadeInOut_Init) }
     . = 0x08000000 + 0xAA6AC;
@@ -8227,7 +8255,7 @@ SECTIONS
     . = 0x08000000 + 0xAA738;
     .FadeInOut_DisableGfx : AT(0xAA738) { build/c/sysutil.o(.text.FadeInOut_DisableGfx) }
     . = 0x08000000 + 0xAA790;
-    .fill_0271 : AT(0xAA790) { build/gen/fill_0271.o(.text) }
+    .fill_0270 : AT(0xAA790) { build/gen/fill_0270.o(.text) }
     . = 0x08000000 + 0xAA9C8;
     .BmBgfx_Init : AT(0xAA9C8) { build/c/sysutil.o(.text.BmBgfx_Init) }
     . = 0x08000000 + 0xAAA08;
@@ -8235,7 +8263,7 @@ SECTIONS
     . = 0x08000000 + 0xAAC0C;
     .BmBgfx_End : AT(0xAAC0C) { build/c/sysutil.o(.text.BmBgfx_End) }
     . = 0x08000000 + 0xAAC40;
-    .fill_0272 : AT(0xAAC40) { build/gen/fill_0272.o(.text) }
+    .fill_0271 : AT(0xAAC40) { build/gen/fill_0271.o(.text) }
     . = 0x08000000 + 0xAACB4;
     .StartBmBgfx : AT(0xAACB4) { build/c/sysutil.o(.text.StartBmBgfx) }
     . = 0x08000000 + 0xAAD5C;
@@ -8247,51 +8275,51 @@ SECTIONS
     . = 0x08000000 + 0xAAE54;
     .StartMixPalette : AT(0xAAE54) { build/c/sysutil.o(.text.StartMixPalette) }
     . = 0x08000000 + 0xAAE8C;
-    .fill_0273 : AT(0xAAE8C) { build/gen/fill_0273.o(.text) }
+    .fill_0272 : AT(0xAAE8C) { build/gen/fill_0272.o(.text) }
     . = 0x08000000 + 0xAAEA0;
     .StartSpriteAnimfx : AT(0xAAEA0) { build/c/sysutil.o(.text.StartSpriteAnimfx) }
     . = 0x08000000 + 0xAAF14;
-    .fill_0274 : AT(0xAAF14) { build/gen/fill_0274.o(.text) }
+    .fill_0273 : AT(0xAAF14) { build/gen/fill_0273.o(.text) }
     . = 0x08000000 + 0xAAFAC;
     .AppendString : AT(0xAAFAC) { build/c/sysutil.o(.text.AppendString) }
     . = 0x08000000 + 0xAAFCC;
     .AppendCharacter : AT(0xAAFCC) { build/c/sysutil.o(.text.AppendCharacter) }
     . = 0x08000000 + 0xAAFD8;
-    .fill_0275 : AT(0xAAFD8) { build/gen/fill_0275.o(.text) }
+    .fill_0274 : AT(0xAAFD8) { build/gen/fill_0274.o(.text) }
     . = 0x08000000 + 0xAB100;
     .code_080AB6FC : AT(0xAB100) { build/asm/eu/code_080AB6FC.o(.text) }
     . = 0x08000000 + 0xAF5E0;
     .sub_80AFC3C : AT(0xAF5E0) { build/c/lord-select.o(.text.sub_80AFC3C) }
     . = 0x08000000 + 0xAF668;
-    .fill_0276 : AT(0xAF668) { build/gen/fill_0276.o(.text) }
+    .fill_0275 : AT(0xAF668) { build/gen/fill_0275.o(.text) }
     . = 0x08000000 + 0xAF6CC;
     .sub_80AFD28 : AT(0xAF6CC) { build/c/lord-select.o(.text.sub_80AFD28) }
     . = 0x08000000 + 0xAF750;
     .sub_80AFDAC : AT(0xAF750) { build/c/lord-select.o(.text.sub_80AFDAC) }
     . = 0x08000000 + 0xAF780;
-    .fill_0277 : AT(0xAF780) { build/gen/fill_0277.o(.text) }
+    .fill_0276 : AT(0xAF780) { build/gen/fill_0276.o(.text) }
     . = 0x08000000 + 0xAFD2C;
     .code_080AFE38 : AT(0xAFD2C) { build/asm/eu/code_080AFE38.o(.text) }
     . = 0x08000000 + 0xBAE90;
-    .fill_0278 : AT(0xBAE90) { build/gen/fill_0278.o(.text) }
+    .fill_0277 : AT(0xBAE90) { build/gen/fill_0277.o(.text) }
     . = 0x08000000 + 0xBAEC0;
     .HBlank_TitleScreen : AT(0xBAEC0) { build/c/titlescreen.o(.text.HBlank_TitleScreen) }
     . = 0x08000000 + 0xBAEEC;
     .ResetTitleBgAffin : AT(0xBAEEC) { build/c/titlescreen.o(.text.ResetTitleBgAffin) }
     . = 0x08000000 + 0xBAF24;
-    .fill_0279 : AT(0xBAF24) { build/gen/fill_0279.o(.text) }
+    .fill_0278 : AT(0xBAF24) { build/gen/fill_0278.o(.text) }
     . = 0x08000000 + 0xBAFE8;
     .Title_InitBg : AT(0xBAFE8) { build/c/titlescreen.o(.text.Title_InitBg) }
     . = 0x08000000 + 0xBB090;
-    .fill_0280 : AT(0xBB090) { build/gen/fill_0280.o(.text) }
+    .fill_0279 : AT(0xBB090) { build/gen/fill_0279.o(.text) }
     . = 0x08000000 + 0xBB204;
     .Title_StartBmBgfxAnim : AT(0xBB204) { build/c/titlescreen.o(.text.Title_StartBmBgfxAnim) }
     . = 0x08000000 + 0xBB290;
-    .fill_0281 : AT(0xBB290) { build/gen/fill_0281.o(.text) }
+    .fill_0280 : AT(0xBB290) { build/gen/fill_0280.o(.text) }
     . = 0x08000000 + 0xBB3C4;
     .Title_ResetBmBgfxConf : AT(0xBB3C4) { build/c/titlescreen.o(.text.Title_ResetBmBgfxConf) }
     . = 0x08000000 + 0xBB444;
-    .fill_0282 : AT(0xBB444) { build/gen/fill_0282.o(.text) }
+    .fill_0281 : AT(0xBB444) { build/gen/fill_0281.o(.text) }
     . = 0x08000000 + 0xBB984;
     .TitleSprite_Init : AT(0xBB984) { build/c/titlescreen.o(.text.TitleSprite_Init) }
     . = 0x08000000 + 0xBB9FC;
@@ -8301,15 +8329,15 @@ SECTIONS
     . = 0x08000000 + 0xBBB60;
     .TitleSpriteBlendOUT : AT(0xBBB60) { build/c/titlescreen.o(.text.TitleSpriteBlendOUT) }
     . = 0x08000000 + 0xBBBA8;
-    .fill_0283 : AT(0xBBBA8) { build/gen/fill_0283.o(.text) }
+    .fill_0282 : AT(0xBBBA8) { build/gen/fill_0282.o(.text) }
     . = 0x08000000 + 0xBBBB8;
     .InitOpScanlineBuf : AT(0xBBBB8) { build/c/opanim_scanline.o(.text.InitOpScanlineBuf) }
     . = 0x08000000 + 0xBBC08;
-    .fill_0284 : AT(0xBBC08) { build/gen/fill_0284.o(.text) }
+    .fill_0283 : AT(0xBBC08) { build/gen/fill_0283.o(.text) }
     . = 0x08000000 + 0xBBC18;
     .opanim_scanline : AT(0xBBC18) { build/asm/eu/opanim_scanline.o(.text) }
     . = 0x08000000 + 0xBC020;
-    .fill_0285 : AT(0xBC020) { build/gen/fill_0285.o(.text) }
+    .fill_0284 : AT(0xBC020) { build/gen/fill_0284.o(.text) }
     . = 0x08000000 + 0xBC024;
     .opanim_p0 : AT(0xBC024) { build/asm/eu/opanim_p0.o(.text) }
     . = 0x08000000 + 0xBD54C;
@@ -8317,18 +8345,18 @@ SECTIONS
     . = 0x08000000 + 0xBD55C;
     .opanim_p1 : AT(0xBD55C) { build/asm/eu/opanim_p1.o(.text) }
     . = 0x08000000 + 0xBE41C;
-    .fill_0286 : AT(0xBE41C) { build/gen/fill_0286.o(.text) }
+    .fill_0285 : AT(0xBE41C) { build/gen/fill_0285.o(.text) }
     . = 0x08000000 + 0xBE420;
     .m4a_1 : AT(0xBE420) { build/asm/eu/m4a_1.o(.text) }
     . = 0x08000000 + 0xBF038;
     .m4a : AT(0xBF038) { build/asm/eu/m4a.o(.text) }
     . = 0x08000000 + 0xC05CC;
-    .fill_0287 : AT(0xC05CC) { build/gen/fill_0287.o(.text) }
+    .fill_0286 : AT(0xC05CC) { build/gen/fill_0286.o(.text) }
     . = 0x08000000 + 0xC05E4;
     .gba_syscall : AT(0xC05E4) { build/asm/eu/gba-syscall.o(.text) }
     . = 0x08000000 + 0xC0640;
     .agb_sram : AT(0xC0640) { build/asm/eu/agb-sram.o(.text) }
     . = 0x08000000 + 0xC07E4;
-    .fill_0288 : AT(0xC07E4) { build/gen/fill_0288.o(.text) }
+    .fill_0287 : AT(0xC07E4) { build/gen/fill_0287.o(.text) }
     /DISCARD/ : { *(*) }
 }

@@ -642,6 +642,12 @@
   "addr": 134237076
  },
  {
+  "name": "sub_8004A48",
+  "file": "proc.c",
+  "size": 24,
+  "addr": 134237088
+ },
+ {
   "name": "sub_8004AAC",
   "file": "proc.c",
   "size": 56,
@@ -1126,6 +1132,12 @@
   "file": "talk.c",
   "size": 244,
   "addr": 134256420
+ },
+ {
+  "name": "sub_800954C",
+  "file": "talk.c",
+  "size": 24,
+  "addr": 134256664
  },
  {
   "name": "sub_8009628",
@@ -1806,6 +1818,12 @@
   "addr": 134308108
  },
  {
+  "name": "GetActiveMapSong",
+  "file": "bm.c",
+  "size": 236,
+  "addr": 134308244
+ },
+ {
   "name": "sub_8016410",
   "file": "bm.c",
   "size": 92,
@@ -2398,6 +2416,12 @@
   "file": "bmfx-chapterintrofx.c",
   "size": 120,
   "addr": 134349052
+ },
+ {
+  "name": "ChapterIntro_LoopFadeToMap",
+  "file": "bmfx-chapterintrofx.c",
+  "size": 372,
+  "addr": 134349172
  },
  {
   "name": "ChapterIntro_BeginCloseText",
@@ -4104,6 +4128,12 @@
   "addr": 134742552
  },
  {
+  "name": "PutStatScreenWeaponExpBar",
+  "file": "statscreenfx.c",
+  "size": 196,
+  "addr": 134742792
+ },
+ {
   "name": "PutStatScreenPage",
   "file": "statscreenfx.c",
   "size": 84,
@@ -4174,6 +4204,12 @@
   "file": "statscreen.c",
   "size": 232,
   "addr": 134745412
+ },
+ {
+  "name": "StatScreenSprites_PutRescueMarkers",
+  "file": "statscreen.c",
+  "size": 200,
+  "addr": 134745868
  },
  {
   "name": "StatScreen_DisableScreen",
@@ -4270,6 +4306,12 @@
   "file": "statscreen-helpbox.c",
   "size": 204,
   "addr": 134749112
+ },
+ {
+  "name": "ApplyHelpBoxContentSize",
+  "file": "statscreen-helpbox.c",
+  "size": 100,
+  "addr": 134749408
  },
  {
   "name": "ApplyHelpBoxPosition",
@@ -4458,6 +4500,12 @@
   "addr": 134800976
  },
  {
+  "name": "Prep_DrawChapterGoal",
+  "file": "prep_atmenu.c",
+  "size": 132,
+  "addr": 134801040
+ },
+ {
   "name": "PrepAtMenu_OnInit",
   "file": "prep_atmenu.c",
   "size": 88,
@@ -4486,6 +4534,18 @@
   "file": "prepscreenfx.c",
   "size": 252,
   "addr": 134806180
+ },
+ {
+  "name": "PrepScreenSprite_OnDraw",
+  "file": "prepscreenfx.c",
+  "size": 168,
+  "addr": 134806432
+ },
+ {
+  "name": "ProcPrepSpChar_OnInit",
+  "file": "prepscreenfx.c",
+  "size": 156,
+  "addr": 134806604
  },
  {
   "name": "ProcPrepSpChar_Idle",
@@ -4572,6 +4632,12 @@
   "addr": 134868068
  },
  {
+  "name": "SaveMenuOnHBlank",
+  "file": "savemenu.c",
+  "size": 128,
+  "addr": 134887012
+ },
+ {
   "name": "SaveMenu_HandleExtraMiscOption",
   "file": "savemenu.c",
   "size": 24,
@@ -4594,6 +4660,12 @@
   "file": "savemenu.c",
   "size": 40,
   "addr": 134887280
+ },
+ {
+  "name": "SaveMenu_StartHelpBox",
+  "file": "savemenu.c",
+  "size": 112,
+  "addr": 134887320
  },
  {
   "name": "sub_80A5B44",
@@ -4626,6 +4698,18 @@
   "addr": 134901404
  },
  {
+  "name": "TactInfo_IntroDialogue1",
+  "file": "savemenu_tactician.c",
+  "size": 64,
+  "addr": 134901456
+ },
+ {
+  "name": "TactInfo_CheckParticipantDialogue",
+  "file": "savemenu_tactician.c",
+  "size": 152,
+  "addr": 134902156
+ },
+ {
   "name": "TactInfo_HandleCheckParticipantPrompt",
   "file": "savemenu_tactician.c",
   "size": 52,
@@ -4654,6 +4738,12 @@
   "file": "savemenu_modeselect.c",
   "size": 56,
   "addr": 134904972
+ },
+ {
+  "name": "sub_80A87A4",
+  "file": "savemenu_modeselect.c",
+  "size": 180,
+  "addr": 134905184
  },
  {
   "name": "sub_80A8850",

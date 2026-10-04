@@ -39,9 +39,10 @@ $(BUILD)/asm/eu/%.o: asm/eu/%.s
 $(BUILD)/gen/%.o: $(BUILD)/gen/%.s
 	$(AS) -mcpu=arm7tdmi -I . $< -o $@
 
-$(BUILD)/c/%.o: refs/fe7j/src/%.c config/c-integrated.json scripts/filter_c_sections.py scripts/patch_relocs_from_rom.py
+.SECONDEXPANSION:
+$(BUILD)/c/%.o: $$(if $$(wildcard src/$$*.c),src/$$*.c,refs/fe7j/src/$$*.c) config/c-integrated.json scripts/filter_c_sections.py scripts/patch_relocs_from_rom.py
 	@mkdir -p $(@D)
-	$(CPP) -Irefs/fe7j/tools/agbcc/include -iquote refs/fe7j/include \
+	$(CPP) -Irefs/fe7j/tools/agbcc/include -iquote include -iquote refs/fe7j/include \
 		-iquote refs/fe7j -nostdinc -undef $< | \
 		iconv -f UTF-8 -t CP932 | \
 		$(CC1) -g -mthumb-interwork -Wimplicit -Wparentheses -fhex-asm \
@@ -51,7 +52,7 @@ $(BUILD)/c/%.o: refs/fe7j/src/%.c config/c-integrated.json scripts/filter_c_sect
 	printf '.text\n\t.align\t2, 0\n' >> $(BUILD)/c/$*.keep.s
 	$(AS) -mcpu=arm7tdmi -I refs/fe7j/include $(BUILD)/c/$*.keep.s -o $@
 	python3 scripts/patch_relocs_from_rom.py --manifest config/c-integrated.json \
-		--rom rom/fe7eu.gba $@
+		--rom rom/fe7eu.gba --file $* $@
 	$(STRIP) -N .gcc2_compiled. $@
 
 fe7eu.elf: $(OBJS) fe7eu.lds

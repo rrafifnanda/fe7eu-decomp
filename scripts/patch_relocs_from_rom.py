@@ -90,6 +90,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--manifest", default="config/c-integrated.json")
     ap.add_argument("--rom", default="rom/fe7eu.gba")
+    ap.add_argument("--file", default=None,
+                    help="source stem override (when the object name does not "
+                         "match the source file, e.g. temp objects)")
     ap.add_argument("objects", nargs="+")
     args = ap.parse_args()
 
@@ -101,7 +104,7 @@ def main():
     total_patched = total_bad = 0
     for obj in args.objects:
         path = Path(obj)
-        stem = path.stem
+        stem = args.file or path.stem
         patched, unsupported = patch_object(path, per_file.get(stem, {}), rom)
         total_patched += patched
         total_bad += unsupported
