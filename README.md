@@ -119,10 +119,10 @@ Progress so far:
 | step | result |
 |---|---|
 | FE7J C files compiled with agbcc (`-ffunction-sections`) | 84/84 |
-| C functions located in the EU ROM (order-preserving chain per source file) | **885** |
+| C functions located in the EU ROM (order-preserving chain per source file) | **887** |
 | merged symbol map (`config/eu-symbols-all.txt`) | 5,724 symbols |
-| **functions integrated into the matching build** | **853 / 885 (96.4%)** ✅ |
-| C bytes replacing assembly in the ROM | 84,652 (70 source files) |
+| **functions integrated into the matching build** | **869 / 887 (98.0%)** ✅ |
+| C bytes replacing assembly in the ROM | 86,896 (70+ source files) |
 
 The integration runs as a differential build loop (`just integrate-all`,
 `scripts/integrate_all.py`): every located candidate is placed at its EU
@@ -134,9 +134,20 @@ places sections, and the ROM is rebuilt. Any candidate whose remaining bytes
 differ is dropped and the loop repeats until the rebuild matches the baserom
 sha1 exactly. The final ROM is byte-identical to the original dump.
 
-The 32 candidates that did not survive the loop compile to bytes that genuinely
-differ from the EU ROM (EU-specific code changes relative to JP) — they stay
-assembly and are the first targets for the permuter in Phase 4.
+EU-divergent functions are recovered by source surgery against the EU
+disassembly (`scripts/check_candidates.py` for per-file iteration,
+`scripts/disasm_diff.py` for per-diff-site disassembly): EU struct layouts
+(`include/gbafe/chapterdata.h`), EU constants and statement orders in
+project-owned `src/` copies, and per-language graphics tables. Functions
+whose EU code is *longer* than the JP compile extend into the following fill
+chunk (`gen_eu_build.py` sizes C units from the compiled objects).
+
+The 18 functions still served by assembly (see `config/c-integration-report.md`
+and the diff sites in `scripts/disasm_diff.py` output) each contain genuine EU
+logic or data changes — EU-only language feature code (per-language title /
+prep-screen / talk CG and text), register-allocation-order divergences, and
+EU-shortened function tails — and are the first targets for continued
+per-function reverse engineering.
 
 Two toolchain pitfalls the pipeline works around (binutils 15.3):
 
