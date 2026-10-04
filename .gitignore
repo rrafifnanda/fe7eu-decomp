@@ -1,0 +1,27 @@
+# Game data / ROMs — never commit
+/rom/
+/game/
+*.gba
+*.sav
+*.ss0
+*.ss1
+*.bin
+*.7z
+
+# Build artifacts
+/build/
+*.o
+*.elf
+
+# Tooling
+.venv/
+/.bin/
+__pycache__/
+*.pyc
+.direnv/
+
+# External tools cloned by scripts (keep the repo small)
+/tools/
+
+# Reference repositories (FE7J, FE8U, ...)
+/refs/
