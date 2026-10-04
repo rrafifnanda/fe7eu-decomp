@@ -655,6 +655,7 @@ void EkrDragonBg3HfScrollHandler_Loop(struct ProcEkrDragonIntroFx * proc)
     proc->timer2 += proc->unk50;
 
     k = 0;
+
     for (i = 0; i < 120; i++)
     {
         int ix;
