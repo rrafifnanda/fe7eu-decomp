@@ -1,11 +1,13 @@
-# Fire Emblem (GBA) — Decompilation Workbench
+# FE7 EU decomp — Fire Emblem: Rekka no Ken / The Blazing Blade (European)
 
-Personal-use workbench for decompiling / studying the Game Boy Advance *Fire Emblem* games.
-It provides the matching toolchain (agbcc + `arm-none-eabi` + armips), an emulator with a GDB
-stub (mGBA), and the usual reverse-engineering tools (Ghidra, splat, m2c, permuter).
+Personal-use workbench for decompiling / studying the European release of
+*Fire Emblem: Rekka no Ken* (a.k.a. *The Blazing Blade*, FE7 — game code
+`AE7X`). It provides the matching toolchain (agbcc + `arm-none-eabi` + armips),
+an emulator with a GDB stub (mGBA), and the usual reverse-engineering tools
+(Ghidra, splat, m2c, permuter).
 
-> **Legal:** no ROM is included. Use a dump of your own cartridge and never redistribute it.
-> Decompilation is done for interoperability/study of a game you own.
+> **Legal:** no ROM is included. Use a dump of your own cartridge and never
+> redistribute it. Decompilation is done for study of a game you own.
 
 ## Status
 
