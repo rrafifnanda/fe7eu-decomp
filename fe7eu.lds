@@ -7802,6 +7802,8 @@ SECTIONS
     .StartHelpBox_Unk : AT(0x81938) { build/c/statscreen-helpbox.o(.text.StartHelpBox_Unk) }
     . = 0x08000000 + 0x81984;
     .fill_0202 : AT(0x81984) { build/gen/fill_0202.o(.text) }
+    . = 0x08000000 + 0x819C0;
+    .StartHelpBoxExt : AT(0x819C0) { build/c/statscreen-helpbox.o(.text.StartHelpBoxExt) }
     . = 0x08000000 + 0x81A98;
     .StartHelpBoxExt_Unk : AT(0x81A98) { build/c/statscreen-helpbox.o(.text.StartHelpBoxExt_Unk) }
     . = 0x08000000 + 0x81B48;

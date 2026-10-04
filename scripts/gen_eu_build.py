@@ -48,7 +48,6 @@ def main():
         stale.unlink()
 
     units = []
-    oversized = []
     for src in sorted(Path(args.asm_dir).glob("*.s")):
         lines = src.read_text().splitlines()
         m = HEADER.match(lines[1]) if len(lines) > 1 else None
@@ -62,13 +61,12 @@ def main():
 
     if Path(args.integrated).exists():
         manifest = json.load(open(args.integrated))
-        # real section sizes from the compiled objects: a candidate whose
-        # compiled code exceeds its EU hole (EU code longer than the JP
-        # compile) cannot be placed without clobbering the next function
+        # real section sizes from the compiled objects: an EU-divergent
+        # function may compile longer than the JP-compiled hole; the C
+        # section then extends into the following fill chunk, which is
+        # generated from the gap that remains
         real_size = {}
-        for obj in sorted({e2["obj"] for e2 in
-                           [{"obj": f"build/c/{Path(e['file']).stem}.o"}
-                            for e in manifest]}):
+        for obj in sorted({f"build/c/{Path(e['file']).stem}.o" for e in manifest}):
             if not Path(obj).exists():
                 continue
             out2 = subprocess.run(["arm-none-eabi-objdump", "-h", obj],
@@ -80,21 +78,11 @@ def main():
         for e in manifest:
             start = e["addr"] - 0x08000000
             real = real_size.get(e["name"], e["size"])
-            if real > e["size"]:
-                oversized.append({"name": e["name"], "file": e["file"],
-                                  "addr": e["addr"], "manifest_size": e["size"],
-                                  "real_size": real})
-                continue
             units.append({"kind": "c", "start": start,
-                          "end": start + e["size"],
+                          "end": start + real,
                           "obj": f"build/c/{Path(e['file']).stem}.o",
                           "section": f".text.{e['name']}",
                           "name": sanitize(e["name"])})
-        if oversized:
-            Path("config/c-oversized.json").write_text(
-                json.dumps(oversized, indent=1) + "\n")
-        elif Path("config/c-oversized.json").exists():
-            Path("config/c-oversized.json").unlink()
 
     units.sort(key=lambda u: u["start"])
     prev_end = 0

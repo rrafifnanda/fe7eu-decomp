@@ -4290,6 +4290,12 @@
   "addr": 134748472
  },
  {
+  "name": "StartHelpBoxExt",
+  "file": "statscreen-helpbox.c",
+  "size": 216,
+  "addr": 134748608
+ },
+ {
   "name": "StartHelpBoxExt_Unk",
   "file": "statscreen-helpbox.c",
   "size": 176,

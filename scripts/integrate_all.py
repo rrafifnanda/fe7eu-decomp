@@ -72,6 +72,16 @@ def write_manifest(candidates):
 
 
 def build_and_diff():
+    # compile the C objects first: gen_eu_build reads their real section
+    # sizes to lay out EU-divergent (longer-than-JP) functions, so they must
+    # be fresh before the layout is generated
+    c_objs = [f"build/c/{Path(line).stem}.o"
+              for line in Path("config/c-integrated-files.txt").read_text().splitlines() if line]
+    if c_objs:
+        ret = run(["make", "-j", str(len(__import__('os').sched_getaffinity(0))), *c_objs])
+        if ret.returncode != 0:
+            print("\n".join(ret.stderr.splitlines()[-8:]))
+            raise SystemExit("C compile failed")
     for step in (["python3", "scripts/split_eu.py", "--rom", "rom/fe7eu.gba",
                   "--symbols", "config/eu-symbols.json", "--out", "asm/eu",
                   "--integrate", "config/c-integrated.json"],
@@ -93,6 +103,20 @@ def build_and_diff():
     if len(got) != len(want):
         raise SystemExit(f"size mismatch: {len(got)} vs {len(want)}")
     return [i for i, (a, b) in enumerate(zip(got, want)) if a != b]
+
+
+def refresh_real_sizes(candidates):
+    """Update each candidate's size to the compiled section size: EU-divergent
+    functions may compile longer than the JP hole, and the diff loop must
+    judge the whole placed section."""
+    real = {}
+    for obj in sorted({f"build/c/{Path(c['file']).stem}.o" for c in candidates}):
+        if not Path(obj).exists():
+            continue
+        sizes, _ = object_info(Path(obj))
+        real.update(sizes)
+    for c in candidates:
+        c["size"] = real.get(c["name"], c["size"])
 
 
 def main():
@@ -130,16 +154,10 @@ def main():
 
     # ---- differential build loop -----------------------------------------
     removed_total = 0
-    oversize_total = 0
     for iteration in range(1, 8):
         write_manifest(candidates)
         diff = build_and_diff()
-        # candidates whose compiled code outgrew their EU hole were excluded
-        # from the layout by gen_eu_build.py; drop them here
-        if Path("config/c-oversized.json").exists():
-            bad = {e["name"] for e in json.load(open("config/c-oversized.json"))}
-            candidates = [c for c in candidates if c["name"] not in bad]
-            oversize_total += len(bad)
+        refresh_real_sizes(candidates)
         print(f"[*] iteration {iteration}: {len(candidates)} candidates, "
               f"{len(diff)} differing bytes")
         if not diff:
@@ -174,9 +192,8 @@ def main():
     lines = [
         "# C integration report",
         "",
-        f"- candidates considered : {len(candidates) + removed_total + oversize_total}",
+        f"- candidates considered : {len(candidates) + removed_total}",
         f"- removed (mismatch)    : {removed_total}",
-        f"- excluded (oversized)  : {oversize_total}",
         f"- **integrated C functions** : **{len(candidates)}**",
         f"- bytes                   : {sum(c['size'] for c in candidates):,}",
         f"- final ROM sha1 match    : {'YES' if ok else 'NO'}",
