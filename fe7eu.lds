@@ -6428,14 +6428,18 @@ SECTIONS
     .fill_0062 : AT(0xA764) { build/gen/fill_0062.o(.text) }
     . = 0x08000000 + 0xA864;
     .event_engine_p0 : AT(0xA864) { build/asm/eu/event-engine_p0.o(.text) }
+    . = 0x08000000 + 0xAE88;
+    .sub_800ACDC : AT(0xAE88) { build/c/sub_800ACDC.o(.text.sub_800ACDC) }
+    . = 0x08000000 + 0xAE94;
+    .event_engine_p1 : AT(0xAE94) { build/asm/eu/event-engine_p1.o(.text) }
     . = 0x08000000 + 0xAF30;
     .Event_FadeOutOfBackgroundTalk : AT(0xAF30) { build/c/Event_FadeOutOfBackgroundTalk.o(.text.Event_FadeOutOfBackgroundTalk) }
     . = 0x08000000 + 0xAF44;
-    .event_engine_p1 : AT(0xAF44) { build/asm/eu/event-engine_p1.o(.text) }
+    .event_engine_p2 : AT(0xAF44) { build/asm/eu/event-engine_p2.o(.text) }
     . = 0x08000000 + 0xAF58;
     .sub_800ADAC : AT(0xAF58) { build/c/sub_800ADAC.o(.text.sub_800ADAC) }
     . = 0x08000000 + 0xAF6C;
-    .event_engine_p2 : AT(0xAF6C) { build/asm/eu/event-engine_p2.o(.text) }
+    .event_engine_p3 : AT(0xAF6C) { build/asm/eu/event-engine_p3.o(.text) }
     . = 0x08000000 + 0xB5F0;
     .fill_0063 : AT(0xB5F0) { build/gen/fill_0063.o(.text) }
     . = 0x08000000 + 0xB618;
@@ -6471,11 +6475,19 @@ SECTIONS
     . = 0x08000000 + 0xEE14;
     .EventClearTalkDisplayed : AT(0xEE14) { build/c/EventClearTalkDisplayed.o(.text.EventClearTalkDisplayed) }
     . = 0x08000000 + 0xEE60;
-    .eventscr_p1 : AT(0xEE60) { build/asm/eu/eventscr_p1.o(.text) }
+    .ClearTalk : AT(0xEE60) { build/c/ClearTalk.o(.text.ClearTalk) }
+    . = 0x08000000 + 0xEE7C;
+    .eventscr_p1 : AT(0xEE7C) { build/asm/eu/eventscr_p1.o(.text) }
     . = 0x08000000 + 0xEF7C;
     .sub_800ECEC : AT(0xEF7C) { build/c/sub_800ECEC.o(.text.sub_800ECEC) }
     . = 0x08000000 + 0xEFA0;
     .eventscr_p2 : AT(0xEFA0) { build/asm/eu/eventscr_p2.o(.text) }
+    . = 0x08000000 + 0xF520;
+    .sub_800F224 : AT(0xF520) { build/c/sub_800F224.o(.text.sub_800F224) }
+    . = 0x08000000 + 0xF52C;
+    .sub_800F230 : AT(0xF52C) { build/c/sub_800F230.o(.text.sub_800F230) }
+    . = 0x08000000 + 0xF538;
+    .eventscr_p3 : AT(0xF538) { build/asm/eu/eventscr_p3.o(.text) }
     . = 0x08000000 + 0x102E8;
     .fill_0066 : AT(0x102E8) { build/gen/fill_0066.o(.text) }
     . = 0x08000000 + 0x103D8;
@@ -6907,13 +6919,25 @@ SECTIONS
     . = 0x08000000 + 0x1A00C;
     .mapwork : AT(0x1A00C) { build/asm/eu/mapwork.o(.text) }
     . = 0x08000000 + 0x1B60C;
-    .debug_menu : AT(0x1B60C) { build/asm/eu/debug-menu.o(.text) }
+    .debug_menu_p0 : AT(0x1B60C) { build/asm/eu/debug-menu_p0.o(.text) }
+    . = 0x08000000 + 0x1B698;
+    .sub_801B650 : AT(0x1B698) { build/c/sub_801B650.o(.text.sub_801B650) }
+    . = 0x08000000 + 0x1B6A4;
+    .debug_menu_p1 : AT(0x1B6A4) { build/asm/eu/debug-menu_p1.o(.text) }
     . = 0x08000000 + 0x1C59C;
     .player_phase_p0 : AT(0x1C59C) { build/asm/eu/player-phase_p0.o(.text) }
+    . = 0x08000000 + 0x1CDC8;
+    .sub_801CDA8 : AT(0x1CDC8) { build/c/sub_801CDA8.o(.text.sub_801CDA8) }
+    . = 0x08000000 + 0x1CDE0;
+    .player_phase_p1 : AT(0x1CDE0) { build/asm/eu/player-phase_p1.o(.text) }
+    . = 0x08000000 + 0x1D1AC;
+    .sub_801D184 : AT(0x1D1AC) { build/c/sub_801D184.o(.text.sub_801D184) }
+    . = 0x08000000 + 0x1D1E8;
+    .player_phase_p2 : AT(0x1D1E8) { build/asm/eu/player-phase_p2.o(.text) }
     . = 0x08000000 + 0x1D3A0;
     .sub_801D374 : AT(0x1D3A0) { build/c/sub_801D374.o(.text.sub_801D374) }
     . = 0x08000000 + 0x1D3C8;
-    .player_phase_p1 : AT(0x1D3C8) { build/asm/eu/player-phase_p1.o(.text) }
+    .player_phase_p3 : AT(0x1D3C8) { build/asm/eu/player-phase_p3.o(.text) }
     . = 0x08000000 + 0x1D80C;
     .fill_0098 : AT(0x1D80C) { build/gen/fill_0098.o(.text) }
     . = 0x08000000 + 0x1D80E;
@@ -7046,6 +7070,8 @@ SECTIONS
     .sub_80221A0 : AT(0x221EC) { build/c/sub_80221A0.o(.text.sub_80221A0) }
     . = 0x08000000 + 0x22208;
     .map_menu_p3 : AT(0x22208) { build/asm/eu/map-menu_p3.o(.text) }
+    . = 0x08000000 + 0x22834;
+    .sub_80227D8 : AT(0x22834) { build/c/sub_80227D8.o(.text.sub_80227D8) }
     . = 0x08000000 + 0x22878;
     .sub_802281C : AT(0x22878) { build/c/sub_802281C.o(.text.sub_802281C) }
     . = 0x08000000 + 0x22884;
@@ -7064,6 +7090,8 @@ SECTIONS
     .target_sel : AT(0x23E40) { build/asm/eu/target-sel.o(.text) }
     . = 0x08000000 + 0x2518C;
     .unit_sprite_p0 : AT(0x2518C) { build/asm/eu/unit-sprite_p0.o(.text) }
+    . = 0x08000000 + 0x2519C;
+    .ApplyUnitSpritePalettes : AT(0x2519C) { build/c/ApplyUnitSpritePalettes.o(.text.ApplyUnitSpritePalettes) }
     . = 0x08000000 + 0x251E4;
     .sub_802516C : AT(0x251E4) { build/c/sub_802516C.o(.text.sub_802516C) }
     . = 0x08000000 + 0x251FC;
@@ -7307,7 +7335,9 @@ SECTIONS
     . = 0x08000000 + 0x2BE50;
     .sub_802BD44 : AT(0x2BE50) { build/c/sub_802BD44.o(.text.sub_802BD44) }
     . = 0x08000000 + 0x2BE64;
-    .trade_menu_p2 : AT(0x2BE64) { build/asm/eu/trade-menu_p2.o(.text) }
+    .sub_802BD58 : AT(0x2BE64) { build/c/sub_802BD58.o(.text.sub_802BD58) }
+    . = 0x08000000 + 0x2BE78;
+    .trade_menu_p2 : AT(0x2BE78) { build/asm/eu/trade-menu_p2.o(.text) }
     . = 0x08000000 + 0x2C014;
     .trap_p0 : AT(0x2C014) { build/asm/eu/trap_p0.o(.text) }
     . = 0x08000000 + 0x2C418;
@@ -7332,8 +7362,22 @@ SECTIONS
     .sub_802D388 : AT(0x2D4AC) { build/c/sub_802D388.o(.text.sub_802D388) }
     . = 0x08000000 + 0x2D4F0;
     .item_action_p2 : AT(0x2D4F0) { build/asm/eu/item-action_p2.o(.text) }
+    . = 0x08000000 + 0x2D83C;
+    .ApplyStatusChange : AT(0x2D83C) { build/c/ApplyStatusChange.o(.text.ApplyStatusChange) }
     . = 0x08000000 + 0x2D870;
-    .bmio : AT(0x2D870) { build/asm/eu/bmio.o(.text) }
+    .bmio_p0 : AT(0x2D870) { build/asm/eu/bmio_p0.o(.text) }
+    . = 0x08000000 + 0x2D964;
+    .StartBmVSync : AT(0x2D964) { build/c/StartBmVSync.o(.text.StartBmVSync) }
+    . = 0x08000000 + 0x2D988;
+    .bmio_p1 : AT(0x2D988) { build/asm/eu/bmio_p1.o(.text) }
+    . = 0x08000000 + 0x2DA54;
+    .sub_802D930 : AT(0x2DA54) { build/c/sub_802D930.o(.text.sub_802D930) }
+    . = 0x08000000 + 0x2DA6C;
+    .bmio_p2 : AT(0x2DA6C) { build/asm/eu/bmio_p2.o(.text) }
+    . = 0x08000000 + 0x2E26C;
+    .sub_802E144 : AT(0x2E26C) { build/c/sub_802E144.o(.text.sub_802E144) }
+    . = 0x08000000 + 0x2E298;
+    .bmio_p3 : AT(0x2E298) { build/asm/eu/bmio_p3.o(.text) }
     . = 0x08000000 + 0x2E4A8;
     .code1_p0 : AT(0x2E4A8) { build/asm/eu/code1_p0.o(.text) }
     . = 0x08000000 + 0x2E914;
@@ -7343,45 +7387,67 @@ SECTIONS
     . = 0x08000000 + 0x2F6C0;
     .sub_802F5A0 : AT(0x2F6C0) { build/c/sub_802F5A0.o(.text.sub_802F5A0) }
     . = 0x08000000 + 0x2F6CC;
-    .code1_p2 : AT(0x2F6CC) { build/asm/eu/code1_p2.o(.text) }
+    .sub_802F5AC : AT(0x2F6CC) { build/c/sub_802F5AC.o(.text.sub_802F5AC) }
+    . = 0x08000000 + 0x2F6D8;
+    .code1_p2 : AT(0x2F6D8) { build/asm/eu/code1_p2.o(.text) }
+    . = 0x08000000 + 0x2F7BC;
+    .sub_802F6A0 : AT(0x2F7BC) { build/c/sub_802F6A0.o(.text.sub_802F6A0) }
+    . = 0x08000000 + 0x2F7E0;
+    .code1_p3 : AT(0x2F7E0) { build/asm/eu/code1_p3.o(.text) }
     . = 0x08000000 + 0x2FE20;
     .sub_802FD04 : AT(0x2FE20) { build/c/sub_802FD04.o(.text.sub_802FD04) }
     . = 0x08000000 + 0x2FE44;
-    .code1_p3 : AT(0x2FE44) { build/asm/eu/code1_p3.o(.text) }
+    .code1_p4 : AT(0x2FE44) { build/asm/eu/code1_p4.o(.text) }
     . = 0x08000000 + 0x30058;
     .sub_802FF34 : AT(0x30058) { build/c/sub_802FF34.o(.text.sub_802FF34) }
     . = 0x08000000 + 0x30084;
     .sub_802FF60 : AT(0x30084) { build/c/sub_802FF60.o(.text.sub_802FF60) }
     . = 0x08000000 + 0x300A4;
-    .code1_p4 : AT(0x300A4) { build/asm/eu/code1_p4.o(.text) }
+    .code1_p5 : AT(0x300A4) { build/asm/eu/code1_p5.o(.text) }
+    . = 0x08000000 + 0x30B84;
+    .sub_8030A5C : AT(0x30B84) { build/c/sub_8030A5C.o(.text.sub_8030A5C) }
+    . = 0x08000000 + 0x30BB8;
+    .code1_p6 : AT(0x30BB8) { build/asm/eu/code1_p6.o(.text) }
+    . = 0x08000000 + 0x30CA8;
+    .PrepMapMenu_OnEnd : AT(0x30CA8) { build/c/PrepMapMenu_OnEnd.o(.text.PrepMapMenu_OnEnd) }
+    . = 0x08000000 + 0x30CBC;
+    .code1_p7 : AT(0x30CBC) { build/asm/eu/code1_p7.o(.text) }
     . = 0x08000000 + 0x3141C;
     .sub_80312E8 : AT(0x3141C) { build/c/sub_80312E8.o(.text.sub_80312E8) }
     . = 0x08000000 + 0x3144C;
-    .code1_p5 : AT(0x3144C) { build/asm/eu/code1_p5.o(.text) }
+    .code1_p8 : AT(0x3144C) { build/asm/eu/code1_p8.o(.text) }
     . = 0x08000000 + 0x314D4;
     .sub_80313A0 : AT(0x314D4) { build/c/sub_80313A0.o(.text.sub_80313A0) }
     . = 0x08000000 + 0x314EC;
-    .code1_p6 : AT(0x314EC) { build/asm/eu/code1_p6.o(.text) }
+    .code1_p9 : AT(0x314EC) { build/asm/eu/code1_p9.o(.text) }
+    . = 0x08000000 + 0x31768;
+    .sub_8031634 : AT(0x31768) { build/c/sub_8031634.o(.text.sub_8031634) }
+    . = 0x08000000 + 0x3177C;
+    .code1_p10 : AT(0x3177C) { build/asm/eu/code1_p10.o(.text) }
     . = 0x08000000 + 0x32648;
     .sub_803255C : AT(0x32648) { build/c/sub_803255C.o(.text.sub_803255C) }
     . = 0x08000000 + 0x32680;
-    .code1_p7 : AT(0x32680) { build/asm/eu/code1_p7.o(.text) }
+    .code1_p11 : AT(0x32680) { build/asm/eu/code1_p11.o(.text) }
     . = 0x08000000 + 0x33248;
     .sub_8033134 : AT(0x33248) { build/c/sub_8033134.o(.text.sub_8033134) }
     . = 0x08000000 + 0x3325C;
-    .code1_p8 : AT(0x3325C) { build/asm/eu/code1_p8.o(.text) }
+    .code1_p12 : AT(0x3325C) { build/asm/eu/code1_p12.o(.text) }
     . = 0x08000000 + 0x33268;
     .sub_800A3A4 : AT(0x33268) { build/c/talk.o(.text.sub_800A3A4) }
     . = 0x08000000 + 0x33270;
-    .code1_p9 : AT(0x33270) { build/asm/eu/code1_p9.o(.text) }
+    .code1_p13 : AT(0x33270) { build/asm/eu/code1_p13.o(.text) }
     . = 0x08000000 + 0x3357C;
     .FinishDamageDisplay : AT(0x3357C) { build/c/FinishDamageDisplay.o(.text.FinishDamageDisplay) }
     . = 0x08000000 + 0x335A8;
-    .code1_p10 : AT(0x335A8) { build/asm/eu/code1_p10.o(.text) }
+    .code1_p14 : AT(0x335A8) { build/asm/eu/code1_p14.o(.text) }
     . = 0x08000000 + 0x3375C;
     .UnitTornOut_Init : AT(0x3375C) { build/c/eventcall_unittornout.o(.text.UnitTornOut_Init) }
     . = 0x08000000 + 0x33764;
-    .code1_p11 : AT(0x33764) { build/asm/eu/code1_p11.o(.text) }
+    .code1_p15 : AT(0x33764) { build/asm/eu/code1_p15.o(.text) }
+    . = 0x08000000 + 0x3418C;
+    .InitBattleForecastFramePalettes : AT(0x3418C) { build/c/InitBattleForecastFramePalettes.o(.text.InitBattleForecastFramePalettes) }
+    . = 0x08000000 + 0x341DC;
+    .code1_p16 : AT(0x341DC) { build/asm/eu/code1_p16.o(.text) }
     . = 0x08000000 + 0x34F44;
     .code_ai_p0 : AT(0x34F44) { build/asm/eu/code-ai_p0.o(.text) }
     . = 0x08000000 + 0x381EC;
@@ -7406,40 +7472,84 @@ SECTIONS
     .code_ai_p5 : AT(0x3C614) { build/asm/eu/code-ai_p5.o(.text) }
     . = 0x08000000 + 0x3C814;
     .code_sio_p0 : AT(0x3C814) { build/asm/eu/code-sio_p0.o(.text) }
+    . = 0x08000000 + 0x3DD5C;
+    .sub_803DB24 : AT(0x3DD5C) { build/c/sub_803DB24.o(.text.sub_803DB24) }
+    . = 0x08000000 + 0x3DD70;
+    .code_sio_p1 : AT(0x3DD70) { build/asm/eu/code-sio_p1.o(.text) }
+    . = 0x08000000 + 0x3E100;
+    .CheckInLinkArena : AT(0x3E100) { build/c/CheckInLinkArena.o(.text.CheckInLinkArena) }
+    . = 0x08000000 + 0x3E110;
+    .code_sio_p2 : AT(0x3E110) { build/asm/eu/code-sio_p2.o(.text) }
+    . = 0x08000000 + 0x3E314;
+    .sub_803E0D8 : AT(0x3E314) { build/c/sub_803E0D8.o(.text.sub_803E0D8) }
+    . = 0x08000000 + 0x3E378;
+    .code_sio_p3 : AT(0x3E378) { build/asm/eu/code-sio_p3.o(.text) }
+    . = 0x08000000 + 0x3E580;
+    .sub_803E344 : AT(0x3E580) { build/c/sub_803E344.o(.text.sub_803E344) }
+    . = 0x08000000 + 0x3E594;
+    .code_sio_p4 : AT(0x3E594) { build/asm/eu/code-sio_p4.o(.text) }
     . = 0x08000000 + 0x3EDFC;
     .sub_803EB44 : AT(0x3EDFC) { build/c/sub_803EB44.o(.text.sub_803EB44) }
     . = 0x08000000 + 0x3EE60;
-    .code_sio_p1 : AT(0x3EE60) { build/asm/eu/code-sio_p1.o(.text) }
+    .code_sio_p5 : AT(0x3EE60) { build/asm/eu/code-sio_p5.o(.text) }
+    . = 0x08000000 + 0x4034C;
+    .sub_8040230 : AT(0x4034C) { build/c/sub_8040230.o(.text.sub_8040230) }
+    . = 0x08000000 + 0x40360;
+    .code_sio_p6 : AT(0x40360) { build/asm/eu/code-sio_p6.o(.text) }
+    . = 0x08000000 + 0x40E0C;
+    .sub_8040CC8 : AT(0x40E0C) { build/c/sub_8040CC8.o(.text.sub_8040CC8) }
+    . = 0x08000000 + 0x40E60;
+    .code_sio_p7 : AT(0x40E60) { build/asm/eu/code-sio_p7.o(.text) }
     . = 0x08000000 + 0x41BB0;
     .sub_80419C8 : AT(0x41BB0) { build/c/sub_80419C8.o(.text.sub_80419C8) }
     . = 0x08000000 + 0x41BBC;
-    .code_sio_p2 : AT(0x41BBC) { build/asm/eu/code-sio_p2.o(.text) }
+    .code_sio_p8 : AT(0x41BBC) { build/asm/eu/code-sio_p8.o(.text) }
+    . = 0x08000000 + 0x4201C;
+    .sub_8041DFC : AT(0x4201C) { build/c/sub_8041DFC.o(.text.sub_8041DFC) }
+    . = 0x08000000 + 0x4203C;
+    .code_sio_p9 : AT(0x4203C) { build/asm/eu/code-sio_p9.o(.text) }
     . = 0x08000000 + 0x45198;
     .sub_8045D2C : AT(0x45198) { build/c/sub_8045D2C.o(.text.sub_8045D2C) }
     . = 0x08000000 + 0x451B0;
-    .code_sio_p3 : AT(0x451B0) { build/asm/eu/code-sio_p3.o(.text) }
+    .code_sio_p10 : AT(0x451B0) { build/asm/eu/code-sio_p10.o(.text) }
     . = 0x08000000 + 0x45890;
     .sub_8046424 : AT(0x45890) { build/c/sub_8046424.o(.text.sub_8046424) }
     . = 0x08000000 + 0x458AC;
-    .code_sio_p4 : AT(0x458AC) { build/asm/eu/code-sio_p4.o(.text) }
+    .code_sio_p11 : AT(0x458AC) { build/asm/eu/code-sio_p11.o(.text) }
     . = 0x08000000 + 0x467D8;
     .sub_8047354 : AT(0x467D8) { build/c/sub_8047354.o(.text.sub_8047354) }
     . = 0x08000000 + 0x467F8;
-    .code_sio_p5 : AT(0x467F8) { build/asm/eu/code-sio_p5.o(.text) }
+    .code_sio_p12 : AT(0x467F8) { build/asm/eu/code-sio_p12.o(.text) }
+    . = 0x08000000 + 0x46CD0;
+    .sub_8047854 : AT(0x46CD0) { build/c/sub_8047854.o(.text.sub_8047854) }
+    . = 0x08000000 + 0x46D20;
+    .code_sio_p13 : AT(0x46D20) { build/asm/eu/code-sio_p13.o(.text) }
     . = 0x08000000 + 0x47788;
     .sub_8048300 : AT(0x47788) { build/c/sub_8048300.o(.text.sub_8048300) }
     . = 0x08000000 + 0x477A8;
-    .code_sio_p6 : AT(0x477A8) { build/asm/eu/code-sio_p6.o(.text) }
+    .code_sio_p14 : AT(0x477A8) { build/asm/eu/code-sio_p14.o(.text) }
+    . = 0x08000000 + 0x479D4;
+    .sub_804854C : AT(0x479D4) { build/c/sub_804854C.o(.text.sub_804854C) }
+    . = 0x08000000 + 0x479F4;
+    .code_sio_p15 : AT(0x479F4) { build/asm/eu/code-sio_p15.o(.text) }
     . = 0x08000000 + 0x48FD0;
     .sub_8049A44 : AT(0x48FD0) { build/c/sub_8049A44.o(.text.sub_8049A44) }
     . = 0x08000000 + 0x48FF4;
-    .code_sio_p7 : AT(0x48FF4) { build/asm/eu/code-sio_p7.o(.text) }
+    .code_sio_p16 : AT(0x48FF4) { build/asm/eu/code-sio_p16.o(.text) }
     . = 0x08000000 + 0x49810;
     .fill_0131 : AT(0x49810) { build/gen/fill_0131.o(.text) }
     . = 0x08000000 + 0x498A0;
     .UnpackUiWindowFrameGraphics2 : AT(0x498A0) { build/c/ui.o(.text.UnpackUiWindowFrameGraphics2) }
     . = 0x08000000 + 0x498F4;
-    .uiutils : AT(0x498F4) { build/asm/eu/uiutils.o(.text) }
+    .uiutils_p0 : AT(0x498F4) { build/asm/eu/uiutils_p0.o(.text) }
+    . = 0x08000000 + 0x49DBC;
+    .ClearUi : AT(0x49DBC) { build/c/ClearUi.o(.text.ClearUi) }
+    . = 0x08000000 + 0x49DE0;
+    .uiutils_p1 : AT(0x49DE0) { build/asm/eu/uiutils_p1.o(.text) }
+    . = 0x08000000 + 0x49EC4;
+    .sub_804A930 : AT(0x49EC4) { build/c/sub_804A930.o(.text.sub_804A930) }
+    . = 0x08000000 + 0x49EF0;
+    .uiutils_p2 : AT(0x49EF0) { build/asm/eu/uiutils_p2.o(.text) }
     . = 0x08000000 + 0x49FA0;
     .ui_menu_p0 : AT(0x49FA0) { build/asm/eu/ui-menu_p0.o(.text) }
     . = 0x08000000 + 0x4A758;
@@ -7452,16 +7562,28 @@ SECTIONS
     .map_sel : AT(0x4AA5C) { build/asm/eu/map-sel.o(.text) }
     . = 0x08000000 + 0x4AF0C;
     .banim_ekrbattle_p0 : AT(0x4AF0C) { build/asm/eu/banim-ekrbattle_p0.o(.text) }
+    . = 0x08000000 + 0x4B2B0;
+    .EkrBattleWaitBattleQuote : AT(0x4B2B0) { build/c/EkrBattleWaitBattleQuote.o(.text.EkrBattleWaitBattleQuote) }
+    . = 0x08000000 + 0x4B2F4;
+    .banim_ekrbattle_p1 : AT(0x4B2F4) { build/asm/eu/banim-ekrbattle_p1.o(.text) }
+    . = 0x08000000 + 0x4B3A4;
+    .EkrBattleWaitDragonIntro : AT(0x4B3A4) { build/c/EkrBattleWaitDragonIntro.o(.text.EkrBattleWaitDragonIntro) }
+    . = 0x08000000 + 0x4B3C4;
+    .banim_ekrbattle_p2 : AT(0x4B3C4) { build/asm/eu/banim-ekrbattle_p2.o(.text) }
     . = 0x08000000 + 0x4B484;
     .sub_804BED8 : AT(0x4B484) { build/c/sub_804BED8.o(.text.sub_804BED8) }
     . = 0x08000000 + 0x4B4B8;
     .sub_804BF0C : AT(0x4B4B8) { build/c/sub_804BF0C.o(.text.sub_804BF0C) }
     . = 0x08000000 + 0x4B4E0;
-    .banim_ekrbattle_p1 : AT(0x4B4E0) { build/asm/eu/banim-ekrbattle_p1.o(.text) }
+    .banim_ekrbattle_p3 : AT(0x4B4E0) { build/asm/eu/banim-ekrbattle_p3.o(.text) }
+    . = 0x08000000 + 0x4B5C0;
+    .sub_804C008 : AT(0x4B5C0) { build/c/sub_804C008.o(.text.sub_804C008) }
+    . = 0x08000000 + 0x4B5EC;
+    .banim_ekrbattle_p4 : AT(0x4B5EC) { build/asm/eu/banim-ekrbattle_p4.o(.text) }
     . = 0x08000000 + 0x4BD94;
     .EkrBattleExecPopup : AT(0x4BD94) { build/c/EkrBattleExecPopup.o(.text.EkrBattleExecPopup) }
     . = 0x08000000 + 0x4BDAC;
-    .banim_ekrbattle_p2 : AT(0x4BDAC) { build/asm/eu/banim-ekrbattle_p2.o(.text) }
+    .banim_ekrbattle_p5 : AT(0x4BDAC) { build/asm/eu/banim-ekrbattle_p5.o(.text) }
     . = 0x08000000 + 0x4BED4;
     .fill_0133 : AT(0x4BED4) { build/gen/fill_0133.o(.text) }
     . = 0x08000000 + 0x4BEF4;
@@ -7470,6 +7592,10 @@ SECTIONS
     .EndEkrGauge : AT(0x4C2D8) { build/c/EndEkrGauge.o(.text.EndEkrGauge) }
     . = 0x08000000 + 0x4C2EC;
     .banim_ekrgauge_p1 : AT(0x4C2EC) { build/asm/eu/banim-ekrgauge_p1.o(.text) }
+    . = 0x08000000 + 0x4CC44;
+    .EndEkrDispUP : AT(0x4CC44) { build/c/EndEkrDispUP.o(.text.EndEkrDispUP) }
+    . = 0x08000000 + 0x4CC58;
+    .banim_ekrgauge_p2 : AT(0x4CC58) { build/asm/eu/banim-ekrgauge_p2.o(.text) }
     . = 0x08000000 + 0x4D424;
     .fill_0134 : AT(0x4D424) { build/gen/fill_0134.o(.text) }
     . = 0x08000000 + 0x4D426;
@@ -7482,24 +7608,46 @@ SECTIONS
     .EfxFlashRestorePalSync : AT(0x4EF98) { build/c/EfxFlashRestorePalSync.o(.text.EfxFlashRestorePalSync) }
     . = 0x08000000 + 0x4EFAC;
     .banim_efxbattle_p2 : AT(0x4EFAC) { build/asm/eu/banim-efxbattle_p2.o(.text) }
+    . = 0x08000000 + 0x4F6F8;
+    .GetUnitEfxDebuff : AT(0x4F6F8) { build/c/GetUnitEfxDebuff.o(.text.GetUnitEfxDebuff) }
+    . = 0x08000000 + 0x4F714;
+    .banim_efxbattle_p3 : AT(0x4F714) { build/asm/eu/banim-efxbattle_p3.o(.text) }
     . = 0x08000000 + 0x4F950;
     .EndProcEfxWeaponIcon : AT(0x4F950) { build/c/EndProcEfxWeaponIcon.o(.text.EndProcEfxWeaponIcon) }
     . = 0x08000000 + 0x4F96C;
-    .banim_efxbattle_p3 : AT(0x4F96C) { build/asm/eu/banim-efxbattle_p3.o(.text) }
+    .banim_efxbattle_p4 : AT(0x4F96C) { build/asm/eu/banim-efxbattle_p4.o(.text) }
+    . = 0x08000000 + 0x4FA98;
+    .sub_80503B8 : AT(0x4FA98) { build/c/sub_80503B8.o(.text.sub_80503B8) }
+    . = 0x08000000 + 0x4FAB4;
+    .banim_efxbattle_p5 : AT(0x4FAB4) { build/asm/eu/banim-efxbattle_p5.o(.text) }
+    . = 0x08000000 + 0x4FC48;
+    .sub_8050560 : AT(0x4FC48) { build/c/sub_8050560.o(.text.sub_8050560) }
+    . = 0x08000000 + 0x4FC64;
+    .banim_efxbattle_p6 : AT(0x4FC64) { build/asm/eu/banim-efxbattle_p6.o(.text) }
     . = 0x08000000 + 0x4FEB4;
     .SpellFx_Begin : AT(0x4FEB4) { build/c/SpellFx_Begin.o(.text.SpellFx_Begin) }
     . = 0x08000000 + 0x4FEC0;
-    .banim_efxbattle_p4 : AT(0x4FEC0) { build/asm/eu/banim-efxbattle_p4.o(.text) }
+    .SpellFx_Finish : AT(0x4FEC0) { build/c/SpellFx_Finish.o(.text.SpellFx_Finish) }
+    . = 0x08000000 + 0x4FECC;
+    .banim_efxbattle_p7 : AT(0x4FECC) { build/asm/eu/banim-efxbattle_p7.o(.text) }
     . = 0x08000000 + 0x50634;
     .sub_8050F48 : AT(0x50634) { build/c/sub_8050F48.o(.text.sub_8050F48) }
     . = 0x08000000 + 0x50640;
-    .banim_efxbattle_p5 : AT(0x50640) { build/asm/eu/banim-efxbattle_p5.o(.text) }
+    .banim_efxbattle_p8 : AT(0x50640) { build/asm/eu/banim-efxbattle_p8.o(.text) }
+    . = 0x08000000 + 0x506E8;
+    .sub_8050FF0 : AT(0x506E8) { build/c/sub_8050FF0.o(.text.sub_8050FF0) }
+    . = 0x08000000 + 0x506F4;
+    .banim_efxbattle_p9 : AT(0x506F4) { build/asm/eu/banim-efxbattle_p9.o(.text) }
     . = 0x08000000 + 0x50868;
     .code_banim1_p0 : AT(0x50868) { build/asm/eu/code-banim1_p0.o(.text) }
     . = 0x08000000 + 0x50980;
     .sub_8051288 : AT(0x50980) { build/c/sub_8051288.o(.text.sub_8051288) }
     . = 0x08000000 + 0x50994;
     .code_banim1_p1 : AT(0x50994) { build/asm/eu/code-banim1_p1.o(.text) }
+    . = 0x08000000 + 0x531F0;
+    .EkrPrepareBanimfx : AT(0x531F0) { build/c/EkrPrepareBanimfx.o(.text.EkrPrepareBanimfx) }
+    . = 0x08000000 + 0x5321C;
+    .code_banim1_p2 : AT(0x5321C) { build/asm/eu/code-banim1_p2.o(.text) }
     . = 0x08000000 + 0x5337C;
     .fill_0135 : AT(0x5337C) { build/gen/fill_0135.o(.text) }
     . = 0x08000000 + 0x53398;
@@ -7526,10 +7674,34 @@ SECTIONS
     .sub_8055D94 : AT(0x55534) { build/c/sub_8055D94.o(.text.sub_8055D94) }
     . = 0x08000000 + 0x55548;
     .code_banim_p2 : AT(0x55548) { build/asm/eu/code-banim_p2.o(.text) }
+    . = 0x08000000 + 0x55764;
+    .sub_8055FC4 : AT(0x55764) { build/c/sub_8055FC4.o(.text.sub_8055FC4) }
+    . = 0x08000000 + 0x55790;
+    .code_banim_p3 : AT(0x55790) { build/asm/eu/code-banim_p3.o(.text) }
     . = 0x08000000 + 0x557C4;
     .sub_8056024 : AT(0x557C4) { build/c/sub_8056024.o(.text.sub_8056024) }
     . = 0x08000000 + 0x557D8;
-    .code_banim_p3 : AT(0x557D8) { build/asm/eu/code-banim_p3.o(.text) }
+    .code_banim_p4 : AT(0x557D8) { build/asm/eu/code-banim_p4.o(.text) }
+    . = 0x08000000 + 0x566FC;
+    .sub_8056F40 : AT(0x566FC) { build/c/sub_8056F40.o(.text.sub_8056F40) }
+    . = 0x08000000 + 0x5670C;
+    .code_banim_p5 : AT(0x5670C) { build/asm/eu/code-banim_p5.o(.text) }
+    . = 0x08000000 + 0x5DE58;
+    .sub_805E640 : AT(0x5DE58) { build/c/sub_805E640.o(.text.sub_805E640) }
+    . = 0x08000000 + 0x5DE68;
+    .code_banim_p6 : AT(0x5DE68) { build/asm/eu/code-banim_p6.o(.text) }
+    . = 0x08000000 + 0x5E410;
+    .sub_805EBF8 : AT(0x5E410) { build/c/sub_805EBF8.o(.text.sub_805EBF8) }
+    . = 0x08000000 + 0x5E420;
+    .code_banim_p7 : AT(0x5E420) { build/asm/eu/code-banim_p7.o(.text) }
+    . = 0x08000000 + 0x60BBC;
+    .sub_806137C : AT(0x60BBC) { build/c/sub_806137C.o(.text.sub_806137C) }
+    . = 0x08000000 + 0x60BD8;
+    .code_banim_p8 : AT(0x60BD8) { build/asm/eu/code-banim_p8.o(.text) }
+    . = 0x08000000 + 0x62278;
+    .sub_8062A2C : AT(0x62278) { build/c/sub_8062A2C.o(.text.sub_8062A2C) }
+    . = 0x08000000 + 0x62288;
+    .code_banim_p9 : AT(0x62288) { build/asm/eu/code-banim_p9.o(.text) }
     . = 0x08000000 + 0x63D0C;
     .fill_0138 : AT(0x63D0C) { build/gen/fill_0138.o(.text) }
     . = 0x08000000 + 0x63D2C;
@@ -7708,22 +7880,56 @@ SECTIONS
     .EkrDragonScreenFlashing_RefrainPalette : AT(0x669D4) { build/c/banim-ekrdragonfx.o(.text.EkrDragonScreenFlashing_RefrainPalette) }
     . = 0x08000000 + 0x66A04;
     .code_banim2_p0 : AT(0x66A04) { build/asm/eu/code-banim2_p0.o(.text) }
+    . = 0x08000000 + 0x67754;
+    .EfxOverrideBgm : AT(0x67754) { build/c/EfxOverrideBgm.o(.text.EfxOverrideBgm) }
+    . = 0x08000000 + 0x6777C;
+    .code_banim2_p1 : AT(0x6777C) { build/asm/eu/code-banim2_p1.o(.text) }
+    . = 0x08000000 + 0x6778C;
+    .UnregisterEfxSoundSeExist : AT(0x6778C) { build/c/UnregisterEfxSoundSeExist.o(.text.UnregisterEfxSoundSeExist) }
     . = 0x08000000 + 0x67798;
     .RegisterEfxSoundSeExist : AT(0x67798) { build/c/RegisterEfxSoundSeExist.o(.text.RegisterEfxSoundSeExist) }
     . = 0x08000000 + 0x677A4;
-    .code_banim2_p1 : AT(0x677A4) { build/asm/eu/code-banim2_p1.o(.text) }
+    .code_banim2_p2 : AT(0x677A4) { build/asm/eu/code-banim2_p2.o(.text) }
     . = 0x08000000 + 0x67DE0;
     .EfxPlayHittedSFX : AT(0x67DE0) { build/c/EfxPlayHittedSFX.o(.text.EfxPlayHittedSFX) }
     . = 0x08000000 + 0x67E44;
-    .code_banim2_p2 : AT(0x67E44) { build/asm/eu/code-banim2_p2.o(.text) }
+    .code_banim2_p3 : AT(0x67E44) { build/asm/eu/code-banim2_p3.o(.text) }
+    . = 0x08000000 + 0x681BC;
+    .EkrRestoreBGM : AT(0x681BC) { build/c/EkrRestoreBGM.o(.text.EkrRestoreBGM) }
+    . = 0x08000000 + 0x681F0;
+    .code_banim2_p4 : AT(0x681F0) { build/asm/eu/code-banim2_p4.o(.text) }
     . = 0x08000000 + 0x682C4;
     .PlaySFX : AT(0x682C4) { build/c/PlaySFX.o(.text.PlaySFX) }
     . = 0x08000000 + 0x682E0;
-    .code_banim2_p3 : AT(0x682E0) { build/asm/eu/code-banim2_p3.o(.text) }
+    .code_banim2_p5 : AT(0x682E0) { build/asm/eu/code-banim2_p5.o(.text) }
+    . = 0x08000000 + 0x68320;
+    .sub_8068A24 : AT(0x68320) { build/c/sub_8068A24.o(.text.sub_8068A24) }
+    . = 0x08000000 + 0x68334;
+    .code_banim2_p6 : AT(0x68334) { build/asm/eu/code-banim2_p6.o(.text) }
+    . = 0x08000000 + 0x68C0C;
+    .EndEkrLevelUp : AT(0x68C0C) { build/c/EndEkrLevelUp.o(.text.EndEkrLevelUp) }
+    . = 0x08000000 + 0x68C20;
+    .code_banim2_p7 : AT(0x68C20) { build/asm/eu/code-banim2_p7.o(.text) }
+    . = 0x08000000 + 0x69048;
+    .sub_8069730 : AT(0x69048) { build/c/sub_8069730.o(.text.sub_8069730) }
+    . = 0x08000000 + 0x69088;
+    .code_banim2_p8 : AT(0x69088) { build/asm/eu/code-banim2_p8.o(.text) }
+    . = 0x08000000 + 0x694BC;
+    .sub_8069BB4 : AT(0x694BC) { build/c/sub_8069BB4.o(.text.sub_8069BB4) }
+    . = 0x08000000 + 0x694EC;
+    .code_banim2_p9 : AT(0x694EC) { build/asm/eu/code-banim2_p9.o(.text) }
+    . = 0x08000000 + 0x6A090;
+    .sub_806A93C : AT(0x6A090) { build/c/sub_806A93C.o(.text.sub_806A93C) }
+    . = 0x08000000 + 0x6A0AC;
+    .code_banim2_p10 : AT(0x6A0AC) { build/asm/eu/code-banim2_p10.o(.text) }
     . = 0x08000000 + 0x6AFD8;
     .EndEkrPopup : AT(0x6AFD8) { build/c/EndEkrPopup.o(.text.EndEkrPopup) }
     . = 0x08000000 + 0x6AFF4;
-    .code_banim2_p4 : AT(0x6AFF4) { build/asm/eu/code-banim2_p4.o(.text) }
+    .code_banim2_p11 : AT(0x6AFF4) { build/asm/eu/code-banim2_p11.o(.text) }
+    . = 0x08000000 + 0x6B940;
+    .sub_806C0D4 : AT(0x6B940) { build/c/sub_806C0D4.o(.text.sub_806C0D4) }
+    . = 0x08000000 + 0x6B954;
+    .code_banim2_p12 : AT(0x6B954) { build/asm/eu/code-banim2_p12.o(.text) }
     . = 0x08000000 + 0x6BAA4;
     .mu : AT(0x6BAA4) { build/asm/eu/mu.o(.text) }
     . = 0x08000000 + 0x6E354;
@@ -7736,20 +7942,28 @@ SECTIONS
     .sub_807A260 : AT(0x79BCC) { build/c/sub_807A260.o(.text.sub_807A260) }
     . = 0x08000000 + 0x79BD8;
     .eventcall_p1 : AT(0x79BD8) { build/asm/eu/eventcall_p1.o(.text) }
+    . = 0x08000000 + 0x79D10;
+    .sub_807A648 : AT(0x79D10) { build/c/sub_807A648.o(.text.sub_807A648) }
+    . = 0x08000000 + 0x79D1C;
+    .eventcall_p2 : AT(0x79D1C) { build/asm/eu/eventcall_p2.o(.text) }
     . = 0x08000000 + 0x79D3C;
     .sub_807A670 : AT(0x79D3C) { build/c/sub_807A670.o(.text.sub_807A670) }
     . = 0x08000000 + 0x79D48;
-    .eventcall_p2 : AT(0x79D48) { build/asm/eu/eventcall_p2.o(.text) }
+    .eventcall_p3 : AT(0x79D48) { build/asm/eu/eventcall_p3.o(.text) }
     . = 0x08000000 + 0x79D74;
     .sub_807A6A4 : AT(0x79D74) { build/c/sub_807A6A4.o(.text.sub_807A6A4) }
     . = 0x08000000 + 0x79D8C;
     .sub_807A6BC : AT(0x79D8C) { build/c/sub_807A6BC.o(.text.sub_807A6BC) }
     . = 0x08000000 + 0x79DA8;
-    .eventcall_p3 : AT(0x79DA8) { build/asm/eu/eventcall_p3.o(.text) }
+    .eventcall_p4 : AT(0x79DA8) { build/asm/eu/eventcall_p4.o(.text) }
+    . = 0x08000000 + 0x7A640;
+    .sub_807AF24 : AT(0x7A640) { build/c/sub_807AF24.o(.text.sub_807AF24) }
+    . = 0x08000000 + 0x7A64C;
+    .eventcall_p5 : AT(0x7A64C) { build/asm/eu/eventcall_p5.o(.text) }
     . = 0x08000000 + 0x7AA24;
     .sub_807B304 : AT(0x7AA24) { build/c/sub_807B304.o(.text.sub_807B304) }
     . = 0x08000000 + 0x7AA4C;
-    .eventcall_p4 : AT(0x7AA4C) { build/asm/eu/eventcall_p4.o(.text) }
+    .eventcall_p6 : AT(0x7AA4C) { build/asm/eu/eventcall_p6.o(.text) }
     . = 0x08000000 + 0x7ABE0;
     .sub_807B4C0 : AT(0x7ABE0) { build/c/sub_807B4C0.o(.text.sub_807B4C0) }
     . = 0x08000000 + 0x7AC08;
@@ -7878,6 +8092,10 @@ SECTIONS
     .sub_807D59C : AT(0x7C9D0) { build/c/sub_807D59C.o(.text.sub_807D59C) }
     . = 0x08000000 + 0x7C9E4;
     .eventcallfx_p1 : AT(0x7C9E4) { build/asm/eu/eventcallfx_p1.o(.text) }
+    . = 0x08000000 + 0x7CDE8;
+    .sub_807D94C : AT(0x7CDE8) { build/c/sub_807D94C.o(.text.sub_807D94C) }
+    . = 0x08000000 + 0x7CDF8;
+    .sub_807D95C : AT(0x7CDF8) { build/c/sub_807D95C.o(.text.sub_807D95C) }
     . = 0x08000000 + 0x7CE08;
     .sub_807D96C : AT(0x7CE08) { build/c/sub_807D96C.o(.text.sub_807D96C) }
     . = 0x08000000 + 0x7CE18;
@@ -7890,18 +8108,22 @@ SECTIONS
     .sub_807DE6C : AT(0x7D1D0) { build/c/sub_807DE6C.o(.text.sub_807DE6C) }
     . = 0x08000000 + 0x7D1E4;
     .eventcallfx_p4 : AT(0x7D1E4) { build/asm/eu/eventcallfx_p4.o(.text) }
+    . = 0x08000000 + 0x7D2F0;
+    .sub_807DFDC : AT(0x7D2F0) { build/c/sub_807DFDC.o(.text.sub_807DFDC) }
+    . = 0x08000000 + 0x7D308;
+    .eventcallfx_p5 : AT(0x7D308) { build/asm/eu/eventcallfx_p5.o(.text) }
     . = 0x08000000 + 0x7D868;
     .EventCall_HideNinianDragonSMS : AT(0x7D868) { build/c/EventCall_HideNinianDragonSMS.o(.text.EventCall_HideNinianDragonSMS) }
     . = 0x08000000 + 0x7D878;
-    .eventcallfx_p5 : AT(0x7D878) { build/asm/eu/eventcallfx_p5.o(.text) }
+    .eventcallfx_p6 : AT(0x7D878) { build/asm/eu/eventcallfx_p6.o(.text) }
     . = 0x08000000 + 0x7D8F0;
     .EventCall_PutFallNinian : AT(0x7D8F0) { build/c/EventCall_PutFallNinian.o(.text.EventCall_PutFallNinian) }
     . = 0x08000000 + 0x7D908;
-    .eventcallfx_p6 : AT(0x7D908) { build/asm/eu/eventcallfx_p6.o(.text) }
+    .eventcallfx_p7 : AT(0x7D908) { build/asm/eu/eventcallfx_p7.o(.text) }
     . = 0x08000000 + 0x7E2E0;
     .sub_807F16C : AT(0x7E2E0) { build/c/sub_807F16C.o(.text.sub_807F16C) }
     . = 0x08000000 + 0x7E30C;
-    .eventcallfx_p7 : AT(0x7E30C) { build/asm/eu/eventcallfx_p7.o(.text) }
+    .sub_807F198 : AT(0x7E30C) { build/c/sub_807F198.o(.text.sub_807F198) }
     . = 0x08000000 + 0x7E32C;
     .sub_807F1B8 : AT(0x7E32C) { build/c/sub_807F1B8.o(.text.sub_807F1B8) }
     . = 0x08000000 + 0x7E350;
@@ -8182,6 +8404,10 @@ SECTIONS
     .sub_80839A4 : AT(0x830F4) { build/c/sub_80839A4.o(.text.sub_80839A4) }
     . = 0x08000000 + 0x83114;
     .helpbox_p1 : AT(0x83114) { build/asm/eu/helpbox_p1.o(.text) }
+    . = 0x08000000 + 0x84454;
+    .sub_8084CEC : AT(0x84454) { build/c/sub_8084CEC.o(.text.sub_8084CEC) }
+    . = 0x08000000 + 0x84484;
+    .helpbox_p2 : AT(0x84484) { build/asm/eu/helpbox_p2.o(.text) }
     . = 0x08000000 + 0x848E0;
     .fill_0211 : AT(0x848E0) { build/gen/fill_0211.o(.text) }
     . = 0x08000000 + 0x848E2;
@@ -8203,7 +8429,11 @@ SECTIONS
     . = 0x08000000 + 0x8767C;
     .fill_0213 : AT(0x8767C) { build/gen/fill_0213.o(.text) }
     . = 0x08000000 + 0x87684;
-    .cgtext : AT(0x87684) { build/asm/eu/cgtext.o(.text) }
+    .cgtext_p0 : AT(0x87684) { build/asm/eu/cgtext_p0.o(.text) }
+    . = 0x08000000 + 0x87F48;
+    .EndCgText : AT(0x87F48) { build/c/EndCgText.o(.text.EndCgText) }
+    . = 0x08000000 + 0x87F5C;
+    .cgtext_p1 : AT(0x87F5C) { build/asm/eu/cgtext_p1.o(.text) }
     . = 0x08000000 + 0x88DE8;
     .unitlistscreen : AT(0x88DE8) { build/asm/eu/unitlistscreen.o(.text) }
     . = 0x08000000 + 0x8DC04;
@@ -8276,24 +8506,28 @@ SECTIONS
     .EndPrepAtMenuIfNoUnitAvailable : AT(0x8EB64) { build/c/prep_atmenu.o(.text.EndPrepAtMenuIfNoUnitAvailable) }
     . = 0x08000000 + 0x8EBD4;
     .prep_atmenu_p0 : AT(0x8EBD4) { build/asm/eu/prep_atmenu_p0.o(.text) }
+    . = 0x08000000 + 0x8ECAC;
+    .AtMenu_SetupCtrlUI : AT(0x8ECAC) { build/c/AtMenu_SetupCtrlUI.o(.text.AtMenu_SetupCtrlUI) }
+    . = 0x08000000 + 0x8ECD4;
+    .prep_atmenu_p1 : AT(0x8ECD4) { build/asm/eu/prep_atmenu_p1.o(.text) }
     . = 0x08000000 + 0x8EFC4;
     .AtMenu_StartSubmenu : AT(0x8EFC4) { build/c/AtMenu_StartSubmenu.o(.text.AtMenu_StartSubmenu) }
     . = 0x08000000 + 0x8F058;
-    .prep_atmenu_p1 : AT(0x8F058) { build/asm/eu/prep_atmenu_p1.o(.text) }
+    .prep_atmenu_p2 : AT(0x8F058) { build/asm/eu/prep_atmenu_p2.o(.text) }
     . = 0x08000000 + 0x8F0EC;
     .AtMenu_LockGame : AT(0x8F0EC) { build/c/AtMenu_LockGame.o(.text.AtMenu_LockGame) }
     . = 0x08000000 + 0x8F104;
-    .prep_atmenu_p2 : AT(0x8F104) { build/asm/eu/prep_atmenu_p2.o(.text) }
+    .prep_atmenu_p3 : AT(0x8F104) { build/asm/eu/prep_atmenu_p3.o(.text) }
     . = 0x08000000 + 0x8F11C;
     .StartPrepAtMenu : AT(0x8F11C) { build/c/StartPrepAtMenu.o(.text.StartPrepAtMenu) }
     . = 0x08000000 + 0x8F130;
     .StartPrepAtMenuWithConfig : AT(0x8F130) { build/c/StartPrepAtMenuWithConfig.o(.text.StartPrepAtMenuWithConfig) }
     . = 0x08000000 + 0x8F14C;
-    .prep_atmenu_p3 : AT(0x8F14C) { build/asm/eu/prep_atmenu_p3.o(.text) }
+    .prep_atmenu_p4 : AT(0x8F14C) { build/asm/eu/prep_atmenu_p4.o(.text) }
     . = 0x08000000 + 0x8FA60;
     .sub_8090104 : AT(0x8FA60) { build/c/sub_8090104.o(.text.sub_8090104) }
     . = 0x08000000 + 0x8FA74;
-    .prep_atmenu_p4 : AT(0x8FA74) { build/asm/eu/prep_atmenu_p4.o(.text) }
+    .prep_atmenu_p5 : AT(0x8FA74) { build/asm/eu/prep_atmenu_p5.o(.text) }
     . = 0x08000000 + 0x8FAA4;
     .sub_8090148 : AT(0x8FAA4) { build/c/prepscreenfx.o(.text.sub_8090148) }
     . = 0x08000000 + 0x8FBA0;
@@ -8312,10 +8546,16 @@ SECTIONS
     .StartPrepScreenMenu : AT(0x900E8) { build/c/StartPrepScreenMenu.o(.text.StartPrepScreenMenu) }
     . = 0x08000000 + 0x9010C;
     .prep_menu_p1 : AT(0x9010C) { build/asm/eu/prep_menu_p1.o(.text) }
+    . = 0x08000000 + 0x90358;
+    .EndPrepScreenMenu : AT(0x90358) { build/c/EndPrepScreenMenu.o(.text.EndPrepScreenMenu) }
+    . = 0x08000000 + 0x9037C;
+    .prep_menu_p2 : AT(0x9037C) { build/asm/eu/prep_menu_p2.o(.text) }
+    . = 0x08000000 + 0x90404;
+    .sub_8090AA4 : AT(0x90404) { build/c/sub_8090AA4.o(.text.sub_8090AA4) }
     . = 0x08000000 + 0x90420;
     .sub_8090AC0 : AT(0x90420) { build/c/sub_8090AC0.o(.text.sub_8090AC0) }
     . = 0x08000000 + 0x9043C;
-    .prep_menu_p2 : AT(0x9043C) { build/asm/eu/prep_menu_p2.o(.text) }
+    .prep_menu_p3 : AT(0x9043C) { build/asm/eu/prep_menu_p3.o(.text) }
     . = 0x08000000 + 0x90458;
     .prep_menuscroll_p0 : AT(0x90458) { build/asm/eu/prep_menuscroll_p0.o(.text) }
     . = 0x08000000 + 0x906E0;
@@ -8333,7 +8573,11 @@ SECTIONS
     . = 0x08000000 + 0x90EF0;
     .fill_0226 : AT(0x90EF0) { build/gen/fill_0226.o(.text) }
     . = 0x08000000 + 0x90EF4;
-    .prep_utils : AT(0x90EF4) { build/asm/eu/prep_utils.o(.text) }
+    .prep_utils_p0 : AT(0x90EF4) { build/asm/eu/prep_utils_p0.o(.text) }
+    . = 0x08000000 + 0x91504;
+    .sub_8091B8C : AT(0x91504) { build/c/sub_8091B8C.o(.text.sub_8091B8C) }
+    . = 0x08000000 + 0x91524;
+    .prep_utils_p1 : AT(0x91524) { build/asm/eu/prep_utils_p1.o(.text) }
     . = 0x08000000 + 0x915A2;
     .fill_0227 : AT(0x915A2) { build/gen/fill_0227.o(.text) }
     . = 0x08000000 + 0x915DC;
@@ -8342,6 +8586,8 @@ SECTIONS
     .fill_0228 : AT(0x91610) { build/gen/fill_0228.o(.text) }
     . = 0x08000000 + 0x91688;
     .prep_itemscreen_p0 : AT(0x91688) { build/asm/eu/prep_itemscreen_p0.o(.text) }
+    . = 0x08000000 + 0x91B60;
+    .sub_80921FC : AT(0x91B60) { build/c/sub_80921FC.o(.text.sub_80921FC) }
     . = 0x08000000 + 0x91B80;
     .sub_809221C : AT(0x91B80) { build/c/sub_809221C.o(.text.sub_809221C) }
     . = 0x08000000 + 0x91BA0;
@@ -8377,11 +8623,17 @@ SECTIONS
     . = 0x08000000 + 0x95CBC;
     .prep_itemusemind : AT(0x95CBC) { build/asm/eu/prep_itemusemind.o(.text) }
     . = 0x08000000 + 0x95F00;
-    .prep_itemsupply_p0 : AT(0x95F00) { build/asm/eu/prep_itemsupply_p0.o(.text) }
+    .sub_80963FC : AT(0x95F00) { build/c/sub_80963FC.o(.text.sub_80963FC) }
+    . = 0x08000000 + 0x95F34;
+    .prep_itemsupply_p0 : AT(0x95F34) { build/asm/eu/prep_itemsupply_p0.o(.text) }
+    . = 0x08000000 + 0x95F78;
+    .StoreConvoyWeaponIconGraphics : AT(0x95F78) { build/c/StoreConvoyWeaponIconGraphics.o(.text.StoreConvoyWeaponIconGraphics) }
+    . = 0x08000000 + 0x95FB4;
+    .prep_itemsupply_p1 : AT(0x95FB4) { build/asm/eu/prep_itemsupply_p1.o(.text) }
     . = 0x08000000 + 0x96488;
     .sub_8096938 : AT(0x96488) { build/c/sub_8096938.o(.text.sub_8096938) }
     . = 0x08000000 + 0x964C0;
-    .prep_itemsupply_p1 : AT(0x964C0) { build/asm/eu/prep_itemsupply_p1.o(.text) }
+    .prep_itemsupply_p2 : AT(0x964C0) { build/asm/eu/prep_itemsupply_p2.o(.text) }
     . = 0x08000000 + 0x97674;
     .fill_0231 : AT(0x97674) { build/gen/fill_0231.o(.text) }
     . = 0x08000000 + 0x9785C;
@@ -8398,10 +8650,18 @@ SECTIONS
     .fill_0234 : AT(0x99692) { build/gen/fill_0234.o(.text) }
     . = 0x08000000 + 0x99740;
     .prep_8099D18_p0 : AT(0x99740) { build/asm/eu/prep_8099D18_p0.o(.text) }
+    . = 0x08000000 + 0x99BF8;
+    .sub_809A270 : AT(0x99BF8) { build/c/sub_809A270.o(.text.sub_809A270) }
+    . = 0x08000000 + 0x99C1C;
+    .prep_8099D18_p1 : AT(0x99C1C) { build/asm/eu/prep_8099D18_p1.o(.text) }
     . = 0x08000000 + 0x9AFE0;
     .sub_809B6D4 : AT(0x9AFE0) { build/c/sub_809B6D4.o(.text.sub_809B6D4) }
     . = 0x08000000 + 0x9B004;
-    .prep_8099D18_p1 : AT(0x9B004) { build/asm/eu/prep_8099D18_p1.o(.text) }
+    .prep_8099D18_p2 : AT(0x9B004) { build/asm/eu/prep_8099D18_p2.o(.text) }
+    . = 0x08000000 + 0x9B180;
+    .sub_809B874 : AT(0x9B180) { build/c/sub_809B874.o(.text.sub_809B874) }
+    . = 0x08000000 + 0x9B19C;
+    .prep_8099D18_p3 : AT(0x9B19C) { build/asm/eu/prep_8099D18_p3.o(.text) }
     . = 0x08000000 + 0x9B320;
     .fill_0235 : AT(0x9B320) { build/gen/fill_0235.o(.text) }
     . = 0x08000000 + 0x9B360;
@@ -8442,14 +8702,22 @@ SECTIONS
     .GetSaveReadAddr : AT(0x9EC64) { build/c/save_core.o(.text.GetSaveReadAddr) }
     . = 0x08000000 + 0x9EC80;
     .save_p0 : AT(0x9EC80) { build/asm/eu/save_p0.o(.text) }
+    . = 0x08000000 + 0x9ED28;
+    .sub_809F3EC : AT(0x9ED28) { build/c/sub_809F3EC.o(.text.sub_809F3EC) }
+    . = 0x08000000 + 0x9ED48;
+    .save_p1 : AT(0x9ED48) { build/asm/eu/save_p1.o(.text) }
     . = 0x08000000 + 0x9F3D4;
     .sub_809FAC0 : AT(0x9F3D4) { build/c/sub_809FAC0.o(.text.sub_809FAC0) }
     . = 0x08000000 + 0x9F3F0;
-    .save_p1 : AT(0x9F3F0) { build/asm/eu/save_p1.o(.text) }
+    .save_p2 : AT(0x9F3F0) { build/asm/eu/save_p2.o(.text) }
+    . = 0x08000000 + 0xA2CD8;
+    .sub_80A35BC : AT(0xA2CD8) { build/c/sub_80A35BC.o(.text.sub_80A35BC) }
+    . = 0x08000000 + 0xA2CF0;
+    .save_p3 : AT(0xA2CF0) { build/asm/eu/save_p3.o(.text) }
     . = 0x08000000 + 0xA3614;
     .sub_80A3EF8 : AT(0xA3614) { build/c/sub_80A3EF8.o(.text.sub_80A3EF8) }
     . = 0x08000000 + 0xA3628;
-    .save_p2 : AT(0xA3628) { build/asm/eu/save_p2.o(.text) }
+    .save_p4 : AT(0xA3628) { build/asm/eu/save_p4.o(.text) }
     . = 0x08000000 + 0xA3664;
     .SaveMenuOnHBlank : AT(0xA3664) { build/c/savemenu.o(.text.SaveMenuOnHBlank) }
     . = 0x08000000 + 0xA36E4;
@@ -8465,7 +8733,11 @@ SECTIONS
     . = 0x08000000 + 0xA3808;
     .fill_0242 : AT(0xA3808) { build/gen/fill_0242.o(.text) }
     . = 0x08000000 + 0xA3970;
-    .savemenu : AT(0xA3970) { build/asm/eu/savemenu.o(.text) }
+    .savemenu_p0 : AT(0xA3970) { build/asm/eu/savemenu_p0.o(.text) }
+    . = 0x08000000 + 0xA520C;
+    .sub_80A5B0C : AT(0xA520C) { build/c/sub_80A5B0C.o(.text.sub_80A5B0C) }
+    . = 0x08000000 + 0xA5220;
+    .savemenu_p1 : AT(0xA5220) { build/asm/eu/savemenu_p1.o(.text) }
     . = 0x08000000 + 0xA5258;
     .sub_80A5B44 : AT(0xA5258) { build/c/savedraw.o(.text.sub_80A5B44) }
     . = 0x08000000 + 0xA5374;
@@ -8580,6 +8852,8 @@ SECTIONS
     .fill_0257 : AT(0xA8F9C) { build/gen/fill_0257.o(.text) }
     . = 0x08000000 + 0xA902C;
     .spinning_arrow : AT(0xA902C) { build/asm/eu/spinning_arrow.o(.text) }
+    . = 0x08000000 + 0xA92F4;
+    .sub_80A9CE4 : AT(0xA92F4) { build/c/sub_80A9CE4.o(.text.sub_80A9CE4) }
     . = 0x08000000 + 0xA9308;
     .ParallelFiniteLoop_Init : AT(0xA9308) { build/c/sysutil.o(.text.ParallelFiniteLoop_Init) }
     . = 0x08000000 + 0xA9310;
@@ -8701,7 +8975,15 @@ SECTIONS
     . = 0x08000000 + 0xAAFD8;
     .fill_0274 : AT(0xAAFD8) { build/gen/fill_0274.o(.text) }
     . = 0x08000000 + 0xAB100;
-    .code_080AB6FC : AT(0xAB100) { build/asm/eu/code_080AB6FC.o(.text) }
+    .code_080AB6FC_p0 : AT(0xAB100) { build/asm/eu/code_080AB6FC_p0.o(.text) }
+    . = 0x08000000 + 0xAD02C;
+    .sub_80AD968 : AT(0xAD02C) { build/c/sub_80AD968.o(.text.sub_80AD968) }
+    . = 0x08000000 + 0xAD040;
+    .code_080AB6FC_p1 : AT(0xAD040) { build/asm/eu/code_080AB6FC_p1.o(.text) }
+    . = 0x08000000 + 0xAD094;
+    .sub_80AD9D0 : AT(0xAD094) { build/c/sub_80AD9D0.o(.text.sub_80AD9D0) }
+    . = 0x08000000 + 0xAD100;
+    .code_080AB6FC_p2 : AT(0xAD100) { build/asm/eu/code_080AB6FC_p2.o(.text) }
     . = 0x08000000 + 0xAF5E0;
     .sub_80AFC3C : AT(0xAF5E0) { build/c/lord-select.o(.text.sub_80AFC3C) }
     . = 0x08000000 + 0xAF668;
@@ -8714,30 +8996,44 @@ SECTIONS
     .fill_0276 : AT(0xAF780) { build/gen/fill_0276.o(.text) }
     . = 0x08000000 + 0xAFD2C;
     .code_080AFE38_p0 : AT(0xAFD2C) { build/asm/eu/code_080AFE38_p0.o(.text) }
+    . = 0x08000000 + 0xB5A44;
+    .sub_80B5D98 : AT(0xB5A44) { build/c/sub_80B5D98.o(.text.sub_80B5D98) }
+    . = 0x08000000 + 0xB5A68;
+    .code_080AFE38_p1 : AT(0xB5A68) { build/asm/eu/code_080AFE38_p1.o(.text) }
+    . = 0x08000000 + 0xB6054;
+    .sub_80B63AC : AT(0xB6054) { build/c/sub_80B63AC.o(.text.sub_80B63AC) }
     . = 0x08000000 + 0xB6084;
     .sub_80B63DC : AT(0xB6084) { build/c/sub_80B63DC.o(.text.sub_80B63DC) }
     . = 0x08000000 + 0xB60AC;
-    .code_080AFE38_p1 : AT(0xB60AC) { build/asm/eu/code_080AFE38_p1.o(.text) }
+    .code_080AFE38_p2 : AT(0xB60AC) { build/asm/eu/code_080AFE38_p2.o(.text) }
     . = 0x08000000 + 0xB60EC;
     .sub_80B6444 : AT(0xB60EC) { build/c/sub_80B6444.o(.text.sub_80B6444) }
     . = 0x08000000 + 0xB60F8;
-    .code_080AFE38_p2 : AT(0xB60F8) { build/asm/eu/code_080AFE38_p2.o(.text) }
+    .code_080AFE38_p3 : AT(0xB60F8) { build/asm/eu/code_080AFE38_p3.o(.text) }
+    . = 0x08000000 + 0xB6630;
+    .sub_80B698C : AT(0xB6630) { build/c/sub_80B698C.o(.text.sub_80B698C) }
+    . = 0x08000000 + 0xB6644;
+    .code_080AFE38_p4 : AT(0xB6644) { build/asm/eu/code_080AFE38_p4.o(.text) }
     . = 0x08000000 + 0xB8A68;
     .sub_80B8BF8 : AT(0xB8A68) { build/c/sub_80B8BF8.o(.text.sub_80B8BF8) }
     . = 0x08000000 + 0xB8A84;
-    .code_080AFE38_p3 : AT(0xB8A84) { build/asm/eu/code_080AFE38_p3.o(.text) }
+    .code_080AFE38_p5 : AT(0xB8A84) { build/asm/eu/code_080AFE38_p5.o(.text) }
     . = 0x08000000 + 0xB8D3C;
     .sub_80B8D8C : AT(0xB8D3C) { build/c/sub_80B8D8C.o(.text.sub_80B8D8C) }
     . = 0x08000000 + 0xB8DAC;
-    .code_080AFE38_p4 : AT(0xB8DAC) { build/asm/eu/code_080AFE38_p4.o(.text) }
+    .code_080AFE38_p6 : AT(0xB8DAC) { build/asm/eu/code_080AFE38_p6.o(.text) }
+    . = 0x08000000 + 0xB91F4;
+    .sub_80B9244 : AT(0xB91F4) { build/c/sub_80B9244.o(.text.sub_80B9244) }
+    . = 0x08000000 + 0xB9200;
+    .code_080AFE38_p7 : AT(0xB9200) { build/asm/eu/code_080AFE38_p7.o(.text) }
     . = 0x08000000 + 0xBAA60;
     .sub_80BAA80 : AT(0xBAA60) { build/c/sub_80BAA80.o(.text.sub_80BAA80) }
     . = 0x08000000 + 0xBAA6C;
-    .code_080AFE38_p5 : AT(0xBAA6C) { build/asm/eu/code_080AFE38_p5.o(.text) }
+    .code_080AFE38_p8 : AT(0xBAA6C) { build/asm/eu/code_080AFE38_p8.o(.text) }
     . = 0x08000000 + 0xBAE40;
     .sub_80BAE58 : AT(0xBAE40) { build/c/sub_80BAE58.o(.text.sub_80BAE58) }
     . = 0x08000000 + 0xBAE54;
-    .code_080AFE38_p6 : AT(0xBAE54) { build/asm/eu/code_080AFE38_p6.o(.text) }
+    .code_080AFE38_p9 : AT(0xBAE54) { build/asm/eu/code_080AFE38_p9.o(.text) }
     . = 0x08000000 + 0xBAE90;
     .fill_0277 : AT(0xBAE90) { build/gen/fill_0277.o(.text) }
     . = 0x08000000 + 0xBAEC0;
@@ -8778,32 +9074,48 @@ SECTIONS
     .fill_0284 : AT(0xBC020) { build/gen/fill_0284.o(.text) }
     . = 0x08000000 + 0xBC024;
     .opanim_p0 : AT(0xBC024) { build/asm/eu/opanim_p0.o(.text) }
+    . = 0x08000000 + 0xBC728;
+    .sub_80BC5B0 : AT(0xBC728) { build/c/sub_80BC5B0.o(.text.sub_80BC5B0) }
+    . = 0x08000000 + 0xBC73C;
+    .opanim_p1 : AT(0xBC73C) { build/asm/eu/opanim_p1.o(.text) }
+    . = 0x08000000 + 0xBC9C4;
+    .sub_80BC848 : AT(0xBC9C4) { build/c/sub_80BC848.o(.text.sub_80BC848) }
+    . = 0x08000000 + 0xBC9D4;
+    .opanim_p2 : AT(0xBC9D4) { build/asm/eu/opanim_p2.o(.text) }
+    . = 0x08000000 + 0xBCA00;
+    .sub_80BC884 : AT(0xBCA00) { build/c/sub_80BC884.o(.text.sub_80BC884) }
+    . = 0x08000000 + 0xBCA34;
+    .opanim_p3 : AT(0xBCA34) { build/asm/eu/opanim_p3.o(.text) }
     . = 0x08000000 + 0xBCC28;
     .sub_80BCAAC : AT(0xBCC28) { build/c/sub_80BCAAC.o(.text.sub_80BCAAC) }
     . = 0x08000000 + 0xBCC48;
-    .opanim_p1 : AT(0xBCC48) { build/asm/eu/opanim_p1.o(.text) }
+    .opanim_p4 : AT(0xBCC48) { build/asm/eu/opanim_p4.o(.text) }
     . = 0x08000000 + 0xBD16C;
     .sub_80BCFD8 : AT(0xBD16C) { build/c/sub_80BCFD8.o(.text.sub_80BCFD8) }
     . = 0x08000000 + 0xBD180;
-    .opanim_p2 : AT(0xBD180) { build/asm/eu/opanim_p2.o(.text) }
+    .opanim_p5 : AT(0xBD180) { build/asm/eu/opanim_p5.o(.text) }
     . = 0x08000000 + 0xBD54C;
     .sub_800A3B8 : AT(0xBD54C) { build/c/talk.o(.text.sub_800A3B8) }
     . = 0x08000000 + 0xBD55C;
-    .opanim_p3 : AT(0xBD55C) { build/asm/eu/opanim_p3.o(.text) }
+    .opanim_p6 : AT(0xBD55C) { build/asm/eu/opanim_p6.o(.text) }
     . = 0x08000000 + 0xBD6C4;
     .sub_80BD534 : AT(0xBD6C4) { build/c/sub_80BD534.o(.text.sub_80BD534) }
     . = 0x08000000 + 0xBD6DC;
-    .opanim_p4 : AT(0xBD6DC) { build/asm/eu/opanim_p4.o(.text) }
+    .opanim_p7 : AT(0xBD6DC) { build/asm/eu/opanim_p7.o(.text) }
     . = 0x08000000 + 0xBD9E4;
     .sub_80BD83C : AT(0xBD9E4) { build/c/sub_80BD83C.o(.text.sub_80BD83C) }
     . = 0x08000000 + 0xBD9F8;
-    .opanim_p5 : AT(0xBD9F8) { build/asm/eu/opanim_p5.o(.text) }
+    .opanim_p8 : AT(0xBD9F8) { build/asm/eu/opanim_p8.o(.text) }
     . = 0x08000000 + 0xBE41C;
     .fill_0285 : AT(0xBE41C) { build/gen/fill_0285.o(.text) }
     . = 0x08000000 + 0xBE420;
     .m4a_1 : AT(0xBE420) { build/asm/eu/m4a_1.o(.text) }
     . = 0x08000000 + 0xBF038;
-    .m4a : AT(0xBF038) { build/asm/eu/m4a.o(.text) }
+    .m4a_p0 : AT(0xBF038) { build/asm/eu/m4a_p0.o(.text) }
+    . = 0x08000000 + 0xC058C;
+    .ply_xiecv : AT(0xC058C) { build/c/ply_xiecv.o(.text.ply_xiecv) }
+    . = 0x08000000 + 0xC0598;
+    .m4a_p1 : AT(0xC0598) { build/asm/eu/m4a_p1.o(.text) }
     . = 0x08000000 + 0xC05CC;
     .fill_0286 : AT(0xC05CC) { build/gen/fill_0286.o(.text) }
     . = 0x08000000 + 0xC05E4;
