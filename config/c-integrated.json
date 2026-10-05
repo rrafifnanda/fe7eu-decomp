@@ -1242,6 +1242,12 @@
   "addr": 134260448
  },
  {
+  "name": "sub_800ADAC",
+  "file": "sub_800ADAC.c",
+  "size": 20,
+  "addr": 134262616
+ },
+ {
   "name": "EvtCmd_Sleep",
   "file": "eventscr.c",
   "size": 52,
@@ -1720,6 +1726,12 @@
   "file": "sub_8013658.c",
   "size": 48,
   "addr": 134296536
+ },
+ {
+  "name": "StartPalFadeToWhite",
+  "file": "StartPalFadeToWhite.c",
+  "size": 28,
+  "addr": 134299012
  },
  {
   "name": "StartFastLockingFadeToBlack",
@@ -2334,6 +2346,12 @@
   "addr": 134340548
  },
  {
+  "name": "sub_801EA54",
+  "file": "sub_801EA54.c",
+  "size": 24,
+  "addr": 134343428
+ },
+ {
   "name": "ChapterIntro_Bg3Scroll_Loop",
   "file": "bmfx-chapterintrofx.c",
   "size": 28,
@@ -2520,6 +2538,12 @@
   "addr": 134350980
  },
  {
+  "name": "sub_8021064",
+  "file": "sub_8021064.c",
+  "size": 24,
+  "addr": 134353076
+ },
+ {
   "name": "sub_80215D0",
   "file": "sub_80215D0.c",
   "size": 16,
@@ -2562,6 +2586,12 @@
   "addr": 134355372
  },
  {
+  "name": "sub_80221A0",
+  "file": "sub_80221A0.c",
+  "size": 28,
+  "addr": 134357484
+ },
+ {
   "name": "sub_802281C",
   "file": "sub_802281C.c",
   "size": 12,
@@ -2590,6 +2620,12 @@
   "file": "faction.c",
   "size": 24,
   "addr": 134364596
+ },
+ {
+  "name": "sub_802516C",
+  "file": "sub_802516C.c",
+  "size": 24,
+  "addr": 134369764
  },
  {
   "name": "GetUnitSupporterCount",
@@ -3144,16 +3180,58 @@
   "addr": 134393668
  },
  {
+  "name": "sub_802BD44",
+  "file": "sub_802BD44.c",
+  "size": 20,
+  "addr": 134397520
+ },
+ {
   "name": "sub_802C300",
   "file": "sub_802C300.c",
   "size": 96,
   "addr": 134399000
  },
  {
+  "name": "sub_802C664",
+  "file": "sub_802C664.c",
+  "size": 28,
+  "addr": 134399880
+ },
+ {
+  "name": "sub_802CEB8",
+  "file": "sub_802CEB8.c",
+  "size": 108,
+  "addr": 134402016
+ },
+ {
+  "name": "sub_802D388",
+  "file": "sub_802D388.c",
+  "size": 68,
+  "addr": 134403244
+ },
+ {
+  "name": "InitMoreBMapGraphics",
+  "file": "InitMoreBMapGraphics.c",
+  "size": 48,
+  "addr": 134408468
+ },
+ {
+  "name": "sub_802FF60",
+  "file": "sub_802FF60.c",
+  "size": 32,
+  "addr": 134414468
+ },
+ {
   "name": "sub_80312E8",
   "file": "sub_80312E8.c",
   "size": 48,
   "addr": 134419484
+ },
+ {
+  "name": "sub_8033134",
+  "file": "sub_8033134.c",
+  "size": 20,
+  "addr": 134427208
  },
  {
   "name": "sub_800A3A4",
@@ -3210,10 +3288,34 @@
   "addr": 134500760
  },
  {
+  "name": "sub_8047354",
+  "file": "sub_8047354.c",
+  "size": 32,
+  "addr": 134506456
+ },
+ {
+  "name": "sub_8049A44",
+  "file": "sub_8049A44.c",
+  "size": 36,
+  "addr": 134516688
+ },
+ {
   "name": "UnpackUiWindowFrameGraphics2",
   "file": "ui.c",
   "size": 84,
   "addr": 134518944
+ },
+ {
+  "name": "sub_804B1C0",
+  "file": "sub_804B1C0.c",
+  "size": 80,
+  "addr": 134522712
+ },
+ {
+  "name": "EkrBattleExecPopup",
+  "file": "EkrBattleExecPopup.c",
+  "size": 24,
+  "addr": 134528404
  },
  {
   "name": "sub_8050F48",
@@ -4548,6 +4650,12 @@
   "addr": 134768636
  },
  {
+  "name": "StartChapterStatusHelpBox",
+  "file": "StartChapterStatusHelpBox.c",
+  "size": 36,
+  "addr": 134769112
+ },
+ {
   "name": "PrepOptionCountToRealIndexByMask",
   "file": "prepscreen.c",
   "size": 48,
@@ -4692,6 +4800,18 @@
   "addr": 134802276
  },
  {
+  "name": "AtMenu_StartSubmenu",
+  "file": "AtMenu_StartSubmenu.c",
+  "size": 148,
+  "addr": 134803396
+ },
+ {
+  "name": "StartPrepAtMenuWithConfig",
+  "file": "StartPrepAtMenuWithConfig.c",
+  "size": 28,
+  "addr": 134803760
+ },
+ {
   "name": "sub_8090148",
   "file": "prepscreenfx.c",
   "size": 252,
@@ -4716,6 +4836,18 @@
   "addr": 134806760
  },
  {
+  "name": "StartPrepScreenMenu",
+  "file": "StartPrepScreenMenu.c",
+  "size": 36,
+  "addr": 134807784
+ },
+ {
+  "name": "sub_8090AC0",
+  "file": "sub_8090AC0.c",
+  "size": 28,
+  "addr": 134808608
+ },
+ {
   "name": "sub_8090E80",
   "file": "prep_bgscroll.c",
   "size": 64,
@@ -4738,6 +4870,12 @@
   "file": "sub_809221C.c",
   "size": 32,
   "addr": 134814592
+ },
+ {
+  "name": "sub_80922DC",
+  "file": "sub_80922DC.c",
+  "size": 52,
+  "addr": 134814784
  },
  {
   "name": "PrepUnit_InitSMS",
@@ -4824,6 +4962,12 @@
   "addr": 134869972
  },
  {
+  "name": "sub_80A3EF8",
+  "file": "sub_80A3EF8.c",
+  "size": 20,
+  "addr": 134886932
+ },
+ {
   "name": "SaveMenuOnHBlank",
   "file": "savemenu.c",
   "size": 128,
@@ -4876,6 +5020,12 @@
   "file": "savedrawfx.c",
   "size": 80,
   "addr": 134897928
+ },
+ {
+  "name": "sub_80A7028",
+  "file": "sub_80A7028.c",
+  "size": 28,
+  "addr": 134899684
  },
  {
   "name": "TactInfo_CloseHelpbox",
@@ -5334,10 +5484,22 @@
   "addr": 134936400
  },
  {
+  "name": "sub_80B63DC",
+  "file": "sub_80B63DC.c",
+  "size": 40,
+  "addr": 134963332
+ },
+ {
   "name": "sub_80BAA80",
   "file": "sub_80BAA80.c",
   "size": 12,
   "addr": 134982240
+ },
+ {
+  "name": "sub_80BAE58",
+  "file": "sub_80BAE58.c",
+  "size": 20,
+  "addr": 134983232
  },
  {
   "name": "HBlank_TitleScreen",
