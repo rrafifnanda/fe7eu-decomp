@@ -3120,6 +3120,12 @@
   "addr": 134393668
  },
  {
+  "name": "sub_802C300",
+  "file": "sub_802C300.c",
+  "size": 96,
+  "addr": 134399000
+ },
+ {
   "name": "sub_800A3A4",
   "file": "talk.c",
   "size": 8,
@@ -3150,10 +3156,22 @@
   "addr": 134448776
  },
  {
+  "name": "sub_803EB44",
+  "file": "sub_803EB44.c",
+  "size": 100,
+  "addr": 134475260
+ },
+ {
   "name": "sub_80419C8",
   "file": "sub_80419C8.c",
   "size": 12,
   "addr": 134486960
+ },
+ {
+  "name": "sub_8045D2C",
+  "file": "sub_8045D2C.c",
+  "size": 24,
+  "addr": 134500760
  },
  {
   "name": "UnpackUiWindowFrameGraphics2",
@@ -3196,6 +3214,12 @@
   "file": "banim-mainutils.c",
   "size": 44,
   "addr": 134561528
+ },
+ {
+  "name": "sub_8056024",
+  "file": "sub_8056024.c",
+  "size": 20,
+  "addr": 134567876
  },
  {
   "name": "EfxDrsmmoya_Loop",
@@ -3576,6 +3600,24 @@
   "addr": 134641560
  },
  {
+  "name": "EfxPlayHittedSFX",
+  "file": "EfxPlayHittedSFX.c",
+  "size": 100,
+  "addr": 134643168
+ },
+ {
+  "name": "PlaySFX",
+  "file": "PlaySFX.c",
+  "size": 28,
+  "addr": 134644420
+ },
+ {
+  "name": "sub_807B4C0",
+  "file": "sub_807B4C0.c",
+  "size": 40,
+  "addr": 134720480
+ },
+ {
   "name": "EventQuakefx_Init",
   "file": "eventcall_quakefx.c",
   "size": 8,
@@ -3858,10 +3900,22 @@
   "addr": 134727352
  },
  {
+  "name": "sub_807D59C",
+  "file": "sub_807D59C.c",
+  "size": 20,
+  "addr": 134728144
+ },
+ {
   "name": "sub_807DA64",
   "file": "sub_807DA64.c",
   "size": 16,
   "addr": 134729484
+ },
+ {
+  "name": "sub_807F16C",
+  "file": "sub_807F16C.c",
+  "size": 44,
+  "addr": 134734560
  },
  {
   "name": "EventDragonsSpritefx_Init",
@@ -4644,6 +4698,18 @@
   "addr": 134813148
  },
  {
+  "name": "sub_809221C",
+  "file": "sub_809221C.c",
+  "size": 32,
+  "addr": 134814592
+ },
+ {
+  "name": "PrepItemUse_ResetBgmAfterPromo",
+  "file": "PrepItemUse_ResetBgmAfterPromo.c",
+  "size": 28,
+  "addr": 134830980
+ },
+ {
   "name": "SramInit",
   "file": "save_core.c",
   "size": 116,
@@ -4702,6 +4768,12 @@
   "file": "save_core.c",
   "size": 28,
   "addr": 134868068
+ },
+ {
+  "name": "sub_809FAC0",
+  "file": "sub_809FAC0.c",
+  "size": 28,
+  "addr": 134869972
  },
  {
   "name": "SaveMenuOnHBlank",
