@@ -1,3 +1,5 @@
+refs/fe7j/src/RegisterEfxSoundSeExist.c
+refs/fe7j/src/StartFastLockingFadeToBlack.c
 refs/fe7j/src/anime.c
 refs/fe7j/src/banim-efxdrsmmoya.c
 refs/fe7j/src/banim-ekrdragon.c
@@ -61,6 +63,16 @@ refs/fe7j/src/statscreen-helpbox.c
 refs/fe7j/src/statscreen-util.c
 refs/fe7j/src/statscreen.c
 refs/fe7j/src/statscreenfx.c
+refs/fe7j/src/sub_8005E50.c
+refs/fe7j/src/sub_80215D0.c
+refs/fe7j/src/sub_802281C.c
+refs/fe7j/src/sub_8038024.c
+refs/fe7j/src/sub_8038238.c
+refs/fe7j/src/sub_80384C0.c
+refs/fe7j/src/sub_80419C8.c
+refs/fe7j/src/sub_8050F48.c
+refs/fe7j/src/sub_807DA64.c
+refs/fe7j/src/sub_80BAA80.c
 refs/fe7j/src/support.c
 refs/fe7j/src/sysutil.c
 refs/fe7j/src/talk-advance.c

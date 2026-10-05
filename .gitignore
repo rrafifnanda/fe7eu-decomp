@@ -25,3 +25,4 @@ __pycache__/
 
 # Reference repositories (FE7J, FE8U, ...)
 /refs/
+src-auto/

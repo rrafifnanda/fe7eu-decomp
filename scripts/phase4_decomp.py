@@ -211,6 +211,7 @@ def main():
     ap.add_argument("cmd", choices=["inventory", "one", "batch"])
     ap.add_argument("name", nargs="?")
     ap.add_argument("--limit", type=int, default=200)
+    ap.add_argument("--offset", type=int, default=0)
     ap.add_argument("--min-score", type=float, default=0.9)
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--max-size", type=int, default=0x400)
@@ -231,7 +232,7 @@ def main():
 
     # batch
     todo = [c for c in cands if c["score"] >= args.min_score
-            and c["size"] <= args.max_size][:args.limit]
+            and c["size"] <= args.max_size][args.offset:args.offset + args.limit]
     print(f"[*] batch: {len(todo)} functions "
           f"(score>={args.min_score}, size<={args.max_size:#x})")
     results = []

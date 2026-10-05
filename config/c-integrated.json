@@ -708,6 +708,12 @@
   "addr": 134237908
  },
  {
+  "name": "sub_8005E50",
+  "file": "sub_8005E50.c",
+  "size": 16,
+  "addr": 134242296
+ },
+ {
   "name": "AnimCreate_unused",
   "file": "anime.c",
   "size": 96,
@@ -1704,6 +1710,12 @@
   "addr": 134295208
  },
  {
+  "name": "StartFastLockingFadeToBlack",
+  "file": "StartFastLockingFadeToBlack.c",
+  "size": 12,
+  "addr": 134300276
+ },
+ {
   "name": "BmMain_ChangePhase",
   "file": "bm.c",
   "size": 40,
@@ -2484,6 +2496,12 @@
   "addr": 134350208
  },
  {
+  "name": "sub_80215D0",
+  "file": "sub_80215D0.c",
+  "size": 16,
+  "addr": 134354460
+ },
+ {
   "name": "SwingSwordfx_Init",
   "file": "bmfx-swingsword.c",
   "size": 56,
@@ -2518,6 +2536,12 @@
   "file": "bmfx-niniantransform.c",
   "size": 76,
   "addr": 134355372
+ },
+ {
+  "name": "sub_802281C",
+  "file": "sub_802281C.c",
+  "size": 12,
+  "addr": 134359160
  },
  {
   "name": "CountFactionMoveableUnits",
@@ -3108,10 +3132,40 @@
   "addr": 134428508
  },
  {
+  "name": "sub_8038024",
+  "file": "sub_8038024.c",
+  "size": 8,
+  "addr": 134447596
+ },
+ {
+  "name": "sub_8038238",
+  "file": "sub_8038238.c",
+  "size": 8,
+  "addr": 134448128
+ },
+ {
+  "name": "sub_80384C0",
+  "file": "sub_80384C0.c",
+  "size": 8,
+  "addr": 134448776
+ },
+ {
+  "name": "sub_80419C8",
+  "file": "sub_80419C8.c",
+  "size": 12,
+  "addr": 134486960
+ },
+ {
   "name": "UnpackUiWindowFrameGraphics2",
   "file": "ui.c",
   "size": 84,
   "addr": 134518944
+ },
+ {
+  "name": "sub_8050F48",
+  "file": "sub_8050F48.c",
+  "size": 12,
+  "addr": 134546996
  },
  {
   "name": "BattleAIS_ExecCommands",
@@ -3516,6 +3570,12 @@
   "addr": 134638036
  },
  {
+  "name": "RegisterEfxSoundSeExist",
+  "file": "RegisterEfxSoundSeExist.c",
+  "size": 12,
+  "addr": 134641560
+ },
+ {
   "name": "EventQuakefx_Init",
   "file": "eventcall_quakefx.c",
   "size": 8,
@@ -3796,6 +3856,12 @@
   "file": "eventcall_icecrystal.c",
   "size": 144,
   "addr": 134727352
+ },
+ {
+  "name": "sub_807DA64",
+  "file": "sub_807DA64.c",
+  "size": 16,
+  "addr": 134729484
  },
  {
   "name": "EventDragonsSpritefx_Init",
@@ -5146,6 +5212,12 @@
   "file": "lord-select.c",
   "size": 48,
   "addr": 134936400
+ },
+ {
+  "name": "sub_80BAA80",
+  "file": "sub_80BAA80.c",
+  "size": 12,
+  "addr": 134982240
  },
  {
   "name": "HBlank_TitleScreen",
