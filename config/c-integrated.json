@@ -714,6 +714,12 @@
   "addr": 134242296
  },
  {
+  "name": "PutNumber",
+  "file": "PutNumber.c",
+  "size": 12,
+  "addr": 134242832
+ },
+ {
   "name": "AnimCreate_unused",
   "file": "anime.c",
   "size": 96,
@@ -1242,6 +1248,12 @@
   "addr": 134260448
  },
  {
+  "name": "Event_FadeOutOfBackgroundTalk",
+  "file": "Event_FadeOutOfBackgroundTalk.c",
+  "size": 20,
+  "addr": 134262576
+ },
+ {
   "name": "sub_800ADAC",
   "file": "sub_800ADAC.c",
   "size": 20,
@@ -1324,6 +1336,12 @@
   "file": "EventClearTalkDisplayed.c",
   "size": 76,
   "addr": 134278676
+ },
+ {
+  "name": "sub_800ECEC",
+  "file": "sub_800ECEC.c",
+  "size": 36,
+  "addr": 134279036
  },
  {
   "name": "EventSnowStormfx_Init",
@@ -1738,6 +1756,12 @@
   "file": "StartFastLockingFadeToBlack.c",
   "size": 12,
   "addr": 134300276
+ },
+ {
+  "name": "sub_80148D4",
+  "file": "sub_80148D4.c",
+  "size": 16,
+  "addr": 134301268
  },
  {
   "name": "BmMain_ChangePhase",
@@ -2340,6 +2364,18 @@
   "addr": 134320528
  },
  {
+  "name": "sub_8019428",
+  "file": "sub_8019428.c",
+  "size": 44,
+  "addr": 134321260
+ },
+ {
+  "name": "sub_801D374",
+  "file": "sub_801D374.c",
+  "size": 40,
+  "addr": 134337440
+ },
+ {
   "name": "sub_801DF38",
   "file": "sub_801DF38.c",
   "size": 48,
@@ -2350,6 +2386,12 @@
   "file": "sub_801EA54.c",
   "size": 24,
   "addr": 134343428
+ },
+ {
+  "name": "sub_801ED30",
+  "file": "sub_801ED30.c",
+  "size": 32,
+  "addr": 134344160
  },
  {
   "name": "ChapterIntro_Bg3Scroll_Loop",
@@ -2584,6 +2626,18 @@
   "file": "bmfx-niniantransform.c",
   "size": 76,
   "addr": 134355372
+ },
+ {
+  "name": "sub_8021B8C",
+  "file": "sub_8021B8C.c",
+  "size": 36,
+  "addr": 134355928
+ },
+ {
+  "name": "sub_8021D58",
+  "file": "sub_8021D58.c",
+  "size": 32,
+  "addr": 134356140
  },
  {
   "name": "sub_80221A0",
@@ -3180,6 +3234,12 @@
   "addr": 134393668
  },
  {
+  "name": "sub_802BC98",
+  "file": "sub_802BC98.c",
+  "size": 20,
+  "addr": 134397348
+ },
+ {
   "name": "sub_802BD44",
   "file": "sub_802BD44.c",
   "size": 20,
@@ -3196,6 +3256,18 @@
   "file": "sub_802C664.c",
   "size": 28,
   "addr": 134399880
+ },
+ {
+  "name": "sub_802C680",
+  "file": "sub_802C680.c",
+  "size": 12,
+  "addr": 134399908
+ },
+ {
+  "name": "sub_802CE54",
+  "file": "sub_802CE54.c",
+  "size": 100,
+  "addr": 134401916
  },
  {
   "name": "sub_802CEB8",
@@ -3216,6 +3288,24 @@
   "addr": 134408468
  },
  {
+  "name": "sub_802F5A0",
+  "file": "sub_802F5A0.c",
+  "size": 12,
+  "addr": 134411968
+ },
+ {
+  "name": "sub_802FD04",
+  "file": "sub_802FD04.c",
+  "size": 36,
+  "addr": 134413856
+ },
+ {
+  "name": "sub_802FF34",
+  "file": "sub_802FF34.c",
+  "size": 44,
+  "addr": 134414424
+ },
+ {
   "name": "sub_802FF60",
   "file": "sub_802FF60.c",
   "size": 32,
@@ -3228,6 +3318,18 @@
   "addr": 134419484
  },
  {
+  "name": "sub_80313A0",
+  "file": "sub_80313A0.c",
+  "size": 24,
+  "addr": 134419668
+ },
+ {
+  "name": "sub_803255C",
+  "file": "sub_803255C.c",
+  "size": 56,
+  "addr": 134424136
+ },
+ {
   "name": "sub_8033134",
   "file": "sub_8033134.c",
   "size": 20,
@@ -3238,6 +3340,12 @@
   "file": "talk.c",
   "size": 8,
   "addr": 134427240
+ },
+ {
+  "name": "FinishDamageDisplay",
+  "file": "FinishDamageDisplay.c",
+  "size": 44,
+  "addr": 134428028
  },
  {
   "name": "UnitTornOut_Init",
@@ -3270,6 +3378,12 @@
   "addr": 134464900
  },
  {
+  "name": "sub_803C3B4",
+  "file": "sub_803C3B4.c",
+  "size": 48,
+  "addr": 134464996
+ },
+ {
   "name": "sub_803EB44",
   "file": "sub_803EB44.c",
   "size": 100,
@@ -3288,10 +3402,22 @@
   "addr": 134500760
  },
  {
+  "name": "sub_8046424",
+  "file": "sub_8046424.c",
+  "size": 28,
+  "addr": 134502544
+ },
+ {
   "name": "sub_8047354",
   "file": "sub_8047354.c",
   "size": 32,
   "addr": 134506456
+ },
+ {
+  "name": "sub_8048300",
+  "file": "sub_8048300.c",
+  "size": 32,
+  "addr": 134510472
  },
  {
   "name": "sub_8049A44",
@@ -3312,16 +3438,64 @@
   "addr": 134522712
  },
  {
+  "name": "sub_804BED8",
+  "file": "sub_804BED8.c",
+  "size": 52,
+  "addr": 134526084
+ },
+ {
+  "name": "sub_804BF0C",
+  "file": "sub_804BF0C.c",
+  "size": 40,
+  "addr": 134526136
+ },
+ {
   "name": "EkrBattleExecPopup",
   "file": "EkrBattleExecPopup.c",
   "size": 24,
   "addr": 134528404
  },
  {
+  "name": "EndEkrGauge",
+  "file": "EndEkrGauge.c",
+  "size": 20,
+  "addr": 134529752
+ },
+ {
+  "name": "sub_804E9A8",
+  "file": "sub_804E9A8.c",
+  "size": 40,
+  "addr": 134537352
+ },
+ {
+  "name": "EfxFlashRestorePalSync",
+  "file": "EfxFlashRestorePalSync.c",
+  "size": 20,
+  "addr": 134541208
+ },
+ {
+  "name": "EndProcEfxWeaponIcon",
+  "file": "EndProcEfxWeaponIcon.c",
+  "size": 28,
+  "addr": 134543696
+ },
+ {
+  "name": "SpellFx_Begin",
+  "file": "SpellFx_Begin.c",
+  "size": 12,
+  "addr": 134545076
+ },
+ {
   "name": "sub_8050F48",
   "file": "sub_8050F48.c",
   "size": 12,
   "addr": 134546996
+ },
+ {
+  "name": "sub_8051288",
+  "file": "sub_8051288.c",
+  "size": 20,
+  "addr": 134547840
  },
  {
   "name": "BattleAIS_ExecCommands",
@@ -3352,6 +3526,18 @@
   "file": "banim-mainutils.c",
   "size": 44,
   "addr": 134561528
+ },
+ {
+  "name": "GetAnimRoundType",
+  "file": "GetAnimRoundType.c",
+  "size": 32,
+  "addr": 134563636
+ },
+ {
+  "name": "sub_8055D94",
+  "file": "sub_8055D94.c",
+  "size": 20,
+  "addr": 134567220
  },
  {
   "name": "sub_8056024",
@@ -3750,6 +3936,42 @@
   "addr": 134644420
  },
  {
+  "name": "EndEkrPopup",
+  "file": "EndEkrPopup.c",
+  "size": 28,
+  "addr": 134655960
+ },
+ {
+  "name": "sub_807A260",
+  "file": "sub_807A260.c",
+  "size": 12,
+  "addr": 134716364
+ },
+ {
+  "name": "sub_807A670",
+  "file": "sub_807A670.c",
+  "size": 12,
+  "addr": 134716732
+ },
+ {
+  "name": "sub_807A6A4",
+  "file": "sub_807A6A4.c",
+  "size": 24,
+  "addr": 134716788
+ },
+ {
+  "name": "sub_807A6BC",
+  "file": "sub_807A6BC.c",
+  "size": 28,
+  "addr": 134716812
+ },
+ {
+  "name": "sub_807B304",
+  "file": "sub_807B304.c",
+  "size": 40,
+  "addr": 134720036
+ },
+ {
   "name": "sub_807B4C0",
   "file": "sub_807B4C0.c",
   "size": 40,
@@ -4044,16 +4266,52 @@
   "addr": 134728144
  },
  {
+  "name": "sub_807D96C",
+  "file": "sub_807D96C.c",
+  "size": 16,
+  "addr": 134729224
+ },
+ {
   "name": "sub_807DA64",
   "file": "sub_807DA64.c",
   "size": 16,
   "addr": 134729484
  },
  {
+  "name": "sub_807DE6C",
+  "file": "sub_807DE6C.c",
+  "size": 20,
+  "addr": 134730192
+ },
+ {
+  "name": "EventCall_HideNinianDragonSMS",
+  "file": "EventCall_HideNinianDragonSMS.c",
+  "size": 16,
+  "addr": 134731880
+ },
+ {
+  "name": "EventCall_PutFallNinian",
+  "file": "EventCall_PutFallNinian.c",
+  "size": 24,
+  "addr": 134732016
+ },
+ {
   "name": "sub_807F16C",
   "file": "sub_807F16C.c",
   "size": 44,
   "addr": 134734560
+ },
+ {
+  "name": "sub_807F1B8",
+  "file": "sub_807F1B8.c",
+  "size": 36,
+  "addr": 134734636
+ },
+ {
+  "name": "ForceDisplayDragonSprite",
+  "file": "ForceDisplayDragonSprite.c",
+  "size": 32,
+  "addr": 134734672
  },
  {
   "name": "EventDragonsSpritefx_Init",
@@ -4644,6 +4902,18 @@
   "addr": 134750300
  },
  {
+  "name": "sub_80839A4",
+  "file": "sub_80839A4.c",
+  "size": 32,
+  "addr": 134754548
+ },
+ {
+  "name": "sub_8085824",
+  "file": "sub_8085824.c",
+  "size": 72,
+  "addr": 134762392
+ },
+ {
   "name": "OnVBlank_SioError",
   "file": "sioerror.c",
   "size": 36,
@@ -4806,10 +5076,28 @@
   "addr": 134803396
  },
  {
+  "name": "AtMenu_LockGame",
+  "file": "AtMenu_LockGame.c",
+  "size": 24,
+  "addr": 134803692
+ },
+ {
+  "name": "StartPrepAtMenu",
+  "file": "StartPrepAtMenu.c",
+  "size": 20,
+  "addr": 134803740
+ },
+ {
   "name": "StartPrepAtMenuWithConfig",
   "file": "StartPrepAtMenuWithConfig.c",
   "size": 28,
   "addr": 134803760
+ },
+ {
+  "name": "sub_8090104",
+  "file": "sub_8090104.c",
+  "size": 20,
+  "addr": 134806112
  },
  {
   "name": "sub_8090148",
@@ -4848,6 +5136,12 @@
   "addr": 134808608
  },
  {
+  "name": "LockMenuScrollBar",
+  "file": "LockMenuScrollBar.c",
+  "size": 28,
+  "addr": 134809312
+ },
+ {
   "name": "sub_8090E80",
   "file": "prep_bgscroll.c",
   "size": 64,
@@ -4878,10 +5172,22 @@
   "addr": 134814784
  },
  {
+  "name": "sub_8093B5C",
+  "file": "sub_8093B5C.c",
+  "size": 108,
+  "addr": 134821156
+ },
+ {
   "name": "PrepUnit_InitSMS",
   "file": "PrepUnit_InitSMS.c",
   "size": 56,
   "addr": 134821264
+ },
+ {
+  "name": "sub_80946D0",
+  "file": "sub_80946D0.c",
+  "size": 24,
+  "addr": 134824196
  },
  {
   "name": "PrepItemUse_ResetBgmAfterPromo",
@@ -4894,6 +5200,12 @@
   "file": "sub_8096938.c",
   "size": 56,
   "addr": 134833288
+ },
+ {
+  "name": "sub_809B6D4",
+  "file": "sub_809B6D4.c",
+  "size": 36,
+  "addr": 134852576
  },
  {
   "name": "SramInit",
@@ -5062,6 +5374,12 @@
   "file": "savemenu_tactician.c",
   "size": 68,
   "addr": 134902444
+ },
+ {
+  "name": "StartTactBirthSelect",
+  "file": "StartTactBirthSelect.c",
+  "size": 20,
+  "addr": 134903388
  },
  {
   "name": "InitModeSelectAnims",
@@ -5490,6 +5808,24 @@
   "addr": 134963332
  },
  {
+  "name": "sub_80B6444",
+  "file": "sub_80B6444.c",
+  "size": 12,
+  "addr": 134963436
+ },
+ {
+  "name": "sub_80B8BF8",
+  "file": "sub_80B8BF8.c",
+  "size": 28,
+  "addr": 134974056
+ },
+ {
+  "name": "sub_80B8D8C",
+  "file": "sub_80B8D8C.c",
+  "size": 112,
+  "addr": 134974780
+ },
+ {
   "name": "sub_80BAA80",
   "file": "sub_80BAA80.c",
   "size": 12,
@@ -5562,9 +5898,33 @@
   "addr": 134986680
  },
  {
+  "name": "sub_80BCAAC",
+  "file": "sub_80BCAAC.c",
+  "size": 32,
+  "addr": 134990888
+ },
+ {
+  "name": "sub_80BCFD8",
+  "file": "sub_80BCFD8.c",
+  "size": 20,
+  "addr": 134992236
+ },
+ {
   "name": "sub_800A3B8",
   "file": "talk.c",
   "size": 16,
   "addr": 134993228
+ },
+ {
+  "name": "sub_80BD534",
+  "file": "sub_80BD534.c",
+  "size": 24,
+  "addr": 134993604
+ },
+ {
+  "name": "sub_80BD83C",
+  "file": "sub_80BD83C.c",
+  "size": 20,
+  "addr": 134994404
  }
 ]

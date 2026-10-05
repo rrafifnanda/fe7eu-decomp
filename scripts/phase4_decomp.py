@@ -39,14 +39,18 @@ def strip_gccisms(text):
 
 
 def prepare_context():
-    """Preprocess gbafe.h into an m2c context file (cached), augmented with
-    unprototyped declarations for every mapped symbol so m2c does not have to
-    invent types for cross-function calls."""
-    dst = Path("build/m2c-ctx-clean.c")
+    """Preprocess gbafe.h into m2c context files (cached): a gbafe-only file
+    and an augmented one with unprototyped declarations for every mapped
+    symbol (so calls to not-yet-decompiled functions resolve). The augmented
+    declarations break m2c's -f lookup for the function being decompiled, so
+    run_m2c retries against the gbafe-only file on 'not found'."""
+    clean = Path("build/m2c-ctx-clean.c")
+    gbafe = Path("build/m2c-ctx-gbafe.c")
     src_ctx = Path("build/m2c-ctx.c")
-    if dst.exists() and src_ctx.exists():
-        return str(dst)
+    if clean.exists() and gbafe.exists() and src_ctx.exists():
+        return
     raw = strip_gccisms(src_ctx.read_text(errors="replace"))
+    gbafe.write_text(raw)
     known = set(re.findall(r"\b([A-Za-z_]\w*)\s*\(", raw))
     decls = []
     for line in Path("config/eu-symbols-all.txt").read_text().splitlines():
@@ -57,8 +61,7 @@ def prepare_context():
         if name in known or not re.match(r"^[A-Za-z_]\w*$", name):
             continue
         decls.append(f"void {name}();")
-    dst.write_text(raw + "\n/* mapped-symbol declarations */\n" + "\n".join(decls) + "\n")
-    return str(dst)
+    clean.write_text(raw + "\n/* mapped-symbol declarations */\n" + "\n".join(decls) + "\n")
 
 
 def clean_m2c_output(text):
@@ -133,13 +136,31 @@ def extract_asm(cand):
     return "\n".join(header + body) + "\n"
 
 
+_CTX_READY = False
+
+
 def run_m2c(asm_text, name):
+    global _CTX_READY
+    if not _CTX_READY:
+        prepare_context()
+        _CTX_READY = True
     Path("/tmp/p4.s").write_text(asm_text)
-    ret = subprocess.run(["m2c", "-t", "gba", "--context", prepare_context(),
+    ret = subprocess.run(["m2c", "-t", "gba", "--context", "build/m2c-ctx-clean.c",
                           "--globals", "used", "-f", name, "/tmp/p4.s"],
                          capture_output=True, text=True)
     if ret.returncode != 0:
-        return None, ret.stderr.strip().splitlines()[-1] if ret.stderr else "m2c failed"
+        err = ret.stderr.strip().splitlines()[-1] if ret.stderr else "m2c failed"
+        if "not found" in err:
+            # the augmented declaration for this very function hides its asm
+            # body — retry with the gbafe-only context
+            ret = subprocess.run(["m2c", "-t", "gba",
+                                  "--context", "build/m2c-ctx-gbafe.c",
+                                  "--globals", "used", "-f", name, "/tmp/p4.s"],
+                                 capture_output=True, text=True)
+            if ret.returncode != 0:
+                return None, ret.stderr.strip().splitlines()[-1] if ret.stderr else "m2c failed"
+        else:
+            return None, err
     return ret.stdout, None
 
 
@@ -213,6 +234,7 @@ def main():
     ap.add_argument("--limit", type=int, default=200)
     ap.add_argument("--offset", type=int, default=0)
     ap.add_argument("--min-score", type=float, default=0.9)
+    ap.add_argument("--inventory", default="config/phase4-inventory.json")
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--max-size", type=int, default=0x400)
     args = ap.parse_args()
@@ -221,7 +243,7 @@ def main():
         build_inventory()
         return
 
-    cands = json.load(open("config/phase4-inventory.json"))
+    cands = json.load(open(args.inventory))
     if args.cmd == "one":
         cand = next((c for c in cands if c["name"] == args.name), None)
         if cand is None:
