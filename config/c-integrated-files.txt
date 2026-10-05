@@ -1,6 +1,8 @@
 refs/fe7j/src/EfxPlayHittedSFX.c
+refs/fe7j/src/EventClearTalkDisplayed.c
 refs/fe7j/src/PlaySFX.c
 refs/fe7j/src/PrepItemUse_ResetBgmAfterPromo.c
+refs/fe7j/src/PrepUnit_InitSMS.c
 refs/fe7j/src/RegisterEfxSoundSeExist.c
 refs/fe7j/src/StartFastLockingFadeToBlack.c
 refs/fe7j/src/anime.c
@@ -67,12 +69,17 @@ refs/fe7j/src/statscreen-util.c
 refs/fe7j/src/statscreen.c
 refs/fe7j/src/statscreenfx.c
 refs/fe7j/src/sub_8005E50.c
+refs/fe7j/src/sub_8013658.c
+refs/fe7j/src/sub_801DF38.c
+refs/fe7j/src/sub_8020838.c
 refs/fe7j/src/sub_80215D0.c
 refs/fe7j/src/sub_802281C.c
 refs/fe7j/src/sub_802C300.c
+refs/fe7j/src/sub_80312E8.c
 refs/fe7j/src/sub_8038024.c
 refs/fe7j/src/sub_8038238.c
 refs/fe7j/src/sub_80384C0.c
+refs/fe7j/src/sub_803C354.c
 refs/fe7j/src/sub_803EB44.c
 refs/fe7j/src/sub_80419C8.c
 refs/fe7j/src/sub_8045D2C.c
@@ -83,6 +90,7 @@ refs/fe7j/src/sub_807D59C.c
 refs/fe7j/src/sub_807DA64.c
 refs/fe7j/src/sub_807F16C.c
 refs/fe7j/src/sub_809221C.c
+refs/fe7j/src/sub_8096938.c
 refs/fe7j/src/sub_809FAC0.c
 refs/fe7j/src/sub_80BAA80.c
 refs/fe7j/src/support.c

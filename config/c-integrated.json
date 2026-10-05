@@ -1314,6 +1314,12 @@
   "addr": 134265308
  },
  {
+  "name": "EventClearTalkDisplayed",
+  "file": "EventClearTalkDisplayed.c",
+  "size": 76,
+  "addr": 134278676
+ },
+ {
   "name": "EventSnowStormfx_Init",
   "file": "eventscr_snowstormfx.c",
   "size": 192,
@@ -1708,6 +1714,12 @@
   "file": "game-ctrl.c",
   "size": 80,
   "addr": 134295208
+ },
+ {
+  "name": "sub_8013658",
+  "file": "sub_8013658.c",
+  "size": 48,
+  "addr": 134296536
  },
  {
   "name": "StartFastLockingFadeToBlack",
@@ -2316,6 +2328,12 @@
   "addr": 134320528
  },
  {
+  "name": "sub_801DF38",
+  "file": "sub_801DF38.c",
+  "size": 48,
+  "addr": 134340548
+ },
+ {
   "name": "ChapterIntro_Bg3Scroll_Loop",
   "file": "bmfx-chapterintrofx.c",
   "size": 28,
@@ -2494,6 +2512,12 @@
   "file": "bmfx-chapterintrofx.c",
   "size": 8,
   "addr": 134350208
+ },
+ {
+  "name": "sub_8020838",
+  "file": "sub_8020838.c",
+  "size": 56,
+  "addr": 134350980
  },
  {
   "name": "sub_80215D0",
@@ -3126,6 +3150,12 @@
   "addr": 134399000
  },
  {
+  "name": "sub_80312E8",
+  "file": "sub_80312E8.c",
+  "size": 48,
+  "addr": 134419484
+ },
+ {
   "name": "sub_800A3A4",
   "file": "talk.c",
   "size": 8,
@@ -3154,6 +3184,12 @@
   "file": "sub_80384C0.c",
   "size": 8,
   "addr": 134448776
+ },
+ {
+  "name": "sub_803C354",
+  "file": "sub_803C354.c",
+  "size": 48,
+  "addr": 134464900
  },
  {
   "name": "sub_803EB44",
@@ -4704,10 +4740,22 @@
   "addr": 134814592
  },
  {
+  "name": "PrepUnit_InitSMS",
+  "file": "PrepUnit_InitSMS.c",
+  "size": 56,
+  "addr": 134821264
+ },
+ {
   "name": "PrepItemUse_ResetBgmAfterPromo",
   "file": "PrepItemUse_ResetBgmAfterPromo.c",
   "size": 28,
   "addr": 134830980
+ },
+ {
+  "name": "sub_8096938",
+  "file": "sub_8096938.c",
+  "size": 56,
+  "addr": 134833288
  },
  {
   "name": "SramInit",
