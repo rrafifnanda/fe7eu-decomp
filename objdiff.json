@@ -1,0 +1,365 @@
+{
+  "$schema": "https://raw.githubusercontent.com/encounter/objdiff/main/config.schema.json",
+  "custom_make": "make",
+  "target_dir": "build/target",
+  "base_dir": "build/c",
+  "build_target": false,
+  "build_base": false,
+  "watch_patterns": [
+    "src/**/*.c",
+    "include/**/*.h",
+    "asm/**/*.s"
+  ],
+  "units": [
+    {
+      "name": "anime",
+      "target_path": "build/target/anime.o",
+      "base_path": "build/c/anime.o"
+    },
+    {
+      "name": "banim-efxdrsmmoya",
+      "target_path": "build/target/banim-efxdrsmmoya.o",
+      "base_path": "build/c/banim-efxdrsmmoya.o"
+    },
+    {
+      "name": "banim-ekrdragon",
+      "target_path": "build/target/banim-ekrdragon.o",
+      "base_path": "build/c/banim-ekrdragon.o"
+    },
+    {
+      "name": "banim-ekrdragonfx",
+      "target_path": "build/target/banim-ekrdragonfx.o",
+      "base_path": "build/c/banim-ekrdragonfx.o"
+    },
+    {
+      "name": "banim-main",
+      "target_path": "build/target/banim-main.o",
+      "base_path": "build/c/banim-main.o"
+    },
+    {
+      "name": "banim-mainutils",
+      "target_path": "build/target/banim-mainutils.o",
+      "base_path": "build/c/banim-mainutils.o"
+    },
+    {
+      "name": "battle",
+      "target_path": "build/target/battle.o",
+      "base_path": "build/c/battle.o"
+    },
+    {
+      "name": "bm",
+      "target_path": "build/target/bm.o",
+      "base_path": "build/c/bm.o"
+    },
+    {
+      "name": "bmfx-chapterintrofx",
+      "target_path": "build/target/bmfx-chapterintrofx.o",
+      "base_path": "build/c/bmfx-chapterintrofx.o"
+    },
+    {
+      "name": "bmfx-minefx",
+      "target_path": "build/target/bmfx-minefx.o",
+      "base_path": "build/c/bmfx-minefx.o"
+    },
+    {
+      "name": "bmfx-niniantransform",
+      "target_path": "build/target/bmfx-niniantransform.o",
+      "base_path": "build/c/bmfx-niniantransform.o"
+    },
+    {
+      "name": "bmfx-swingsword",
+      "target_path": "build/target/bmfx-swingsword.o",
+      "base_path": "build/c/bmfx-swingsword.o"
+    },
+    {
+      "name": "chapter-title",
+      "target_path": "build/target/chapter-title.o",
+      "base_path": "build/c/chapter-title.o"
+    },
+    {
+      "name": "cursor-hand",
+      "target_path": "build/target/cursor-hand.o",
+      "base_path": "build/c/cursor-hand.o"
+    },
+    {
+      "name": "eventcall_0807F9EC",
+      "target_path": "build/target/eventcall_0807F9EC.o",
+      "base_path": "build/c/eventcall_0807F9EC.o"
+    },
+    {
+      "name": "eventcall_dragonflamefx",
+      "target_path": "build/target/eventcall_dragonflamefx.o",
+      "base_path": "build/c/eventcall_dragonflamefx.o"
+    },
+    {
+      "name": "eventcall_dragongate",
+      "target_path": "build/target/eventcall_dragongate.o",
+      "base_path": "build/c/eventcall_dragongate.o"
+    },
+    {
+      "name": "eventcall_firedragonsprite",
+      "target_path": "build/target/eventcall_firedragonsprite.o",
+      "base_path": "build/c/eventcall_firedragonsprite.o"
+    },
+    {
+      "name": "eventcall_flamebreath",
+      "target_path": "build/target/eventcall_flamebreath.o",
+      "base_path": "build/c/eventcall_flamebreath.o"
+    },
+    {
+      "name": "eventcall_icecrystal",
+      "target_path": "build/target/eventcall_icecrystal.o",
+      "base_path": "build/c/eventcall_icecrystal.o"
+    },
+    {
+      "name": "eventcall_quakefx",
+      "target_path": "build/target/eventcall_quakefx.o",
+      "base_path": "build/c/eventcall_quakefx.o"
+    },
+    {
+      "name": "eventcall_unittornout",
+      "target_path": "build/target/eventcall_unittornout.o",
+      "base_path": "build/c/eventcall_unittornout.o"
+    },
+    {
+      "name": "eventcall_zephielepilogue",
+      "target_path": "build/target/eventcall_zephielepilogue.o",
+      "base_path": "build/c/eventcall_zephielepilogue.o"
+    },
+    {
+      "name": "eventscr",
+      "target_path": "build/target/eventscr.o",
+      "base_path": "build/c/eventscr.o"
+    },
+    {
+      "name": "eventscr_fadefx",
+      "target_path": "build/target/eventscr_fadefx.o",
+      "base_path": "build/c/eventscr_fadefx.o"
+    },
+    {
+      "name": "eventscr_niniandisp",
+      "target_path": "build/target/eventscr_niniandisp.o",
+      "base_path": "build/c/eventscr_niniandisp.o"
+    },
+    {
+      "name": "eventscr_screenflashfx",
+      "target_path": "build/target/eventscr_screenflashfx.o",
+      "base_path": "build/c/eventscr_screenflashfx.o"
+    },
+    {
+      "name": "eventscr_snowstormfx",
+      "target_path": "build/target/eventscr_snowstormfx.o",
+      "base_path": "build/c/eventscr_snowstormfx.o"
+    },
+    {
+      "name": "eventscr_spriteanim",
+      "target_path": "build/target/eventscr_spriteanim.o",
+      "base_path": "build/c/eventscr_spriteanim.o"
+    },
+    {
+      "name": "eventscr_thunderfx",
+      "target_path": "build/target/eventscr_thunderfx.o",
+      "base_path": "build/c/eventscr_thunderfx.o"
+    },
+    {
+      "name": "face",
+      "target_path": "build/target/face.o",
+      "base_path": "build/c/face.o"
+    },
+    {
+      "name": "faction",
+      "target_path": "build/target/faction.o",
+      "base_path": "build/c/faction.o"
+    },
+    {
+      "name": "game-ctrl",
+      "target_path": "build/target/game-ctrl.o",
+      "base_path": "build/c/game-ctrl.o"
+    },
+    {
+      "name": "hardware",
+      "target_path": "build/target/hardware.o",
+      "base_path": "build/c/hardware.o"
+    },
+    {
+      "name": "icon",
+      "target_path": "build/target/icon.o",
+      "base_path": "build/c/icon.o"
+    },
+    {
+      "name": "irq",
+      "target_path": "build/target/irq.o",
+      "base_path": "build/c/irq.o"
+    },
+    {
+      "name": "lord-select",
+      "target_path": "build/target/lord-select.o",
+      "base_path": "build/c/lord-select.o"
+    },
+    {
+      "name": "move-data",
+      "target_path": "build/target/move-data.o",
+      "base_path": "build/c/move-data.o"
+    },
+    {
+      "name": "oam",
+      "target_path": "build/target/oam.o",
+      "base_path": "build/c/oam.o"
+    },
+    {
+      "name": "opanim_scanline",
+      "target_path": "build/target/opanim_scanline.o",
+      "base_path": "build/c/opanim_scanline.o"
+    },
+    {
+      "name": "prep_atmenu",
+      "target_path": "build/target/prep_atmenu.o",
+      "base_path": "build/c/prep_atmenu.o"
+    },
+    {
+      "name": "prep_bgscroll",
+      "target_path": "build/target/prep_bgscroll.o",
+      "base_path": "build/c/prep_bgscroll.o"
+    },
+    {
+      "name": "prep_itemscreen",
+      "target_path": "build/target/prep_itemscreen.o",
+      "base_path": "build/c/prep_itemscreen.o"
+    },
+    {
+      "name": "prepscreen",
+      "target_path": "build/target/prepscreen.o",
+      "base_path": "build/c/prepscreen.o"
+    },
+    {
+      "name": "prepscreenfx",
+      "target_path": "build/target/prepscreenfx.o",
+      "base_path": "build/c/prepscreenfx.o"
+    },
+    {
+      "name": "preputil_unitlist",
+      "target_path": "build/target/preputil_unitlist.o",
+      "base_path": "build/c/preputil_unitlist.o"
+    },
+    {
+      "name": "proc",
+      "target_path": "build/target/proc.o",
+      "base_path": "build/c/proc.o"
+    },
+    {
+      "name": "quintessence-fx",
+      "target_path": "build/target/quintessence-fx.o",
+      "base_path": "build/c/quintessence-fx.o"
+    },
+    {
+      "name": "random",
+      "target_path": "build/target/random.o",
+      "base_path": "build/c/random.o"
+    },
+    {
+      "name": "save_core",
+      "target_path": "build/target/save_core.o",
+      "base_path": "build/c/save_core.o"
+    },
+    {
+      "name": "savedraw",
+      "target_path": "build/target/savedraw.o",
+      "base_path": "build/c/savedraw.o"
+    },
+    {
+      "name": "savedrawfx",
+      "target_path": "build/target/savedrawfx.o",
+      "base_path": "build/c/savedrawfx.o"
+    },
+    {
+      "name": "savemenu",
+      "target_path": "build/target/savemenu.o",
+      "base_path": "build/c/savemenu.o"
+    },
+    {
+      "name": "savemenu_modeselect",
+      "target_path": "build/target/savemenu_modeselect.o",
+      "base_path": "build/c/savemenu_modeselect.o"
+    },
+    {
+      "name": "savemenu_tactician",
+      "target_path": "build/target/savemenu_tactician.o",
+      "base_path": "build/c/savemenu_tactician.o"
+    },
+    {
+      "name": "scrolling_util",
+      "target_path": "build/target/scrolling_util.o",
+      "base_path": "build/c/scrolling_util.o"
+    },
+    {
+      "name": "sioerror",
+      "target_path": "build/target/sioerror.o",
+      "base_path": "build/c/sioerror.o"
+    },
+    {
+      "name": "sprite",
+      "target_path": "build/target/sprite.o",
+      "base_path": "build/c/sprite.o"
+    },
+    {
+      "name": "sprite-anim",
+      "target_path": "build/target/sprite-anim.o",
+      "base_path": "build/c/sprite-anim.o"
+    },
+    {
+      "name": "statscreen",
+      "target_path": "build/target/statscreen.o",
+      "base_path": "build/c/statscreen.o"
+    },
+    {
+      "name": "statscreen-helpbox",
+      "target_path": "build/target/statscreen-helpbox.o",
+      "base_path": "build/c/statscreen-helpbox.o"
+    },
+    {
+      "name": "statscreen-util",
+      "target_path": "build/target/statscreen-util.o",
+      "base_path": "build/c/statscreen-util.o"
+    },
+    {
+      "name": "statscreenfx",
+      "target_path": "build/target/statscreenfx.o",
+      "base_path": "build/c/statscreenfx.o"
+    },
+    {
+      "name": "support",
+      "target_path": "build/target/support.o",
+      "base_path": "build/c/support.o"
+    },
+    {
+      "name": "sysutil",
+      "target_path": "build/target/sysutil.o",
+      "base_path": "build/c/sysutil.o"
+    },
+    {
+      "name": "talk",
+      "target_path": "build/target/talk.o",
+      "base_path": "build/c/talk.o"
+    },
+    {
+      "name": "talk-advance",
+      "target_path": "build/target/talk-advance.o",
+      "base_path": "build/c/talk-advance.o"
+    },
+    {
+      "name": "titlescreen",
+      "target_path": "build/target/titlescreen.o",
+      "base_path": "build/c/titlescreen.o"
+    },
+    {
+      "name": "ui",
+      "target_path": "build/target/ui.o",
+      "base_path": "build/c/ui.o"
+    },
+    {
+      "name": "unit",
+      "target_path": "build/target/unit.o",
+      "base_path": "build/c/unit.o"
+    }
+  ]
+}
