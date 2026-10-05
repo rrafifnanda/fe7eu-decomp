@@ -249,7 +249,18 @@ def main():
              and r.get("ratio", 0) >= 0.9]
     print(f"[*] done: {len(results)} processed, {len(matches)} byte-exact, "
           f"{len(close)} >=90%")
-    Path("config/phase4-results.json").write_text(json.dumps(results, indent=1))
+    # merge with previous runs (keep the best ratio seen per function)
+    out_path = Path("config/phase4-results.json")
+    merged = {}
+    if out_path.exists():
+        for r in json.load(open(out_path)):
+            merged[r["name"]] = r
+    for r in results:
+        old = merged.get(r["name"])
+        if old is None or r.get("ratio", 0) >= old.get("ratio", 0) \
+                or r.get("match") or old.get("status") != "ok":
+            merged[r["name"]] = r
+    out_path.write_text(json.dumps(list(merged.values()), indent=1))
     for r in matches:
         print(f"  MATCH {r['name']:40s} {r['eu_addr']:#010x} {r['size']:#x} score={r['score']}")
     return 0
