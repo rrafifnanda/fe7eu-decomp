@@ -1,0 +1,25 @@
+--- before
++++ after
+@@ -8410,18 +8410,20 @@
+ extern struct ProcCmd ProcScr_LordSelect[];
+ void PutNumberExt(u16 *tm, s32 color, s32 number, s32 id_zero)
+ {
++  s32 new_var;
+   s32 var_r4;
+   u16 *var_r5;
+   var_r5 = tm;
+   var_r4 = number;
++  new_var = id_zero;
+   if (var_r4 == 0)
+   {
+-    PutSpecialChar(tm, color, id_zero);
++    PutSpecialChar(tm, color, new_var);
+     return;
+   }
+   do
+   {
+-    PutSpecialChar(var_r5, color, (var_r4 % 10) + id_zero);
++    PutSpecialChar(var_r5, color, (var_r4 % 10) + new_var);
+     var_r4 = var_r4 / 10;
+     var_r5 -= 2;
+   }

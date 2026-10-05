@@ -88,7 +88,7 @@ def main():
 def shutil_copy_compile_sh(d):
     src = Path("scripts/perm_compile.sh")
     dst = d / "compile.sh"
-    dst.write_text(src.read_text())
+    dst.write_text(src.read_text().replace("__PERM_ROOT__", str(Path.cwd())))
     dst.chmod(0o755)
 
 

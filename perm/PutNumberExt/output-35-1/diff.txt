@@ -1,0 +1,12 @@
+--- before
++++ after
+@@ -8412,8 +8412,8 @@
+ {
+   s32 var_r4;
+   u16 *var_r5;
++  var_r4 = number;
+   var_r5 = tm;
+-  var_r4 = number;
+   if (var_r4 == 0)
+   {
+     PutSpecialChar(tm, color, id_zero);

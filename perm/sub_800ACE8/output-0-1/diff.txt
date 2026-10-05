@@ -1,0 +1,16 @@
+--- before
++++ after
+@@ -8408,8 +8408,10 @@
+ void sub_80AFE04(struct ProcLordSelect *proc);
+ void StartLordSelect(u8, ProcPtr);
+ extern struct ProcCmd ProcScr_LordSelect[];
+-void sub_800ACE8(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
+-{
+-  sub_800AD04(arg0, arg1, arg2, 0x240, 4, arg3);
++unsigned char sub_800ACE8(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
++{
++  s32 new_var;
++  new_var = arg3;
++  sub_800AD04(arg0, arg1, arg2, 0x240, 4, new_var);
+ }
+ 

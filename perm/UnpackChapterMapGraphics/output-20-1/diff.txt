@@ -1,0 +1,16 @@
+--- before
++++ after
+@@ -8411,10 +8411,12 @@
+ extern s32 gChapterDataAssetTable;
+ void UnpackChapterMapGraphics(s32 chapterId)
+ {
++  s32 *new_var;
++  new_var = &gChapterDataAssetTable;
+   Decompress(*((GetChapterInfo((u32) chapterId)->asset_img_a * 4) + (&gChapterDataAssetTable)), (void *) 0x06008000);
+   if ((*((GetChapterInfo((u32) chapterId)->asset_img_b * 4) + (&gChapterDataAssetTable))) != 0)
+   {
+-    Decompress(*((GetChapterInfo((u32) chapterId)->asset_img_b * 4) + (&gChapterDataAssetTable)), (void *) 0x0600C000);
++    Decompress(*((GetChapterInfo((u32) chapterId)->asset_img_b * 4) + new_var), (void *) 0x0600C000);
+   }
+   ApplyPaletteExt(*((GetChapterInfo((u32) chapterId)->asset_pal * 4) + (&gChapterDataAssetTable)), 0xC0, 0x140);
+ }

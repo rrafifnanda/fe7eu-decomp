@@ -1,0 +1,19 @@
+--- before
++++ after
+@@ -8411,13 +8411,14 @@
+ extern s16 gEkrInitialHitSide;
+ void sub_8053438(s16 *arg0, u16 arg1, u16 arg2)
+ {
+-  u16 temp_r2;
++  long temp_r2;
++  int new_var;
+   temp_r2 = (u16) GetItemIndex((s32) arg2);
+   if ((*arg0) == (-1))
+   {
+     *arg0 = 0;
+   }
+-  if (((gEkrInitialHitSide != arg1) && (((s32) temp_r2) >= 0x53)) && ((((s32) temp_r2) <= 0x55) || (temp_r2 == 0x57)))
++  if (((gEkrInitialHitSide != arg1) && (((s32) temp_r2) >= (new_var = 0x53))) && ((((s32) temp_r2) <= 0x55) || (temp_r2 == 0x57)))
+   {
+     *arg0 = 0;
+   }

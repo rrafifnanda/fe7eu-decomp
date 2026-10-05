@@ -1,0 +1,24 @@
+--- before
++++ after
+@@ -8411,8 +8411,7 @@
+ void PutNumberExt(u16 *tm, s32 color, s32 number, s32 id_zero)
+ {
+   s32 var_r4;
+-  u16 *var_r5;
+-  var_r5 = tm;
++  tm = tm;
+   var_r4 = number;
+   if (var_r4 == 0)
+   {
+@@ -8421,9 +8420,9 @@
+   }
+   do
+   {
+-    PutSpecialChar(var_r5, color, (var_r4 % 10) + id_zero);
++    PutSpecialChar(tm, color, (var_r4 % 10) + id_zero);
+     var_r4 = var_r4 / 10;
+-    var_r5 -= 2;
++    tm -= 2;
+   }
+   while (var_r4 != 0);
+ }

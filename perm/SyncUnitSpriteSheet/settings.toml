@@ -1,0 +1,2 @@
+compiler_type = "gcc"
+function_name = "SyncUnitSpriteSheet"

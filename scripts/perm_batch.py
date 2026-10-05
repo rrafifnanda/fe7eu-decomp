@@ -85,15 +85,18 @@ def main():
     ap.add_argument("--timeout", type=int, default=600)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--names", default="")
     args = ap.parse_args()
 
     integrated = {e["name"] for e in json.load(open("config/c-integrated.json"))}
     pool = json.load(open("config/phase4-results.json"))
+    only = set(json.load(open(args.names))) if args.names else None
     todo = [r for r in pool
             if r.get("status") == "ok" and not r.get("match")
             and args.min_ratio <= r.get("ratio", 0) <= args.max_ratio
             and r["name"] not in integrated
-            and find_c(r["name"]) is not None]
+            and find_c(r["name"]) is not None
+            and (only is None or r["name"] in only)]
     todo.sort(key=lambda r: -r["ratio"])
     if args.limit:
         todo = todo[:args.limit]

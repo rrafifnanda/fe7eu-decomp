@@ -1,0 +1,18 @@
+--- before
++++ after
+@@ -8410,8 +8410,13 @@
+ extern struct ProcCmd ProcScr_LordSelect[];
+ void sub_8015324(struct Text *arg0, s32 arg1, s32 arg2, s8 *arg3, s32 arg4)
+ {
+-  Text_SetCursor(arg0, ((s32) ((arg4 * 8) - GetStringTextLen(arg3))) >> 1);
++  int new_var;
++  char new_var2;
++  new_var = GetStringTextLen(arg3);
++  new_var = (s32) ((arg4 * 8) - new_var);
++  new_var2 = new_var >> 1;
++  Text_SetCursor(arg0, new_var2);
+   Text_DrawString(arg0, arg3);
+-  PutText(arg0, &gBg0Tm[(arg2 << 5) + arg1]);
++  PutText(arg0, &gBg0Tm[((arg2 << 4) << 1) + arg1]);
+ }
+ 

@@ -3,7 +3,7 @@
 # Compiles an agbcc-style single-function C file into a .o (no
 # -ffunction-sections: the whole .text is the function).
 set -e
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+ROOT="__PERM_ROOT__"
 cd "$ROOT"
 IN="$1"
 OUT="$3"
